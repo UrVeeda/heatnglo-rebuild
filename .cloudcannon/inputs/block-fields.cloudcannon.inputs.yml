@@ -3,6 +3,16 @@
 # Field names match props on every block; CC applies them by name.
 
 _inputs:
+  # ──────── Page-builder array binding (CRITICAL) ────────
+  # Without this, CC's "+ Add Content Block" shows a generic merged-field form
+  # instead of the modal Structure picker with all 9 block types.
+  content_blocks:
+    type: array
+    label: 'Page sections'
+    comment: 'Click + Add Content Block to insert a new section.'
+    options:
+      structures: _structures.content_blocks
+
   # ──────── Section variants (Block Delivery Standard) ────────
   bg_variant:
     type: select

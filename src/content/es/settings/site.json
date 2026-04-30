@@ -1,0 +1,21 @@
+{
+  "company": {
+    "name": "Heat & Glo",
+    "parent": "Hearth & Home Technologies",
+    "phone": "888-427-3973",
+    "email": "info@heatnglo.com",
+    "address": "20802 Kensington Blvd, Lake City, MN 55041",
+    "founded": 1975
+  },
+  "rebate": {
+    "amount_usd": "$650",
+    "amount_cad": "$890 CAD",
+    "expires_at": "2026-05-01"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/heatnglo/",
+    "facebook":  "https://www.facebook.com/HeatandGlo/",
+    "youtube":   "https://www.youtube.com/user/HeatnGloFireplace",
+    "linkedin":  "https://www.linkedin.com/company/heat-&-glo"
+  }
+}
