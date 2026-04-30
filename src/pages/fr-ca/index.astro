@@ -1,20 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Container from '@components/ui/Container.astro';
+import ContentBlocks from '@components/global/ContentBlocks.astro';
+import { loadPageEntry } from '@lib/pageContent';
+
+const entry = await loadPageEntry('fr-ca', 'index');
+const data = entry?.data;
 ---
 <BaseLayout
-  title="Heat & Glo Canada — Foyers manufacturés, inserts et foyers extérieurs"
-  description="Foyers au gaz, électriques, au bois et extérieurs. Trouvez un détaillant autorisé près de chez vous et planifiez une consultation gratuite."
+  title={data?.title ?? 'Heat & Glo Canada'}
+  description={data?.description ?? ''}
+  ogImage={data?.ogImage ?? undefined}
   noIndex={true}
 >
-  <Container as="section" class="home-placeholder">
-    <h1>Phase 3 scaffold (fr-CA).</h1>
-    <p>La phase 4 reconstruit les sections du corps à partir de la maquette approuvée.</p>
-  </Container>
+  <ContentBlocks blocks={(data?.content_blocks ?? []) as never} />
 </BaseLayout>
-
-<style>
-  .home-placeholder { padding: 80px 0 120px; }
-  .home-placeholder h1 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700; margin-bottom: 14px; color: var(--ink); }
-  .home-placeholder p { color: var(--ink-2); max-width: 60ch; }
-</style>

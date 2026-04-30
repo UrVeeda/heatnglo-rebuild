@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ContentBlocks from '@components/global/ContentBlocks.astro';
+import { loadPageEntry } from '@lib/pageContent';
+
+const entry = await loadPageEntry('en', 'index');
+const data = entry?.data;
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -41,154 +45,13 @@ const structuredData = {
     },
   ],
 };
-
-// Seeded content_blocks. Phase 5 moves this into src/content/en/pages/index.json
-// or equivalent so editors can manage the page-builder array via CloudCannon.
-const blocks = [
-  {
-    _type: 'hero_block',
-    eyebrow_rating: 'from 12,400+ verified owners',
-    heading: 'Bring the room you love',
-    heading_em: 'back to life.',
-    lede: 'Save up to $650 when you upgrade your old wood-burning fireplace to a beautiful, easy-to-use Heat & Glo gas insert. Push-button warmth. Cleaner glass. The kind of flame your living room organizes itself around.',
-    cta_primary_text: 'Get Your $650 Savings Code',
-    cta_primary_href: '/promotions/gas-insert-rebate/',
-    cta_secondary_text: 'Browse the Lineup',
-    cta_secondary_href: '/products/',
-    microcopy: '✓ No purchase necessary · ✓ 0% financing through dealer partners · ✓ Most installs in 2-4 weeks',
-    zip_label: 'Find a Dealer',
-    zip_placeholder: 'ZIP code',
-    zip_button_text: 'Search →',
-    zip_action: '/where-to-buy/',
-    proximity_text: '3 authorized dealers within 25 mi · 2 showrooms open right now',
-    background_image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:1080',
-    background_image_alt: 'Heat & Glo SupremeX gas fireplace in a contemporary living room',
-  },
-  {
-    _type: 'trust_strip_block',
-    items: [
-      { icon: '★',  num: '50',     num_unit: 'yrs', label: 'Engineered since 1975' },
-      { icon: '🏠', num: '2.4M',   num_unit: '+',   label: 'Hearths installed' },
-      { icon: '📍', num: '1,400',  num_unit: '+',   label: 'Authorized dealers' },
-      { icon: '🇺🇸', num: 'USA',                   label: 'Made in Lake City, MN' },
-    ],
-  },
-  {
-    _type: 'love_your_fireplace_block',
-    eyebrow: 'Limited Offer · Through May 1',
-    heading: 'Love Your Fireplace',
-    heading_em: 'Again',
-    paragraph_1: 'Transform your wood-burning fireplace into a source of everyday comfort. A Heat & Glo gas insert fits right inside your existing fireplace, delivering consistent heat, no cleanup, and a cozy atmosphere at the touch of a button.',
-    paragraph_2: 'Perfect for chilly spring mornings, rainy afternoons, and relaxed evenings at home. Save up to $650 for a limited time.',
-    cta_text: 'Get Your Savings Code',
-    cta_href: '/promotions/gas-insert-rebate/',
-    media_image: 'https://hearthnhome.getbynder.com/transform/ed7f9952-337a-40b7-a842-2fee6d375de3/Before-After-Heat-Glo-SupremeX-1?io=transform:fill,width:1000,height:750',
-    media_image_alt: 'Before and after — upgrading a wood-burning fireplace to a Heat & Glo SupremeX gas insert',
-    media_position: 'right',
-  },
-  {
-    _type: 'browse_lineup_block',
-    eyebrow: 'Browse the Lineup',
-    heading: 'Four ways a Heat & Glo fits a room.',
-    lede: 'Gas, electric, wood, and outdoor — every Heat & Glo fireplace is engineered for the way American homes actually live.',
-    cards: [
-      {
-        image: 'https://hearthnhome.getbynder.com/transform/b312f162-9693-404e-a128-bcaeaffa736c/HNG_True_TradBrick_Oak_Arched_Mediterranean?io=transform:fill,width:600,height:450',
-        image_alt: 'Heat & Glo True gas fireplace, Mediterranean arched living room',
-        title: 'Gas Fireplaces',
-        sub: 'Direct-vent, B-vent, ventless · 18 models',
-        cta_text: 'Browse Gas',
-        cta_href: '/products/gas-fireplaces/',
-      },
-      {
-        image: 'https://hearthnhome.getbynder.com/transform/151cc8f6-126a-4786-a17d-25ba18a7bf0f/EmilyHenderson-PrimaryBedroom_KaitlinGreen-16?io=transform:fill,width:600,height:450',
-        image_alt: 'Modern primary bedroom with Heat & Glo electric fireplace',
-        title: 'Electric Fireplaces',
-        sub: 'Wall-mount, built-in, inserts · 9 models',
-        cta_text: 'Browse Electric',
-        cta_href: '/products/electric-fireplaces/',
-      },
-      {
-        image: 'https://hearthnhome.getbynder.com/transform/ab82046a-f6e7-40e8-92ab-5cc8b0f870ef/HNG_Supreme_LKS-06?io=transform:fill,width:600,height:450',
-        image_alt: 'Heat & Glo Supreme wood-burning fireplace',
-        title: 'Wood Fireplaces',
-        sub: 'EPA-certified, low-emission burns · 7 models',
-        cta_text: 'Browse Wood',
-        cta_href: '/products/wood-fireplaces/',
-      },
-      {
-        image: 'https://hearthnhome.getbynder.com/transform/a7b207d3-169f-4fff-a129-486d7a8d731d/STL_OpenHearth_6ft_Stone_MediaRoom_599?io=transform:fill,width:600,height:450',
-        image_alt: 'Stellar by Heat & Glo open hearth fireplace, stone surround',
-        title: 'Outdoor Fireplaces',
-        sub: 'Patio, built-in, gas + wood · 11 models',
-        cta_text: 'Browse Outdoor',
-        cta_href: '/products/outdoor-fireplaces/',
-      },
-    ],
-  },
-  {
-    _type: 'proadvantage_block',
-    eyebrow: 'For Builders & Designers',
-    heading: 'Build Smarter With The',
-    heading_em: 'ProAdvantage Trade Program',
-    paragraph_1: "This isn't just access; it's advantage. Get exclusive incentives, BIM/CAD libraries, AIA continuing-education credits, and direct factory tech support when you sign up for the ProAdvantage Trade Program.",
-    paragraph_2: "It's quick to join and benefits start right away.",
-    cta_text: 'Join Today',
-    cta_href: '/pro/proadvantage/',
-    media_image: 'https://hearthnhome.getbynder.com/transform/9b5d29b5-7913-4077-8309-445b069a7017/HNG-Mezzo60_River-s-Point-2019-Parade-of-Homes-Photos-51-tif?io=transform:fill,width:900,height:675',
-    media_image_alt: 'Heat & Glo Mezzo60 fireplace, 2019 Parade of Homes installation',
-  },
-  {
-    _type: 'tv_walls_block',
-    eyebrow: 'Editorial · 8 min read',
-    heading: 'Six Fireplace + TV Wall Designs That',
-    heading_em: 'Get It Right',
-    paragraph_1: 'Tired of having to choose between the two? These six projects prove fireplaces and TVs can coexist beautifully — thanks to thoughtful heat management and design moves that make both feel intentional.',
-    cta_text: 'Get Inspired',
-    cta_href: '/inspiration/six-tv-wall-designs/',
-    media_image: 'https://hearthnhome.getbynder.com/transform/91330052-89b6-4dd2-9507-f20faeb05951/HNG_MEZZO-48_gas_fireplace_basement_-2x-jpg?io=transform:fill,width:900,height:675',
-    media_image_alt: 'Lower-level entertaining space with pool table, bar, and Mezzo 48 linear fireplace with TV overhead',
-  },
-  {
-    _type: 'press_strip_block',
-    lead_text: 'As featured in',
-    logos: [
-      { name: 'Architectural Digest' },
-      { name: 'Dwell' },
-      { name: 'House Beautiful' },
-      { name: 'Fine Homebuilding', emphasis: 'bold' },
-      { name: 'Builder',           emphasis: 'bold' },
-      { name: 'Houzz · Best of' },
-    ],
-  },
-  {
-    _type: 'faq_block',
-    eyebrow: 'Common Questions',
-    heading: "Everything you'd ask",
-    heading_em: 'at the showroom.',
-    items: [
-      { question: "What's the difference between gas, electric, and wood fireplaces?",            answer: "Gas fireplaces are push-button — the flame is sealed behind glass, the heat is controllable, and there's no cleanup. Electric units don't need a vent or gas line, so they install almost anywhere. Wood-burning fireplaces deliver the cabin-style ambience and crackle but need a chimney and ongoing wood handling. Most homeowners pick gas for primary living spaces and electric for bedrooms or alcoves." },
-      { question: 'How long does a typical install take?',                                        answer: 'Most projects scope in 2 to 4 weeks from your free in-home consultation. A gas insert dropped into an existing fireplace typically wraps in a single day; new construction or a complete rebuild can run a week or more. Your dealer handles permits, gas line, and final inspection sign-off.' },
-      { question: 'What happens at the free in-home consultation?',                               answer: 'A local Heat & Glo specialist comes to you. They measure the wall, scope the gas line and venting, walk you through model options that fit your space, and price the install on the spot. Most consultations run 45 to 60 minutes. No purchase pressure — you keep the quote and decide on your timeline.' },
-      { question: 'Is financing available?',                                                      answer: 'Yes — most authorized dealers partner with Synchrony, Wells Fargo, or GreenSky to offer 0% financing for 12 to 24 months on qualifying installs. Your dealer can pre-qualify you in about 2 minutes during the consultation. Approval doesn\'t affect your credit score.' },
-      { question: 'Will my existing wood-burning fireplace work with a gas insert?',              answer: 'Most existing wood-burning fireplaces accept a Heat & Glo gas insert with no structural change — the SupremeX, Escape, and Grand insert lines are sized for standard masonry openings. Your dealer confirms the fit during the in-home visit and quotes any needed adjustments. The current $650 rebate is specifically for these wood-to-gas insert upgrades.' },
-      { question: 'Are Heat & Glo fireplaces ENERGY STAR certified?',                             answer: 'Many of our gas fireplaces qualify for ENERGY STAR certification, with high-efficiency direct-vent units delivering 80%+ efficiency. Wood-burning units carry EPA certification for low-emission burns. Your dealer can identify which model qualifies for any local efficiency rebates in addition to the manufacturer rebate.' },
-    ],
-  },
-  {
-    _type: 'quote_block',
-    stars: 5,
-    quote_body: 'We compared three brands at three showrooms. The Heat & Glo flame looked like a fire — the others looked like a screensaver. Bought it that afternoon.',
-    attribution_name: 'Megan R.',
-    attribution_meta: 'Twin Cities homeowner · Heat & Glo Cosmo direct-vent',
-  },
-];
 ---
 <BaseLayout
-  title="Heat & Glo — Manufactured Fireplaces, Inserts & Outdoor Fire Features"
-  description="Gas, electric, wood, and outdoor fireplaces from Heat & Glo. Find an authorized dealer near you and schedule a free in-home consultation."
+  title={data?.title ?? 'Heat & Glo'}
+  description={data?.description ?? ''}
+  ogImage={data?.ogImage ?? undefined}
   structuredData={structuredData}
   noIndex={true}
 >
-  <ContentBlocks blocks={blocks} />
+  <ContentBlocks blocks={(data?.content_blocks ?? []) as never} />
 </BaseLayout>

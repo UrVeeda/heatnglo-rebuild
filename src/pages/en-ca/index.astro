@@ -1,20 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Container from '@components/ui/Container.astro';
+import ContentBlocks from '@components/global/ContentBlocks.astro';
+import { loadPageEntry } from '@lib/pageContent';
+
+const entry = await loadPageEntry('en-ca', 'index');
+const data = entry?.data;
 ---
 <BaseLayout
-  title="Heat & Glo Canada — Manufactured Fireplaces, Inserts & Outdoor Fire Features"
-  description="Gas, electric, wood, and outdoor fireplaces from Heat & Glo. Canadian-dealer locator with CAD pricing."
+  title={data?.title ?? 'Heat & Glo Canada'}
+  description={data?.description ?? ''}
+  ogImage={data?.ogImage ?? undefined}
   noIndex={true}
 >
-  <Container as="section" class="home-placeholder">
-    <h1>Phase 3 scaffold (en-CA).</h1>
-    <p>Phase 4 rebuilds the body sections from the approved mockup. Canadian dealer prioritization + CAD currency wired in Phase 5.</p>
-  </Container>
+  <ContentBlocks blocks={(data?.content_blocks ?? []) as never} />
 </BaseLayout>
-
-<style>
-  .home-placeholder { padding: 80px 0 120px; }
-  .home-placeholder h1 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700; margin-bottom: 14px; color: var(--ink); }
-  .home-placeholder p { color: var(--ink-2); max-width: 60ch; }
-</style>
