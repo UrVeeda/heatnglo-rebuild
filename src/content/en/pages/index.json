@@ -1,4 +1,5 @@
 {
+  "_schema": "default",
   "title": "Heat & Glo — Manufactured Fireplaces, Inserts & Outdoor Fire Features",
   "description": "Gas, electric, wood, and outdoor fireplaces from Heat & Glo. Find an authorized dealer near you and schedule a free in-home consultation.",
   "ogImage": "https://heatnglo.com/og-default.jpg",
@@ -28,10 +29,30 @@
     {
       "_type": "trust_strip_block",
       "items": [
-        { "icon": "★",  "num": "50",    "num_unit": "yrs", "label": "Engineered since 1975" },
-        { "icon": "🏠", "num": "2.4M",  "num_unit": "+",   "label": "Hearths installed" },
-        { "icon": "📍", "num": "1,400", "num_unit": "+",   "label": "Authorized dealers" },
-        { "icon": "🇺🇸", "num": "USA",  "num_unit": "",    "label": "Made in Lake City, MN" }
+        {
+          "icon": "★",
+          "num": "50",
+          "num_unit": "yrs",
+          "label": "Engineered since 1975"
+        },
+        {
+          "icon": "🏠",
+          "num": "2.4M",
+          "num_unit": "+",
+          "label": "Hearths installed"
+        },
+        {
+          "icon": "📍",
+          "num": "1,400",
+          "num_unit": "+",
+          "label": "Authorized dealers"
+        },
+        {
+          "icon": "🇺🇸",
+          "num": "USA",
+          "num_unit": "",
+          "label": "Made in Lake City, MN"
+        }
       ]
     },
     {
@@ -119,26 +140,62 @@
       "_type": "press_strip_block",
       "lead_text": "As featured in",
       "logos": [
-        { "name": "Architectural Digest", "emphasis": "regular" },
-        { "name": "Dwell",                "emphasis": "regular" },
-        { "name": "House Beautiful",      "emphasis": "regular" },
-        { "name": "Fine Homebuilding",    "emphasis": "bold" },
-        { "name": "Builder",              "emphasis": "bold" },
-        { "name": "Houzz · Best of",      "emphasis": "regular" }
+        {
+          "name": "Architectural Digest",
+          "emphasis": "regular"
+        },
+        {
+          "name": "Dwell",
+          "emphasis": "regular"
+        },
+        {
+          "name": "House Beautiful",
+          "emphasis": "regular"
+        },
+        {
+          "name": "Fine Homebuilding",
+          "emphasis": "bold"
+        },
+        {
+          "name": "Builder",
+          "emphasis": "bold"
+        },
+        {
+          "name": "Houzz · Best of",
+          "emphasis": "regular"
+        }
       ]
     },
     {
       "_type": "faq_block",
       "eyebrow": "Common Questions",
-      "heading": "Everything you'd ask",
+      "heading": "Everything you'd ask for",
       "heading_em": "at the showroom.",
       "items": [
-        { "question": "What's the difference between gas, electric, and wood fireplaces?",            "answer": "Gas fireplaces are push-button — the flame is sealed behind glass, the heat is controllable, and there's no cleanup. Electric units don't need a vent or gas line, so they install almost anywhere. Wood-burning fireplaces deliver the cabin-style ambience and crackle but need a chimney and ongoing wood handling. Most homeowners pick gas for primary living spaces and electric for bedrooms or alcoves." },
-        { "question": "How long does a typical install take?",                                        "answer": "Most projects scope in 2 to 4 weeks from your free in-home consultation. A gas insert dropped into an existing fireplace typically wraps in a single day; new construction or a complete rebuild can run a week or more. Your dealer handles permits, gas line, and final inspection sign-off." },
-        { "question": "What happens at the free in-home consultation?",                               "answer": "A local Heat & Glo specialist comes to you. They measure the wall, scope the gas line and venting, walk you through model options that fit your space, and price the install on the spot. Most consultations run 45 to 60 minutes. No purchase pressure — you keep the quote and decide on your timeline." },
-        { "question": "Is financing available?",                                                      "answer": "Yes — most authorized dealers partner with Synchrony, Wells Fargo, or GreenSky to offer 0% financing for 12 to 24 months on qualifying installs. Your dealer can pre-qualify you in about 2 minutes during the consultation. Approval doesn't affect your credit score." },
-        { "question": "Will my existing wood-burning fireplace work with a gas insert?",              "answer": "Most existing wood-burning fireplaces accept a Heat & Glo gas insert with no structural change — the SupremeX, Escape, and Grand insert lines are sized for standard masonry openings. Your dealer confirms the fit during the in-home visit and quotes any needed adjustments. The current $650 rebate is specifically for these wood-to-gas insert upgrades." },
-        { "question": "Are Heat & Glo fireplaces ENERGY STAR certified?",                             "answer": "Many of our gas fireplaces qualify for ENERGY STAR certification, with high-efficiency direct-vent units delivering 80%+ efficiency. Wood-burning units carry EPA certification for low-emission burns. Your dealer can identify which model qualifies for any local efficiency rebates in addition to the manufacturer rebate." }
+        {
+          "question": "What's the difference between gas, electric, and wood fireplaces?",
+          "answer": "Gas fireplaces are push-button — the flame is sealed behind glass, the heat is controllable, and there's no cleanup. Electric units don't need a vent or gas line, so they install almost anywhere. Wood-burning fireplaces deliver the cabin-style ambience and crackle but need a chimney and ongoing wood handling. Most homeowners pick gas for primary living spaces and electric for bedrooms or alcoves."
+        },
+        {
+          "question": "How long does a typical install take?",
+          "answer": "Most projects scope in 2 to 4 weeks from your free in-home consultation. A gas insert dropped into an existing fireplace typically wraps in a single day; new construction or a complete rebuild can run a week or more. Your dealer handles permits, gas line, and final inspection sign-off."
+        },
+        {
+          "question": "What happens at the free in-home consultation?",
+          "answer": "A local Heat & Glo specialist comes to you. They measure the wall, scope the gas line and venting, walk you through model options that fit your space, and price the install on the spot. Most consultations run 45 to 60 minutes. No purchase pressure — you keep the quote and decide on your timeline."
+        },
+        {
+          "question": "Is financing available?",
+          "answer": "Yes — most authorized dealers partner with Synchrony, Wells Fargo, or GreenSky to offer 0% financing for 12 to 24 months on qualifying installs. Your dealer can pre-qualify you in about 2 minutes during the consultation. Approval doesn't affect your credit score."
+        },
+        {
+          "question": "Will my existing wood-burning fireplace work with a gas insert?",
+          "answer": "Most existing wood-burning fireplaces accept a Heat & Glo gas insert with no structural change — the SupremeX, Escape, and Grand insert lines are sized for standard masonry openings. Your dealer confirms the fit during the in-home visit and quotes any needed adjustments. The current $650 rebate is specifically for these wood-to-gas insert upgrades."
+        },
+        {
+          "question": "Are Heat & Glo fireplaces ENERGY STAR certified?",
+          "answer": "Many of our gas fireplaces qualify for ENERGY STAR certification, with high-efficiency direct-vent units delivering 80%+ efficiency. Wood-burning units carry EPA certification for low-emission burns. Your dealer can identify which model qualifies for any local efficiency rebates in addition to the manufacturer rebate."
+        }
       ]
     },
     {
