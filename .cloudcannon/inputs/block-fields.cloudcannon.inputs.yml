@@ -1,32 +1,140 @@
-# Per Phase 4 §7c — every variant prop becomes a CC select input
+# Per Phase 4 §7c + Phase 6 §5/§5a — every variant prop becomes a CC select input
 # so the data editor renders a dropdown rather than a free-form text field.
+# Field names match props on every block; CC applies them by name.
 
 _inputs:
+  # ──────── Section variants (Block Delivery Standard) ────────
   bg_variant:
     type: select
+    label: 'Section background'
+    comment: 'Paper = default light · Cream = soft warm · Ink = dark inverted · Brand = orange accent'
     options:
-      values: [paper, cream, ink, brand]
+      values:
+        - { value: paper, label: 'Paper (default light)' }
+        - { value: cream, label: 'Cream (soft warm)' }
+        - { value: ink,   label: 'Ink (dark inverted)' }
+        - { value: brand, label: 'Brand (orange accent)' }
 
   alignment:
     type: select
+    label: 'Heading alignment'
     options:
-      values: [left, center]
+      values:
+        - { value: left,   label: 'Left' }
+        - { value: center, label: 'Centered' }
 
   density:
     type: select
+    label: 'Vertical padding'
+    comment: 'Compact = 40px top/bottom · Default = 80px · Roomy = 120px'
     options:
-      values: [compact, default, roomy]
+      values:
+        - { value: compact, label: 'Compact' }
+        - { value: default, label: 'Default' }
+        - { value: roomy,   label: 'Roomy' }
 
   hidden_on_mobile:
     type: switch
+    label: 'Hide on mobile'
+    comment: 'For decorative / secondary blocks (logo strips, badge rows). Default OFF.'
 
-  # Per-CTA variant inputs — one per known CTA prop name across the block library
-  cta_primary_variant:    { type: select, options: { values: [orange, orange-outline, ink, ghost] } }
-  cta_secondary_variant:  { type: select, options: { values: [orange, orange-outline, ink, ghost] } }
-  cta_variant:            { type: select, options: { values: [orange, orange-outline, ink, ghost] } }
+  # ──────── Per-CTA variant inputs ────────
+  cta_primary_variant:
+    type: select
+    label: 'Primary CTA style'
+    options:
+      values:
+        - { value: orange,         label: 'Orange (filled — primary)' }
+        - { value: orange-outline, label: 'Orange Outline' }
+        - { value: ink,            label: 'Ink (dark filled)' }
+        - { value: ghost,          label: 'Ghost (transparent border)' }
 
-  # Layout-specific selects
-  media_position:         { type: select, options: { values: [left, right] } }
+  cta_secondary_variant:
+    type: select
+    label: 'Secondary CTA style'
+    options:
+      values:
+        - { value: orange,         label: 'Orange (filled)' }
+        - { value: orange-outline, label: 'Orange Outline' }
+        - { value: ink,            label: 'Ink (dark filled)' }
+        - { value: ghost,          label: 'Ghost (transparent border)' }
 
-  # Logo emphasis on press strip
-  emphasis:               { type: select, options: { values: [regular, bold] } }
+  cta_variant:
+    type: select
+    label: 'CTA style'
+    options:
+      values:
+        - { value: orange,         label: 'Orange (filled)' }
+        - { value: orange-outline, label: 'Orange Outline' }
+        - { value: ink,            label: 'Ink (dark filled)' }
+        - { value: ghost,          label: 'Ghost (transparent border)' }
+
+  # ──────── Layout selects ────────
+  media_position:
+    type: select
+    label: 'Image position'
+    options:
+      values:
+        - { value: left,  label: 'Image left, copy right' }
+        - { value: right, label: 'Image right, copy left' }
+
+  emphasis:
+    type: select
+    label: 'Emphasis'
+    options:
+      values:
+        - { value: regular, label: 'Regular' }
+        - { value: bold,    label: 'Bold' }
+
+  # ──────── Page-level inputs ────────
+  title:        { type: text,     label: 'Page title (SEO + browser tab)', comment: '≤ 60 chars for best SEO' }
+  description:  { type: textarea, label: 'Meta description',               comment: '≤ 160 chars; appears in search results + social shares', empty_type: null }
+  ogImage:      { type: image,    label: 'Social-share image',             comment: '1200×630 ideal · OG image for Facebook / X / LinkedIn cards', empty_type: null, options: { allowed_sources: [site-files, cloudinary] } }
+  draft:        { type: switch,   label: 'Draft (unpublished)' }
+
+  # ──────── Block content fields ────────
+  heading:           { type: text,     label: 'Heading' }
+  heading_em:        { type: text,     label: 'Heading (italic emphasis)', empty_type: null }
+  eyebrow:           { type: text,     label: 'Eyebrow tag (small uppercase)', empty_type: null }
+  eyebrow_rating:    { type: text,     label: 'Rating eyebrow' }
+  lede:              { type: markdown, label: 'Lead paragraph' }
+  paragraph_1:       { type: markdown, label: 'Paragraph 1' }
+  paragraph_2:       { type: markdown, label: 'Paragraph 2' }
+  cta_primary_text:  { type: text,     label: 'Primary CTA label' }
+  cta_secondary_text:{ type: text,     label: 'Secondary CTA label' }
+  cta_text:          { type: text,     label: 'CTA label' }
+  microcopy:         { type: textarea, label: 'Microcopy under hero (trust-builder bullets)' }
+  zip_label:         { type: text,     label: 'ZIP-search label' }
+  zip_placeholder:   { type: text,     label: 'ZIP input placeholder' }
+  zip_button_text:   { type: text,     label: 'ZIP button label' }
+  proximity_text:    { type: text,     label: 'Dealer-proximity badge text', empty_type: null }
+  background_image:  { type: image,    label: 'Hero background image',  options: { allowed_sources: [site-files, cloudinary] } }
+  background_image_alt: { type: text,  label: 'Hero background alt text' }
+  media_image:       { type: image,    label: 'Section image',           options: { allowed_sources: [site-files, cloudinary] } }
+  media_image_alt:   { type: text,     label: 'Section image alt text' }
+  image:             { type: image,    label: 'Image',                    options: { allowed_sources: [site-files, cloudinary] } }
+  image_alt:         { type: text,     label: 'Image alt text' }
+
+  # ──────── Block-specific ────────
+  num:               { type: text,     label: 'Number / count' }
+  num_unit:          { type: text,     label: 'Unit suffix (yrs, +, etc.)', empty_type: null }
+  label:             { type: text,     label: 'Label' }
+  icon:              { type: text,     label: 'Icon (emoji or short glyph)' }
+  title:             { type: text,     label: 'Title' }
+  sub:               { type: text,     label: 'Subtitle / descriptor' }
+  cta_href:          { type: url,      label: 'CTA link target' }
+  cta_primary_href:  { type: url,      label: 'Primary CTA link target' }
+  cta_secondary_href:{ type: url,      label: 'Secondary CTA link target' }
+  zip_action:        { type: url,      label: 'ZIP form action URL' }
+  href:              { type: url,      label: 'Link target' }
+  name:              { type: text,     label: 'Name' }
+  question:          { type: text,     label: 'Question' }
+  answer:            { type: markdown, label: 'Answer (rich text)' }
+  lead_text:         { type: text,     label: 'Lead-in text' }
+  quote_body:        { type: textarea, label: 'Quote body' }
+  attribution_name:  { type: text,     label: 'Attribution — name' }
+  attribution_meta:  { type: text,     label: 'Attribution — meta (location · product)' }
+  stars:
+    type: number
+    label: 'Stars'
+    options: { min: 0, max: 5, step: 1 }

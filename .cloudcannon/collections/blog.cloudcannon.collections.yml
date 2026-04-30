@@ -1,0 +1,50 @@
+# Blog collections — markdown posts per locale.
+# Phase 8 wires the route templates; Phase 6 just registers the collections.
+
+blog-en:
+  path: src/content/en/blog
+  glob: ['**/*.{md,mdx}']
+  name: Blog (English)
+  icon: article
+  output: true
+  url: '/blog/[slug]/'
+  _enabled_editors: [content, data]
+  create:
+    path: '[relative_base_path]/{title|slugify}.md'
+  preview:
+    text:
+      - key: title
+    subtext:
+      - key: excerpt
+      - key: description
+    icon: article
+
+blog-es:
+  path: src/content/es/blog
+  glob: ['**/*.{md,mdx}']
+  name: Blog (Español — auto)
+  icon: language
+  output: true
+  url: '/es/blog/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true
+
+blog-en-ca:
+  path: src/content/en-ca/blog
+  glob: ['**/*.{md,mdx}']
+  name: Blog (English-CA — auto)
+  icon: language
+  output: true
+  url: '/en-ca/blog/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true
+
+blog-fr-ca:
+  path: src/content/fr-ca/blog
+  glob: ['**/*.{md,mdx}']
+  name: Blog (Français-CA — auto)
+  icon: language
+  output: true
+  url: '/fr-ca/blog/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true

@@ -1,0 +1,18 @@
+{
+  "title": "New Page",
+  "description": "Brief meta description for SEO + social sharing.",
+  "ogImage": "",
+  "draft": true,
+  "content_blocks": [
+    {
+      "_type": "hero_block",
+      "heading": "Your headline here",
+      "lede": "Supporting subhead — what's the value the visitor walks away with.",
+      "cta_primary_text": "Find a Dealer",
+      "cta_primary_href": "/where-to-buy/",
+      "cta_primary_variant": "orange",
+      "background_image": "",
+      "background_image_alt": ""
+    }
+  ]
+}

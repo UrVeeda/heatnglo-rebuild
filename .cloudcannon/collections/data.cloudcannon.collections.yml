@@ -1,0 +1,13 @@
+# Site-wide data collection — nav, footer, cta JSONs.
+
+data:
+  path: src/data
+  glob: ['**/*.json']
+  name: Site Data
+  icon: storage
+  output: false
+  _enabled_editors: [data]
+  preview:
+    text:
+      - key: heading
+      - key: name

@@ -1,2 +1,80 @@
-# Phase 6 populates this. Intentionally empty stub for Phase 2.
-# See agency-templates/cloudcannon-skills/ for the full config conventions.
+# CloudCannon root config — Phase 6 wiring.
+# Per Phase 1 handoff §5: 4-locale matrix, locale_routed branch.
+# Per Phase 5 Turn 1: all-auto translation via Anthropic. EN is source of truth.
+# Per Phase 6 §3: split-config glob imports (leading slash REQUIRED).
+
+source: ''
+timezone: America/Chicago
+
+paths:
+  static: public
+  uploads: public/uploads
+  dam_uploads: '{collection}'
+  dam_uploads_filename: '[asset_filename]'
+  # paths.collections is INTENTIONALLY OMITTED — per-collection `path:` keys
+  # already declare src/content/<locale>/<type>. Adding paths.collections causes
+  # CC to look in src/content/src/content/<...>/ (concatenated, broken).
+
+collections_config_from_glob:
+  - /.cloudcannon/collections/*.cloudcannon.collections.yml
+
+_structures_from_glob:
+  - /.cloudcannon/structures/*.cloudcannon.structures.yml
+
+_inputs_from_glob:
+  - /.cloudcannon/inputs/*.cloudcannon.inputs.yml
+
+# Editor groupings — per Phase 5 §collection_groups recommendation.
+# EN is editable; non-EN are translate-loader output (read-only by default,
+# editable only on individual strings marked _locked: true in JSON).
+collection_groups:
+  - heading: 'Content (English — source of truth)'
+    collections: [pages-en, blog-en, services-en, faq-en, settings-en]
+  - heading: 'Content (Español — auto-translated, override per-string)'
+    collections: [pages-es, blog-es, services-es, faq-es, settings-es]
+  - heading: 'Content (English-CA — auto-localized)'
+    collections: [pages-en-ca, blog-en-ca, services-en-ca, faq-en-ca, settings-en-ca]
+  - heading: 'Content (Français-CA — Quebec auto-translated)'
+    collections: [pages-fr-ca, blog-fr-ca, services-fr-ca, faq-fr-ca, settings-fr-ca]
+  - heading: 'Site data'
+    collections: [data]
+
+commit_templates:
+  - template_path: .cloudcannon/commit-templates/standard.md
+    extra_data:
+      author_name: '[author]'
+      changed_files: '[changes]'
+
+pull_request_templates:
+  - label: Standard Publish
+    title: 'Content update — {{date}}'
+    template_path: .cloudcannon/pr-templates/standard.md
+    _inputs:
+      summary:
+        type: textarea
+        comment: 'What changed and why? Editors / reviewers will read this on the PR.'
+      reviewer:
+        type: select
+        options:
+          values:
+            - { value: cash, label: 'Cash (TVOC)' }
+            - { value: david, label: 'David Jones (TVOC)' }
+            - { value: heatnglo, label: 'Heat & Glo team' }
+
+# Rich-text inline link styles — Phase 4 §7c Block Delivery Standard.
+# Editors using "Find a Button" in rich-text get real styled buttons,
+# not naked underlined links.
+_editables:
+  content:
+    styles:
+      - { class: 'btn btn--orange',         label: 'Button — Primary (orange)', type: link }
+      - { class: 'btn btn--orange-outline', label: 'Button — Outline',           type: link }
+      - { class: 'btn btn--ink',            label: 'Button — Dark',              type: link }
+      - { class: 'btn btn--ghost',          label: 'Button — Ghost (outline)',  type: link }
+      - { class: 'link--underline',         label: 'Underlined link',            type: link }
+  block:
+    styles:
+      - { class: 'btn btn--orange',         label: 'Button — Primary (orange)', type: link }
+      - { class: 'btn btn--orange-outline', label: 'Button — Outline',           type: link }
+      - { class: 'btn btn--ink',            label: 'Button — Dark',              type: link }
+      - { class: 'btn btn--ghost',          label: 'Button — Ghost',             type: link }
