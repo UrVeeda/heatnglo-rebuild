@@ -7,7 +7,7 @@
   "content_blocks": [
     {
       "_type": "hero_block",
-      "eyebrow_rating": "from 12,400+ verified owners",
+      "eyebrow_rating": "",
       "heading": "Bring the room you love",
       "heading_em": "back to life.",
       "lede": "Save up to $650 when you upgrade your old wood-burning fireplace to a beautiful, easy-to-use Heat & Glo gas insert. Push-button warmth. Cleaner glass. The kind of flame your living room organizes itself around.",
@@ -22,7 +22,7 @@
       "zip_placeholder": "ZIP code",
       "zip_button_text": "Search →",
       "zip_action": "/where-to-buy/",
-      "proximity_text": "3 authorized dealers within 25 mi · 2 showrooms open right now",
+      "proximity_text": "",
       "background_image": "https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:1080",
       "background_image_alt": "Heat & Glo SupremeX gas fireplace in a contemporary living room"
     },
