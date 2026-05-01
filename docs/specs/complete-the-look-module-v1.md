@@ -578,5 +578,12 @@ at lines 84-96, passing the four required props from `data` and `product.id`.
 
 ---
 
-_Spec version: v1. Next revision triggered by: HHT product team compatibility matrix response,
-hearth-stones activation, or 90-day A/B test results on CTA copy._
+_Spec version: v1. Next revision triggered by: hearth-stones activation, or 90-day A/B test results on CTA copy._
+
+---
+
+## Resolutions
+
+**2026-05-01 Cash decision on the accessory-compatibility-matrix open question:** any accessory is universal across all fireplace families and sizes. NO compatibility matrix needed. The `complete_the_look[]` flat-slug-list shape on each product JSON stands as the canonical data model. The CTL module ships in v1 as designed (no filter engine, no per-size accessory restriction, the surround-fits-all assumption is the production assumption).
+
+This closes the load-bearing open question Ghostface flagged in the conversion theory section. Build proceeds on the simpler data model.

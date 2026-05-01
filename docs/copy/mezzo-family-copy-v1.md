@@ -72,3 +72,9 @@ A: Mezzo's thin steel frame is designed to disappear into the surround material 
 ---
 
 *Copy status: v1 draft. Pending: HHT spec PDF for all five sizes (width, height, depth, BTU max per size). All spec tables and inline spec callouts to remain empty until that data is verified and loaded into `mezzo.json`. Do not set `draft: false` on the JSON until specs are populated.*
+
+---
+
+## Resolutions
+
+**2026-05-01 Cash decision on the venting FAQ data gap:** keep the venting FAQ intentionally vague as written. Do NOT chase HHT for the vent-system reference card. The FAQ stays general (direct vent primary, power vent acknowledged for constrained installs, B-vent unspecified). Copy is production-ready as drafted, no further venting-data closure required.
