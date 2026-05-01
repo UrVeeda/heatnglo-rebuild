@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products-en');
+  return products
+    .filter((p) => p.data.placement !== 'log-set')
+    .map((p) => ({
+      params: { family: p.id.replace(/\.json$/, '') },
+      props: { product: p },
+    }));
+}
+
+const { product } = Astro.props;
+const data = product.data;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': data.sizes.map((size: any) => ({
+    '@type': 'Product',
+    '@id': `https://heatnglo.com/fireplaces/${product.id.replace(/\.json$/, '')}#${size.id}`,
+    name: size.name,
+    brand: { '@type': 'Brand', name: 'Heat & Glo' },
+    category: `${data.energy} fireplace`,
+    additionalProperty: [
+      size.width_in && { '@type': 'PropertyValue', name: 'Width (in)', value: size.width_in },
+      size.height_in && { '@type': 'PropertyValue', name: 'Height (in)', value: size.height_in },
+      size.depth_in && { '@type': 'PropertyValue', name: 'Depth (in)', value: size.depth_in },
+      size.btu_max && { '@type': 'PropertyValue', name: 'Max BTU', value: size.btu_max },
+    ].filter(Boolean),
+  })),
+};
+---
+<BaseLayout
+  title={data.title}
+  description={data.description ?? ''}
+  ogImage={data.ogImage ?? undefined}
+  structuredData={structuredData}
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-neutral-500">{data.energy} · {data.placement}</p>
+      <h1 class="text-4xl font-bold mt-2">{data.family}</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">{data.description}</p>
+    </header>
+
+    {data.sizes.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Available sizes</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+          {data.sizes.map((s: any) => (
+            <a href={`#${s.id}`} class="block border rounded-lg p-4 hover:bg-neutral-50 transition">
+              <p class="font-semibold">{s.name}</p>
+              {s.width_in && <p class="text-sm text-neutral-600 mt-1">{s.width_in}" wide</p>}
+              {s.btu_max && <p class="text-sm text-neutral-600">{s.btu_max} BTU max</p>}
+            </a>
+          ))}
+        </div>
+
+        {data.sizes.map((s: any) => (
+          <article id={s.id} class="border-t py-10">
+            <h3 class="text-xl font-semibold mb-4">{s.name}</h3>
+            <dl class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+              {s.width_in && (<><dt class="text-neutral-500">Width</dt><dd>{s.width_in}"</dd></>)}
+              {s.height_in && (<><dt class="text-neutral-500">Height</dt><dd>{s.height_in}"</dd></>)}
+              {s.depth_in && (<><dt class="text-neutral-500">Depth</dt><dd>{s.depth_in}"</dd></>)}
+              {s.btu_max && (<><dt class="text-neutral-500">Max BTU</dt><dd>{s.btu_max}</dd></>)}
+            </dl>
+            {!s.width_in && !s.btu_max && (
+              <p class="text-sm text-amber-700 italic mt-2">Specifications pending — real values import in next pass from HHT spec sheets.</p>
+            )}
+            {s.spec_pdf_url && (
+              <p class="mt-4">
+                <a href={s.spec_pdf_url} class="underline">Download spec sheet (PDF)</a>
+              </p>
+            )}
+          </article>
+        ))}
+      </section>
+    )}
+
+    {data.complete_the_look && data.complete_the_look.length > 0 && (
+      <section class="border-t pt-10 mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Complete the Look</h2>
+        <p class="text-neutral-600 mb-4">Pairs beautifully with the {data.family} Series:</p>
+        <ul class="grid sm:grid-cols-3 gap-4">
+          {data.complete_the_look.map((slug: string) => (
+            <li class="border rounded-lg p-4">
+              <a href={`/accessories/${slug}/`} class="font-medium hover:underline">{slug.replace(/-/g, ' ')}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {data.available_in && data.available_in.length > 0 && (
+      <section class="border-t pt-6 text-sm text-neutral-600">
+        <p>Available in: {data.available_in.join(', ').toUpperCase()}</p>
+      </section>
+    )}
+  </main>
+</BaseLayout>
