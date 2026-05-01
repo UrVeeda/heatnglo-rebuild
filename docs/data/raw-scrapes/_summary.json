@@ -1,0 +1,27 @@
+{
+  "total": 243,
+  "ok": 243,
+  "errors": [],
+  "by_section": {
+    "fireplaces": 99,
+    "model-home-fireplace": 1,
+    "get-in-touch": 1,
+    "pro-help-desk": 1,
+    "apply-for-dealership": 1,
+    "fireplace-safety": 2,
+    "continuing-education": 1,
+    "request-a-consultation": 1,
+    "fireplace-sale": 1,
+    "press-and-media": 3,
+    "ideas": 103,
+    "architect": 7,
+    "owner-resources": 5,
+    "pro-tools": 1,
+    "about-us": 3,
+    "manuals": 1,
+    "warranty-information": 1,
+    "key-technologies": 1,
+    "history-and-heritage": 1,
+    "search": 1
+  }
+}

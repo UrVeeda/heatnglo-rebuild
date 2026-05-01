@@ -1,0 +1,14 @@
+# Heat & Glo — Marketing Claims Ledger
+
+8 unique claims surfaced across the 243-URL crawl. Status starts as **unverified** for every claim — promote to **verified** only after Heat & Glo confirms the source data, or after the agency independently verifies (e.g. Google Places API for review counts).
+
+| Status | Claim | First seen on |
+|---|---|---|
+| ⚠️ unverified | Heat & Glo has been revolutionizing the hearth industry for nearly 50 years, so innovating sustainable solutions just feels right to us. Our commitment to responsible eco-stewardship, by creating and  | [/about-us/sustainability](https://www.heatnglo.com/about-us/sustainability) |
+| ⚠️ unverified | Transforming the 180 year old Jackson building into an upscale hotel destination was the challenge accepted by ESG Architects, Fe Equus Development, and the Minnesota State Preservation Society. | [/architect/designers-on-fire/ann-fritz](https://www.heatnglo.com/architect/designers-on-fire/ann-fritz) |
+| ⚠️ unverified | Brandi Hagen is an award-winning interior designer based in Minneapolis, Minnesota. Brandi brings with her more than 20 years of industry experience working on new construction, interior design and re | [/architect/designers-on-fire/brandi-hagen](https://www.heatnglo.com/architect/designers-on-fire/brandi-hagen) |
+| ⚠️ unverified | Our Escape FireBrick inserts were recently updated to incorporate some important new and improved features. We’ll cover those in a moment, but first we want to spend time talking about FireBrick, whic | [/ideas/better-than-ever-escape-firebrick-inserts](https://www.heatnglo.com/ideas/better-than-ever-escape-firebrick-inserts) |
+| ⚠️ unverified | We teamed up with "Trending Today” an award-winning A&E and Bloomberg TV show that profiles the world’s leading innovators and how they’re reshaping industries and inspiring change. Heat & Glo is hono | [/ideas/breaking-5-fireplace-myths-with-trending-today](https://www.heatnglo.com/ideas/breaking-5-fireplace-myths-with-trending-today) |
+| ⚠️ unverified | Our concrete slab patio had served us well, but after 18 years, it was cracked, sagging at the corners and didn’t maximize the view of the woods behind our house. | [/ideas/enhance-your-outdoor-living-space-with-a-gas-fireplace](https://www.heatnglo.com/ideas/enhance-your-outdoor-living-space-with-a-gas-fireplace) |
+| ⚠️ unverified | “There's definitely a lot more responsibility on the homeowner that is building on their land because we can't do everything for them,” says Horning, who estimates that his company builds about 20 hom | [/ideas/new-construction-workbook](https://www.heatnglo.com/ideas/new-construction-workbook) |
+| ⚠️ unverified | While some may be hesitant to install a vent-free fireplace because of the lack of venting, vent-free fireplace technology has many benefits. Usilton says that this method is safe and sound—and has co | [/ideas/venting-explained](https://www.heatnglo.com/ideas/venting-explained) |

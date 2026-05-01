@@ -1,0 +1,220 @@
+{
+  "url": "https://www.heatnglo.com/owner-resources/care-and-maintenance",
+  "title": "FAQs, Care and Maintenance | Heat & Glo",
+  "description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+  "canonical": "https://www.heatnglo.com/owner-resources/care-and-maintenance",
+  "og": {
+    "description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "keywords": "hamburger and pickles",
+    "og:title": "FAQs, Care and Maintenance",
+    "og:description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "og:url": "https://www.heatnglo.com/owner-resources/care-and-maintenance",
+    "og:country_name": "UK",
+    "og:image": "https://www.heatnglo.com/api/og?id=81bda946-7bb4-4f62-8081-c4f81b861069&type=page",
+    "og:image:secure_url": "https://www.heatnglo.com/api/og?id=81bda946-7bb4-4f62-8081-c4f81b861069&type=page",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "FAQs, Care and Maintenance",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:creator": "@studioroboto",
+    "twitter:title": "FAQs, Care and Maintenance",
+    "twitter:description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "twitter:image": "https://www.heatnglo.com/api/og?id=81bda946-7bb4-4f62-8081-c4f81b861069&type=page"
+  },
+  "headings": {
+    "h1": [
+      "FAQs, Care & Maintenance"
+    ],
+    "h2": [
+      "Use & Care Videos",
+      "IntelliFire App Videos",
+      "Install & Owners Manuals",
+      "Firescreen Safety",
+      "Warranty Information",
+      "Indoor Fireplace Maintenance Checklist",
+      "Outdoor Fireplace Maintenance Checklist"
+    ],
+    "h3": []
+  },
+  "paragraphs": [
+    "Tips on using battery backup to start your fireplace with a remote or wall switch.",
+    "Basics for on/off, flame height, fan and thermostat control with or without a remote.",
+    "Safety precautions, common fixes and when to contact a dealer or utility company.",
+    "See the best methods and products to use, and tips to access the glass.",
+    "What to do if you change your remote control and any electronics or add a fan.",
+    "Simple steps to get out of lockout mode for your insert, linear or traditional model.",
+    "Locate the rating plate, found in slightly different places depending on your model.",
+    "Synchronize a Smart-Stat or Smart-Batt remote with the receiver in your control panel.",
+    "How pros run venting and a gas line, secure the insert, fasten doors and front, and inspect it.",
+    "Understand the ignition system that runs the app, wireless wall switch or touchscreen remote.",
+    "Enjoy touch control of all functions of the fireplace including thermostat settings.",
+    "Use the wireless wall switch for simple on/off and control of Cold Climate mode.",
+    "Easily control your pilot light, flame height, blower speed, accent lighting and more.",
+    "Connect your hearth appliance to your network and begin smart control on your iOS device.",
+    "Use the app to add/edit users and create an email for them to start usage on their iOS device.",
+    "How to control flame height, temp, timer, lights, fan and more for your iOS device.",
+    "Connect your hearth appliance to your network and begin smart control on your Android device.",
+    "Use the app to add/edit users and create an email for them to start usage on their Android device.",
+    "How to control flame height, temp, timer, lights, fan and more for your Android device.",
+    "Connect the app to your Amazon Alexa speaker to begin using voice commands.",
+    "Connect the app to your Google Home speaker to begin using voice commands.",
+    "For proper installation and care of your fireplace product, consult the manual listed here. First find your exact model and serial number from the rating plate in the following location.",
+    "Learn more about the importance of a protective screen to ensure safe fireplace operation in your home and reduce the risk of burns. Or request a safety screen for a past or current model.",
+    "View the current warranty coverage, period, conditions and exclusions for your indoor or outdoor gas, wood, pellet and electric hearth product.Contact Heat & Glo at 888-427-3973",
+    "Ensure years of cozy comfort and enjoyment from your indoor hearth product by following this handy step-by-step checklist.",
+    "By following these steps, you can keep your outdoor hearth product in top operating condition for years to come.",
+    "© 2026 Heat & Glo. All rights reserved."
+  ],
+  "images": [
+    {
+      "src": "https://hearthnhome.getbynder.com/transform/ef6b96d3-0677-4468-8d78-e5f136a0a24f/HNG_man_at_desk_doing_research-2x?io=transform:fill,width:768,height:576",
+      "alt": "Architect with glasses sitting at table looking at design on laptop computer"
+    },
+    {
+      "src": "https://hearthnhome.getbynder.com/transform/9917f424-4bb9-4dde-8a7b-f4d646ffe5b3/HNG_fireplace_safety_kid_on_sofa-2x?io=transform:fill,width:768,height:576",
+      "alt": "Boy lying on stomach on sofa with head in hands, smiling and looking away with fireplace in background"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/upnkuzzs/production/3458d46314b3f05c230463ead9d322c9052b9e47-177x43.svg",
+      "alt": "Heat & Glo"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/upnkuzzs/production/bebd267250879715a552be5878aa9b7fac2df773-132x40.svg?w=132&h=40&fm=webp&q=75&fit=max&auto=format&dpr=2",
+      "alt": "Stellar by Heat & Glo Logo Footer"
+    }
+  ],
+  "links": [
+    {
+      "href": "#faqs",
+      "text": "FAQs"
+    },
+    {
+      "href": "#videos",
+      "text": "Videos"
+    },
+    {
+      "href": "#warranty",
+      "text": "Warranty"
+    },
+    {
+      "href": "#manuals",
+      "text": "Manuals"
+    },
+    {
+      "href": "#maintenance",
+      "text": "Maintenance Checklist"
+    },
+    {
+      "href": "/manuals",
+      "text": "View Manuals"
+    },
+    {
+      "href": "/fireplace-safety",
+      "text": "Read More"
+    },
+    {
+      "href": "/warranty-information",
+      "text": "Read More"
+    },
+    {
+      "href": "https://downloads.hearthnhome.com/communications/HNG-0206-0419_FireplaceMaintenanceChecklist.pdf",
+      "text": "Read More"
+    },
+    {
+      "href": "https://downloads.hearthnhome.com/communications/HHT-0380_ODL_AnnualFireplaceMaintenanceChecklist.pdf",
+      "text": "Read More"
+    },
+    {
+      "href": "/fireplace-sale",
+      "text": "GET YOUR SAVINGS CODE"
+    },
+    {
+      "href": "tel:888-427-3973",
+      "text": "888-427-3973"
+    },
+    {
+      "href": "https://facebook.com/HeatandGlo",
+      "text": "Follow us on Facebook"
+    },
+    {
+      "href": "https://www.instagram.com/heatnglofireplaces",
+      "text": "Follow us on Instagram"
+    },
+    {
+      "href": "https://www.pinterest.com/heatnglo/",
+      "text": "Follow us on LinkedIn"
+    },
+    {
+      "href": "/fireplace-safety",
+      "text": "Fireplace Safety"
+    },
+    {
+      "href": "/fireplaces/global",
+      "text": "Global Products"
+    },
+    {
+      "href": "/owner-resources/recall-notices",
+      "text": "Recall Notices"
+    },
+    {
+      "href": "https://www.hearthnhome.com",
+      "text": "Careers"
+    },
+    {
+      "href": "/about-us/site-map",
+      "text": "Site Map"
+    },
+    {
+      "href": "https://www.hnicorp.com/privacy-rights",
+      "text": "Do not sell/share my information"
+    },
+    {
+      "href": "/where-to-buy",
+      "text": "Where to Buy"
+    },
+    {
+      "href": "/history-and-heritage",
+      "text": "About Us"
+    },
+    {
+      "href": "/about-us/epa-certification",
+      "text": "EPA Certification"
+    },
+    {
+      "href": "/get-in-touch",
+      "text": "Parts & Support"
+    },
+    {
+      "href": "/press-and-media",
+      "text": "Press & Media"
+    },
+    {
+      "href": "https://www.hnicorp.com/cookie-notice",
+      "text": "Cookie Notice"
+    },
+    {
+      "href": "https://www.hnicorp.com/privacy-policy",
+      "text": "Privacy Policy"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-website-terms-of-use",
+      "text": "Website Terms of Use"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-online-sales-policy",
+      "text": "Online Sales Policy"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-disclaimer",
+      "text": "Disclaimer"
+    },
+    {
+      "href": "#",
+      "text": "Cookie Settings"
+    }
+  ],
+  "json_ld": [],
+  "claims_candidates": [],
+  "crawled_at": "2026-05-01T00:09:10.148Z"
+}

@@ -1,0 +1,150 @@
+{
+  "url": "https://www.heatnglo.com/fireplaces/global",
+  "title": "Global Fireplaces Category Page | Heat & Glo",
+  "description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+  "canonical": "https://www.heatnglo.com/fireplaces/global",
+  "og": {
+    "description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "keywords": "gas fireplaces,fireplaces,gas stoves,wood stoves,stoves,Australia fireplaces,New Zealand fireplaces,Europe fireplaces",
+    "og:title": "Global Fireplaces Category Page",
+    "og:description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "og:url": "https://www.heatnglo.com/fireplaces/global",
+    "og:country_name": "UK",
+    "og:image": "https://www.heatnglo.com/api/og?id=fe396363-a023-4457-9540-d00948a0ed1d&type=page",
+    "og:image:secure_url": "https://www.heatnglo.com/api/og?id=fe396363-a023-4457-9540-d00948a0ed1d&type=page",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "Global Fireplaces Category Page",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:creator": "@studioroboto",
+    "twitter:title": "Global Fireplaces Category Page",
+    "twitter:description": "Add warmth, comfort and ambiance with our lineup of gas, electric and wood fireplaces, inserts and log sets.",
+    "twitter:image": "https://www.heatnglo.com/api/og?id=fe396363-a023-4457-9540-d00948a0ed1d&type=page"
+  },
+  "headings": {
+    "h1": [
+      "Global Products"
+    ],
+    "h2": [
+      "Australia and New Zealand"
+    ],
+    "h3": []
+  },
+  "paragraphs": [
+    "Bring warmth and comfort where you live, work, and gather with quality products you can trust. Browse gas fireplaces and gas or wood stoves in modern or traditional designs to fit your life in Europe, Australia, or New Zealand.",
+    "Browse mid-range best-selling gas fireplaces in modern or classic styles, slim models just 16” deep, gas fireplace inserts that transform wood fireplaces, or a sleek gas stove.",
+    "© 2026 Heat & Glo. All rights reserved."
+  ],
+  "images": [
+    {
+      "src": "https://hearthnhome.getbynder.com/transform/bdbb7dd2-366d-426a-8d72-a0028d0de5d1/img-product-card-6x-au-jpg?io=transform:fill,width:768,height:576",
+      "alt": "Heat & Glo 6X AU indoor gas fireplace with Folio front."
+    },
+    {
+      "src": "https://cdn.sanity.io/images/upnkuzzs/production/3458d46314b3f05c230463ead9d322c9052b9e47-177x43.svg",
+      "alt": "Heat & Glo"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/upnkuzzs/production/bebd267250879715a552be5878aa9b7fac2df773-132x40.svg?w=132&h=40&fm=webp&q=75&fit=max&auto=format&dpr=2",
+      "alt": "Stellar by Heat & Glo Logo Footer"
+    }
+  ],
+  "links": [
+    {
+      "href": "/fireplace-sale",
+      "text": "GET YOUR SAVINGS CODE"
+    },
+    {
+      "href": "/fireplaces/global/australia-and-new-zealand",
+      "text": "Browse Products"
+    },
+    {
+      "href": "tel:888-427-3973",
+      "text": "888-427-3973"
+    },
+    {
+      "href": "https://facebook.com/HeatandGlo",
+      "text": "Follow us on Facebook"
+    },
+    {
+      "href": "https://www.instagram.com/heatnglofireplaces",
+      "text": "Follow us on Instagram"
+    },
+    {
+      "href": "https://www.pinterest.com/heatnglo/",
+      "text": "Follow us on LinkedIn"
+    },
+    {
+      "href": "/fireplace-safety",
+      "text": "Fireplace Safety"
+    },
+    {
+      "href": "/fireplaces/global",
+      "text": "Global Products"
+    },
+    {
+      "href": "/owner-resources/recall-notices",
+      "text": "Recall Notices"
+    },
+    {
+      "href": "https://www.hearthnhome.com",
+      "text": "Careers"
+    },
+    {
+      "href": "/about-us/site-map",
+      "text": "Site Map"
+    },
+    {
+      "href": "https://www.hnicorp.com/privacy-rights",
+      "text": "Do not sell/share my information"
+    },
+    {
+      "href": "/where-to-buy",
+      "text": "Where to Buy"
+    },
+    {
+      "href": "/history-and-heritage",
+      "text": "About Us"
+    },
+    {
+      "href": "/about-us/epa-certification",
+      "text": "EPA Certification"
+    },
+    {
+      "href": "/get-in-touch",
+      "text": "Parts & Support"
+    },
+    {
+      "href": "/press-and-media",
+      "text": "Press & Media"
+    },
+    {
+      "href": "https://www.hnicorp.com/cookie-notice",
+      "text": "Cookie Notice"
+    },
+    {
+      "href": "https://www.hnicorp.com/privacy-policy",
+      "text": "Privacy Policy"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-website-terms-of-use",
+      "text": "Website Terms of Use"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-online-sales-policy",
+      "text": "Online Sales Policy"
+    },
+    {
+      "href": "https://hearthnhome.com/pages/hearth-home-technologies-disclaimer",
+      "text": "Disclaimer"
+    },
+    {
+      "href": "#",
+      "text": "Cookie Settings"
+    }
+  ],
+  "json_ld": [],
+  "claims_candidates": [],
+  "crawled_at": "2026-05-01T00:09:23.781Z"
+}
