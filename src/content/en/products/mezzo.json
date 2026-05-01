@@ -1,0 +1,75 @@
+{
+  "_schema": "default",
+  "title": "Mezzo Linear Indoor Gas Fireplace — 32, 36, 48, 60, 72",
+  "description": "The Mezzo Series brings the linear gas fireplace into focus. Five sizes from 32 to 72 inches, low-profile thin frame, true contemporary geometry. Configurable for indoor or see-through installations.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/mezzo-hero/Heat-Glo-Mezzo-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "Mezzo",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/mezzo-gas-fireplace",
+    "/fireplaces/gas/see-through/mezzo-gas-fireplace"
+  ],
+  "sizes": [
+    {
+      "id": "32",
+      "name": "Mezzo 32",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    },
+    {
+      "id": "36",
+      "name": "Mezzo 36",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    },
+    {
+      "id": "48",
+      "name": "Mezzo 48",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    },
+    {
+      "id": "60",
+      "name": "Mezzo 60",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    },
+    {
+      "id": "72",
+      "name": "Mezzo 72",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    }
+  ],
+  "gallery": [],
+  "complete_the_look": [
+    "stone-surrounds",
+    "wood-mantels",
+    "mantel-shelves"
+  ],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}

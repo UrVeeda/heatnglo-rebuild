@@ -54,6 +54,68 @@ const settingsSchema = z.object({
   social: z.record(z.string()).nullish(),
 });
 
+// Product family. One file per family (e.g. mezzo.json); `sizes` carries variants
+// (32/36/48/60/72) rendered as anchor sub-sections on the family page.
+const productSchema = z.object({
+  title: z.string(),
+  description: z.string().nullish(),
+  ogImage: z.string().nullish(),
+  publishedAt: z.coerce.date().nullish(),
+  updatedAt: z.coerce.date().nullish(),
+  draft: z.boolean().default(false),
+  structuredData: z.any().nullish(),
+
+  family: z.string(),
+  energy: z.enum(['gas', 'wood', 'electric']),
+  placement: z.string(),
+  legacy_slugs: z.array(z.string()).default([]),
+
+  sizes: z.array(z.object({
+    id: z.string(),
+    name: z.string(),
+    width_in: z.string().nullish(),
+    height_in: z.string().nullish(),
+    depth_in: z.string().nullish(),
+    btu_max: z.string().nullish(),
+    spec_pdf_url: z.string().nullish(),
+    image: z.string().nullish(),
+  })).default([]),
+
+  gallery: z.array(z.object({
+    src: z.string(),
+    alt: z.string().nullish(),
+    caption: z.string().nullish(),
+  })).default([]),
+
+  complete_the_look: z.array(z.string()).default([]),
+
+  available_in: z.array(z.string()).default(['us']),
+  hreflang_locales: z.array(z.string()).default([]),
+
+  content_blocks: z.array(z.object({ _type: z.string() }).passthrough()).default([]),
+});
+
+// Accessories. `compatible_fireplaces` is a slug list driving the reverse
+// cross-reference module on accessory pages back to fireplace family pages.
+const accessorySchema = z.object({
+  title: z.string(),
+  description: z.string().nullish(),
+  ogImage: z.string().nullish(),
+  draft: z.boolean().default(false),
+  structuredData: z.any().nullish(),
+
+  accessory_type: z.enum(['mantel-shelf', 'stone-surround', 'wood-mantel', 'hearth-stone']),
+  compatible_fireplaces: z.array(z.string()).default([]),
+
+  gallery: z.array(z.object({
+    src: z.string(),
+    alt: z.string().nullish(),
+    caption: z.string().nullish(),
+  })).default([]),
+
+  content_blocks: z.array(z.object({ _type: z.string() }).passthrough()).default([]),
+});
+
 function buildCollections(locale: string) {
   return {
     [`pages-${locale}`]: defineCollection({
@@ -75,6 +137,14 @@ function buildCollections(locale: string) {
     [`settings-${locale}`]: defineCollection({
       loader: glob({ pattern: '**/*.{json,yml,yaml}', base: `./src/content/${locale}/settings` }),
       schema: settingsSchema,
+    }),
+    [`products-${locale}`]: defineCollection({
+      loader: glob({ pattern: '**/*.{md,mdx,json}', base: `./src/content/${locale}/products` }),
+      schema: productSchema,
+    }),
+    [`accessories-${locale}`]: defineCollection({
+      loader: glob({ pattern: '**/*.{md,mdx,json}', base: `./src/content/${locale}/accessories` }),
+      schema: accessorySchema,
     }),
   };
 }
