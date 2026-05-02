@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Request a Consultation | Heat & Glo" description="Schedule a free in-home consultation with a Heat & Glo authorized dealer. ZIP-code routing to the closest qualified specifier in your area." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Request a Consultation</p>
+      <h1 class="text-4xl font-bold mt-2">Free in-home consultation.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Most Heat & Glo dealers offer no-obligation in-home consultations to size the right fireplace for your space, recommend installation approaches, and quote pricing.</p>
+    </header>
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <form class="grid sm:grid-cols-2 gap-3 max-w-2xl" onsubmit="return false;">
+        <input type="text" placeholder="Name" class="px-4 py-3 border rounded-lg" />
+        <input type="email" placeholder="Email" class="px-4 py-3 border rounded-lg" />
+        <input type="tel" placeholder="Phone" class="px-4 py-3 border rounded-lg" />
+        <input type="text" placeholder="ZIP / postal code" class="px-4 py-3 border rounded-lg" />
+        <textarea placeholder="Tell us about your project (optional)" class="px-4 py-3 border rounded-lg sm:col-span-2 h-24"></textarea>
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium sm:col-span-2 hover:bg-orange-700 transition">Schedule consultation</button>
+      </form>
+      <p class="text-sm text-neutral-500 mt-4">Form submission routes to the dealer closest to your ZIP. They contact you within 24 hours.</p>
+    </section>
+  </main>
+</BaseLayout>

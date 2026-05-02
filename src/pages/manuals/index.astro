@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Owner's Manuals | Heat & Glo" description="Heat & Glo owner's manuals and installation documents. Search by model name, model number, or product family to download the manual for your fireplace." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Owner's Manuals</p>
+      <h1 class="text-4xl font-bold mt-2">Find your manual.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Installation, operation, and maintenance manuals for current and discontinued Heat & Glo products. Search by model name or browse by family.</p>
+    </header>
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <form class="flex gap-3" onsubmit="return false;">
+        <input type="text" placeholder="Model name or number (e.g. Mezzo 48)" class="flex-1 px-4 py-3 border rounded-lg" />
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition">Search</button>
+      </form>
+    </section>
+    <p class="text-sm text-neutral-600">Can't find your model? <a href="/where-to-buy/" class="underline">Your authorized dealer</a> can supply manuals for legacy or discontinued products.</p>
+  </main>
+</BaseLayout>

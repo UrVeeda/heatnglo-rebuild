@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Search | Heat & Glo" description="Search Heat & Glo products, manuals, ideas, and pages." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Search</p>
+      <h1 class="text-4xl font-bold mt-2">Find what you're looking for.</h1>
+    </header>
+    <section class="bg-neutral-50 rounded-lg p-8">
+      <form class="flex gap-3" onsubmit="return false;">
+        <input type="search" placeholder="Search products, manuals, ideas..." class="flex-1 px-4 py-3 border rounded-lg" />
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition">Search</button>
+      </form>
+      <p class="text-sm text-neutral-500 mt-4">Search wired to Pagefind index in production. Currently a placeholder shell for the pitch.</p>
+    </section>
+  </main>
+</BaseLayout>

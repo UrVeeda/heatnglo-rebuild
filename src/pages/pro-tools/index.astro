@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Pro Tools | Heat & Glo" description="ProAdvantage trade tools: BIM files, spec PDFs, dimensional drawings, photography library, co-marketing assets, and the Heat & Glo specification toolkit." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Pro Tools</p>
+      <h1 class="text-4xl font-bold mt-2">The trade specification toolkit.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">BIM files, spec PDFs, dimensional drawings, photography. The Heat & Glo specification library, organized for the trade.</p>
+    </header>
+    <section class="grid sm:grid-cols-3 gap-6 mb-16">
+      <a href="/manuals/" class="block border rounded-lg p-5 hover:border-orange-400 transition"><p class="font-semibold mb-2">Specification PDFs</p><p class="text-sm text-neutral-600">By product family. Downloadable directly.</p></a>
+      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">BIM library</p><p class="text-sm text-neutral-600">Revit families and IFC files for every current product. ProAdvantage member access.</p></div>
+      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">Photography library</p><p class="text-sm text-neutral-600">High-resolution product photography for project presentations and marketing.</p></div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Apply for Dealership | Heat & Glo" description="Apply to become a Heat & Glo authorized dealer. Application requires verification of business credentials, location, and service capabilities." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Apply for Dealership</p>
+      <h1 class="text-4xl font-bold mt-2">Become an authorized Heat & Glo dealer.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo's authorized dealer network spans more than 1,400 locations across the US and Canada. Application requires verification of business credentials, location, and service capabilities.</p>
+    </header>
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <form class="grid sm:grid-cols-2 gap-3 max-w-2xl" onsubmit="return false;">
+        <input type="text" placeholder="Business name" class="px-4 py-3 border rounded-lg sm:col-span-2" />
+        <input type="text" placeholder="Contact name" class="px-4 py-3 border rounded-lg" />
+        <input type="email" placeholder="Email" class="px-4 py-3 border rounded-lg" />
+        <input type="tel" placeholder="Phone" class="px-4 py-3 border rounded-lg" />
+        <input type="text" placeholder="ZIP / postal code" class="px-4 py-3 border rounded-lg" />
+        <textarea placeholder="Tell us about your business" class="px-4 py-3 border rounded-lg sm:col-span-2 h-24"></textarea>
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium sm:col-span-2 hover:bg-orange-700 transition">Submit application</button>
+      </form>
+    </section>
+  </main>
+</BaseLayout>

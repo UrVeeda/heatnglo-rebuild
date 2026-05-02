@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="Warranty Information | Heat & Glo" description="Heat & Glo warranty terms, registration, and claims. Confirm your fireplace's warranty coverage period and submit a warranty claim through your authorized dealer." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Warranty Information</p>
+      <h1 class="text-4xl font-bold mt-2">Coverage, registration, claims.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Every Heat & Glo fireplace ships with a manufacturer warranty. Confirm your unit's coverage period, register your warranty, and submit claims through your authorized dealer.</p>
+    </header>
+    <section class="grid sm:grid-cols-2 gap-6 mb-16">
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Register your warranty</p><p class="text-sm text-neutral-600 mb-4">Warranty registration starts your coverage period and gives you faster service when you need it.</p><p class="text-sm"><a href="/get-in-touch/" class="underline">Register →</a></p></div>
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Submit a claim</p><p class="text-sm text-neutral-600 mb-4">Warranty claims route through your authorized dealer. They handle the assessment, parts, and service work.</p><p class="text-sm"><a href="/where-to-buy/" class="underline">Find your dealer →</a></p></div>
+    </section>
+  </main>
+</BaseLayout>
