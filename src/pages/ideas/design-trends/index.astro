@@ -142,6 +142,13 @@ const formatDate = (iso: string) => {
         {allArticles.slice(1).map((article: any, i: number) => (
           <a
             href={article.href}
+            data-demo-target={article.href}
+            data-demo-label={article.title}
+            data-demo-eyebrow="Design Trends · Demo Article"
+            data-demo-heading="This article is a demo stub."
+            data-demo-context={buildModalContext(article)}
+            data-demo-image={article.image}
+            data-demo-cta="Read the editor's pick →"
             class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
           >
             <img
