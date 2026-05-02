@@ -1,14 +1,137 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+
+const profiles = [
+  {
+    name: 'Stacked Natural Stone Surround',
+    desc: 'Real quarried stone in a dry-stack presentation. No mortar joints — the layered ledgestone look that reads as the most authentic residential hearth finish.',
+    img: 'https://hearthnhome.getbynder.com/transform/6d502d5b-b8b2-4999-8cbe-0794c99b275b/HHT_Birmingham_MasonryBrn_Stacked_HeritageOak_SO?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Birmingham fireplace with stacked natural stone surround and heritage oak log set in a traditional masonry setting',
+  },
+  {
+    name: 'Traditional Brick Surround',
+    desc: 'Conventional brick in traditional or herringbone patterns. The most timeless American fireplace surround material — available in multiple color ranges.',
+    img: 'https://hearthnhome.getbynder.com/transform/2ea06941-e4d7-4ca0-a938-327e43c9fd66/HNG-PRovident35_FirescreenBK_Metal-interior-tif?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Provident 35 gas fireplace with traditional brick surround and black firescreen in a residential living room',
+  },
+  {
+    name: 'Herringbone Brick Interior + Surround',
+    desc: 'Herringbone brick pattern on both the interior firebox wall and the exterior surround face. Classic pattern that bridges traditional and transitional interiors.',
+    img: 'https://hearthnhome.getbynder.com/transform/cdc4a4b4-9be0-4b83-b279-f4513cd75472/SFE_Inception_TQHerringbone_BWOak_Halston?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Inception gas fireplace with herringbone brick surround and black and white oak interior in a contemporary room',
+  },
+  {
+    name: 'Full-Slab Stone Continuous Surround',
+    desc: 'A single uninterrupted slab — quartzite, marble, or limestone — carried from the hearth floor through the surround to the mantel shelf. The most contemporary stone specification.',
+    img: 'https://hearthnhome.getbynder.com/transform/27bf1b1e-883f-4c32-b31a-05c0cf30fa95/img-pdp-slimline-fusion-room-shot-02-jpg?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Slimline Fusion gas fireplace with full-slab stone continuous surround in a contemporary living room setting',
+  },
+  {
+    name: 'Cast Stone Corbeled Surround',
+    desc: 'Cast limestone look with corbel detail at the breast. Pre-finished, pre-sized, and lighter than field-fabricated natural stone. Traditional character at a controlled specification.',
+    img: 'https://hearthnhome.getbynder.com/transform/0bf271ce-ef80-4c8c-a7f0-660531aa15bf/Phoenix_StratfordBrick_Angle_Roomshot_180620_2155-Pinto_289-tif?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Phoenix fireplace with cast stone corbeled surround and stratford brick detail in an angled residential room shot',
+  },
+  {
+    name: 'Grey Ledgestone Tile Surround',
+    desc: 'Natural grey split-face ledgestone in a tile format — easier to install than full masonry, with the same textured depth. Coordinates with contemporary grey interior palettes.',
+    img: 'https://hearthnhome.getbynder.com/transform/dc79f266-cd67-47fe-a3cd-5683aeafbb29/21_HHT_Cottagewood_NatGreyTrad_3Tier_GrandOak_SS-Curtain_SO?io=transform:fill,width:600,height:450',
+    alt: 'Heat & Glo Cottagewood fireplace with natural grey traditional stone surround and steel curtain screen in a residential setting',
+  },
+];
 ---
-<BaseLayout title="Stone Fireplace Surrounds + Sets | Heat & Glo Accessories" description="Heat & Glo stone fireplace surrounds: cast stone, natural stone, and slab profiles engineered to pair with Heat & Glo fireplaces." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Stone Surrounds</p>
-      <h1 class="text-4xl font-bold mt-2">Stone surrounds for every aesthetic.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Cast stone, natural stone, full-slab continuous, and traditional veneer. Heat & Glo stone surround profiles are sized to match the firebox openings of every product family without custom fabrication.</p>
+<BaseLayout
+  title="Stone Fireplace Surrounds + Sets | Heat & Glo Accessories"
+  description="Heat & Glo stone fireplace surrounds: cast stone, natural stone, and slab profiles engineered to pair with Heat & Glo fireplaces."
+  noIndex={true}
+>
+
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4 overflow-hidden">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/2ea93327-a5bf-4bf1-9a89-65559689f3c1/Corner_Angle_Roomshot_180613_Swanson_0264-tif?io=transform:fill,width:1920,height:720"
+      alt="Traditional Heat & Glo fireplace installation with natural stone surround, hearth stone, and flanking built-in shelving in a residential living room"
+      class="w-full h-[580px] md:h-[400px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Stone Surrounds</p>
+        <h1 class="text-3xl md:text-5xl font-bold max-w-2xl leading-tight mb-4">Stone surrounds for every aesthetic.</h1>
+        <p class="text-sm md:text-lg text-white/85 max-w-xl mb-8">Cast stone, natural stone, full-slab continuous, and traditional veneer. Heat &amp; Glo stone surround profiles are sized to match the firebox openings of every product family without custom fabrication.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- INTRO -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">
+        Stone surround selection is one of the longest-lasting decisions in a fireplace installation. The same firebox can look entirely different depending on whether you surround it in stacked ledgestone, a continuous marble slab, or traditional brick in a herringbone pattern. Heat &amp; Glo's authorized dealers work with homeowners and designers to match surround materials to the firebox, the room, and the clearance spec.
+      </p>
+      <div style="background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #d97706; border-radius: 8px; padding: 16px 20px;">
+        <p style="color: #78350f; font-size: 14px; line-height: 1.6; margin: 0;"><strong>Clearance requirement:</strong> Stone and tile surround materials must meet clearance-to-combustibles specifications for your specific fireplace model. Confirm requirements with your authorized dealer before selecting materials.</p>
+      </div>
     </header>
-    <section class="bg-neutral-50 rounded-lg p-6 mb-16"><p class="text-sm text-neutral-700">Stone surround pages are in progress. Browse the full Heat &amp; Glo lineup or contact your authorized dealer for available stone surround models.</p></section>
-    <p class="text-neutral-600 border-t pt-10"><a href="/accessories/" class="underline">Back to all accessories</a></p>
+
+    <!-- PRODUCT GRID -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-2">Stone surround profiles</h2>
+      <p class="text-neutral-600 mb-8 max-w-2xl">Surround style, material, and installation format available through authorized Heat &amp; Glo dealers. Confirm availability and clearance requirements before ordering.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {profiles.map((p) => (
+          <a href="/where-to-buy/" class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+            <img src={p.img} alt={p.alt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="p-5">
+              <p class="font-semibold text-lg group-hover:text-orange-700">{p.name}</p>
+              <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.desc}</p>
+              <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">Ask your dealer &rarr;</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-16" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/0bf271ce-ef80-4c8c-a7f0-660531aa15bf/Phoenix_StratfordBrick_Angle_Roomshot_180620_2155-Pinto_289-tif?io=transform:fill,width:1920,height:560"
+        alt="Heat & Glo Phoenix gas fireplace with stratford brick stone surround and angled room view in a traditional residential living room"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">The surround defines the room</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">Same firebox. Completely different room.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">The stone surround is where the room's personality lives. A full-slab marble surround reads contemporary and restrained. Traditional brick with corbeled cast stone reads classic American hearth. Your authorized dealer has worked with interior designers and architects on every surround type and can help you specify the material that matches your project without custom fabrication costs.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Specify with confidence</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Your dealer matches surround to firebox before anything ships.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">Clearance-to-combustibles varies by material type and unit. Heat &amp; Glo authorized dealers confirm the spec before ordering and can source pre-sized surround materials through the factory distribution network.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
+    <p class="text-neutral-600 border-t pt-8 pb-12">
+      <a href="/accessories/" class="underline hover:text-orange-700">Back to all accessories</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/accessories/wood-mantels/" class="underline hover:text-orange-700">Wood Mantels</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/accessories/mantel-shelves/" class="underline hover:text-orange-700">Mantel Shelves</a>
+    </p>
+
   </main>
 </BaseLayout>
