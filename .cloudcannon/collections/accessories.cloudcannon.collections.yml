@@ -1,0 +1,71 @@
+# Accessories collections — one per locale, mirrors the pages-* pattern.
+# accessories-en is editor-facing; other locales are translate-loader output.
+
+accessories-en:
+  path: src/content/en/accessories
+  glob: ['**/*.json']
+  name: Accessories (English)
+  icon: chair_alt
+  output: true
+  url: '/accessories/[slug]/'
+  _enabled_editors: [visual, data]
+  schemas:
+    default:
+      path: .cloudcannon/schemas/accessory.json
+      name: 'New English Accessory'
+  create:
+    path: '[relative_base_path]/{title|slugify}.json'
+  preview:
+    text:
+      - key: title
+    subtext:
+      - key: description
+    icon: chair_alt
+
+accessories-es:
+  path: src/content/es/accessories
+  glob: ['**/*.json']
+  name: Accessories (Español — auto)
+  icon: language
+  output: true
+  url: '/es/accessories/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true
+  preview:
+    text:
+      - key: title
+    subtext:
+      - key: description
+    icon: language
+
+accessories-en-ca:
+  path: src/content/en-ca/accessories
+  glob: ['**/*.json']
+  name: Accessories (English-CA — auto)
+  icon: language
+  output: true
+  url: '/en-ca/accessories/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true
+  preview:
+    text:
+      - key: title
+    subtext:
+      - key: description
+    icon: language
+
+accessories-fr-ca:
+  path: src/content/fr-ca/accessories
+  glob: ['**/*.json']
+  name: Accessories (Français-CA — auto)
+  icon: language
+  output: true
+  url: '/fr-ca/accessories/[slug]/'
+  _enabled_editors: [data]
+  disable_add: true
+  preview:
+    text:
+      - key: title
+    subtext:
+      - key: description
+    icon: language

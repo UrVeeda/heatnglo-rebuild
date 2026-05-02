@@ -1,0 +1,27 @@
+{
+  "title": "New Product Family",
+  "description": "Brief description for SEO + social sharing.",
+  "ogImage": "",
+  "draft": true,
+  "family": "",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [],
+  "sizes": [
+    {
+      "id": "default",
+      "name": "",
+      "width_in": null,
+      "height_in": null,
+      "depth_in": null,
+      "btu_max": null,
+      "spec_pdf_url": null,
+      "image": null
+    }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}
