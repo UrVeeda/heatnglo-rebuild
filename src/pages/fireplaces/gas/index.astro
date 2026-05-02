@@ -5,7 +5,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 const products = await getCollection('products-en');
 const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !== 'log-set' && !p.data.available_in?.includes('au'));
 
-const gasFallback = 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400';
+const gasFallback = 'https://hearthnhome.getbynder.com/transform/c0885ec5-e68c-48f7-9a85-f66e09730cd3/img-pdp-cosmo-room-shot-01-jpg?io=transform:fill,width:600,height:400';
 
 const demoContextMap: Record<string, string> = {
   cosmo: '<strong>{label}</strong> is the contemporary linear sibling of Mezzo — same clean geometry, taller glass proportion for high-ceiling rooms. In production, the Cosmo family page renders the same template structure: hero, sizes available, complete-the-look surrounds, technical specs, dealer CTAs. The Mezzo template is fully built — open it to see the layout.',
@@ -16,11 +16,11 @@ const demoContextMap: Record<string, string> = {
 };
 
 const demoImageMap: Record<string, string> = {
-  cosmo: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400',
-  '6k-8k-series': 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400',
-  'phoenix-trueview': 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400',
-  true: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400',
-  'primo-ii': 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400',
+  cosmo: 'https://hearthnhome.getbynder.com/transform/140c24d4-ef44-4a4a-b764-4c4d35927728/img-pdp-cosmo-room-shot-04-jpg?io=transform:fill,width:600,height:400',
+  '6k-8k-series': 'https://hearthnhome.getbynder.com/transform/06252566-e202-4816-a3f2-8a3c9d62dfd1/23_HHT_Birmingham_Rutherford_Ashland_BlkHerr_3Tier_GrandBirch_Room?io=transform:fill,width:600,height:400',
+  'phoenix-trueview': 'https://hearthnhome.getbynder.com/transform/0bf271ce-ef80-4c8c-a7f0-660531aa15bf/Phoenix_StratfordBrick_Angle_Roomshot_180620_2155-Pinto_289-tif?io=transform:fill,width:600,height:400',
+  true: 'https://hearthnhome.getbynder.com/transform/0a52f87c-2a5e-4be1-97f7-b67c429bae0d/HNG_True_gas_fireplace_livingroom-4-2x-jpg?io=transform:fill,width:600,height:400',
+  'primo-ii': 'https://hearthnhome.getbynder.com/transform/08763d99-34be-436f-b2dd-2c391d4edc87/HNG-Primo-II_72_736X555?io=transform:fill,width:600,height:400',
 };
 ---
 <BaseLayout title="Gas Fireplaces | Heat & Glo" description="Heat & Glo gas fireplaces: direct-vent, push-button warmth, and the most-specified category in the lineup. Indoor, outdoor, see-through, inserts, freestanding." noIndex={true}>
@@ -28,8 +28,8 @@ const demoImageMap: Record<string, string> = {
   <!-- HERO -->
   <section class="relative mb-12 -mx-4 overflow-hidden">
     <img
-      src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:720"
-      alt="Heat & Glo SupremeX gas fireplace in a contemporary living room with natural light and modern furniture"
+      src="https://hearthnhome.getbynder.com/transform/2355d7a5-63d1-4a8e-a2ad-302d318ad817/HNG_Cosmo-42_gas_fireplace_livingroom_-2x-jpg?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo Cosmo 42 gas fireplace in a bright contemporary living room with clean-face design and ribbon flame"
       class="w-full h-[640px] md:h-[440px] object-cover"
       loading="eager"
       fetchpriority="high"

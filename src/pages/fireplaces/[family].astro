@@ -59,8 +59,8 @@ const familyGalleryMap: Record<string, { src: string; alt: string }[]> = {
 const defaultGallery: { src: string; alt: string }[] = [
   { src: 'https://hearthnhome.getbynder.com/transform/94bed5b8-d82a-47db-8823-a5082c371991/HNG_SupremeX_30_Oak_BlkFirescreen_Room?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} gas fireplace in a residential great room` },
   { src: 'https://hearthnhome.getbynder.com/transform/b9e6a1ec-4f6b-4a6a-85bb-d75f8ef08b05/img-pdp-supreme-room-shot-01-jpg?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} installed in a contemporary living room` },
-  { src: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArchFront_2019Artisan_190613_Lecy_0160-1-tif?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in a traditional stone surround setting` },
-  { src: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-shot-05-jpg?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in an open-plan modern interior` },
+  { src: 'https://hearthnhome.getbynder.com/transform/3c63083e-fd96-450c-bf95-38a69bf9cd65/PioneerIII_ForgedArchFrnt_rm1_2336x1314?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in a traditional stone hearth setting` },
+  { src: 'https://hearthnhome.getbynder.com/transform/37b85921-3a11-497e-8bfb-05d7710ce531/HNG-Cosmo-32-Open-Floor-Plan-tif?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in an open-plan contemporary living space` },
 ];
 
 const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
@@ -72,7 +72,7 @@ const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
   noIndex={true}
 >
   <section class="relative mb-12 -mx-4 overflow-hidden">
-    <img src={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:720"} alt={`Heat & Glo ${data.family}`} class="w-full h-[600px] md:h-[420px] object-cover" />
+    <img src={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/0d5fa77c-7811-4e56-8f91-cb91fc591577/HNG_SupremeX_30_Birch_Black-Reflective-Glass_Room?io=transform:fill,width:1920,height:720"} alt={`Heat & Glo ${data.family}`} class="w-full h-[600px] md:h-[420px] object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
       <div class="max-w-page mx-auto text-white">
         {data.hero?.eyebrow ? (
@@ -164,7 +164,7 @@ const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
           data-hg-item-type="Fireplace"
           data-hg-item-title={`${data.family} ${data.energy === 'gas' ? 'Gas Fireplace' : data.energy === 'wood' ? 'Wood-Burning Fireplace' : data.energy === 'electric' ? 'Electric Fireplace' : 'Fireplace'}`}
           data-hg-slug={`/fireplaces/${product.id.replace(/\.json$/, '')}/`}
-          data-hg-item-image={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400"}
+          data-hg-item-image={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/032655c7-d40f-44c8-8f65-4eb28851d742/img-product-card-mezzo-jpg?io=transform:fill,width:600,height:400"}
           style="background: #c44a08; color: #fff; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-align: center; border: 0; cursor: pointer; font-size: 15px; transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.18s ease;"
           onmouseover="this.style.background='#a83e07'; this.style.boxShadow='0 4px 18px rgba(196,74,8,0.45)'; this.style.transform='translateY(-1px)';"
           onmouseout="this.style.background='#c44a08'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
@@ -182,8 +182,8 @@ const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.complete_the_look.map((slug: string) => {
               const imageMap = {
-                'stone-surrounds':  'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
-                'wood-mantels':     'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
+                'stone-surrounds':  'https://hearthnhome.getbynder.com/transform/00f6b661-1087-4eff-99ba-5c62a226d3c8/Firebrick-3-copy?io=transform:fill,width:600,height:450',
+                'wood-mantels':     'https://hearthnhome.getbynder.com/transform/04f03182-5209-4b71-894c-603c253fe582/cement-mantel-shelf_WashedCedar_326x277?io=transform:fill,width:600,height:450',
                 'mantel-shelves':   'https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:600,height:450',
                 'hearth-stones':    'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:450',
               };

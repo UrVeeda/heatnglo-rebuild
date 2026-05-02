@@ -10,8 +10,8 @@ const wood = products.filter((p) => p.data.energy === 'wood');
   <!-- HERO -->
   <section class="relative mb-12 -mx-4 overflow-hidden">
     <img
-      src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:720"
-      alt="Traditional Heat & Glo fireplace with stone hearth and forged-arch surround in a Coastal Chic living room"
+      src="https://hearthnhome.getbynder.com/transform/3bccdcac-d755-40cd-a83e-d15bc37980e1/Pioneer-II_WoodFireplace_Room-SO-tif?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo Pioneer II wood-burning fireplace in a traditional residential great room with stone hearth"
       class="w-full h-[640px] md:h-[440px] object-cover"
       loading="eager"
       fetchpriority="high"
@@ -60,7 +60,7 @@ const wood = products.filter((p) => p.data.energy === 'wood');
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {wood.map((p: any) => (
         <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400'} alt={p.data.family + ' wood-burning fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/3c63083e-fd96-450c-bf95-38a69bf9cd65/PioneerIII_ForgedArchFrnt_rm1_2336x1314?io=transform:fill,width:600,height:400'} alt={p.data.family + ' wood-burning fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
           <div class="p-5">
             <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
             <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>

@@ -7,7 +7,7 @@ updatedAt: 2026-05-02
 author: "Heat & Glo Editorial"
 category: "Design Trends"
 tags: ["mantels", "stone", "wood", "tile", "design", "surround", "clearance", "specification"]
-hero: "https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:720"
+hero: "https://hearthnhome.getbynder.com/transform/0a52f87c-2a5e-4be1-97f7-b67c429bae0d/HNG_True_gas_fireplace_livingroom-4-2x-jpg?io=transform:fill,width:1920,height:720"
 ---
 
 ## Direct answer

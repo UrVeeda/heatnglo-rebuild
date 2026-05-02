@@ -7,7 +7,7 @@ updatedAt: 2026-05-02
 author: "Heat & Glo Editorial"
 category: "Renovation Stories"
 tags: ["inserts", "gas", "renovation", "rebate", "wood-burning", "conversion", "direct-vent"]
-hero: "https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:720"
+hero: "https://hearthnhome.getbynder.com/transform/046ec330-a7b5-45ab-8d79-4e4e44b0fae5/HNG_Escape_Gas_Insert_Makeover_Wit-Delight_family?io=transform:fill,width:1920,height:720"
 ---
 
 ## Direct answer
