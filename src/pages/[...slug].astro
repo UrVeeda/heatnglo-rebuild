@@ -77,31 +77,20 @@ const featured = [
 ];
 ---
 <BaseLayout
-  title="Demo — Heat & Glo"
-  description="You're exploring a demo of Heat & Glo's redesigned site. This page is in the production build queue."
+  title="Page in production scope | Heat & Glo"
+  description="Browse the Heat & Glo fireplace lineup — gas, wood, electric, and outdoor — or find your nearest authorized dealer."
   noIndex={true}
 >
   <section class="relative -mx-4 mb-0">
     <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:600" alt="Heat & Glo SupremeX gas fireplace in a contemporary living room" class="w-full h-[420px] object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-xs font-semibold drop-shadow inline-block bg-orange-600/90 px-3 py-1 rounded-full">Demo Site</p>
-        <h1 class="text-5xl font-bold mt-4 max-w-2xl drop-shadow-lg">This page is in our build queue.</h1>
+        <h1 class="text-5xl font-bold max-w-2xl drop-shadow-lg">Let's get you to the right place.</h1>
       </div>
     </div>
   </section>
 
   <main class="max-w-page mx-auto px-4 py-12">
-    <section class="bg-orange-50 border-l-4 border-orange-600 rounded-r-lg p-6 mb-12 max-w-3xl">
-      <p class="text-orange-900 font-medium mb-2">Welcome to the Heat & Glo redesign demo.</p>
-      <p class="text-neutral-700 leading-relaxed">
-        You followed a link to <code class="px-2 py-0.5 bg-white border rounded text-sm">{pathname}</code>, which is one of the 200+ pages we'll be building as part of the full production rollout. The redesigned IA, conversion-optimized templates, and CloudCannon-edit-ready infrastructure are all wired and ready, this specific page just hasn't been authored yet.
-      </p>
-      <p class="text-neutral-700 leading-relaxed mt-3">
-        Continue exploring the demo by clicking the link below to a similar built page.
-      </p>
-    </section>
-
     <section class="mb-16">
       <h2 class="text-2xl font-semibold mb-2">Continue your visit</h2>
       <p class="text-neutral-600 mb-6 max-w-2xl">{suggestedDescription}</p>
@@ -112,7 +101,6 @@ const featured = [
 
     <section class="border-t pt-10 mb-16">
       <h2 class="text-xl font-semibold mb-6">Featured product families</h2>
-      <p class="text-neutral-600 mb-6 max-w-2xl">A few of the deeply-built product families in this demo. Click in to see the redesigned PDP treatment, conversion modules, and CloudCannon-edit-ready content structure.</p>
       <div class="grid sm:grid-cols-3 gap-4">
         {featured.map((f) => (
           <a href={f.href} class="block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition group">
@@ -124,13 +112,6 @@ const featured = [
           </a>
         ))}
       </div>
-    </section>
-
-    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
-      <h2 class="text-xl font-semibold mb-3">Want the full site?</h2>
-      <p class="text-neutral-700 max-w-2xl mb-4">
-        The production engagement builds out every URL on Heat & Glo's existing 243-URL sitemap with fully-authored content, real product photography, CloudCannon editing for the HHT marketing team, and full SEO schema markup. This demo represents roughly 30 percent of the eventual scope, focused on demonstrating the IA, the visual direction, and the conversion patterns.
-      </p>
     </section>
 
     <section class="border-t pt-10 text-sm text-neutral-600">

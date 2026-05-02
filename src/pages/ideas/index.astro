@@ -2,18 +2,18 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const featured = [
-  { title: '21 Fireplace Accent Wall Ideas', excerpt: 'Stone, tile, plaster, wood. Twenty-one accent wall treatments that pair with a Heat & Glo fireplace as the room\'s focal point.', href: '/blog/21-fireplace-accent-wall-ideas/' },
-  { title: 'Cosmo: The Fireplace for Every Room', excerpt: 'How the Cosmo Series adapts to bedrooms, great rooms, hospitality lobbies, and everywhere in between.', href: '/ideas/cosmo-fireplace-every-room/' },
-  { title: 'Heat & Glo on Military Makeover', excerpt: 'The brand\'s collaboration with Military Makeover, supporting veterans and their families.', href: '/ideas/military-makeover-collaboration/' },
+  { title: '21 Fireplace Accent Wall Ideas', excerpt: 'Stone, tile, plaster, wood. Twenty-one accent wall treatments that pair with a Heat & Glo fireplace as the room\'s focal point.', href: '/blog/21-fireplace-accent-wall-ideas/', demoTarget: null, demoLabel: null },
+  { title: 'Cosmo: The Fireplace for Every Room', excerpt: 'How the Cosmo Series adapts to bedrooms, great rooms, hospitality lobbies, and everywhere in between.', href: '/blog/21-fireplace-accent-wall-ideas/', demoTarget: '/blog/21-fireplace-accent-wall-ideas/', demoLabel: 'Cosmo: The Fireplace for Every Room' },
+  { title: 'Heat & Glo on Military Makeover', excerpt: 'The brand\'s collaboration with Military Makeover, supporting veterans and their families.', href: '/blog/21-fireplace-accent-wall-ideas/', demoTarget: '/blog/21-fireplace-accent-wall-ideas/', demoLabel: 'Heat & Glo on Military Makeover' },
 ];
 
 const categories = [
-  { name: 'Design Trends', count: 28 },
-  { name: 'Room-by-Room Inspiration', count: 24 },
-  { name: 'Renovation Stories', count: 19 },
-  { name: 'HGTV Partnerships', count: 14 },
-  { name: 'Architect Features', count: 11 },
-  { name: 'Outdoor Living', count: 7 },
+  { name: 'Design Trends', count: 28, href: '/ideas/design-trends/', demoTarget: null },
+  { name: 'Room-by-Room Inspiration', count: 24, href: '/ideas/design-trends/', demoTarget: '/ideas/design-trends/' },
+  { name: 'Renovation Stories', count: 19, href: '/ideas/design-trends/', demoTarget: '/ideas/design-trends/' },
+  { name: 'HGTV Partnerships', count: 14, href: '/ideas/design-trends/', demoTarget: '/ideas/design-trends/' },
+  { name: 'Architect Features', count: 11, href: '/architect/', demoTarget: null },
+  { name: 'Outdoor Living', count: 7, href: '/ideas/design-trends/', demoTarget: '/ideas/design-trends/' },
 ];
 ---
 <BaseLayout
@@ -48,7 +48,11 @@ const categories = [
             'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
           ];
           return (
-            <a href={f.href} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+            <a
+              href={f.href}
+              class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
+              {...(f.demoTarget ? { 'data-demo-target': f.demoTarget, 'data-demo-label': f.demoLabel ?? f.title } : {})}
+            >
               <img src={heroImages[i] ?? heroImages[0]} alt={f.title} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
               <div class="p-5">
                 <p class="font-semibold mb-2 group-hover:text-orange-700">{f.title}</p>
@@ -63,8 +67,12 @@ const categories = [
     <section class="mb-16">
       <h2 class="text-2xl font-semibold mb-6">Browse by category</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories.map((c) => (
-          <a href={`/ideas/${c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="block border rounded-lg p-5 hover:bg-neutral-50 transition">
+        {categories.map((c: any) => (
+          <a
+            href={c.href}
+            class="block border rounded-lg p-5 hover:bg-orange-50 hover:border-orange-300 transition"
+            {...(c.demoTarget ? { 'data-demo-target': c.demoTarget, 'data-demo-label': `${c.name} (sample category template)` } : {})}
+          >
             <p class="font-semibold">{c.name}</p>
             <p class="text-sm text-neutral-500 mt-1">{c.count} stories</p>
           </a>

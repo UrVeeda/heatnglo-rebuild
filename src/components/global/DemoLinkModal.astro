@@ -1,0 +1,283 @@
+---
+/*
+  Component: DemoLinkModal
+  Purpose:   Intercepts clicks on unbuilt demo pages, explains scope, offers
+             a working equivalent. Fires globally via data attributes.
+
+  Usage on any anchor:
+    <a
+      href="/pro/proadvantage/"
+      data-demo-target="/apply-for-dealership/"
+      data-demo-label="ProAdvantage Trade Program"
+    >Join Today</a>
+
+  The JS below intercepts that click, suppresses navigation, opens this modal
+  with the label + target populated, and offers a primary CTA to the live
+  equivalent plus a secondary dismiss.
+*/
+---
+
+<!-- MODAL BACKDROP + DIALOG -->
+<div
+  id="demo-link-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="demo-modal-heading"
+  aria-describedby="demo-modal-body"
+  hidden
+  style="
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(26,26,26,0.78);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  "
+>
+  <div
+    id="demo-modal-card"
+    style="
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.32);
+      max-width: 540px;
+      width: 100%;
+      padding: 40px 40px 36px;
+      position: relative;
+    "
+  >
+    <!-- CLOSE BUTTON -->
+    <button
+      id="demo-modal-close"
+      aria-label="Close"
+      style="
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: #6e6e6e;
+        line-height: 1;
+        border-radius: 6px;
+        transition: background 0.15s ease;
+      "
+      onmouseover="this.style.background='#f0f0f0'"
+      onmouseout="this.style.background='none'"
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <!-- EYEBROW -->
+    <p
+      style="
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #c44a08;
+        margin: 0 0 12px;
+      "
+    >
+      Demo Scope
+    </p>
+
+    <!-- HEADING -->
+    <h2
+      id="demo-modal-heading"
+      style="
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0 0 16px;
+        line-height: 1.25;
+      "
+    >
+      This section is part of the production engagement.
+    </h2>
+
+    <!-- BODY -->
+    <div id="demo-modal-body">
+      <p
+        style="
+          font-family: 'Roboto', system-ui, sans-serif;
+          font-size: 15px;
+          color: #333333;
+          line-height: 1.65;
+          margin: 0 0 8px;
+        "
+      >
+        The page you clicked &mdash;
+        <strong id="demo-modal-label" style="color: #1a1a1a;"></strong>
+        &mdash; is within the full production scope but not included in this
+        demo deliverable.
+      </p>
+      <p
+        style="
+          font-family: 'Roboto', system-ui, sans-serif;
+          font-size: 15px;
+          color: #333333;
+          line-height: 1.65;
+          margin: 0 0 28px;
+        "
+      >
+        To experience a comparable built page right now, use the button below.
+      </p>
+    </div>
+
+    <!-- RULE -->
+    <hr style="border: none; border-top: 1px solid #e8e8e8; margin: 0 0 28px;" />
+
+    <!-- ACTIONS -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a
+        id="demo-modal-cta"
+        href="#"
+        style="
+          display: block;
+          background: #c44a08;
+          color: #ffffff;
+          font-family: 'DM Sans', system-ui, sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          text-align: center;
+          padding: 14px 24px;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: background 0.15s ease;
+        "
+        onmouseover="this.style.background='#a83e07'"
+        onmouseout="this.style.background='#c44a08'"
+      >
+        View a similar live page
+      </a>
+
+      <button
+        id="demo-modal-dismiss"
+        style="
+          display: block;
+          width: 100%;
+          background: none;
+          border: 1px solid #e8e8e8;
+          color: #6e6e6e;
+          font-family: 'DM Sans', system-ui, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+          padding: 12px 24px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.15s ease, border-color 0.15s ease;
+        "
+        onmouseover="this.style.background='#f8f6f2'; this.style.borderColor='#cccccc';"
+        onmouseout="this.style.background='none'; this.style.borderColor='#e8e8e8';"
+      >
+        Stay on this page
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const modal    = document.getElementById('demo-link-modal');
+    const card     = document.getElementById('demo-modal-card');
+    const labelEl  = document.getElementById('demo-modal-label');
+    const ctaEl    = document.getElementById('demo-modal-cta');
+    const closeBtn = document.getElementById('demo-modal-close');
+    const dismiss  = document.getElementById('demo-modal-dismiss');
+
+    if (!modal || !card || !labelEl || !ctaEl || !closeBtn || !dismiss) return;
+
+    // ---- Focusable elements inside modal (for focus trap) ----
+    const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    let previouslyFocused: Element | null = null;
+
+    // ---- Open ----
+    function openModal(label: string, target: string) {
+      labelEl.textContent = label;
+      ctaEl.setAttribute('href', target);
+      modal.removeAttribute('hidden');
+      modal.style.display = 'flex';
+      previouslyFocused = document.activeElement;
+
+      // Move focus into modal
+      const firstFocusable = card.querySelectorAll<HTMLElement>(FOCUSABLE)[0];
+      if (firstFocusable) firstFocusable.focus();
+
+      document.addEventListener('keydown', handleKey);
+    }
+
+    // ---- Close ----
+    function closeModal() {
+      modal.setAttribute('hidden', '');
+      modal.style.display = 'none';
+      document.removeEventListener('keydown', handleKey);
+
+      if (previouslyFocused && (previouslyFocused as HTMLElement).focus) {
+        (previouslyFocused as HTMLElement).focus();
+      }
+    }
+
+    // ---- Keyboard handler ----
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+
+      // Focus trap
+      if (e.key === 'Tab') {
+        const focusable = Array.from(card.querySelectorAll<HTMLElement>(FOCUSABLE));
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last  = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    }
+
+    // ---- Backdrop click (outside the card) ----
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // ---- Close / dismiss buttons ----
+    closeBtn.addEventListener('click', closeModal);
+    dismiss.addEventListener('click',  closeModal);
+
+    // ---- Wire all demo anchors on page load ----
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll<HTMLAnchorElement>('a[data-demo-target]').forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
+          const target = anchor.dataset.demoTarget;
+          const label  = anchor.dataset.demoLabel ?? anchor.textContent?.trim() ?? 'this section';
+          if (!target) return;
+          e.preventDefault();
+          openModal(label, target);
+        });
+      });
+    });
+  })();
+</script>

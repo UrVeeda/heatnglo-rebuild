@@ -1,0 +1,183 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const HERO_POOL = [
+  'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:600,height:450',
+  'https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:600,height:450',
+];
+
+const REAL_ARTICLE = {
+  title: '21 Fireplace Accent Wall Ideas: Stone, Tile, Plaster, Wood',
+  excerpt: 'Twenty-one accent wall treatments that pair with a Heat & Glo fireplace as the room\'s focal point. Stone, tile, plaster, wood — paired with the right Heat & Glo unit for the wall proportion.',
+  href: '/blog/21-fireplace-accent-wall-ideas/',
+  category: 'Design Trends',
+  date: '2026-04-15',
+  readTime: '9 min',
+  featured: true,
+};
+
+const STUB_ARTICLES = [
+  { title: 'How Linear Fireplaces Are Reshaping Open-Plan Great Rooms', excerpt: 'The contemporary linear category answers a specific architectural problem: low ceilings + wide spans need horizontal proportion to feel balanced.', date: '2026-04-12', readTime: '7 min' },
+  { title: 'Designing With Crystal Glass Media: Color Theory for the Fire Bed', excerpt: 'How modern crystal glass media changes the visual register of a contemporary fireplace from "open flame" to "sculptural light source."', date: '2026-04-08', readTime: '6 min' },
+  { title: 'Plaster Surrounds Are the New Stone: 2026 Specifier Trend Report', excerpt: 'Why architects and designers are pulling back from heavy stone in favor of integrated plaster surrounds that read as architectural rather than applied.', date: '2026-04-04', readTime: '8 min' },
+  { title: 'See-Through Fireplaces in Multi-Room Layouts: A Design Pattern Guide', excerpt: 'When the see-through configuration earns its complexity. Three room conditions where see-through becomes the right specification call.', date: '2026-03-30', readTime: '10 min' },
+  { title: 'The Return of the Traditional Hearth in Contemporary Architecture', excerpt: 'Counter-current to the linear-everywhere trend: 2026 sees a measured return of the traditional firebox in contemporary residential.', date: '2026-03-26', readTime: '8 min' },
+  { title: 'Color-Driven Hearth Design: Beyond Black, Beyond Stainless', excerpt: 'Unlacquered brass, blackened bronze, oil-rubbed iron — the metalwork register that\'s defining hearth design specification calls in 2026.', date: '2026-03-22', readTime: '6 min' },
+  { title: 'Outdoor Living Spaces: Where Gas Fireplaces Replace Fire Pits', excerpt: 'The shift from open fire pit to direct-vent outdoor gas fireplace, and what it enables for patio season extension.', date: '2026-03-18', readTime: '7 min' },
+  { title: 'Mantel Heights and Modern Proportion: A Specifier\'s Reference', excerpt: 'The arithmetic that governs mantel placement above a Heat & Glo unit, with reference dimensions for every product family in the contemporary lineup.', date: '2026-03-14', readTime: '9 min' },
+  { title: 'Whole-Room Lighting Design Around the Fireplace as Anchor', excerpt: 'How the fireplace as the room\'s primary light source reshapes the rest of the lighting plan — sconces, recessed, accent, ambient.', date: '2026-03-10', readTime: '8 min' },
+  { title: 'Wood-Burning in 2026: Why the Category Quietly Came Back', excerpt: 'EPA Step 2 certification, plus a new generation of buyers prioritizing sensory experience, has wood-burning back on specification sheets.', date: '2026-03-06', readTime: '7 min' },
+  { title: 'Hospitality Hearth Design: From Lobby Anchor to Suite Detail', excerpt: 'Five hospitality installation patterns that move beyond "lobby fireplace" into suite-level fireplace specification.', date: '2026-03-02', readTime: '10 min' },
+  { title: 'The Architectural Case for Cool-Glass Front Technology', excerpt: 'Cool-glass front isn\'t just a safety feature — it\'s an architectural enabler for installations that put the fireplace at child-height or pet-height.', date: '2026-02-26', readTime: '6 min' },
+  { title: 'Stone Selection for Modern Hearths: Quartzite, Travertine, Marble', excerpt: 'A specifier\'s guide to stone selection for contemporary hearth installations, with a focus on what reads "modern" vs. "applied traditional."', date: '2026-02-22', readTime: '8 min' },
+  { title: 'Bedroom Fireplaces: Specification, Safety, and Sensory Design', excerpt: 'The bedroom fireplace specification has tightened sensory and safety requirements. Here\'s the 2026 framework for getting it right.', date: '2026-02-18', readTime: '9 min' },
+  { title: 'Open-Concept Living: Where the Fireplace Defines the Room Without a Wall', excerpt: 'In open-plan layouts, the fireplace becomes the room divider, the sight-line anchor, and the architectural focal all at once.', date: '2026-02-14', readTime: '7 min' },
+  { title: 'Heritage Architecture + Contemporary Hearth: Bridging the Visual Gap', excerpt: 'Renovation projects in heritage homes face a specific design challenge: how to introduce a contemporary fireplace without breaking the architectural register.', date: '2026-02-10', readTime: '8 min' },
+  { title: 'Two-Story Great Room Hearth Design: Vertical Proportion Strategies', excerpt: 'When the great room runs two stories, the fireplace specification needs vertical scale to hold the wall — and that\'s a specific category of fireplace.', date: '2026-02-06', readTime: '9 min' },
+  { title: 'Minimalism Meets the Hearth: How Reductionist Design Treats Fire', excerpt: 'In minimalist interiors, the fireplace becomes more important, not less. Here\'s how reductionist designers approach hearth specification.', date: '2026-02-02', readTime: '7 min' },
+  { title: 'Outdoor Kitchen Integration: Fireplace as Cooking Companion', excerpt: 'The outdoor kitchen + fireplace combination is a specific design pattern with proven thermal and social benefits.', date: '2026-01-29', readTime: '8 min' },
+  { title: 'Designer Spotlight: How Brandi Hagen Specifies Heat & Glo Across Scales', excerpt: 'Brandi Hagen on hospitality vs. residential specification, and why she treats the fireplace as a single design problem across both scales.', date: '2026-01-25', readTime: '11 min' },
+  { title: 'Material-First Specification: Letting the Surround Drive the Fireplace Choice', excerpt: 'A reverse-order specification approach: pick the surround material first, then choose the fireplace family that complements it. Three case studies.', date: '2026-01-21', readTime: '8 min' },
+  { title: 'Coastal Modern Hearth Design: Salt-Air Considerations + Aesthetic Calls', excerpt: 'Coastal modern interiors need fireplace specifications that handle salt-air corrosion AND deliver the right aesthetic register. Here\'s the playbook.', date: '2026-01-17', readTime: '9 min' },
+  { title: 'Mountain Home Specification: Fireplaces That Compete With the View', excerpt: 'Mountain homes face a specific design challenge: the fireplace has to hold its own against the view. Three architectural approaches that work.', date: '2026-01-13', readTime: '10 min' },
+  { title: 'New Construction vs. Renovation: How Specification Sequence Changes', excerpt: 'In new construction, the fireplace is specified before the room takes shape. In renovation, the room exists. The specification process differs significantly.', date: '2026-01-09', readTime: '8 min' },
+  { title: 'The HHT Family Visual Language: How Heat & Glo Reads Within the Portfolio', excerpt: 'Heat & Glo, Quadra-Fire, Harman, Majestic — what each brand offers, and how Heat & Glo positions visually within the HHT portfolio.', date: '2026-01-05', readTime: '7 min' },
+  { title: 'Custom Surround Programs: When the Catalog Is Just a Starting Point', excerpt: 'Heat & Glo dealers can coordinate custom surround fabrication on installations that need to match very specific architectural details.', date: '2026-01-01', readTime: '6 min' },
+  { title: 'Five Years of Hearth Design Trends: What\'s Lasted, What\'s Faded', excerpt: 'A retrospective look at hearth design trends since 2021 — what predictions held up, and what disappeared as quickly as it arrived.', date: '2025-12-28', readTime: '11 min' },
+];
+
+// Combine: 1 real + 27 stubs = 28 cards
+const allArticles = [
+  REAL_ARTICLE,
+  ...STUB_ARTICLES.map((stub, i) => ({
+    ...stub,
+    href: REAL_ARTICLE.href,
+    category: 'Design Trends',
+    featured: false,
+    image: HERO_POOL[(i + 1) % HERO_POOL.length],
+  })),
+];
+
+const formatDate = (iso: string) => {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+};
+---
+<BaseLayout
+  title="Design Trends — Fireplace Inspiration | Heat & Glo"
+  description="Twenty-eight design trend articles on fireplace specification, surround materials, contemporary linear, traditional hearths, and the architectural decisions that shape modern hearth design."
+  noIndex={true}
+>
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:1920,height:560"
+      alt="Heat & Glo design trend collage spanning contemporary linear, traditional hearth, and outdoor installations"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/20 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Inspiration · Design Trends</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4 drop-shadow-lg">Design Trends</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8 drop-shadow">28 articles on fireplace specification, surround materials, and the design decisions that shape modern hearth design. Updated monthly by the Heat & Glo Editorial team.</p>
+        <a href="#articles" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Browse all 28 articles</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- INTRO -->
+    <header class="mb-10 max-w-3xl">
+      <p class="text-lg text-neutral-700 leading-relaxed">
+        Trend coverage for architects, interior designers, and homeowners researching the next fireplace specification. Each article is written by the Heat & Glo Editorial team in coordination with HHT specification engineers and the Heat & Glo dealer network.
+      </p>
+    </header>
+
+    <!-- FEATURED ARTICLE (THE REAL ONE) -->
+    <section class="mb-16" id="articles">
+      <p class="uppercase tracking-wide text-xs font-semibold text-orange-700 mb-4">Editor's pick</p>
+      <a
+        href={REAL_ARTICLE.href}
+        class="group block bg-white border-2 border-orange-200 rounded-xl overflow-hidden hover:border-orange-500 hover:shadow-xl transition"
+      >
+        <div class="grid md:grid-cols-2 gap-0">
+          <img
+            src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1200,height:800"
+            alt="Featured: 21 Fireplace Accent Wall Ideas — stone, tile, plaster, wood treatments paired with Heat & Glo fireplaces"
+            class="w-full h-72 md:h-auto object-cover group-hover:scale-105 transition duration-300"
+          />
+          <div class="p-8 md:p-10 flex flex-col justify-center">
+            <p class="uppercase tracking-wide text-xs font-semibold text-orange-700 mb-3">{REAL_ARTICLE.category} · Featured</p>
+            <h2 class="text-3xl font-bold mb-4 group-hover:text-orange-700 transition">{REAL_ARTICLE.title}</h2>
+            <p class="text-neutral-700 leading-relaxed mb-5">{REAL_ARTICLE.excerpt}</p>
+            <div class="flex items-center gap-4 text-sm text-neutral-500 mb-6">
+              <span>{formatDate(REAL_ARTICLE.date)}</span>
+              <span>·</span>
+              <span>{REAL_ARTICLE.readTime} read</span>
+            </div>
+            <p class="font-semibold text-orange-700 group-hover:underline">Read the article →</p>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- THE OTHER 27 (DEMO STUBS) -->
+    <section class="mb-16">
+      <p class="uppercase tracking-wide text-xs font-semibold text-neutral-600 mb-4">All articles in this category</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {allArticles.slice(1).map((article: any, i: number) => (
+          <a
+            href={article.href}
+            class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
+            data-demo-target={REAL_ARTICLE.href}
+            data-demo-label={article.title}
+          >
+            <img
+              src={article.image}
+              alt={article.title}
+              class="w-full h-44 object-cover group-hover:scale-105 transition duration-300"
+              loading="lazy"
+            />
+            <div class="p-5">
+              <p class="uppercase tracking-wide text-xs font-semibold text-orange-700 mb-2">Design Trends</p>
+              <h3 class="font-semibold text-base mb-2 leading-snug line-clamp-2 group-hover:text-orange-700">{article.title}</h3>
+              <p class="text-sm text-neutral-600 line-clamp-3 mb-3">{article.excerpt}</p>
+              <div class="flex items-center gap-3 text-xs text-neutral-500">
+                <span>{formatDate(article.date)}</span>
+                <span>·</span>
+                <span>{article.readTime} read</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- DEALER CTA BAND -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Ready to specify?</p>
+        <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 8px;">See the trend in your space.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">1,400+ authorized Heat &amp; Glo dealers across the US and Canada have working showroom displays of the families discussed in these articles.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
+    <!-- BACK TO IDEAS -->
+    <section class="border-t pt-8 mb-16">
+      <p class="text-sm text-neutral-600">
+        Browse other inspiration categories: <a href="/ideas/" class="text-orange-700 underline">All Ideas</a>
+      </p>
+    </section>
+
+  </main>
+</BaseLayout>

@@ -82,11 +82,6 @@ const dealers = [
   </section>
 
   <main class="max-w-page mx-auto px-4 py-4">
-    <section class="bg-amber-50 border-l-4 border-orange-600 rounded-r p-5 mb-8">
-      <p class="text-orange-900 font-semibold text-sm uppercase tracking-wide mb-1">Demo Results</p>
-      <p class="text-neutral-800">These are sample dealer cards showing how the production locator will display results. Click <strong>Pacific Hearth + Design</strong> to see a fully-built dealer detail page. The other 4 dealers route to the demo modal.</p>
-    </section>
-
     <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm">
       <p class="text-neutral-700"><strong>5 results</strong> within 25 miles of {zip}, sorted by distance.</p>
       <div class="flex gap-2">
@@ -112,7 +107,6 @@ const dealers = [
                 <span class="text-neutral-500">·</span>
                 <span class="font-medium text-neutral-700">{d.distance}</span>
               </div>
-              {d.isReal && <p class="text-xs text-orange-700 font-semibold mt-3 uppercase tracking-wide">↑ Click to see fully-built dealer detail page</p>}
             </div>
           </div>
         </a>

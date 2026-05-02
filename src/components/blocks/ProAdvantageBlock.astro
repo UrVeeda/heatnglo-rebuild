@@ -30,7 +30,7 @@ const {
   paragraph_1 = '',
   paragraph_2 = '',
   cta_text = 'Join Today',
-  cta_href = '/pro/proadvantage/',
+  cta_href = '/apply-for-dealership/',
   cta_variant,
   media_image = '',
   media_image_alt = '',
@@ -58,7 +58,14 @@ const btnClass = btnClasses(cta_variant, 'ink');
         {paragraph_1 && <p data-editable="text" data-prop="paragraph_1" data-type="block">{paragraph_1}</p>}
         {paragraph_2 && <p data-editable="text" data-prop="paragraph_2" data-type="block">{paragraph_2}</p>}
         {cta_text && (
-          <a class={btnClass} href={cta_href} data-editable="text" data-prop="cta_text">{cta_text}</a>
+          <a
+            class={btnClass}
+            href={cta_href}
+            data-editable="text"
+            data-prop="cta_text"
+            data-demo-target="/apply-for-dealership/"
+            data-demo-label="ProAdvantage Trade Program"
+          >{cta_text}</a>
         )}
       </div>
       {media_image && (

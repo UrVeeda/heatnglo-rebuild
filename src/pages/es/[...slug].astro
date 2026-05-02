@@ -1,18 +1,46 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Container from '@components/ui/Container.astro';
 
 export function getStaticPaths() {
   return [];
 }
----
-<BaseLayout title="Heat & Glo" description="" noIndex={true}>
-  <Container as="section" class="placeholder">
-    <h1>Página no conectada.</h1>
-  </Container>
-</BaseLayout>
 
-<style>
-  .placeholder { padding: 80px 0 120px; }
-  .placeholder h1 { font-size: 1.5rem; font-weight: 700; }
-</style>
+const pathname = Astro.url.pathname;
+---
+<BaseLayout
+  title="Página en desarrollo | Heat & Glo"
+  description="Explore la línea completa de chimeneas Heat & Glo — gas, madera, eléctrico y exterior — o encuentre su distribuidor autorizado más cercano."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-16">
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4">Volvamos a encontrar lo que buscas.</h1>
+      <p class="text-lg text-neutral-700 max-w-2xl">La página <code class="px-2 py-0.5 bg-neutral-100 border rounded text-sm">{pathname}</code> está disponible en el sitio completo de Heat &amp; Glo.</p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 gap-4 mb-12 max-w-2xl">
+      <a href="/es/" class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+        <p class="font-semibold mb-1">Inicio</p>
+        <p class="text-sm text-neutral-600">Página principal en español.</p>
+      </a>
+      <a href="/fireplaces/" class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+        <p class="font-semibold mb-1">Chimeneas</p>
+        <p class="text-sm text-neutral-600">Gas, madera, eléctrico y exterior.</p>
+      </a>
+      <a href="/where-to-buy/" class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+        <p class="font-semibold mb-1">Encontrar un distribuidor</p>
+        <p class="text-sm text-neutral-600">Más de 1,400 distribuidores autorizados.</p>
+      </a>
+      <a href="/blog/" class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+        <p class="font-semibold mb-1">Blog</p>
+        <p class="text-sm text-neutral-600">Guías de diseño y proyectos de renovación.</p>
+      </a>
+    </section>
+
+    <section class="border-t pt-10 text-sm text-neutral-600">
+      <p>
+        <a href="/where-to-buy/" class="underline">Encontrar un distribuidor Heat &amp; Glo cerca de usted</a> para información directa sobre productos.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

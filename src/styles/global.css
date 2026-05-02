@@ -165,4 +165,26 @@
       scroll-behavior: auto !important;
     }
   }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     Heat & Glo signature cursor + hover treatment.
+     Brick wall cursor on the page surface, flame on interactive
+     elements. Original-mockup-vibe restored across the site.
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><text y="22" font-size="22">🧱</text></svg>') 4 4, auto;
+  }
+
+  a, button, [role="button"], .btn, [data-demo-target] {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><text y="22" font-size="22">🔥</text></svg>') 4 4, pointer !important;
+  }
+
+  /* Subtle flame-glow accent on primary CTA hover */
+  a[style*="background: #c44a08"]:hover,
+  button[style*="background: #c44a08"]:hover {
+    box-shadow: 0 4px 18px rgba(196, 74, 8, 0.45), 0 0 0 1px rgba(255, 167, 38, 0.4);
+    transform: translateY(-1px);
+    transition: box-shadow 0.18s ease, transform 0.18s ease, background 0.15s ease;
+  }
 }

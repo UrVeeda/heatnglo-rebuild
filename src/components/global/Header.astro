@@ -67,8 +67,9 @@ const localePrefix = currentLocale === 'en' ? '' : '/' + currentLocale;
                 href={item.href}
                 class:list={[isPartner && 'nav__partner', isActive && 'is-active']}
                 aria-current={isActive ? 'page' : undefined}
+                {...(isPartner ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
-                {item.label}{isPartner ? ' →' : ''}
+                {item.label}{isPartner ? ' ↗' : ''}
               </a>
             </li>
           );

@@ -2,11 +2,46 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const designers = [
-  { name: 'Brandi Hagen', title: 'Eminent Interior Design', slug: 'brandi-hagen', focus: 'Hospitality + luxury residential' },
-  { name: 'Ann Fritz', title: 'Ann Fritz Designs', slug: 'ann-fritz', focus: 'Custom residential, Pacific Northwest' },
-  { name: 'Chris Walker', title: 'Walker Design Studio', slug: 'chris-walker', focus: 'Contemporary residential' },
-  { name: 'Jordan Iverson', title: 'Iverson Architecture', slug: 'jordan-iverson', focus: 'Modern residential + multifamily' },
-  { name: 'Katie Kurtz', title: 'Kurtz Interiors', slug: 'katie-kurtz', focus: 'Traditional and transitional residential' },
+  {
+    name: 'Brandi Hagen',
+    title: 'Eminent Interior Design',
+    slug: 'brandi-hagen',
+    focus: 'Hospitality + luxury residential',
+    img: 'https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:600,height:450',
+    imgAlt: 'Curated collection of Heat and Glo fireplace installations across luxury residential and hospitality settings',
+  },
+  {
+    name: 'Ann Fritz',
+    title: 'Ann Fritz Designs',
+    slug: 'ann-fritz',
+    focus: 'Custom residential, Pacific Northwest',
+    img: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
+    imgAlt: 'Traditional fireplace in a stone hearth with Coastal Chic furnishings and flanking shelves — True Series installation',
+  },
+  {
+    name: 'Chris Walker',
+    title: 'Walker Design Studio',
+    slug: 'chris-walker',
+    focus: 'Contemporary residential',
+    img: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
+    imgAlt: 'Heat and Glo Mezzo linear gas fireplace with ribbon flame and crystal glass media in a contemporary living room',
+  },
+  {
+    name: 'Jordan Iverson',
+    title: 'Iverson Architecture',
+    slug: 'jordan-iverson',
+    focus: 'Modern residential + multifamily',
+    img: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:450',
+    imgAlt: 'Open contemporary residential layout with Primo II 60 linear fireplace wall, L-shaped seating, and angled stair volume',
+  },
+  {
+    name: 'Katie Kurtz',
+    title: 'Kurtz Interiors',
+    slug: 'katie-kurtz',
+    focus: 'Traditional and transitional residential',
+    img: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
+    imgAlt: 'Warm traditional living room with fireplace set in a stone hearth, flanking built-in shelving, and symmetrical seating arrangement',
+  },
 ];
 ---
 <BaseLayout
@@ -33,11 +68,20 @@ const designers = [
 
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {designers.map((d) => (
-        <a href={`/architect/${d.slug}/`} class="block border rounded-lg p-6 hover:border-orange-400 hover:shadow-md transition">
-          <div class="aspect-[4/3] bg-neutral-100 rounded mb-4"></div>
-          <p class="font-semibold text-lg">{d.name}</p>
-          <p class="text-sm text-neutral-600 mt-1">{d.title}</p>
-          <p class="text-sm text-neutral-500 mt-2">{d.focus}</p>
+        <a href={`/architect/${d.slug}/`} class="block border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition group">
+          <div class="overflow-hidden">
+            <img
+              src={d.img}
+              alt={d.imgAlt}
+              class="w-full aspect-[4/3] object-cover rounded-t transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6 pt-4">
+            <p class="font-semibold text-lg">{d.name}</p>
+            <p class="text-sm text-neutral-600 mt-1">{d.title}</p>
+            <p class="text-sm text-neutral-500 mt-2">{d.focus}</p>
+          </div>
         </a>
       ))}
     </section>
