@@ -1,39 +1,15 @@
-# Settings collections — site-level data per locale.
-
 settings-en:
   path: src/content/en/settings
-  glob: ['**/*.{json,yml,yaml}']
+  glob:
+    - '**/*.{json,yml,yaml}'
   name: Settings (English)
   icon: settings
-  output: false
-  _enabled_editors: [data]
+  disable_url: false
   preview:
     text:
       - key: company.name
-
-settings-es:
-  path: src/content/es/settings
-  glob: ['**/*.{json,yml,yaml}']
-  name: Settings (Español — auto)
-  icon: settings
-  output: false
-  _enabled_editors: [data]
-  disable_add: true
-
-settings-en-ca:
-  path: src/content/en-ca/settings
-  glob: ['**/*.{json,yml,yaml}']
-  name: Settings (English-CA — auto)
-  icon: settings
-  output: false
-  _enabled_editors: [data]
-  disable_add: true
-
-settings-fr-ca:
-  path: src/content/fr-ca/settings
-  glob: ['**/*.{json,yml,yaml}']
-  name: Settings (Français-CA — auto)
-  icon: settings
-  output: false
-  _enabled_editors: [data]
-  disable_add: true
+  _enabled_editors:
+    - data
+  disable_add: false
+  disable_add_folder: false
+  disable_file_actions: false
