@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Mezzo Series Gas Fireplace (AU/NZ) | Heat & Glo",
+  "description": "Mezzo Series for AU/NZ: contemporary linear gas fireplace engineered to Australian and New Zealand gas standards. AS/NZS 5263. Available through AGA-certified dealers.",
+  "draft": true,
+  "family": "Mezzo Series (AU/NZ)",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": ["/fireplaces/global/australia-and-new-zealand/mezzo-series-gas-fireplace"],
+  "hero": {
+    "eyebrow": "MEZZO SERIES — AU/NZ LINEAR GAS FIREPLACE",
+    "h1": "The Mezzo linear, recompiled for AU/NZ regulations.",
+    "h1_em": "for AU/NZ regulations.",
+    "lede": "The Mezzo Series for Australia and New Zealand carries the same contemporary linear design language as Heat & Glo's US Mezzo, recompiled to meet AS/NZS 5263 gas standards and serviced through the regional AGA-certified dealer network."
+  },
+  "sizes": [
+    { "id": "default", "name": "Mezzo Series (AU/NZ)", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["au", "nz"],
+  "hreflang_locales": ["en-AU", "en-NZ"],
+  "faq": [],
+  "content_blocks": []
+}

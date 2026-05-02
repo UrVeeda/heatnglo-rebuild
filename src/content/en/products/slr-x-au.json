@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "SLR-X AU Gas Fireplace | Heat & Glo",
+  "description": "SLR-X AU: gas fireplace engineered for Australia and New Zealand markets. AS/NZS 5263 compliance. Available through Heat & Glo's AGA-certified dealer network.",
+  "draft": true,
+  "family": "SLR-X AU",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": ["/fireplaces/global/australia-and-new-zealand/slr-x-au-gas-fireplace"],
+  "hero": {
+    "eyebrow": "SLR-X AU — GAS FIREPLACE",
+    "h1": "Linear fire designed for AU/NZ residential applications.",
+    "h1_em": "for AU/NZ residential applications.",
+    "lede": "The SLR-X AU is a gas fireplace engineered specifically for Australian and New Zealand residential and light-commercial applications. AS/NZS 5263 listed. Sold and installed through Heat & Glo's regional AGA-certified dealer network."
+  },
+  "sizes": [
+    { "id": "default", "name": "SLR-X AU", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["au", "nz"],
+  "hreflang_locales": ["en-AU", "en-NZ"],
+  "faq": [],
+  "content_blocks": []
+}

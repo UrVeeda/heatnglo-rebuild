@@ -83,16 +83,27 @@ const data = product.data;
     )}
 
     {data.complete_the_look && data.complete_the_look.length > 0 && (
-      <section class="border-t pt-10 mb-16">
-        <h2 class="text-2xl font-semibold mb-6">Complete the Look</h2>
-        <p class="text-neutral-600 mb-4">Pairs beautifully with the {data.family} Series:</p>
-        <ul class="grid sm:grid-cols-3 gap-4">
-          {data.complete_the_look.map((slug: string) => (
-            <li class="border rounded-lg p-4">
-              <a href={`/accessories/${slug}/`} class="font-medium hover:underline">{slug.replace(/-/g, ' ')}</a>
-            </li>
-          ))}
-        </ul>
+      <section class="border-t pt-12 pb-12 mb-12 bg-neutral-50 -mx-4 px-4">
+        <div class="max-w-page mx-auto">
+          <p class="uppercase tracking-wide text-xs text-orange-700 font-semibold mb-2">Complete the look</p>
+          <h2 class="text-2xl font-semibold mb-2">Pairs beautifully with the {data.family} Series</h2>
+          <p class="text-neutral-600 mb-8 max-w-2xl">Heat & Glo mantel shelves, stone surrounds, and wood mantels are engineered to complete the install. Bring the conversation to your authorized dealer with the pieces already in mind.</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.complete_the_look.map((slug: string) => (
+              <a href={`/accessories/${slug}/`} class="group block bg-white border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+                <div class="aspect-[4/3] bg-neutral-100 rounded mb-4 flex items-center justify-center text-xs text-neutral-400 uppercase tracking-wide">
+                  {slug.split('-')[0]}
+                </div>
+                <p class="font-semibold text-base mb-1 group-hover:text-orange-700">{slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</p>
+                <p class="text-sm text-neutral-600 mb-3">Designed to pair with {data.family}</p>
+                <p class="text-sm font-medium text-orange-700">Add to my consultation list →</p>
+              </a>
+            ))}
+          </div>
+          <p class="mt-8 text-sm text-neutral-500">
+            <a href="/accessories/" class="underline">Browse all accessories</a>
+          </p>
+        </div>
       </section>
     )}
 
@@ -110,7 +121,18 @@ const data = product.data;
       </section>
     )}
 
-    {data.available_in && data.available_in.length > 0 && (
+    {data.available_in && (data.available_in.includes('au') || data.available_in.includes('nz')) && (
+      <section class="border-t pt-8 mb-8">
+        <div class="bg-amber-50 border border-amber-300 rounded-lg p-4 inline-block">
+          <p class="text-sm font-medium text-amber-900">
+            <span class="uppercase tracking-wide text-xs font-semibold">AU/NZ market</span><br/>
+            Available in Australia and New Zealand. Compliance: AS/NZS 5263. Contact your local AGA-certified dealer for spec confirmation and installation requirements specific to your region.
+          </p>
+        </div>
+      </section>
+    )}
+
+    {data.available_in && data.available_in.length > 0 && !data.available_in.includes('au') && !data.available_in.includes('nz') && (
       <section class="border-t pt-6 text-sm text-neutral-600">
         <p>Available in: {data.available_in.join(', ').toUpperCase()}</p>
       </section>

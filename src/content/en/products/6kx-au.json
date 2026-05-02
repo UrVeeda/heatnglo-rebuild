@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "6KX AU Gas Fireplace | Heat & Glo",
+  "description": "6KX AU: traditional-aesthetic gas fireplace engineered for Australia and New Zealand markets. Compliance: AS/NZS 5263. Available through AGA-certified dealers.",
+  "draft": true,
+  "family": "6KX AU",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": ["/fireplaces/global/australia-and-new-zealand/6kx-au-gas-fireplace"],
+  "hero": {
+    "eyebrow": "6KX AU — GAS FIREPLACE",
+    "h1": "Traditional warmth. Engineered for the AU/NZ market.",
+    "h1_em": "Engineered for the AU/NZ market.",
+    "lede": "The 6KX AU brings the familiar Heat & Glo traditional hearth aesthetic into compliance with Australian and New Zealand gas standards. AS/NZS 5263 listed. Sold and installed through Heat & Glo's regional AGA-certified dealer network."
+  },
+  "sizes": [
+    { "id": "default", "name": "6KX AU", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["au", "nz"],
+  "hreflang_locales": ["en-AU", "en-NZ"],
+  "faq": [],
+  "content_blocks": []
+}

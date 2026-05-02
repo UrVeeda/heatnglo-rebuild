@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "AU Series Gas Fireplace Insert | Heat & Glo",
+  "description": "AU Series Insert: gas fireplace insert engineered for Australia and New Zealand fireplace retrofits. AS/NZS 5263 compliance. Available through AGA-certified dealers.",
+  "draft": true,
+  "family": "AU Series Insert",
+  "energy": "gas",
+  "placement": "inserts",
+  "legacy_slugs": ["/fireplaces/global/australia-and-new-zealand/au-series-gas-fireplace-insert"],
+  "hero": {
+    "eyebrow": "AU SERIES INSERT — GAS FIREPLACE INSERT",
+    "h1": "Retrofit a traditional fireplace opening with regulated gas.",
+    "h1_em": "with regulated gas.",
+    "lede": "The AU Series Insert is a gas fireplace insert engineered for the Australian and New Zealand markets, designed to retrofit existing traditional fireplace openings with controlled, code-compliant gas operation. AS/NZS 5263 listed."
+  },
+  "sizes": [
+    { "id": "default", "name": "AU Series Insert", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["au", "nz"],
+  "hreflang_locales": ["en-AU", "en-NZ"],
+  "faq": [],
+  "content_blocks": []
+}
