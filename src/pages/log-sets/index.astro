@@ -6,72 +6,321 @@ const products = await getCollection('products-en');
 const logSets = products.filter((p) => p.data.placement === 'log-set');
 const indoor = logSets.filter((p) => !p.id.includes('outdoor'));
 const outdoor = logSets.filter((p) => p.id.includes('outdoor'));
+
+const indoorSeriesCards = [
+  {
+    name: 'Duzy 2 Log Set',
+    desc: 'Two-piece hand-painted ceramic log set with a natural hardwood appearance. Vented configuration for traditional masonry fireplace openings.',
+    img: 'https://hearthnhome.getbynder.com/transform/1d9111d1-a8f3-45a9-b9ea-0b4f2b947aae/HHT_GasLogs_Duzy2?io=transform:fill,width:600,height:450',
+    alt: 'Duzy 2 gas log set with hand-painted ceramic logs and natural flame in a traditional masonry fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Duzy 3 Log Set',
+    desc: 'Three-piece oak log grouping with realistic char marks and flame height control. Fits 24- to 36-inch fireplace openings.',
+    img: 'https://hearthnhome.getbynder.com/transform/032865c8-bf59-4d18-91a1-6558c2fccc88/HHT_GasLogs_Duzy3?io=transform:fill,width:600,height:450',
+    alt: 'Duzy 3 gas log set three-piece oak grouping with realistic char detail and controlled flame in a brick fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Duzy 5 Log Set',
+    desc: 'Full five-piece log arrangement for larger openings — 36 to 42 inches. The most layered, realistic presentation in the Duzy family.',
+    img: 'https://hearthnhome.getbynder.com/transform/8699f253-03a0-467e-9f66-dca714b7c87f/HHT_GasLogs_Duzy5?io=transform:fill,width:600,height:450',
+    alt: 'Duzy 5 gas log set five-piece arrangement with full flame presentation in a stone masonry fireplace opening',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'HTube TimberOak Logs',
+    desc: 'Horizontal tube burner with TimberOak ceramic logs — a wider, lower flame bed that reads as smoldering embers at reduced settings.',
+    img: 'https://hearthnhome.getbynder.com/transform/a14397d3-2bd2-4a6b-a876-f58c672e3b6a/HHT_GasLogs_HTube_TimberOak2Logs?io=transform:fill,width:600,height:450',
+    alt: 'HTube TimberOak 2 gas log set with horizontal tube burner and low ember bed presentation in a brick fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'HTube WoodlandBirch Logs',
+    desc: 'Birch-species ceramic log set on the horizontal tube burner platform. White bark detail with multi-level flame height.',
+    img: 'https://hearthnhome.getbynder.com/transform/908fcdf6-cca6-4c5d-93ba-9f61844b9ce5/HHT_GasLogs_HTube_WoodlandBirchLogs?io=transform:fill,width:600,height:450',
+    alt: 'HTube WoodlandBirch gas log set with white birch bark ceramic logs and controlled multi-level flame in a traditional fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'HTube Kindled-Stack Logs',
+    desc: 'Stacked kindling arrangement with orange flame and glowing ember bed. Distinctive look for contemporary and transitional fireplace surrounds.',
+    img: 'https://hearthnhome.getbynder.com/transform/dd94d913-9b31-49e3-b3a3-641a634ddfcf/HHT_GasLogs_HTube_Kindled-StackLogs_Fire?io=transform:fill,width:600,height:450',
+    alt: 'HTube Kindled-Stack gas log set with stacked log arrangement and deep orange flame in a fireplace opening',
+    href: '/where-to-buy/',
+  },
+  {
+    name: '3-Tier HeritageOak',
+    desc: 'Three-tier oak log arrangement for maximum visual volume. The largest indoor log-set presentation in the Heat & Glo lineup.',
+    img: 'https://hearthnhome.getbynder.com/transform/82efc796-21f5-4cd5-86d5-0dcc7aadf5af/HHT_GasLogs_3Tier_HeritageOakLogs?io=transform:fill,width:600,height:450',
+    alt: '3-Tier HeritageOak gas log set with three-row log arrangement and full flame in a traditional masonry fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: '3-Tier GrandBirch',
+    desc: 'Birch log set in a three-tier arrangement. The white bark ceramic logs layer from front to back for depth and realism.',
+    img: 'https://hearthnhome.getbynder.com/transform/e2b084cd-962a-4891-bb68-0a1398e09dde/HHT_GasLogs_3Tier_GrandBirchLogs?io=transform:fill,width:600,height:450',
+    alt: '3-Tier GrandBirch gas log set with layered white birch ceramic logs and flame in a traditional fireplace opening',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Contemporary Crystal Media',
+    desc: 'For the customer who wants the gas flame without any log aesthetic. Smoke crystal glass media with a clean ember bed.',
+    img: 'https://hearthnhome.getbynder.com/transform/0f53b9a1-3b0b-4bc0-929b-2c287810ae8b/HHT_GasLogs_Contemp_SmokeCrystalMedia?io=transform:fill,width:600,height:450',
+    alt: 'Contemporary smoke crystal glass media bed with clean gas flame in a modern fireplace opening',
+    href: '/where-to-buy/',
+  },
+];
+
+const outdoorSeriesCards = [
+  {
+    name: 'Outdoor 3-Tier GrandOak',
+    desc: 'Three-tier grand oak log arrangement rated for exterior installation. Weatherproof components with full flame presentation.',
+    img: 'https://hearthnhome.getbynder.com/transform/c2f5cc0a-0d24-4f0e-bd53-fcfe42dd3dd0/HHT_GasLogs_Outdoor_3Tier_GrandOakLogs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor 3-Tier GrandOak gas log set in an exterior stone fireplace with full flame and weatherproof components',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Outdoor 3-Tier GrandBirch',
+    desc: 'White birch ceramic logs in a three-tier arrangement. Outdoor-rated and matched to the full outdoor fireplace lineup.',
+    img: 'https://hearthnhome.getbynder.com/transform/dc73860d-4eff-4ffb-9e56-3cc99140c073/19_HHT_GasLogs_Outdoor_3Tier_GrandBirchLogs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor 3-Tier GrandBirch gas log set with birch ceramic logs in an exterior fireplace with patio setting',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Outdoor 3-Tier HeritageOak',
+    desc: 'Heritage oak species in the outdoor three-tier platform. Pairs with the Castlewood and Cottagewood exterior masonry fireplace families.',
+    img: 'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outdoor_3Tier_HeritageOakLogs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor 3-Tier HeritageOak gas log set with traditional oak logs and flame in a stone exterior fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Outdoor SingleTube TimberOak',
+    desc: 'Single horizontal tube burner with TimberOak logs. Compact outdoor configuration for 24- to 30-inch exterior openings.',
+    img: 'https://hearthnhome.getbynder.com/transform/a466deb9-eefd-494a-90da-02f01f6478d1/40_HHT_GasLogs_Outdoor_SingleTube_Smoldering_TimberOak_Logs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor SingleTube smoldering TimberOak gas log set in an exterior fireplace with low ember presentation',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Outdoor SingleTube Kindled-Stack',
+    desc: 'Stacked kindling arrangement on the single outdoor burner platform. Fits the Courtyard and Lanai outdoor fireplace families.',
+    img: 'https://hearthnhome.getbynder.com/transform/fa7735a5-7bac-4c5d-be4d-93212873562c/43_HHT_GasLogs_Outdoor_SingleTube_Kindled-StackLogs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor SingleTube Kindled-Stack gas log set with stacked arrangement and orange flame in an exterior stone fireplace',
+    href: '/where-to-buy/',
+  },
+  {
+    name: 'Outdoor HTube TimberOak',
+    desc: 'Horizontal tube outdoor burner platform with TimberOak logs. Wider flame bed for larger 36-inch+ exterior openings.',
+    img: 'https://hearthnhome.getbynder.com/transform/77452cd4-7c5c-4d6d-af8e-89c42ebcd655/14_HHT_GasLogs_Outdoor_HTube_TimberOak2Logs?io=transform:fill,width:600,height:450',
+    alt: 'Outdoor HTube TimberOak 2 gas log set with horizontal burner and wide flame in an outdoor stone fireplace surround',
+    href: '/where-to-buy/',
+  },
+];
 ---
 <BaseLayout
   title="Gas Log Sets — Heat & Glo"
   description="Heat & Glo gas log sets bring real flame to existing fireplace openings. Indoor and outdoor configurations across vented and vent-free options."
   noIndex={true}
 >
+
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4 overflow-hidden">
-    <img src="https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:1920,height:720" alt="Heat & Glo Heritage Oak outdoor gas log set with three-tier flame in a stone fireplace" class="w-full h-[520px] md:h-[360px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outdoor_3Tier_HeritageOakLogs?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo Heritage Oak outdoor gas log set with three-tier flame in a stone fireplace"
+      class="w-full h-[640px] md:h-[480px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Log Sets</p>
-        <h1 class="text-3xl md:text-3xl md:text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">Gas log sets for existing fireplace openings.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Gas Log Sets</p>
+        <h1 class="text-3xl md:text-5xl font-bold max-w-2xl leading-tight mb-4">Real flame. No chimney rebuild required.</h1>
+        <p class="text-sm md:text-lg text-white/85 max-w-xl mb-8">Heat &amp; Glo gas log sets retrofit into existing masonry fireplace openings — indoor and outdoor. You keep the surround, the mantel, the hearth. The only thing that changes is how much easier the fire becomes.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          <a href="/fireplaces/gas/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Browse gas fireplaces</a>
+        </div>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">
-        Real flame, controlled gas, no chimney rebuild. Heat & Glo log sets retrofit into existing
-        masonry openings without replacing the fireplace, indoor or outdoor.
+
+    <!-- INTRO + TRUST STRIP -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">
+        Gas log sets are the retrofit answer for homeowners with a working masonry fireplace who want the convenience of gas without losing the visual character of real logs. The existing firebox stays. The log set drops in. Heat &amp; Glo offers vented indoor sets in traditional, birch, and contemporary media styles — and a complete line of outdoor-rated sets for patio and covered-exterior installations.
       </p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Retrofit</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">No chimney rebuild needed</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Indoor + outdoor</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Full rated lineup for both</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized dealers</p>
+        </div>
+      </div>
     </header>
 
-    {logSets.length === 0 && (
-      <section class="bg-amber-50 border border-amber-200 rounded p-6">
-        <p class="text-amber-900">
-          Log set product pages are being populated from the legacy catalog. Check back soon, or
-          <a href="/where-to-buy/" class="underline ml-1">find an authorized dealer</a> for current
-          inventory and pairing recommendations.
-        </p>
-      </section>
-    )}
-
-    {indoor.length > 0 && (
-      <section class="mb-16">
-        <h2 class="text-2xl font-semibold mb-6">Indoor log sets</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {indoor.map((p: any) => (
-            <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-4 hover:bg-neutral-50 transition">
-              <p class="font-semibold">{p.data.family}</p>
-              {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
-
-    {outdoor.length > 0 && (
-      <section class="mb-16">
-        <h2 class="text-2xl font-semibold mb-6">Outdoor log sets</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {outdoor.map((p: any) => (
-            <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-4 hover:bg-neutral-50 transition">
-              <p class="font-semibold">{p.data.family}</p>
-              {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
-
-    <section class="border-t pt-10">
-      <p class="text-neutral-600">
-        Need a complete fireplace install instead of a retrofit?
-        <a href="/fireplaces/gas/" class="underline ml-2">Browse Gas Fireplaces</a>
-      </p>
+    <!-- INLINE CTA BAND 1 -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px;">Which log set pairs with your existing fireplace opening?</p>
+        <p style="color: #6b7280; font-size: 14px;">Opening width, BTU requirements, and venting configuration determine the right set. Your authorized dealer measures the opening and specifies the correct model — you don't have to guess.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
     </section>
+
+    <!-- INDOOR LOG SET GRID -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-2">Indoor gas log sets</h2>
+      <p class="text-neutral-600 mb-8 max-w-2xl">Traditional masonry fireplace openings, vented configuration. Available in oak, birch, stacked kindling, and contemporary crystal media.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {indoor.length > 0
+          ? indoor.map((p: any) => (
+              <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+                <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/82efc796-21f5-4cd5-86d5-0dcc7aadf5af/HHT_GasLogs_3Tier_HeritageOakLogs?io=transform:fill,width:600,height:450'} alt={p.data.family + ' indoor gas log set in a traditional masonry fireplace'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+                <div class="p-5">
+                  <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+                  {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
+                  <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View log set &rarr;</p>
+                </div>
+              </a>
+            ))
+          : indoorSeriesCards.map((card) => (
+              <a href={card.href} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+                <img src={card.img} alt={card.alt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+                <div class="p-5">
+                  <p class="font-semibold text-lg group-hover:text-orange-700">{card.name}</p>
+                  <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{card.desc}</p>
+                  <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">Ask your dealer &rarr;</p>
+                </div>
+              </a>
+            ))
+        }
+      </div>
+    </section>
+
+    <!-- LIFESTYLE INTERSTITIAL 1 — smoldering TimberOak close-up -->
+    <section class="relative -mx-4 mb-16" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/926f8ba4-a56c-4bf1-b585-1e6e17902ac9/HHT_GasLogs_HTube_Smoldering_TimberOak1Logs?io=transform:fill,width:1920,height:560"
+        alt="HTube TimberOak gas log set smoldering with low amber ember bed in a traditional masonry fireplace"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">The smolder setting</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">Low and slow. The ambiance without the heat.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Heat &amp; Glo log sets dial down to a smoldering ember presentation — low flame, amber glow, no significant BTU output. The look of a fire that has been burning for hours, on demand. Your authorized dealer can show you the full flame range in a working showroom display.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTDOOR LOG SET GRID -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-2">Outdoor gas log sets</h2>
+      <p class="text-neutral-600 mb-8 max-w-2xl">Rated for exterior installation in covered patios, outdoor kitchens, and masonry fireplace columns. Weatherproof components and outdoor-rated burners — paired with the Castlewood, Cottagewood, Courtyard, and Lanai outdoor fireplace families.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {outdoor.length > 0
+          ? outdoor.map((p: any) => (
+              <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+                <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/c2f5cc0a-0d24-4f0e-bd53-fcfe42dd3dd0/HHT_GasLogs_Outdoor_3Tier_GrandOakLogs?io=transform:fill,width:600,height:450'} alt={p.data.family + ' outdoor gas log set in an exterior stone fireplace'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+                <div class="p-5">
+                  <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+                  {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
+                  <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View log set &rarr;</p>
+                </div>
+              </a>
+            ))
+          : outdoorSeriesCards.map((card) => (
+              <a href={card.href} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+                <img src={card.img} alt={card.alt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+                <div class="p-5">
+                  <p class="font-semibold text-lg group-hover:text-orange-700">{card.name}</p>
+                  <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{card.desc}</p>
+                  <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">Ask your dealer &rarr;</p>
+                </div>
+              </a>
+            ))
+        }
+      </div>
+    </section>
+
+    <!-- LIFESTYLE INTERSTITIAL 2 — WoodlandBirch outdoor carousel, wide patio setting -->
+    <section class="relative -mx-4 mb-16" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/5d3dd2ec-420d-49b6-b2ba-82922f8884d5/HHT_GasLogs_WoodlandBirch_SingleTube_Outdoor_Carousel?io=transform:fill,width:1920,height:560"
+        alt="WoodlandBirch single tube outdoor gas log set installed in an exterior fireplace with covered patio setting"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Outdoor log sets</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">Built for the patio. Same realism as indoors.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Heat &amp; Glo outdoor log sets use weatherproof ceramic and outdoor-rated burner assemblies. The visual quality — birch bark detail, timber oak grain, stacked kindling texture — is identical to the indoor line. Your authorized dealer can match the log set to your outdoor fireplace family and opening dimensions.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE THE LOOK — cross-link to fireplace families -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-2">Complete the look — pair with a fireplace family</h2>
+      <p class="text-neutral-600 mb-8 max-w-2xl">Don't have an existing fireplace opening yet? Log sets pair with the full Heat &amp; Glo gas and wood-burning lineup. The right firebox and log set are specified together for the cleanest result.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <a href="/fireplaces/gas/" style="border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+          <img
+            src="https://hearthnhome.getbynder.com/transform/6d502d5b-b8b2-4999-8cbe-0794c99b275b/HHT_Birmingham_MasonryBrn_Stacked_HeritageOak_SO?io=transform:fill,width:800,height:480"
+            alt="Heat & Glo Birmingham masonry brown stacked Heritage Oak log set in a traditional gas fireplace room setting"
+            class="w-full object-cover"
+            style="height: 220px;"
+          />
+          <div style="padding: 20px 24px;">
+            <p style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Gas Fireplaces</p>
+            <p style="color: #6b7280; font-size: 13px; margin-bottom: 12px;">Every gas fireplace family supports log set configuration from the factory. Match the firebox and the log set in one spec.</p>
+            <p style="color: #c44a08; font-weight: 600; font-size: 14px;">Browse gas fireplaces &rarr;</p>
+          </div>
+        </a>
+        <a href="/fireplaces/outdoor/" style="border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+          <img
+            src="https://hearthnhome.getbynder.com/transform/1f169f74-9817-4318-aaa3-4a2c37953ad4/18_HHT_GasLogs_Outdoor_3Tier_GrandOakLogs?io=transform:fill,width:800,height:480"
+            alt="Outdoor 3-Tier GrandOak log set in an exterior stone fireplace with patio furniture in a covered outdoor living space"
+            class="w-full object-cover"
+            style="height: 220px;"
+          />
+          <div style="padding: 20px 24px;">
+            <p style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Outdoor Fireplaces</p>
+            <p style="color: #6b7280; font-size: 13px; margin-bottom: 12px;">Outdoor fireplaces and outdoor log sets are specified together. Your dealer matches the burner platform to the firebox opening in your exterior build.</p>
+            <p style="color: #c44a08; font-weight: 600; font-size: 14px;">Browse outdoor fireplaces &rarr;</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DEALER CTA BAND -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Find your configuration</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Talk to a dealer who installs these for a living.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">Log set sizing, burner type, venting configuration, and BTU range are all opening-specific. Your authorized Heat &amp; Glo dealer measures, specifies, and installs. 1,400+ locations across the US and Canada.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
   </main>
 </BaseLayout>

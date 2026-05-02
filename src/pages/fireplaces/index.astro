@@ -121,14 +121,31 @@ const familyCardImages: Record<string, string> = {
             const demoImage = demoImageMap[slug] ?? fallbackImage;
             const cardImage = familyCardImages[slug] ?? (p.data.ogImage ?? fallbackImage);
             return isLive ? (
-              <a href={`/fireplaces/${slug}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-                <img src={cardImage} alt={`Heat & Glo ${p.data.family} fireplace`} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
-                <div class="p-5">
-                  <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
-                  <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
-                  <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} · {p.data.sizes?.length ?? 1} sizes</p>
+              <div class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition relative" style="display: flex; flex-direction: column;">
+                <a href={`/fireplaces/${slug}/`} class="block">
+                  <img src={cardImage} alt={`Heat & Glo ${p.data.family} fireplace`} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
+                  <div class="p-5 pb-3">
+                    <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+                    <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+                    <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} · {p.data.sizes?.length ?? 1} sizes</p>
+                  </div>
+                </a>
+                <div class="px-5 pb-5 pt-0 flex gap-2 mt-auto">
+                  <a href={`/fireplaces/${slug}/`} style="font-size: 13px; font-weight: 600; color: #c44a08; text-decoration: underline; align-self: center;">View family →</a>
+                  <button
+                    type="button"
+                    data-hg-add-to-consultation
+                    data-hg-item-id={`fireplace:${slug}`}
+                    data-hg-item-type="Fireplace"
+                    data-hg-item-title={`${p.data.family} ${p.data.energy === 'gas' ? 'Gas Fireplace' : p.data.energy === 'wood' ? 'Wood-Burning Fireplace' : 'Fireplace'}`}
+                    data-hg-slug={`/fireplaces/${slug}/`}
+                    data-hg-item-image={cardImage}
+                    style="margin-left: auto; background: #c44a08; color: #fff; padding: 8px 14px; border-radius: 6px; font-weight: 700; border: 0; cursor: pointer; font-size: 12px; transition: background 0.15s ease;"
+                    onmouseover="this.style.background='#a83e07'"
+                    onmouseout="this.style.background='#c44a08'"
+                  >🔥 Add to list</button>
                 </div>
-              </a>
+              </div>
             ) : (
               <a
                 href={`/fireplaces/${slug}/`}
