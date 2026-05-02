@@ -1,46 +1,46 @@
 {
   "main": [
-    { "label": "Fireplaces",        "href": "/products/" },
+    { "label": "Fireplaces",        "href": "/fireplaces/" },
     { "label": "Log Sets",          "href": "/log-sets/" },
     { "label": "Accessories",       "href": "/accessories/" },
-    { "label": "Inspiration",       "href": "/inspiration/" },
+    { "label": "Inspiration",       "href": "/ideas/" },
     { "label": "Where to Buy",      "href": "/where-to-buy/" },
     { "label": "Pro",               "href": "/pro/" },
     { "label": "Owner Resources",   "href": "/owner-resources/" },
     { "label": "Blog",              "href": "/blog/" },
-    { "label": "About",             "href": "/about/" }
+    { "label": "About",             "href": "/about-us/" }
   ],
   "es_main": [
-    { "label": "Chimeneas",                      "href": "/es/products/" },
+    { "label": "Chimeneas",                      "href": "/es/fireplaces/" },
     { "label": "Juegos de Leños",                "href": "/es/log-sets/" },
     { "label": "Accesorios",                     "href": "/es/accessories/" },
-    { "label": "Inspiración",                    "href": "/es/inspiration/" },
+    { "label": "Inspiración",                    "href": "/es/ideas/" },
     { "label": "Dónde Comprar",                  "href": "/es/where-to-buy/" },
     { "label": "Pro",                            "href": "/es/pro/" },
     { "label": "Recursos para Propietarios",     "href": "/es/owner-resources/" },
     { "label": "Blog",                           "href": "/es/blog/" },
-    { "label": "Acerca de",                      "href": "/es/about/" }
+    { "label": "Acerca de",                      "href": "/es/about-us/" }
   ],
   "en_ca_main": [
-    { "label": "Fireplaces",        "href": "/en-ca/products/" },
+    { "label": "Fireplaces",        "href": "/en-ca/fireplaces/" },
     { "label": "Log Sets",          "href": "/en-ca/log-sets/" },
     { "label": "Accessories",       "href": "/en-ca/accessories/" },
-    { "label": "Inspiration",       "href": "/en-ca/inspiration/" },
+    { "label": "Inspiration",       "href": "/en-ca/ideas/" },
     { "label": "Where to Buy",      "href": "/en-ca/where-to-buy/" },
     { "label": "Pro",               "href": "/en-ca/pro/" },
     { "label": "Owner Resources",   "href": "/en-ca/owner-resources/" },
     { "label": "Blog",              "href": "/en-ca/blog/" },
-    { "label": "About",             "href": "/en-ca/about/" }
+    { "label": "About",             "href": "/en-ca/about-us/" }
   ],
   "fr_ca_main": [
-    { "label": "Foyers",                         "href": "/fr-ca/products/" },
+    { "label": "Foyers",                         "href": "/fr-ca/fireplaces/" },
     { "label": "Ensembles de Bûches",            "href": "/fr-ca/log-sets/" },
     { "label": "Accessoires",                    "href": "/fr-ca/accessories/" },
-    { "label": "Inspiration",                    "href": "/fr-ca/inspiration/" },
+    { "label": "Inspiration",                    "href": "/fr-ca/ideas/" },
     { "label": "Où acheter",                     "href": "/fr-ca/where-to-buy/" },
     { "label": "Pro",                            "href": "/fr-ca/pro/" },
     { "label": "Ressources pour propriétaires",  "href": "/fr-ca/owner-resources/" },
     { "label": "Blogue",                         "href": "/fr-ca/blog/" },
-    { "label": "À propos",                       "href": "/fr-ca/about/" }
+    { "label": "À propos",                       "href": "/fr-ca/about-us/" }
   ]
 }

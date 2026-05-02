@@ -12,10 +12,10 @@
       "heading_em": "back to life.",
       "lede": "Save up to $650 when you upgrade your old wood-burning fireplace to a beautiful, easy-to-use Heat & Glo gas insert. Push-button warmth. Cleaner glass. The kind of flame your living room organizes itself around.",
       "cta_primary_text": "Get Your $650 Savings Code",
-      "cta_primary_href": "/promotions/gas-insert-rebate/",
+      "cta_primary_href": "/fireplace-sale/",
       "cta_primary_variant": "orange",
       "cta_secondary_text": "Browse the Lineup",
-      "cta_secondary_href": "/products/",
+      "cta_secondary_href": "/fireplaces/",
       "cta_secondary_variant": "ghost",
       "microcopy": "✓ No purchase necessary · ✓ 0% financing through dealer partners · ✓ Most installs in 2-4 weeks",
       "zip_label": "Find a Dealer",
@@ -63,7 +63,7 @@
       "paragraph_1": "Transform your wood-burning fireplace into a source of everyday comfort. A Heat & Glo gas insert fits right inside your existing fireplace, delivering consistent heat, no cleanup, and a cozy atmosphere at the touch of a button.",
       "paragraph_2": "Perfect for chilly spring mornings, rainy afternoons, and relaxed evenings at home. Save up to $650 for a limited time.",
       "cta_text": "Get Your Savings Code",
-      "cta_href": "/promotions/gas-insert-rebate/",
+      "cta_href": "/fireplace-sale/",
       "cta_variant": "ink",
       "media_image": "https://hearthnhome.getbynder.com/transform/ed7f9952-337a-40b7-a842-2fee6d375de3/Before-After-Heat-Glo-SupremeX-1?io=transform:fill,width:1000,height:750",
       "media_image_alt": "Before and after — upgrading a wood-burning fireplace to a Heat & Glo SupremeX gas insert",
@@ -82,7 +82,7 @@
           "title": "Gas Fireplaces",
           "sub": "Direct-vent, B-vent, ventless · 18 models",
           "cta_text": "Browse Gas",
-          "cta_href": "/products/gas-fireplaces/"
+          "cta_href": "/fireplaces/gas/"
         },
         {
           "image": "https://hearthnhome.getbynder.com/transform/151cc8f6-126a-4786-a17d-25ba18a7bf0f/EmilyHenderson-PrimaryBedroom_KaitlinGreen-16?io=transform:fill,width:600,height:450",
@@ -90,7 +90,7 @@
           "title": "Electric Fireplaces",
           "sub": "Wall-mount, built-in, inserts · 9 models",
           "cta_text": "Browse Electric",
-          "cta_href": "/products/electric-fireplaces/"
+          "cta_href": "/fireplaces/electric/"
         },
         {
           "image": "https://hearthnhome.getbynder.com/transform/ab82046a-f6e7-40e8-92ab-5cc8b0f870ef/HNG_Supreme_LKS-06?io=transform:fill,width:600,height:450",
@@ -98,7 +98,7 @@
           "title": "Wood Fireplaces",
           "sub": "EPA-certified, low-emission burns · 7 models",
           "cta_text": "Browse Wood",
-          "cta_href": "/products/wood-fireplaces/"
+          "cta_href": "/fireplaces/wood/"
         },
         {
           "image": "https://hearthnhome.getbynder.com/transform/a7b207d3-169f-4fff-a129-486d7a8d731d/STL_OpenHearth_6ft_Stone_MediaRoom_599?io=transform:fill,width:600,height:450",
@@ -106,7 +106,7 @@
           "title": "Outdoor Fireplaces",
           "sub": "Patio, built-in, gas + wood · 11 models",
           "cta_text": "Browse Outdoor",
-          "cta_href": "/products/outdoor-fireplaces/"
+          "cta_href": "/fireplaces/outdoor/"
         }
       ]
     },
