@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Grand Oak Gas Log Set | Heat & Glo",
+  "description": "Grand Oak gas log set: a substantial six-log oak arrangement engineered for larger traditional fireplace openings. Layered flame, realistic bark detail, vented operation.",
+  "draft": false,
+  "family": "Grand Oak",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/indoor/grand-oak-gas-logs-set"],
+  "hero": {
+    "eyebrow": "GRAND OAK — VENTED GAS LOG SET",
+    "h1": "A substantial gas log set built for substantial openings.",
+    "h1_em": "built for substantial openings.",
+    "lede": "The Grand Oak fills a larger traditional fireplace opening with a six-log oak arrangement, deeper ember bed, and a layered flame pattern that reads convincingly as a real wood fire from across the room."
+  },
+  "sizes": [
+    { "id": "default", "name": "Grand Oak", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}

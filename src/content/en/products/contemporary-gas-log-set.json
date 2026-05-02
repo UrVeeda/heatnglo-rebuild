@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Contemporary Gas Log Set | Heat & Glo",
+  "description": "Contemporary gas log set: a clean modern alternative to traditional log arrangements, featuring sculptural geometry and a controlled flame designed for contemporary interiors.",
+  "draft": false,
+  "family": "Contemporary",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/indoor/contemporary-gas-log-set"],
+  "hero": {
+    "eyebrow": "CONTEMPORARY — GAS LOG SET",
+    "h1": "Modern firebox media. No traditional log set required.",
+    "h1_em": "No traditional log set required.",
+    "lede": "The Contemporary gas log set replaces the traditional log arrangement with sculptural geometric media and a controlled flame designed for contemporary interiors. Specifier favorite for modern renovations of older masonry openings."
+  },
+  "sizes": [
+    { "id": "default", "name": "Contemporary", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}

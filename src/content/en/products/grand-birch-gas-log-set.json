@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Grand Birch Gas Log Set | Heat & Glo",
+  "description": "Grand Birch gas log set: a contemporary white-bark birch log arrangement designed to bring the modern lodge aesthetic into a traditional fireplace opening.",
+  "draft": false,
+  "family": "Grand Birch",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/indoor/grand-birch-gas-log-set"],
+  "hero": {
+    "eyebrow": "GRAND BIRCH — VENTED GAS LOG SET",
+    "h1": "Birch logs. White bark. Modern-lodge fire.",
+    "h1_em": "Modern-lodge fire.",
+    "lede": "The Grand Birch translates the modern lodge aesthetic into a traditional fireplace opening. White-bark birch log detail, layered flame pattern, vented configuration. The contemporary alternative to a classic oak log set."
+  },
+  "sizes": [
+    { "id": "default", "name": "Grand Birch", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}

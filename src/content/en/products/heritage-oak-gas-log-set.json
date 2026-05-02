@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Heritage Oak Gas Log Set | Heat & Glo",
+  "description": "Heritage Oak gas log set: a hand-crafted oak log arrangement with realistic bark detail and a layered flame pattern. Vented configuration for traditional fireplace retrofits.",
+  "draft": false,
+  "family": "Heritage Oak",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/indoor/heritage-oak-gas-log-set"],
+  "hero": {
+    "eyebrow": "HERITAGE OAK — VENTED GAS LOG SET",
+    "h1": "Hand-crafted oak. The kind of fire that earns a long stare.",
+    "h1_em": "earns a long stare.",
+    "lede": "The Heritage Oak gas log set captures the bark detail, layered embers, and irregular flame behavior of a real oak fire. Vented configuration retrofits cleanly into existing traditional fireplace openings."
+  },
+  "sizes": [
+    { "id": "default", "name": "Heritage Oak", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}

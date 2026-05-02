@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Duzy 3 Vented Gas Log Set | Heat & Glo",
+  "description": "Duzy 3 vented gas log set: a refined three-log arrangement engineered for traditional fireplace openings. Realistic flame, controlled gas operation, no chimney rebuild required.",
+  "draft": false,
+  "family": "Duzy 3",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/indoor/duzy-3"],
+  "hero": {
+    "eyebrow": "DUZY 3 — VENTED GAS LOG SET",
+    "h1": "Three logs, one transformed fireplace.",
+    "h1_em": "one transformed fireplace.",
+    "lede": "The Duzy 3 retrofits an existing traditional fireplace opening with a refined three-log gas arrangement. Real flame, refined burner control, no chimney work, no wood storage. The look of a wood fire with the convenience of gas."
+  },
+  "sizes": [
+    { "id": "default", "name": "Duzy 3", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}

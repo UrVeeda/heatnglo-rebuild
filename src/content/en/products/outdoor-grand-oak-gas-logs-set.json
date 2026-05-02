@@ -1,0 +1,25 @@
+{
+  "_schema": "default",
+  "title": "Outdoor Grand Oak Gas Log Set | Heat & Glo",
+  "description": "Outdoor Grand Oak gas log set: a substantial six-log oak arrangement engineered for outdoor masonry fireplace openings. Weather-rated burner, vented configuration.",
+  "draft": false,
+  "family": "Outdoor Grand Oak",
+  "energy": "gas",
+  "placement": "log-set",
+  "legacy_slugs": ["/fireplaces/gas/gas-log-set-collections/outdoor/outdoor-grand-oak-gas-logs-set"],
+  "hero": {
+    "eyebrow": "OUTDOOR GRAND OAK — VENTED GAS LOG SET",
+    "h1": "The Grand Oak, weather-rated for the patio.",
+    "h1_em": "weather-rated for the patio.",
+    "lede": "The Outdoor Grand Oak retrofits an existing outdoor masonry fireplace opening with a six-log oak arrangement engineered for exterior conditions. Weather-rated burner, layered flame, real flame presence on the patio without wood storage."
+  },
+  "sizes": [
+    { "id": "default", "name": "Outdoor Grand Oak", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": [],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "faq": [],
+  "content_blocks": []
+}
