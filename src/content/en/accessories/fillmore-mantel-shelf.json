@@ -1,0 +1,11 @@
+{
+  "_schema": "default",
+  "title": "Fillmore Mantel Shelf",
+  "description": "Floating contemporary mantel shelf in solid hardwood, profile-engineered to pair with Heat & Glo linear gas fireplaces.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:1200,height:800",
+  "draft": false,
+  "accessory_type": "mantel-shelf",
+  "compatible_fireplaces": ["mezzo", "cosmo", "primo-ii"],
+  "gallery": [],
+  "content_blocks": []
+}

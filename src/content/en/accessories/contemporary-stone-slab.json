@@ -1,0 +1,11 @@
+{
+  "_schema": "default",
+  "title": "Contemporary Stone Slab",
+  "description": "Continuous stone slab surround for contemporary linear fireplace installs. Honed limestone, travertine, and quartzite options.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1200,height:800",
+  "draft": false,
+  "accessory_type": "stone-surround",
+  "compatible_fireplaces": ["mezzo", "cosmo", "primo-ii"],
+  "gallery": [],
+  "content_blocks": []
+}

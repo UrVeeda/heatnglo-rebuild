@@ -1,0 +1,11 @@
+{
+  "_schema": "default",
+  "title": "Stacked Fieldstone Surround",
+  "description": "Dry-laid stacked fieldstone surround for lodge-aesthetic and rustic-residential installations. Field-installed by mason.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:1200,height:800",
+  "draft": false,
+  "accessory_type": "stone-surround",
+  "compatible_fireplaces": ["true", "phoenix-trueview"],
+  "gallery": [],
+  "content_blocks": []
+}
