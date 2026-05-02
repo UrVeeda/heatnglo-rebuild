@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout title="The Company | About Heat & Glo" description="Heat & Glo as a Hearth & Home Technologies brand. Founded 1975, manufacturing in Lake City, Minnesota, ~1,400 dealers across the US and Canada." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">The Company</p>
+      <h1 class="text-4xl font-bold mt-2">Heat & Glo at a glance.</h1>
+    </header>
+    <section class="grid sm:grid-cols-2 gap-6 mb-16">
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Founded</p><p class="text-2xl font-bold">1975</p><p class="text-sm text-neutral-600 mt-2">Lake City, Minnesota</p></div>
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Parent company</p><p class="text-2xl font-bold">HHT</p><p class="text-sm text-neutral-600 mt-2">Hearth & Home Technologies</p></div>
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Dealer network</p><p class="text-2xl font-bold">1,400+</p><p class="text-sm text-neutral-600 mt-2">Authorized dealers across the US and Canada</p></div>
+      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Manufacturing</p><p class="text-2xl font-bold">USA</p><p class="text-sm text-neutral-600 mt-2">Continuing manufacture at Lake City, Minnesota</p></div>
+    </section>
+    <p class="text-neutral-600 border-t pt-10"><a href="/about-us/" class="underline">Back to about</a></p>
+  </main>
+</BaseLayout>
