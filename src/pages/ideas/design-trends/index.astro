@@ -140,6 +140,11 @@ const formatDate = (iso: string) => {
             class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
             data-demo-target={REAL_ARTICLE.href}
             data-demo-label={article.title}
+            data-demo-eyebrow="Design Trends · Article in Production Scope"
+            data-demo-heading="This article scales from the same template."
+            data-demo-context={`<strong>{label}</strong> is one of 28 articles in the Design Trends category. Each article in production runs the same long-form template — direct-answer lede, comparison tables, scenario H3s, FAQ block, internal product cross-links, dealer CTAs. Click below to see the production-quality template fully built on the editor's-pick article.`}
+            data-demo-image={article.image}
+            data-demo-cta="Open the live article template →"
           >
             <img
               src={article.image}
