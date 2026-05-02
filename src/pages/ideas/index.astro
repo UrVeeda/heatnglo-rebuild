@@ -41,13 +41,22 @@ const categories = [
     <section class="mb-16">
       <h2 class="text-2xl font-semibold mb-6">Featured</h2>
       <div class="grid sm:grid-cols-3 gap-6">
-        {featured.map((f) => (
-          <a href={f.href} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
-            <div class="aspect-[4/3] bg-neutral-100 rounded mb-4"></div>
-            <p class="font-semibold mb-2">{f.title}</p>
-            <p class="text-sm text-neutral-600 line-clamp-3">{f.excerpt}</p>
-          </a>
-        ))}
+        {featured.map((f, i) => {
+          const heroImages = [
+            'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
+            'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:450',
+            'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
+          ];
+          return (
+            <a href={f.href} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+              <img src={heroImages[i] ?? heroImages[0]} alt={f.title} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+              <div class="p-5">
+                <p class="font-semibold mb-2 group-hover:text-orange-700">{f.title}</p>
+                <p class="text-sm text-neutral-600 line-clamp-3">{f.excerpt}</p>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </section>
 

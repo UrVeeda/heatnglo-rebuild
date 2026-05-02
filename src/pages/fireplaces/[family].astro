@@ -89,6 +89,26 @@ const data = product.data;
       </section>
     )}
 
+    <section class="-mx-4 mb-16">
+      <div class="max-w-page mx-auto px-4">
+        <h2 class="text-2xl font-semibold mb-6">Specified across the country</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
+        <img src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:600" alt={`${data.family} in a contemporary great room`} class="w-full aspect-square object-cover" />
+        <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:600" alt={`${data.family} in a contemporary living room`} class="w-full aspect-square object-cover" />
+        <img src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:600" alt={`${data.family} in a traditional setting`} class="w-full aspect-square object-cover" />
+        <img src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:600" alt={`${data.family} in an open-plan residence`} class="w-full aspect-square object-cover" />
+      </div>
+    </section>
+
+    <section class="bg-orange-50 border border-orange-200 rounded-lg p-8 mb-16 grid sm:grid-cols-3 gap-6 items-center">
+      <div class="sm:col-span-2">
+        <h2 class="text-2xl font-semibold mb-2">Ready to specify the {data.family}?</h2>
+        <p class="text-neutral-700 max-w-xl">Find your authorized Heat & Glo dealer to schedule a free in-home consultation. Most installations finish in 2 to 4 weeks from the consultation.</p>
+      </div>
+      <a href="/where-to-buy/" class="inline-block bg-orange-600 text-white px-6 py-3 rounded font-medium hover:bg-orange-700 transition text-center">Find a dealer →</a>
+    </section>
+
     {data.complete_the_look && data.complete_the_look.length > 0 && (
       <section class="border-t pt-12 pb-12 mb-12 bg-neutral-50 -mx-4 px-4">
         <div class="max-w-page mx-auto">

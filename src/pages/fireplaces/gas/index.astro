@@ -19,12 +19,15 @@ const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !
     <header class="mb-12">
       <p class="text-lg text-neutral-700 max-w-2xl">Gas is the most-specified category in the Heat & Glo lineup. Direct-vent design means no chimney required, sealed combustion preserves indoor air quality, and IPI ignition delivers reliable startup every time.</p>
     </header>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {gas.map((p: any) => (
-        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
-          <p class="font-semibold">{p.data.family}</p>
-          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
-          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.placement}</p>
+        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="p-5">
+            <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+            <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+            <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} · {p.data.sizes?.length ?? 1} sizes</p>
+          </div>
         </a>
       ))}
     </section>

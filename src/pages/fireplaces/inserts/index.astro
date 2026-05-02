@@ -23,12 +23,15 @@ const inserts = products.filter((p) => p.data.placement === 'inserts');
       <p class="font-semibold mb-2">Save up to $650 on a gas insert.</p>
       <p class="text-sm text-neutral-700 mb-3">Limited-time rebate when you upgrade your old wood-burning fireplace. <a href="/fireplace-sale/" class="underline">See terms</a></p>
     </section>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {inserts.map((p: any) => (
-        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
-          <p class="font-semibold">{p.data.family}</p>
-          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
-          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.energy}</p>
+        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="p-5">
+            <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+            <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+            <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.energy}</p>
+          </div>
         </a>
       ))}
     </section>
