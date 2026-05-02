@@ -30,7 +30,7 @@ const data = product.data;
         ) : (
           <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">{data.energy} · {data.placement}</p>
         )}
-        <h1 class="text-3xl md:text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">
+        <h1 class="text-3xl md:text-3xl md:text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">
           {data.hero?.h1 ? (
             <>
               {data.hero.h1.split(data.hero.h1_em ?? '__no_em__').map((part: string, i: number, arr: string[]) => (
