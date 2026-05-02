@@ -36,6 +36,8 @@ Your authorized dealer assesses the existing opening during a free consultation 
 
 [Talk to a dealer about which path fits your existing opening →](/where-to-buy/)
 
+![Heat & Glo Duzy gas log set with realistic bark detail and controlled flame in an existing masonry firebox](https://hearthnhome.getbynder.com/transform/032865c8-bf59-4d18-91a1-6558c2fccc88/HHT_GasLogs_Duzy3?io=transform:fill,width:1200,height:680)
+
 ## When a gas log set is the right answer
 
 A gas log set is the answer when the existing wood-burning firebox is still in good structural condition and the household's primary goal is eliminating wood management while preserving the masonry character of the original opening.
@@ -56,6 +58,8 @@ Gas log sets use the existing flue as their exhaust path. They are not sealed sy
 
 For households in jurisdictions with strong indoor air quality standards, or in very tightly sealed modern homes with low air-exchange rates, the open-combustion design of a log set is a consideration to discuss with your dealer.
 
+![Heat & Glo kindled stack log set with realistic stacked-log visual and flame presentation](https://hearthnhome.getbynder.com/transform/dd94d913-9b31-49e3-b3a3-641a634ddfcf/HHT_GasLogs_HTube_Kindled-StackLogs_Fire?io=transform:fill,width:1200,height:680)
+
 ### The Heat & Glo log set lineup
 
 Several product families cover the residential log set application:
@@ -70,6 +74,8 @@ Several product families cover the residential log set application:
 Your dealer can identify which log set models fit your specific opening and recommend the appropriate BTU rating for the opening size.
 
 [Explore Heat & Glo log set options →](/accessories/log-sets/)
+
+![Heat & Glo gas insert installed as a full fireplace replacement with sealed glass panel and decorative surround](https://hearthnhome.getbynder.com/transform/c563023a-361e-4b80-b732-37994623f627/HTI_ST-DV36IN_ORIGINAL-logs?io=transform:fill,width:1200,height:680)
 
 ## When a gas insert is the right answer
 
@@ -97,6 +103,8 @@ Sealed glass is one of the defining features of a gas insert. The front glass pa
 [Explore Heat & Glo gas insert options →](/fireplaces/inserts/)
 
 [Find your authorized dealer to confirm which insert fits your opening →](/where-to-buy/)
+
+![Heat & Glo Duzy gas log set showing realistic ember bed and flame detail as an alternative to full fireplace replacement](https://hearthnhome.getbynder.com/transform/1d9111d1-a8f3-45a9-b9ea-0b4f2b947aae/HHT_GasLogs_Duzy2?io=transform:fill,width:1200,height:680)
 
 ## What your existing firebox condition tells you
 

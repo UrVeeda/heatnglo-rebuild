@@ -33,6 +33,8 @@ Every Heat & Glo gas fireplace -- the Mezzo, Cosmo, 6K/8K Series Traditional, Tr
 
 [Talk to a dealer about direct-vent installation in your specific build →](/where-to-buy/)
 
+![Heat & Glo direct-vent gas fireplace installed in a contemporary living room with no chimney required](https://hearthnhome.getbynder.com/transform/72e008f7-c22f-4329-afee-878b13013d76/36_HHT_Element_Royalton_RoyalHearth_NatGreyTrad_HTube_TimberOak_Room?io=transform:fill,width:1200,height:680)
+
 ## Why wood-burning is a structural commitment
 
 A real wood-burning fireplace is a chimney project first and a fireplace second. The design sequence runs backward from the exit point at the roof, not forward from the room.
@@ -54,6 +56,8 @@ Wood combustion produces particulate matter. In high-air-quality-alert areas -- 
 Direct-vent gas has no particulate emissions and no burn-day restrictions.
 
 [Find a direct-vent dealer near you →](/where-to-buy/)
+
+![Heat & Glo gas fireplace with sealed glass and controlled flame showing direct-vent sealed combustion technology](https://hearthnhome.getbynder.com/transform/ea27cacb-f977-4036-a1e3-547249a42f34/NorthStar_Room_02_BlackHandles-tif?io=transform:fill,width:1200,height:680)
 
 ## Why vent-free gas has limits
 
@@ -80,6 +84,8 @@ Electric fireplaces are not in direct competition with direct-vent gas for the s
 - **Lower heat output** -- electric fireplaces are primarily aesthetic; they don't deliver the radiant warmth of a gas appliance
 
 For buyers who want the look and warmth of a real gas flame and have access to a gas line, direct-vent gas is a meaningfully different experience. For multi-family units, rental properties, or spaces where a gas line isn't practical, electric serves the brief.
+
+![Heat & Glo Mezzo linear gas fireplace installed on an interior partition wall demonstrating direct-vent flexibility](https://hearthnhome.getbynder.com/transform/a5805a26-dce0-4b26-8b94-cfdc4a3dad6b/img-pdp-mezzo-jpg?io=transform:fill,width:1200,height:680)
 
 ## What direct-vent actually enables for the designer
 
@@ -108,6 +114,8 @@ Every product in the Heat & Glo gas fireplace lineup uses direct-vent engineerin
 - **[Primo II Linear Gas Fireplace](/fireplaces/primo-ii/)** -- linear with see-through, peninsula, and single-sided configurations
 
 All use the same co-axial direct-vent principle. The design and proportion vary. The engineering discipline is consistent.
+
+![Heat & Glo True series gas fireplace in a traditional room demonstrating the full direct-vent lineup range](https://hearthnhome.getbynder.com/transform/b9e6a1ec-4f6b-4a6a-85bb-d75f8ef08b05/img-pdp-supreme-room-shot-01-jpg?io=transform:fill,width:1200,height:680)
 
 ## How to choose within direct-vent
 

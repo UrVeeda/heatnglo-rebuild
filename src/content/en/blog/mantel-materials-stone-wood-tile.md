@@ -37,6 +37,8 @@ The numbers in your specific fireplace's installation manual are non-negotiable 
 
 [Find a dealer to confirm clearance specs for your specific unit →](/where-to-buy/)
 
+![Heat & Glo fireplace in a stacked stone masonry surround representing natural stone mantel installation](https://hearthnhome.getbynder.com/transform/6d502d5b-b8b2-4999-8cbe-0794c99b275b/HHT_Birmingham_MasonryBrn_Stacked_HeritageOak_SO?io=transform:fill,width:1200,height:680)
+
 ## Stone mantels and surrounds
 
 Stone is the specifier's most forgiving choice because non-combustible materials don't carry the same clearance-to-combustibles risk as wood. That doesn't mean there are no clearance requirements -- it means the requirements are focused on the mechanical and structural side rather than the fire-safety side.
@@ -61,6 +63,8 @@ The stone itself is non-combustible. The mortar used in wet-laid installations i
 
 [Explore Heat & Glo accessories and surround options →](/accessories/)
 
+![Heat & Glo fireplace with floating mantel shelf demonstrating wood mantel installation above a contemporary surround](https://hearthnhome.getbynder.com/transform/228d7240-a885-401b-9185-e854bdfb1cb1/SFE-Format-Floating-Mantel-Fireplace?io=transform:fill,width:1200,height:680)
+
 ## Tile mantels and surrounds
 
 Tile is the middle ground in cost, clearance, and aesthetic range. Most ceramic and porcelain tile faces are non-combustible, which is why tile has become the contemporary-residential default when natural stone slab is cost-prohibitive.
@@ -82,6 +86,8 @@ Zellige, terracotta, and other hand-glazed specialty tiles read as high-craft ch
 Confirm that any hand-glazed specialty tile is rated for the temperature exposure at the specified clearance distance. Ask the tile supplier for technical data sheets before final selection.
 
 [Find a dealer who can confirm tile substrate requirements →](/where-to-buy/)
+
+![Heat & Glo Inception fireplace in a contemporary tile surround with herringbone pattern and birch oak logs](https://hearthnhome.getbynder.com/transform/cdc4a4b4-9be0-4b83-b279-f4513cd75472/SFE_Inception_TQHerringbone_BWOak_Halston?io=transform:fill,width:1200,height:680)
 
 ## Wood mantels and surrounds
 
@@ -108,6 +114,8 @@ If the design calls for wood paneling that runs closer to the firebox than the i
 Confirm all clearance-to-combustibles distances with a qualified installer before final design lock.
 
 [Browse the full Heat & Glo accessories library →](/accessories/)
+
+![Heat & Glo Exclaim fireplace in a traditional brick masonry surround showing how surround material frames the firebox](https://hearthnhome.getbynder.com/transform/5b7a314a-1bbb-4944-a964-2530fcd0ff0b/HNG_Exclaim_MasonryBrn_TradBrick_HeritageOak?io=transform:fill,width:1200,height:680)
 
 ## The discipline that matters across all three materials
 

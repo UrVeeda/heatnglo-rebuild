@@ -14,6 +14,56 @@ export async function getStaticPaths() {
 
 const { product } = Astro.props;
 const data = product.data;
+
+const familySlug = product.id.replace(/\.json$/, '');
+
+const familyGalleryMap: Record<string, { src: string; alt: string }[]> = {
+  mezzo: [
+    { src: 'https://hearthnhome.getbynder.com/transform/a5805a26-dce0-4b26-8b94-cfdc4a3dad6b/img-pdp-mezzo-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Mezzo linear gas fireplace unit shot with thin frame and glass front' },
+    { src: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-shot-05-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Mezzo installed in a contemporary great room with dark walls and low furniture' },
+    { src: 'https://hearthnhome.getbynder.com/transform/67fb006b-4f97-4b60-8ba7-b9c7f94b3eb2/img-pdp-mezzo-see-through-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Mezzo see-through configuration viewed from both sides' },
+    { src: 'https://hearthnhome.getbynder.com/transform/790894ce-7159-4873-8738-a0e2de3e1792/img-product-card-mezzo-see-through-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Mezzo see-through product card view with ribbon flame' },
+  ],
+  cosmo: [
+    { src: 'https://hearthnhome.getbynder.com/transform/0b819fa5-acab-4fc3-9cc6-b6f48b8fa8dd/img-pdp-cosmo-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Cosmo contemporary gas fireplace unit front view' },
+    { src: 'https://hearthnhome.getbynder.com/transform/c0885ec5-e68c-48f7-9a85-f66e09730cd3/img-pdp-cosmo-room-shot-01-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Cosmo gas fireplace installed in a contemporary living room with high ceilings' },
+    { src: 'https://hearthnhome.getbynder.com/transform/536aa9c9-7f52-4c36-86f4-4f3a0f4cb107/img-product-card-cosmo-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Cosmo product card with crystal glass media and blue flame accent' },
+    { src: 'https://hearthnhome.getbynder.com/transform/f7d593d1-54e5-4d69-97ff-7314fc71656b/img-pdp-cosmo-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Cosmo gas fireplace with driftwood logs and orange flame' },
+  ],
+  'phoenix-trueview': [
+    { src: 'https://hearthnhome.getbynder.com/transform/0cb8444c-1685-4605-a3cd-d25e21b5fb74/img-pdp-phoenix-trueview-jpg?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Phoenix TrueView open-hearth gas fireplace front view' },
+    { src: 'https://hearthnhome.getbynder.com/transform/0bf271ce-ef80-4c8c-a7f0-660531aa15bf/Phoenix_StratfordBrick_Angle_Roomshot_180620_2155-Pinto_289-tif?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Phoenix TrueView with Stratford brick surround at an angle in a traditional living room' },
+    { src: 'https://hearthnhome.getbynder.com/transform/2ea93327-a5bf-4bf1-9a89-65559689f3c1/Corner_Angle_Roomshot_180613_Swanson_0264-tif?io=transform:fill,width:600,height:600', alt: 'Heat & Glo open-hearth gas fireplace in a corner installation with stone surround' },
+    { src: 'https://hearthnhome.getbynder.com/transform/a1a77c41-27ff-41d1-9620-0d2673f67a90/HNG_Corner_fireplace_1110x624?io=transform:fill,width:600,height:600', alt: 'Heat & Glo corner gas fireplace installation in a residential living room' },
+  ],
+  true: [
+    { src: 'https://hearthnhome.getbynder.com/transform/03f4f4bc-b3f8-45c3-96ab-050b976d6e9a/HNG_TRUE_Firescreen-BK_Traditional_UnitOnly-SO-tif?io=transform:fill,width:600,height:600', alt: 'Heat & Glo True Series gas fireplace with black firescreen traditional unit front view' },
+    { src: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArchFront_2019Artisan_190613_Lecy_0160-1-tif?io=transform:fill,width:600,height:600', alt: 'Heat & Glo True Series with forged arch front surround in a 2019 Artisan installation' },
+    { src: 'https://hearthnhome.getbynder.com/transform/5b7a314a-1bbb-4944-a964-2530fcd0ff0b/HNG_Exclaim_MasonryBrn_TradBrick_HeritageOak?io=transform:fill,width:600,height:600', alt: 'Heat & Glo traditional gas fireplace with masonry surround, traditional brick interior and heritage oak logs' },
+    { src: 'https://hearthnhome.getbynder.com/transform/61394f80-eab6-4429-af14-64be32ec90d5/FSSupremeOak-A-001-TIF?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Supreme Series oak freestanding gas fireplace in a formal setting' },
+  ],
+  'primo-ii': [
+    { src: 'https://hearthnhome.getbynder.com/transform/08763d99-34be-436f-b2dd-2c391d4edc87/HNG-Primo-II_72_736X555?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Primo II 72-inch linear gas fireplace wide format' },
+    { src: 'https://hearthnhome.getbynder.com/transform/35f0af27-129c-401f-84c6-3e1ebfeff95c/Primo-II-60ST?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Primo II 60 see-through configuration installed in a partition wall' },
+    { src: 'https://hearthnhome.getbynder.com/transform/37ccb81d-8cda-4664-a49e-f3445e27a692/HNG-Primo-II_72ST_736X555?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Primo II 72 see-through installation with driftwood logs' },
+    { src: 'https://hearthnhome.getbynder.com/transform/b6184228-9ae0-4732-a39e-cb404169cd75/Primo-II-Driftwood_Logs?io=transform:fill,width:600,height:600', alt: 'Heat & Glo Primo II with driftwood log set and amber flame' },
+  ],
+  '6k-8k-series': [
+    { src: 'https://hearthnhome.getbynder.com/transform/c9ebe317-8a39-4149-9400-33ec3dfe6a92/HNG-M-R_6KX_763X555?io=transform:fill,width:600,height:600', alt: 'Heat & Glo 6K Series traditional gas fireplace front view' },
+    { src: 'https://hearthnhome.getbynder.com/transform/ccf4b2e6-8a3d-49b2-87e3-1e255bb487ba/HNG-M-R_8MOD_763X555?io=transform:fill,width:600,height:600', alt: 'Heat & Glo 8K Series traditional modular gas fireplace front view' },
+    { src: 'https://hearthnhome.getbynder.com/transform/8e5e837a-256a-4804-b8fa-55cfd8122fdc/20B_8KX_MOD_BlkG_Blk-Port_Copper-front_so4?io=transform:fill,width:600,height:600', alt: 'Heat & Glo 8KX modular gas fireplace with black glass and copper front surround' },
+    { src: 'https://hearthnhome.getbynder.com/transform/a8dfbcc4-e9a6-40e9-8be8-bd3371aaaef8/8KX-TG_StudioFront_room_so?io=transform:fill,width:600,height:600', alt: 'Heat & Glo 8KX gas fireplace with studio front in a residential room setting' },
+  ],
+};
+
+const defaultGallery: { src: string; alt: string }[] = [
+  { src: 'https://hearthnhome.getbynder.com/transform/94bed5b8-d82a-47db-8823-a5082c371991/HNG_SupremeX_30_Oak_BlkFirescreen_Room?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} gas fireplace in a residential great room` },
+  { src: 'https://hearthnhome.getbynder.com/transform/b9e6a1ec-4f6b-4a6a-85bb-d75f8ef08b05/img-pdp-supreme-room-shot-01-jpg?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} installed in a contemporary living room` },
+  { src: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArchFront_2019Artisan_190613_Lecy_0160-1-tif?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in a traditional stone surround setting` },
+  { src: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-shot-05-jpg?io=transform:fill,width:600,height:600', alt: `Heat & Glo ${data.family} in an open-plan modern interior` },
+];
+
+const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
 ---
 <BaseLayout
   title={data.title}
@@ -95,10 +145,9 @@ const data = product.data;
         <p class="text-neutral-600 mb-6 max-w-2xl">Real installations across residential and hospitality projects. Photography from Heat & Glo's authorized dealer network.</p>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
-        <img src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:600" alt={`${data.family} in a contemporary great room`} class="w-full aspect-square object-cover" />
-        <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:600" alt={`${data.family} in a contemporary living room`} class="w-full aspect-square object-cover" />
-        <img src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:600" alt={`${data.family} in a traditional setting`} class="w-full aspect-square object-cover" />
-        <img src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:600" alt={`${data.family} in an open-plan residence`} class="w-full aspect-square object-cover" />
+        {gallery.map((img) => (
+          <img src={img.src} alt={img.alt} class="w-full aspect-square object-cover" />
+        ))}
       </div>
     </section>
 

@@ -30,10 +30,19 @@ const demoImageMap: Record<string, string> = {
 };
 
 const energyImages: Record<string, { hero: string; alt: string }> = {
-  gas:      { hero: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:450', alt: 'Heat & Glo SupremeX gas fireplace in a contemporary living room' },
-  wood:     { hero: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450', alt: 'Traditional wood-burning fireplace with stone hearth' },
-  electric: { hero: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:450', alt: 'Finished basement living space with electric fireplace' },
-  outdoor:  { hero: 'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:450', alt: 'Outdoor patio fireplace with gas log set' },
+  gas:      { hero: 'https://hearthnhome.getbynder.com/transform/94bed5b8-d82a-47db-8823-a5082c371991/HNG_SupremeX_30_Oak_BlkFirescreen_Room?io=transform:fill,width:600,height:450', alt: 'Heat & Glo SupremeX gas fireplace in a residential great room with oak surround' },
+  wood:     { hero: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArchFront_2019Artisan_190613_Lecy_0160-1-tif?io=transform:fill,width:600,height:450', alt: 'Heat & Glo True Series wood-burning fireplace with forged arch front surround' },
+  electric: { hero: 'https://hearthnhome.getbynder.com/transform/56037a7d-01f9-45de-87db-c89ce137ac34/Forum-Electric_55_PDP_hero_1140x385?io=transform:fill,width:600,height:450', alt: 'Heat & Glo Forum electric fireplace 55-inch in a contemporary living room' },
+  outdoor:  { hero: 'https://hearthnhome.getbynder.com/transform/c2bcb50e-e12b-468f-8cc1-d24be27133a6/3_HHT_Lanai_72_CoveredPatio_Rm?io=transform:fill,width:600,height:450', alt: 'Heat & Glo Lanai 72 outdoor fireplace on a covered patio with outdoor seating' },
+};
+
+const familyCardImages: Record<string, string> = {
+  'mezzo':          'https://hearthnhome.getbynder.com/transform/a5805a26-dce0-4b26-8b94-cfdc4a3dad6b/img-pdp-mezzo-jpg?io=transform:fill,width:600,height:400',
+  'cosmo':          'https://hearthnhome.getbynder.com/transform/536aa9c9-7f52-4c36-86f4-4f3a0f4cb107/img-product-card-cosmo-jpg?io=transform:fill,width:600,height:400',
+  'phoenix-trueview': 'https://hearthnhome.getbynder.com/transform/0cb8444c-1685-4605-a3cd-d25e21b5fb74/img-pdp-phoenix-trueview-jpg?io=transform:fill,width:600,height:400',
+  'true':           'https://hearthnhome.getbynder.com/transform/03f4f4bc-b3f8-45c3-96ab-050b976d6e9a/HNG_TRUE_Firescreen-BK_Traditional_UnitOnly-SO-tif?io=transform:fill,width:600,height:400',
+  'primo-ii':       'https://hearthnhome.getbynder.com/transform/08763d99-34be-436f-b2dd-2c391d4edc87/HNG-Primo-II_72_736X555?io=transform:fill,width:600,height:400',
+  '6k-8k-series':   'https://hearthnhome.getbynder.com/transform/c9ebe317-8a39-4149-9400-33ec3dfe6a92/HNG-M-R_6KX_763X555?io=transform:fill,width:600,height:400',
 };
 ---
 <BaseLayout
@@ -73,14 +82,29 @@ const energyImages: Record<string, { hero: string; alt: string }> = {
       </div>
     </section>
 
-    <section class="relative -mx-4 mb-16 overflow-hidden">
-      <img src="https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:1920,height:480" alt="Heat & Glo lifestyle photography" class="w-full h-[320px] object-cover" />
-      <div class="absolute inset-0 bg-black/45 flex items-end pb-10 md:items-center md:pb-0 px-4">
+    <section class="relative -mx-4 mb-16 overflow-hidden" style="min-height: 400px;">
+      <img src="https://hearthnhome.getbynder.com/transform/94bed5b8-d82a-47db-8823-a5082c371991/HNG_SupremeX_30_Oak_BlkFirescreen_Room?io=transform:fill,width:1920,height:620" alt="Heat & Glo SupremeX gas fireplace with oak surround and black firescreen in a residential great room" class="w-full object-cover" style="height: 400px;" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/15 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
         <div class="max-w-page mx-auto w-full">
-          <div class="bg-neutral-900/95 text-white p-8 rounded-lg max-w-xl border border-neutral-800">
-            <p class="uppercase tracking-wide text-xs font-semibold text-orange-300">Inspiration</p>
-            <h2 class="text-3xl font-bold mt-2">A fireplace anchors the room. The right one defines it.</h2>
-            <a href="/ideas/" class="mt-5 inline-block bg-orange-600 text-white px-6 py-3 rounded font-semibold hover:bg-orange-700 transition">Browse design inspiration →</a>
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">The full lineup</p>
+            <h2 style="color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 12px;">Contemporary linear to traditional hearth.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">The Heat &amp; Glo lineup spans every design register — from the thin-frame geometry of the Mezzo Series to the brick-lined warmth of the 6K/8K. Gas, wood, electric. Indoor, outdoor, see-through. Find the configuration that fits your architecture and your life.</p>
+            <a href="/fireplaces/gas/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Explore gas fireplaces</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative -mx-4 mb-16 overflow-hidden" style="min-height: 400px;">
+      <img src="https://hearthnhome.getbynder.com/transform/c2bcb50e-e12b-468f-8cc1-d24be27133a6/3_HHT_Lanai_72_CoveredPatio_Rm?io=transform:fill,width:1920,height:620" alt="Heat & Glo Lanai 72 outdoor fireplace on a covered patio with outdoor dining and seating" class="w-full object-cover" style="height: 400px;" />
+      <div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black/55 to-black/15 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">From great room to outdoor patio</p>
+            <h2 style="color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 12px;">Heat &amp; Glo goes where you live.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Indoor or outdoor, single-sided or see-through, built-in or retrofit insert. Every product in the lineup is backed by Heat &amp; Glo's 50-year engineering history in Lake City, Minnesota. 1,400+ authorized dealers across the US and Canada can show you the working units.</p>
+            <a href="/fireplaces/outdoor/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">See outdoor fireplaces</a>
           </div>
         </div>
       </div>
@@ -95,9 +119,10 @@ const energyImages: Record<string, { hero: string; alt: string }> = {
             const isLive = slug === 'mezzo';
             const demoContext = demoContextMap[slug] ?? '<strong>{label}</strong> is a Heat &amp; Glo product family. In production, it renders the same template structure as the Mezzo family page — hero, sizes, specs, and dealer CTAs. Open Mezzo to see the production layout.';
             const demoImage = demoImageMap[slug] ?? fallbackImage;
+            const cardImage = familyCardImages[slug] ?? (p.data.ogImage ?? fallbackImage);
             return isLive ? (
               <a href={`/fireplaces/${slug}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-                <img src={p.data.ogImage ?? fallbackImage} alt={p.data.family} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
+                <img src={cardImage} alt={`Heat & Glo ${p.data.family} fireplace`} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
                 <div class="p-5">
                   <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
                   <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
@@ -116,7 +141,7 @@ const energyImages: Record<string, { hero: string; alt: string }> = {
                 data-demo-cta="See the Mezzo family template →"
                 class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
               >
-                <img src={p.data.ogImage ?? fallbackImage} alt={p.data.family} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
+                <img src={cardImage} alt={`Heat & Glo ${p.data.family} fireplace`} class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" />
                 <div class="p-5">
                   <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
                   <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>

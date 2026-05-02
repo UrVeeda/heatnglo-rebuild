@@ -36,6 +36,8 @@ The result: a sealed, direct-vent gas appliance that operates on demand, produce
 
 [Find a dealer to schedule your free in-home consultation →](/where-to-buy/)
 
+![Heat & Glo gas insert installed in an existing wood-burning fireplace opening with decorative surround trim](https://hearthnhome.getbynder.com/transform/f060b850-92dd-48c5-8d67-43d62f12c1e2/GI-32-ZC_hi-res?io=transform:fill,width:1200,height:680)
+
 ## The real reason people convert
 
 The honest version: most wood-burning fireplaces in existing homes stopped getting used because the maintenance cost exceeded the enjoyment. A sweep. A screen. The ash. The kindling. The fifteen minutes of setup for twenty minutes of fire.
@@ -51,6 +53,8 @@ Families with young children or pets find the sealed glass panel a meaningful sa
 Your authorized Heat & Glo dealer visits the home, measures the existing firebox opening, and identifies which insert model fits correctly. Insert sizing is precise -- the unit must fit the opening with adequate clearance for the surround trim to cover the gap neatly. This is not a "close enough" measurement.
 
 The dealer also assesses the chimney condition. The existing flue doesn't need to be in perfect working order -- it just needs to be structurally sound enough to serve as the chase for the new liner. A sweep or structural repair may be recommended before the liner install.
+
+![Heat & Glo HTI gas insert with stainless liner and black metal finish in a traditional opening](https://hearthnhome.getbynder.com/transform/1e9d4ffe-5f0d-4b27-a484-09432f4af30a/HTI-PIER-DV36IN_blackmetal-and-logs?io=transform:fill,width:1200,height:680)
 
 ### Step 2: Liner installation
 
@@ -74,6 +78,8 @@ The insert slides into the firebox opening. The vent connections are made. Elect
 
 The installation is inspected by the authority having jurisdiction before first use. Your authorized dealer manages this process. After inspection, the dealer commissions the unit -- confirms ignition, flame presentation, and control operation -- before handing off to the homeowner.
 
+![Heat & Glo HTI ST gas insert with original log set in a finished room installation after conversion](https://hearthnhome.getbynder.com/transform/5909e991-697b-409b-9bba-b05cddd3b22e/HTI-ST-DV36IN_blackmetal-and-Logs?io=transform:fill,width:1200,height:680)
+
 ## Insert options for your opening
 
 Several Heat & Glo insert models are available for different opening sizes and aesthetic preferences:
@@ -92,6 +98,8 @@ Your dealer will identify which models are compatible with your specific opening
 Heat & Glo's Gas Insert Rebate program offers qualifying homeowners up to $650 off the purchase of a qualifying gas insert upgrade from a wood-burning original. The rebate is applied at the point of sale through the authorized dealer -- no mail-in form, no separate application process.
 
 To confirm current rebate eligibility, participating dealers, and which specific insert models qualify, ask at your free in-home consultation. The rebate program is subject to availability and terms; your dealer is the authoritative source on current participation status.
+
+![Heat & Glo Provident gas insert in a contemporary room demonstrating the finished installation after wood-burning conversion](https://hearthnhome.getbynder.com/transform/4ff8f3a5-1f25-48d6-95cf-ea396460778a/img-pdp-provident-jpg?io=transform:fill,width:1200,height:680)
 
 ## What to expect after conversion
 

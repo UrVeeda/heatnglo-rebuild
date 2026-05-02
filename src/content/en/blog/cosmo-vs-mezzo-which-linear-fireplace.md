@@ -55,6 +55,8 @@ Whether the surrounding design is white oak slat walls, large-format porcelain, 
 
 [Explore the Mezzo series →](/fireplaces/mezzo/)
 
+![Heat & Glo Mezzo linear gas fireplace with ribbon flame in a contemporary great-room media wall installation](https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-shot-05-jpg?io=transform:fill,width:1200,height:680)
+
 ## When to specify the Cosmo
 
 The Cosmo is specified when the room has vertical space that needs to be honored, not ignored. Its taller glass proportion gives the flame room to move upward -- which is what you want in a 12-foot or taller room.
@@ -77,6 +79,8 @@ Floor-to-ceiling stone slab, full-height fluted tile, continuous wood paneling -
 
 [Explore the Cosmo series →](/fireplaces/cosmo/)
 
+![Heat & Glo Cosmo linear gas fireplace with taller glass aperture in a contemporary room with elevated ceiling](https://hearthnhome.getbynder.com/transform/0b819fa5-acab-4fc3-9cc6-b6f48b8fa8dd/img-pdp-cosmo-jpg?io=transform:fill,width:1200,height:680)
+
 ## What to do when neither is the right answer
 
 ### Partition walls and see-through configurations
@@ -88,6 +92,8 @@ If the brief is a fireplace that reads from two rooms -- a great room on one sid
 Powder rooms, primary bedroom features, and compact living rooms don't always need a 48-inch linear unit. Confirm the room dimensions with your dealer before selecting size. Proportion applies to room-to-firebox scale, not just wall-to-firebox scale.
 
 [Talk to a dealer about your specific room dimensions →](/where-to-buy/)
+
+![Heat & Glo Mezzo see-through gas fireplace as a partition element between two adjacent living spaces](https://hearthnhome.getbynder.com/transform/67fb006b-4f97-4b60-8ba7-b9c7f94b3eb2/img-pdp-mezzo-see-through-jpg?io=transform:fill,width:1200,height:680)
 
 ## How to choose: the three questions
 
