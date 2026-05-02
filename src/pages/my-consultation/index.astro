@@ -68,20 +68,9 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
       <div id="hg-cart-items" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-      <!-- Suggested pairings nudge — static, non-functioning demo widget -->
-      <div id="hg-pairings-nudge" hidden style="margin-top: 32px; background: linear-gradient(180deg, #fef3d8 0%, #fefaf0 100%); border: 1px solid #e8d29b; border-left: 4px solid #c44a08; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <span style="font-size: 36px; line-height: 1; flex-shrink: 0;">🧱</span>
-        <div style="flex: 1; min-width: 240px;">
-          <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin: 0 0 4px;">Suggested pairing</p>
-          <p style="font-family: 'Roboto', system-ui, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.55; margin: 0;">Most homeowners who add a Mezzo to their consultation list also pair it with a <strong>Walnut Floating Mantel</strong> and a <strong>Honed Limestone Surround</strong>. Add them to bring a fully spec'd package to your dealer.</p>
-        </div>
-        <a
-          href="/accessories/wood-mantels/"
-          style="background: #c44a08; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 13px; flex-shrink: 0; white-space: nowrap; transition: background 0.15s ease;"
-          onmouseover="this.style.background='#a83e07';"
-          onmouseout="this.style.background='#c44a08';"
-        >Browse mantels →</a>
-      </div>
+      <!-- Suggested pairings — DYNAMIC based on cart contents.
+           Renders nothing when no useful suggestion can be inferred. -->
+      <div id="hg-pairings-host" style="margin-top: 32px;"></div>
     </section>
 
     <!-- CONSULTATION REQUEST FORM -->
@@ -227,7 +216,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       const clearBtn  = document.getElementById('hg-cart-clear');
       const shareBtn  = document.getElementById('hg-cart-share');
       const printBtn  = document.getElementById('hg-cart-print');
-      const pairingsNudge = document.getElementById('hg-pairings-nudge');
+      const pairingsHost = document.getElementById('hg-pairings-host');
       const form      = document.getElementById('hg-consultation-form') as HTMLFormElement | null;
       const submitBtn = document.getElementById('hg-consultation-submit') as HTMLButtonElement | null;
       const successEl = document.getElementById('hg-consultation-success');
@@ -276,23 +265,109 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         try { localStorage.setItem(NOTES_KEY, JSON.stringify(notes)); } catch {}
       }
 
+      // Family-specific surround/mantel pairings (curated taste recommendations).
+      // Each fireplace family points at the surround AND mantel that designers most
+      // often spec alongside it. Falls back to generic advice when not in this map.
+      const FAMILY_PAIRINGS: Record<string, { surround?: string; mantel?: string; mantelShelf?: string; reason?: string }> = {
+        'mezzo': { surround: 'Honed Limestone Slab Surround', mantel: 'Walnut Floating Mantel', mantelShelf: 'Contemporary Linear Mantel Shelf', reason: 'The Mezzo\'s linear glass aperture is best balanced by stone-slab cleanliness and a single warm-wood floating element, not a heavy traditional mantel.' },
+        'cosmo': { surround: 'Vertical Travertine Slab', mantel: 'Walnut Floating Mantel', mantelShelf: 'Wide-Plank Driftwood Shelf', reason: 'Cosmo\'s tall aperture wants vertical surround proportion. Designers most often pair with a single horizontal wood element to break the verticality.' },
+        '6k-8k-series': { surround: 'Stacked Natural Stone Surround', mantel: 'Traditional Corbeled Hardwood Mantel', mantelShelf: 'Heritage Oak Mantel Shelf', reason: 'The 6K/8K Series is a traditional hearth — the strongest pairings carry that traditional language through the surround and mantel.' },
+        'true': { surround: 'Cast Stone Forged-Arch Surround', mantel: 'Heritage Oak Hardwood Mantel', mantelShelf: 'Traditional Corbeled Shelf', reason: 'The True Series\' forged-arch detail is best amplified, not muted — cast stone keeps the architectural register correct.' },
+        'phoenix-trueview': { surround: 'Stratford Brick Surround', mantel: 'Reclaimed Barnwood Mantel', mantelShelf: 'Weathered Barnwood Floating Shelf', reason: 'Phoenix TrueView is the most masonry-feeling firebox in the lineup — brick + reclaimed wood reads coherent.' },
+        'primo-ii': { surround: 'Continuous Plaster Surround', mantel: 'Black Steel Linear Mantel', mantelShelf: 'Contemporary Linear Mantel Shelf', reason: 'Primo II works in see-through and peninsula installs — the cleanest surround treatment is a continuous plaster reveal, not an applied stone object.' },
+      };
+
+      const ACCESSORY_FAMILY_LABEL: Record<string, string> = {
+        'wood-mantel': 'Wood Mantel',
+        'mantel-shelf': 'Mantel Shelf',
+        'stone-surround': 'Stone Surround',
+        'log-set': 'Gas Log Set',
+      };
+
+      function inferFamilyFromId(id: string): string | null {
+        const m = /^fireplace:(.+)$/i.exec(id);
+        return m ? m[1].toLowerCase() : null;
+      }
+      function inferAccessoryTypeFromCartItem(it: any): string | null {
+        const t = (it.type || '').toLowerCase();
+        if (t.includes('wood mantel')) return 'wood-mantel';
+        if (t.includes('mantel shelf')) return 'mantel-shelf';
+        if (t.includes('stone surround') || t.includes('surround')) return 'stone-surround';
+        if (t.includes('log set') || /^accessory:[^:]*log/i.test(it.id || '')) return 'log-set';
+        return null;
+      }
+
+      function buildPairingHTML(items: any[]): string {
+        if (items.length === 0) return '';
+
+        const fireplaces = items.filter((i: any) => /^fireplace:/i.test(i.id));
+        const accessoryTypes = new Set(items.map(inferAccessoryTypeFromCartItem).filter(Boolean) as string[]);
+
+        // Case A: cart has a fireplace, suggest its specific surround/mantel pairings if missing
+        if (fireplaces.length > 0) {
+          const primary = fireplaces[0];
+          const familyKey = inferFamilyFromId(primary.id);
+          const familyName = primary.title.replace(/ (Gas |Wood-Burning |Wood |Electric |Outdoor |Indoor )?[Ff]ireplace$/, '');
+          const pairing = (familyKey && FAMILY_PAIRINGS[familyKey]) || null;
+
+          const missing: { name: string; type: string; href: string }[] = [];
+          if (!accessoryTypes.has('stone-surround')) missing.push({ name: pairing?.surround || 'a complementary stone surround', type: 'stone-surround', href: '/accessories/stone-surrounds/' });
+          if (!accessoryTypes.has('wood-mantel')) missing.push({ name: pairing?.mantel || 'a hardwood mantel', type: 'wood-mantel', href: '/accessories/wood-mantels/' });
+          if (!accessoryTypes.has('mantel-shelf') && !accessoryTypes.has('wood-mantel')) {
+            // Only suggest a shelf if neither shelf nor mantel is present
+            missing.push({ name: pairing?.mantelShelf || 'a mantel shelf', type: 'mantel-shelf', href: '/accessories/mantel-shelves/' });
+          }
+          if (missing.length === 0) return '';
+
+          // Pick the top suggestion to feature in the CTA
+          const featured = missing[0];
+          const allNames = missing.slice(0, 2).map((m) => `<strong>${escapeText(m.name)}</strong>`).join(' and ');
+          const reason = pairing?.reason || `Designers most often pair the ${familyName} with these specific accessories so the spec reads coherent rather than catalog-shopped.`;
+
+          return `
+            <div style="background: linear-gradient(180deg, #fef3d8 0%, #fefaf0 100%); border: 1px solid #e8d29b; border-left: 4px solid #c44a08; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+              <span style="font-size: 36px; line-height: 1; flex-shrink: 0;">🧱</span>
+              <div style="flex: 1; min-width: 240px;">
+                <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin: 0 0 4px;">Suggested pairing for your ${escapeText(familyName)}</p>
+                <p style="font-family: 'Roboto', system-ui, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.55; margin: 0 0 6px;">Designers most often pair the ${escapeText(familyName)} with ${allNames}. ${escapeText(reason)}</p>
+              </div>
+              <a href="${escapeAttr(featured.href)}" style="background: #c44a08; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 13px; flex-shrink: 0; white-space: nowrap; transition: background 0.15s ease;" onmouseover="this.style.background='#a83e07';" onmouseout="this.style.background='#c44a08';">Browse ${escapeText(ACCESSORY_FAMILY_LABEL[featured.type]?.toLowerCase() || 'accessories')}s →</a>
+            </div>`;
+        }
+
+        // Case B: cart has accessories but NO fireplace, suggest pairing fireplace
+        if (accessoryTypes.size > 0) {
+          const primary = items[0];
+          const accType = inferAccessoryTypeFromCartItem(primary);
+          const accLabel = accType ? ACCESSORY_FAMILY_LABEL[accType] : 'accessory';
+          return `
+            <div style="background: linear-gradient(180deg, #fef3d8 0%, #fefaf0 100%); border: 1px solid #e8d29b; border-left: 4px solid #c44a08; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+              <span style="font-size: 36px; line-height: 1; flex-shrink: 0;">🔥</span>
+              <div style="flex: 1; min-width: 240px;">
+                <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin: 0 0 4px;">Add a fireplace to your spec</p>
+                <p style="font-family: 'Roboto', system-ui, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.55; margin: 0;">You've started with ${escapeText(accLabel.toLowerCase())}s. Most consultations land cleanest when there's a fireplace family on the list — your dealer can spec the install around the surround and mantel choices you've already made.</p>
+              </div>
+              <a href="/fireplaces/" style="background: #c44a08; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 13px; flex-shrink: 0; white-space: nowrap; transition: background 0.15s ease;" onmouseover="this.style.background='#a83e07';" onmouseout="this.style.background='#c44a08';">Browse fireplaces →</a>
+            </div>`;
+        }
+
+        return '';
+      }
+
       function renderItems(items: any[]) {
         if (items.length === 0) {
           itemsEl!.innerHTML = '';
           emptyEl!.hidden = false;
           formWrap!.hidden = true;
           if (actionsEl) actionsEl.hidden = true;
-          if (pairingsNudge) pairingsNudge.hidden = true;
+          if (pairingsHost) pairingsHost.innerHTML = '';
           return;
         }
         emptyEl!.hidden = true;
         formWrap!.hidden = false;
         if (actionsEl) actionsEl.hidden = false;
-        // Show pairings nudge only if user has at least 1 fireplace and < 3 items total
-        if (pairingsNudge) {
-          const hasFireplace = items.some((i: any) => /^fireplace:/i.test(i.id));
-          pairingsNudge.hidden = !(hasFireplace && items.length < 3);
-        }
+        // Render dynamic pairings based on what's in the cart
+        if (pairingsHost) pairingsHost.innerHTML = buildPairingHTML(items);
 
         const notes = readNotes();
         itemsEl!.innerHTML = items.map((it) => `
@@ -440,7 +515,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           try { localStorage.removeItem(DEALER_KEY); } catch {}
           formWrap!.hidden = true;
           if (actionsEl) actionsEl.hidden = true;
-          if (pairingsNudge) pairingsNudge.hidden = true;
+          if (pairingsHost) pairingsHost.innerHTML = '';
           if (successEl) {
             successEl.hidden = false;
             successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
