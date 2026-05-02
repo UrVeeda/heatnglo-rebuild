@@ -21,7 +21,7 @@ const data = product.data;
   ogImage={data.ogImage ?? undefined}
   noIndex={true}
 >
-  <section class="relative mb-12 -mx-4">
+  <section class="relative mb-12 -mx-4 overflow-hidden">
     <img src={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:720"} alt={`Heat & Glo ${data.family}`} class="w-full h-[420px] object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
       <div class="max-w-page mx-auto text-white">
@@ -30,7 +30,7 @@ const data = product.data;
         ) : (
           <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">{data.energy} · {data.placement}</p>
         )}
-        <h1 class="text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">
           {data.hero?.h1 ? (
             <>
               {data.hero.h1.split(data.hero.h1_em ?? '__no_em__').map((part: string, i: number, arr: string[]) => (
