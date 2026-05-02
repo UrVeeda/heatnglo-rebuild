@@ -1,10 +1,121 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 
-const features = [
+const liveFeatures = [
   { title: 'Heat & Glo on Today Show', source: 'NBC Today Show', date: '2025', href: '/press-and-media/today-show/' },
   { title: 'HGTV Designer Showcase', source: 'HGTV', date: '2024', href: '/press-and-media/hgtv-designer-showcase/' },
   { title: 'Architectural Digest Custom Residential', source: 'Architectural Digest', date: '2024', href: '/press-and-media/architectural-digest/' },
+];
+
+const stubFeatures = [
+  {
+    title: 'Heat & Glo Featured in Forbes Home: Best Indoor Fireplaces 2026',
+    source: 'Forbes Home',
+    date: '2026',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Forbes Home — Best Indoor Fireplaces 2026',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'Forbes Home — Best Indoor Fireplaces 2026',
+    demoContext: '<strong>{label}</strong> is part of the production-engagement press archive — major-publication coverage of Heat & Glo product features. Same article-template structure as the live Today Show piece. Open it to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Featured Designer Project: Mountain Modern in Aspen with Mezzo Linear',
+    source: 'House Beautiful',
+    date: '2025',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'House Beautiful — Mountain Modern in Aspen',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'House Beautiful — Mountain Modern in Aspen',
+    demoContext: '{label} represents the designer-project feature format in the press archive. Each entry documents the installation context, the specifying designer, and the product configuration. The Today Show page demonstrates the full article structure.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Award: HHT Wins 2026 Hearth Industry Manufacturer of the Year',
+    source: 'Hearth & Home Magazine',
+    date: '2026',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Hearth Industry Manufacturer of the Year 2026',
+    demoEyebrow: 'Sample Award Coverage Template',
+    demoHeading: 'Hearth Industry Manufacturer of the Year 2026',
+    demoContext: '{label} is part of the awards and recognition section of the press archive. Each award entry covers the program, the selection criteria, and what the recognition signals to buyers and specifiers. The Today Show page shows the production article layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Behind the Scenes: How Heat & Glo Engineered the True Series Cool-Glass Front',
+    source: 'This Old House',
+    date: '2025',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'This Old House — True Series Cool-Glass Engineering',
+    demoEyebrow: 'Sample Product Editorial Template',
+    demoHeading: 'This Old House — True Series Cool-Glass Engineering',
+    demoContext: '{label} is a product-engineering feature in the press archive — editorial coverage that goes behind the specifications into how and why a technology works. Same article template structure. Open the live Today Show piece to see the production format.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Real Simple Home: The Gas Fireplace Upgrade Buyers Are Actually Making',
+    source: 'Real Simple',
+    date: '2025',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Real Simple Home — Gas Fireplace Upgrade Guide',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'Real Simple Home — Gas Fireplace Upgrade Guide',
+    demoContext: '{label} covers the buyer-decision editorial format — publication features aimed at homeowners researching gas fireplace upgrades. Each article entry documents the publication context and the brand positioning it confirms. Today Show page shows the full layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Bob Vila: Best Gas Fireplaces for Open-Plan Living Rooms',
+    source: 'Bob Vila',
+    date: '2026',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Bob Vila — Best Gas Fireplaces for Open-Plan Living Rooms',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'Bob Vila — Best Gas Fireplaces for Open-Plan Living',
+    demoContext: '{label} is a product-roundup feature in the press archive. Roundup coverage positions Heat & Glo in the editorial shortlists that homeowners use at the research stage of a purchase decision. The Today Show page demonstrates the article template these entries share.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Design Milk: The Linear Fireplace Moment in American Residential Design',
+    source: 'Design Milk',
+    date: '2025',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Design Milk — The Linear Fireplace Moment',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'Design Milk — The Linear Fireplace Moment',
+    demoContext: '{label} covers design-trade editorial — publications that reach interior designers and architects at the specification stage, not just end consumers. This format in the archive documents design-trade placement that reinforces Heat & Glo\'s position among specifiers. Today Show page shows the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'New Construction Report: Fireplaces as a Primary Sales Feature in High-End Builds',
+    source: 'Builder Magazine',
+    date: '2025',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Builder Magazine — Fireplaces as a Primary Sales Feature',
+    demoEyebrow: 'Sample Trade Press Template',
+    demoHeading: 'Builder Magazine — Fireplaces as a Primary Sales Feature',
+    demoContext: '{label} is a trade-press feature in the press archive, covering builder and developer publications that document how products are specified in new construction at scale. These entries reinforce the brand\'s position with the builder audience. Open the Today Show page to see the production article format.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
+  {
+    title: 'Dwell: Indoor-Outdoor Continuity and the Outdoor Fireplace as a Room Anchor',
+    source: 'Dwell',
+    date: '2024',
+    demoTarget: '/press-and-media/today-show/',
+    demoLabel: 'Dwell — Indoor-Outdoor Continuity',
+    demoEyebrow: 'Sample Press Article Template',
+    demoHeading: 'Dwell — Indoor-Outdoor Continuity',
+    demoContext: '{label} documents outdoor fireplace editorial coverage — a distinct category in the press archive covering features that position Heat & Glo\'s outdoor product line within the indoor-outdoor living trend. The Today Show article template demonstrates the structure every entry in the archive shares.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:900,height:500',
+    demoCta: 'See the article template →',
+  },
 ];
 ---
 <BaseLayout
@@ -29,9 +140,31 @@ const features = [
       </p>
     </header>
 
-    <section class="grid sm:grid-cols-3 gap-6 mb-16">
-      {features.map((f) => (
+    <!-- Live-built press pages: real navigation, no modal -->
+    <section class="grid sm:grid-cols-3 gap-6 mb-6">
+      {liveFeatures.map((f) => (
         <a href={f.href} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+          <p class="text-xs uppercase tracking-wide text-neutral-500 font-semibold">{f.source}</p>
+          <p class="font-semibold mt-2">{f.title}</p>
+          <p class="text-sm text-neutral-500 mt-2">{f.date}</p>
+        </a>
+      ))}
+    </section>
+
+    <!-- Additional coverage: popup-stub cards pointing to Today Show template -->
+    <section class="grid sm:grid-cols-3 gap-6 mb-16">
+      {stubFeatures.map((f) => (
+        <a
+          href={f.demoTarget}
+          data-demo-target={f.demoTarget}
+          data-demo-label={f.demoLabel}
+          data-demo-eyebrow={f.demoEyebrow}
+          data-demo-heading={f.demoHeading}
+          data-demo-context={f.demoContext}
+          data-demo-image={f.demoImage}
+          data-demo-cta={f.demoCta}
+          class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition cursor-pointer"
+        >
           <p class="text-xs uppercase tracking-wide text-neutral-500 font-semibold">{f.source}</p>
           <p class="font-semibold mt-2">{f.title}</p>
           <p class="text-sm text-neutral-500 mt-2">{f.date}</p>

@@ -1,0 +1,251 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const recall = {
+  id: 'RC-2025-001',
+  status: 'ACTIVE',
+  issued: 'March 14, 2025',
+  product: 'Mezzo 36 / Mezzo 48 Gas Fireplace',
+  hazard: 'Inner glass panel retaining clip',
+  affectedRange: 'MZ36-XXXXXX and MZ48-XXXXXX series — serial numbers between [HHT-CONFIRM: serial prefix range] and [HHT-CONFIRM: serial prefix range], manufactured between [HHT-CONFIRM: date range].',
+  units: '[HHT-CONFIRM: approximate unit count] units',
+  cpscNumber: '[HHT-CONFIRM: CPSC recall number if applicable]',
+};
+---
+<BaseLayout
+  title="Recall Notice RC-2025-001 — Mezzo 36/48 Glass Panel | Heat & Glo Owner Resources"
+  description="Active recall notice for Heat & Glo Mezzo 36 and Mezzo 48 gas fireplaces. Glass panel retaining clip issue — check your serial number and contact your authorized dealer."
+  noIndex={true}
+  ogImage="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1200,height:630"
+>
+
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo Mezzo 48 gas fireplace in a contemporary living room — subject of RC-2025-001 recall notice"
+      class="w-full h-[420px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="background: #dc2626; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 4px;">Active Recall</span>
+          <span style="color: rgba(255,255,255,0.6); font-size: 12px; font-weight: 500;">Notice {recall.id} &mdash; Issued {recall.issued}</span>
+        </div>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Mezzo 36 &amp; 48 — Glass Panel Retaining Clip.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">An inner glass panel retaining clip on certain Mezzo 36 and Mezzo 48 units may not be fully seated at the factory. Check your serial number. If affected, do not operate the unit until an authorized dealer has inspected and corrected the clip.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#check-serial" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Check if your unit is affected</a>
+          <a href="/where-to-buy/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Find your authorized dealer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- ALERT BANNER -->
+    <section style="background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 20px 24px; margin-bottom: 40px; display: flex; gap: 16px; align-items: flex-start;">
+      <div style="flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px;">
+        <svg viewBox="0 0 20 20" fill="#dc2626" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      </div>
+      <p style="color: #991b1b; font-size: 14px; line-height: 1.6; margin: 0;"><strong>Do not operate an affected unit.</strong> If your serial number falls within the affected range, stop use immediately and contact your authorized dealer to schedule a free inspection and correction. The fix is at no cost to the homeowner.</p>
+    </section>
+
+    <!-- RECALL SUMMARY GRID -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Recall summary</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Recall number</p>
+          <p class="font-semibold text-lg">{recall.id}</p>
+          <p class="text-sm text-neutral-500 mt-1">Status: <span style="color: #dc2626; font-weight: 600;">Active</span></p>
+        </div>
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Affected products</p>
+          <p class="font-semibold text-lg">Mezzo 36 / Mezzo 48</p>
+          <p class="text-sm text-neutral-500 mt-1">Gas fireplace — select serial ranges</p>
+        </div>
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Hazard</p>
+          <p class="font-semibold text-lg">Glass retaining clip</p>
+          <p class="text-sm text-neutral-500 mt-1">Risk of glass displacement during operation</p>
+        </div>
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Notice issued</p>
+          <p class="font-semibold text-lg">{recall.issued}</p>
+          <p class="text-sm text-neutral-500 mt-1">Registered owners notified by mail</p>
+        </div>
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Estimated units</p>
+          <p class="font-semibold text-lg">{recall.units}</p>
+          <p class="text-sm text-neutral-500 mt-1">[HHT-CONFIRM: unit count] manufactured, [HHT-CONFIRM] registered</p>
+        </div>
+        <div class="border rounded-lg p-5">
+          <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c44a08; margin-bottom: 6px;">Cost to homeowner</p>
+          <p class="font-semibold text-lg">No charge</p>
+          <p class="text-sm text-neutral-500 mt-1">Inspection and correction covered by Heat &amp; Glo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERIAL NUMBER LOOKUP -->
+    <section id="check-serial" class="mb-16 scroll-mt-24">
+      <div class="grid sm:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Is your unit affected?</h2>
+          <p class="text-neutral-700 leading-relaxed mb-6">The affected serial numbers are printed on the rating plate located on the lower left side of the unit chassis, visible with the louver panel removed. The plate shows the model number, serial number, and BTU input rating.</p>
+          <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+            <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin-bottom: 10px;">Affected serial number range</p>
+            <p class="font-mono text-sm text-neutral-800">[HHT-CONFIRM: e.g. MZ36-240001 through MZ36-244999]</p>
+            <p class="font-mono text-sm text-neutral-800 mt-1">[HHT-CONFIRM: e.g. MZ48-240001 through MZ48-243999]</p>
+            <p class="text-xs text-neutral-500 mt-3">Manufacture dates: [HHT-CONFIRM: e.g. January 2024 through August 2024]</p>
+          </div>
+          <p class="text-sm text-neutral-600 mb-4">If your serial number is outside these ranges, your unit is not affected by this recall. Retain this page for your records.</p>
+          <a href="tel:8884273973" style="display: inline-flex; align-items: center; gap: 8px; color: #c44a08; font-weight: 600; font-size: 14px; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            Need help? Call 888-427-3973
+          </a>
+        </div>
+        <div class="border rounded-lg overflow-hidden">
+          <img
+            src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:800,height:500"
+            alt="Heat & Glo Mezzo 48 gas fireplace — rating plate location for serial number lookup"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5 bg-neutral-50">
+            <p class="text-sm font-semibold mb-1">Rating plate location</p>
+            <p class="text-xs text-neutral-600 leading-relaxed">Lower left side of the unit chassis. Remove the louver panel (no tools required — panel lifts out) to access the rating plate. The serial number is the 12-character alphanumeric string beginning with your model prefix.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOMEOWNER ACTION STEPS -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-2">What you need to do</h2>
+      <p class="text-neutral-700 mb-8 max-w-2xl">If your serial number is within the affected range, complete these three steps. The correction takes approximately 45 minutes at your home and requires no parts from the homeowner.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div style="border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; position: relative;">
+          <div style="width: 36px; height: 36px; background: #c44a08; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 16px;">1</div>
+          <h3 class="font-semibold text-base mb-2">Stop operating the unit</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">Immediately stop using the fireplace if your serial number falls within the affected range. Do not operate until a dealer technician has confirmed the retaining clip is correctly seated.</p>
+        </div>
+        <div style="border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; position: relative;">
+          <div style="width: 36px; height: 36px; background: #c44a08; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 16px;">2</div>
+          <h3 class="font-semibold text-base mb-2">Contact your authorized dealer</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">Find your nearest Heat &amp; Glo authorized dealer using the dealer locator below. Reference recall <strong>RC-2025-001</strong> when you call. Dealers are prioritizing affected owners for scheduling.</p>
+          <a href="/where-to-buy/" class="inline-block mt-4 text-sm font-semibold text-orange-700 underline">Find a dealer</a>
+        </div>
+        <div style="border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; position: relative;">
+          <div style="width: 36px; height: 36px; background: #c44a08; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 16px;">3</div>
+          <h3 class="font-semibold text-base mb-2">Schedule the free correction</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">A qualified dealer technician will visit your home, inspect the inner glass assembly, and correctly seat the retaining clip if needed. The service visit is at no cost. No parts or shipping required from the homeowner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Free inspection and correction</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Find your dealer and schedule your service visit.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">1,400+ authorized dealers across the US and Canada. Reference <strong style="color: #fff;">RC-2025-001</strong> for priority scheduling. The correction takes approximately 45 minutes.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your authorized dealer</a>
+    </section>
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-16" style="min-height: 340px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:520"
+        alt="Heat & Glo authorized dealer service technician preparing for a home visit"
+        class="w-full object-cover"
+        style="height: 340px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.55);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 32px 36px; border-radius: 12px; max-width: 34rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Nationwide service network</p>
+            <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 10px;">Your dealer handles the whole correction.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Heat &amp; Glo authorized dealers have received the technical service bulletin for RC-2025-001. They have the parts, the procedure, and the training to complete the correction at your home in a single visit.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Locate a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8">Frequently asked questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 1px; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
+        <details style="background: #fff; padding: 0;" open>
+          <summary style="padding: 20px 24px; font-weight: 600; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1a1a1a;">
+            What is the exact hazard — can the glass fall out?
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div style="padding: 0 24px 20px; border-top: 1px solid #f3f4f6;">
+            <p class="text-sm text-neutral-700 leading-relaxed mt-4">On affected units, an inner glass panel retaining clip may not have been fully seated during factory assembly. During normal thermal expansion and contraction cycles, an incorrectly seated clip could allow the inner glass panel to shift out of its designed position. While no injuries have been reported, Heat &amp; Glo is proactively issuing this recall to correct all affected units before any incident occurs.</p>
+          </div>
+        </details>
+        <details style="background: #fafafa; padding: 0; border-top: 1px solid #e5e7eb;">
+          <summary style="padding: 20px 24px; font-weight: 600; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1a1a1a;">
+            I already scheduled annual service — will the technician check the clip during that visit?
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div style="padding: 0 24px 20px; border-top: 1px solid #f3f4f6;">
+            <p class="text-sm text-neutral-700 leading-relaxed mt-4">You should confirm this directly with your dealer when you schedule or confirm your existing appointment. All authorized dealers have received the RC-2025-001 technical service bulletin, but it is your responsibility to confirm the inspection is included in the visit scope. Do not operate the unit in the interim if your serial number is within the affected range.</p>
+          </div>
+        </details>
+        <details style="background: #fff; padding: 0; border-top: 1px solid #e5e7eb;">
+          <summary style="padding: 20px 24px; font-weight: 600; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1a1a1a;">
+            Does this recall affect my warranty?
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div style="padding: 0 24px 20px; border-top: 1px solid #f3f4f6;">
+            <p class="text-sm text-neutral-700 leading-relaxed mt-4">No. Participating in this recall correction does not alter, shorten, or otherwise affect your existing warranty coverage. The correction is performed under the recall program, not as a warranty service call. Your warranty period continues unchanged from the original purchase date.</p>
+          </div>
+        </details>
+        <details style="background: #fafafa; padding: 0; border-top: 1px solid #e5e7eb;">
+          <summary style="padding: 20px 24px; font-weight: 600; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1a1a1a;">
+            My unit serial is not in the affected range. Do I still need service?
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div style="padding: 0 24px 20px; border-top: 1px solid #f3f4f6;">
+            <p class="text-sm text-neutral-700 leading-relaxed mt-4">Your unit is not affected by RC-2025-001. Heat &amp; Glo still recommends annual service for all gas fireplaces — but that is routine maintenance, not a recall requirement. No immediate action is required from you on this recall notice.</p>
+          </div>
+        </details>
+        <details style="background: #fff; padding: 0; border-top: 1px solid #e5e7eb;">
+          <summary style="padding: 20px 24px; font-weight: 600; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1a1a1a;">
+            I purchased my unit second-hand. Am I still eligible for the free correction?
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="#9ca3af" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div style="padding: 0 24px 20px; border-top: 1px solid #f3f4f6;">
+            <p class="text-sm text-neutral-700 leading-relaxed mt-4">Yes. The recall correction applies to the unit, not the original purchaser. If your serial number is within the affected range, the inspection and correction are available at no cost regardless of whether you are the original owner. Contact your nearest authorized dealer and reference RC-2025-001.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BAND -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: grid; gap: 24px; grid-template-columns: 2fr 1fr; align-items: center;">
+      <div>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a;">Questions about this recall?</h2>
+        <p style="color: #6b7280; font-size: 15px; max-width: 420px; line-height: 1.6;">Your authorized dealer is the fastest path to answers and scheduling. Heat &amp; Glo customer service is also available Monday through Friday at <a href="tel:8884273973" style="color: #c44a08; font-weight: 600; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">888-427-3973</a>.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; text-align: center; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your authorized dealer</a>
+    </section>
+
+    <!-- BREADCRUMB BACK -->
+    <p class="text-neutral-500 text-sm border-t pt-8 mb-12">
+      <a href="/owner-resources/" class="underline hover:text-orange-700">Owner Resources</a>
+      &rsaquo;
+      <a href="/owner-resources/recall-notices/" class="underline hover:text-orange-700">Recall Notices</a>
+      &rsaquo;
+      RC-2025-001 &mdash; Mezzo 36 / 48 Glass Panel
+    </p>
+
+  </main>
+</BaseLayout>

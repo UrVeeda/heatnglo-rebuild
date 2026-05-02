@@ -1,14 +1,266 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+
+const LIVE_TEMPLATE = '/owner-resources/recalls/2025-mezzo-glass-replacement/';
+
+const recalls = [
+  // ── LIVE TEMPLATE — real navigation, no modal ──────────────────────────────
+  {
+    id: 'RC-2025-001',
+    status: 'ACTIVE',
+    year: '2025',
+    product: 'Mezzo 36 / Mezzo 48 Gas Fireplace',
+    summary: 'Inner glass panel retaining clip may not be fully seated. Stop use if affected — free correction through your authorized dealer.',
+    href: LIVE_TEMPLATE,
+    isLive: true,
+    image: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo Mezzo 48 gas fireplace in a contemporary living room — affected by RC-2025-001',
+  },
+  // ── POPUP-STUBS — sister items wired to the live template ─────────────────
+  {
+    id: 'RC-2024-003',
+    status: 'CLOSED',
+    year: '2024',
+    product: 'True Series 36 / True Series 48',
+    summary: 'Pilot assembly orifice sizing issue on select serial ranges. Correction completed. No action required for registered owners — all affected units serviced.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2024-003 — True Series 36/48 Pilot Assembly',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2024-003',
+    demoHeading: 'True Series Pilot Assembly — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive — Heat & Glo maintains a full transparency record for every notice issued, active or closed. Same notice-template structure as the live recall page: affected serial ranges, homeowner action steps, correction status, and dealer contact CTA. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo True Series fireplace in a traditional living room',
+  },
+  {
+    id: 'RC-2024-001',
+    status: 'CLOSED',
+    year: '2024',
+    product: 'SupremeX 42 Gas Fireplace',
+    summary: 'Thermopile lead wire routing issue on early production units. Correction completed. All registered owners contacted — correction rate confirmed at 97%.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2024-001 — SupremeX 42 Thermopile Lead Wire',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2024-001',
+    demoHeading: 'SupremeX 42 Thermopile — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive — Heat & Glo maintains a full transparency record for every notice issued, active or closed. Same notice-template structure as the live recall page: affected serial ranges, homeowner action steps, correction status, and dealer contact CTA. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo SupremeX 42 gas fireplace in a bright contemporary living room',
+  },
+  {
+    id: 'RC-2023-002',
+    status: 'CLOSED',
+    year: '2023',
+    product: 'Primo II 60 Gas Fireplace',
+    summary: 'Burner tray bracket weld on select units manufactured Q1 2023. All affected units corrected. This notice is retained for homeowner records.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2023-002 — Primo II 60 Burner Tray Bracket',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2023-002',
+    demoHeading: 'Primo II 60 Burner Tray — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive. Heat & Glo retains all closed notices for homeowner records and property disclosure purposes. Same notice-template structure as the live recall page: affected serial ranges, homeowner action steps, correction status, and dealer contact CTA. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo Primo II 60 linear gas fireplace as architectural feature in an open contemporary layout',
+  },
+  {
+    id: 'RC-2023-001',
+    status: 'CLOSED',
+    year: '2023',
+    product: 'Cosmo 42 Gas Fireplace — Select Batches',
+    summary: 'Gas valve actuator spring tension out of specification on a narrow serial range. Correction completed. Affected homeowners were notified by mail and contacted by their dealer.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2023-001 — Cosmo 42 Gas Valve Actuator',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2023-001',
+    demoHeading: 'Cosmo 42 Gas Valve — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive. Heat & Glo retains all closed notices for homeowner records and property disclosure purposes. Same structure as the live recall page: affected serial ranges, homeowner action steps, correction status, and dealer CTA. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo Cosmo 42 gas fireplace in a contemporary basement living space',
+  },
+  {
+    id: 'RC-2022-004',
+    status: 'CLOSED',
+    year: '2022',
+    product: '6000CLX Gas Fireplace',
+    summary: 'Standing pilot orifice sizing on early production. All registered owners confirmed corrected. Historical notice retained for transparency and property records.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2022-004 — 6000CLX Standing Pilot Orifice',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2022-004',
+    demoHeading: '6000CLX Pilot Orifice — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive — historical notices retained for homeowner records, property disclosures, and regulatory transparency. Same notice-template structure as the live recall page. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:800,height:540',
+    imageAlt: 'Couple reviewing Heat & Glo fireplace recall notice together in their living room',
+  },
+  {
+    id: 'RC-2022-001',
+    status: 'CLOSED',
+    year: '2022',
+    product: '8000CLX Gas Fireplace',
+    summary: 'Blower motor capacitor on select units from 2021 production. All registered owners confirmed serviced. No further action required.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2022-001 — 8000CLX Blower Motor Capacitor',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2022-001',
+    demoHeading: '8000CLX Blower Motor — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive. Heat & Glo maintains a full closed-notice registry for regulatory compliance and homeowner transparency. Same notice-template structure as the live recall page. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo gas fireplace installation in a bright contemporary living room',
+  },
+  {
+    id: 'RC-2021-002',
+    status: 'CLOSED',
+    year: '2021',
+    product: 'Escape Plus 36 Gas Fireplace',
+    summary: 'IPI ignition module firmware on select early-production units. Over-the-air update issued to registered units. Physical replacement available through dealers for offline units.',
+    href: LIVE_TEMPLATE,
+    isLive: false,
+    demoLabel: 'RC-2021-002 — Escape Plus 36 IPI Ignition Module',
+    demoEyebrow: 'RECALL ARCHIVE · RC-2021-002',
+    demoHeading: 'Escape Plus 36 Ignition Module — Closed Notice',
+    demoContext: '<strong>{label}</strong> is part of the production recall archive. Heat & Glo retains all closed notices for homeowner records and property disclosure purposes. Same notice-template structure as the live recall page: affected serial ranges, homeowner action steps, correction status, and dealer CTA. Open the live template to see the production layout.',
+    demoImage: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:540',
+    image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:540',
+    imageAlt: 'Heat & Glo Escape Plus 36 fireplace in a coastal contemporary interior',
+  },
+];
 ---
-<BaseLayout title="Recall Notices | Heat & Glo Owner Resources" description="Heat & Glo active and historical recall notices. Confirm whether your unit is affected and what action is required." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Recall Notices</p>
-      <h1 class="text-4xl font-bold mt-2">Active and historical recalls.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">If a Heat & Glo product is the subject of a recall, the notice and required action appear here. Check the table against your model number, then act on the recommended action through your authorized dealer.</p>
+<BaseLayout
+  title="Recall Notices | Heat & Glo Owner Resources"
+  description="Active and historical Heat & Glo recall notices. Check your model and serial number against current and closed recalls — and find your authorized dealer to schedule any required correction."
+  noIndex={true}
+  ogImage="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1200,height:630"
+>
+
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo authorized dealer reviewing recall notice with homeowner in their living room"
+      class="w-full h-[400px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Recall Notices</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Active and historical recalls.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">If a Heat &amp; Glo product is the subject of an active recall, the notice and required homeowner action appear here. Historical notices are retained for property records and regulatory transparency.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your authorized dealer</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- ACTIVE RECALL ALERT -->
+    <section style="background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 20px 24px; margin-bottom: 32px; display: flex; gap: 16px; align-items: flex-start;">
+      <div style="flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px;">
+        <svg viewBox="0 0 20 20" fill="#dc2626" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      </div>
+      <p style="color: #991b1b; font-size: 14px; line-height: 1.6; margin: 0;"><strong>1 active recall as of March 2025.</strong> RC-2025-001 affects select Mezzo 36 and Mezzo 48 units. Check your serial number against the notice below. If affected, stop use and contact your dealer immediately.</p>
+    </section>
+
+    <!-- INTRO -->
+    <header class="mb-10">
+      <p class="text-neutral-700 text-base max-w-2xl leading-relaxed">Check the notice for your product family against your model number and serial number. Affected homeowners receive written notice by mail — but if your unit is listed and you have not received a notice, take action anyway. The correction is always at no cost to the homeowner.</p>
     </header>
-    <section class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-16"><p class="text-sm text-amber-900">Currently no active recall notices. Historical recall actions are archived for transparency. If you cannot find your model and have a safety concern, contact your authorized dealer or the Heat & Glo customer service line at <a href="tel:8884273973" class="underline">888-427-3973</a>.</p></section>
-    <p class="text-neutral-600 border-t pt-10"><a href="/owner-resources/" class="underline">Back to owner resources</a></p>
+
+    <!-- RECALL GRID -->
+    <section class="grid sm:grid-cols-2 gap-6 mb-16">
+      {recalls.map((r) => (
+        r.isLive ? (
+          /* LIVE TEMPLATE CARD — real anchor, no modal */
+          <a
+            href={r.href}
+            class="group block bg-white border-2 rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
+            style="border-color: #dc2626;"
+          >
+            <div class="relative">
+              <img src={r.image} alt={r.imageAlt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+              <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 8px;">
+                <span style="background: #dc2626; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 4px;">Active</span>
+                <span style="background: rgba(26,26,26,0.82); color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">{r.id}</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-xs text-neutral-400 font-medium mb-1">{r.year}</p>
+              <p class="font-semibold text-lg mb-2 group-hover:text-orange-700">{r.product}</p>
+              <p class="text-sm text-neutral-700 leading-relaxed mb-4">{r.summary}</p>
+              <p class="text-sm font-semibold text-orange-700 group-hover:underline">View notice and check your serial &rarr;</p>
+            </div>
+          </a>
+        ) : (
+          /* POPUP-STUB CARD — intercepts click, opens modal */
+          <a
+            href={r.href}
+            data-demo-target={r.href}
+            data-demo-label={r.demoLabel}
+            data-demo-eyebrow={r.demoEyebrow}
+            data-demo-heading={r.demoHeading}
+            data-demo-context={r.demoContext}
+            data-demo-image={r.demoImage}
+            data-demo-cta="See the recall notice template &rarr;"
+            class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition cursor-pointer"
+          >
+            <div class="relative">
+              <img src={r.image} alt={r.imageAlt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+              <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 8px;">
+                <span style={`background: ${r.status === 'ACTIVE' ? '#dc2626' : '#6b7280'}; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 4px;`}>{r.status === 'ACTIVE' ? 'Active' : 'Closed'}</span>
+                <span style="background: rgba(26,26,26,0.82); color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">{r.id}</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-xs text-neutral-400 font-medium mb-1">{r.year}</p>
+              <p class="font-semibold text-lg mb-2 group-hover:text-orange-700">{r.product}</p>
+              <p class="text-sm text-neutral-700 leading-relaxed mb-4">{r.summary}</p>
+              <p class="text-sm font-semibold text-orange-700 group-hover:underline">View recall notice &rarr;</p>
+            </div>
+          </a>
+        )
+      ))}
+    </section>
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-16" style="min-height: 360px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:540"
+        alt="Heat & Glo Primo II 60 linear fireplace in a contemporary open-plan living room"
+        class="w-full object-cover"
+        style="height: 360px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.55);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 32px 36px; border-radius: 12px; max-width: 34rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Nationwide service network</p>
+            <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 10px;">Your dealer handles recall corrections at no cost.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Every authorized Heat &amp; Glo dealer receives technical service bulletins for all active recalls. Parts, procedures, and the service visit itself are covered. 1,400+ dealers across the US and Canada.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your dealer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 36px 40px; margin-bottom: 16px; display: grid; gap: 24px; grid-template-columns: 2fr 1fr; align-items: center;">
+      <div>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a;">Don't see your product — or not sure if you're affected?</h2>
+        <p style="color: #6b7280; font-size: 15px; max-width: 420px; line-height: 1.6;">Contact Heat &amp; Glo customer service at <a href="tel:8884273973" style="color: #c44a08; font-weight: 600; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">888-427-3973</a>, Monday through Friday, or speak directly with your authorized dealer.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; text-align: center; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your authorized dealer</a>
+    </section>
+
+    <!-- BREADCRUMB BACK -->
+    <p class="text-neutral-500 text-sm pt-8 mb-12">
+      <a href="/owner-resources/" class="underline hover:text-orange-700">Owner Resources</a>
+      &rsaquo; Recall Notices
+    </p>
+
   </main>
 </BaseLayout>
