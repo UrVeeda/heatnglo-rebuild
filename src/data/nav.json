@@ -1,6 +1,8 @@
 {
   "main": [
-    { "label": "Products",          "href": "/products/" },
+    { "label": "Fireplaces",        "href": "/products/" },
+    { "label": "Log Sets",          "href": "/log-sets/" },
+    { "label": "Accessories",       "href": "/accessories/" },
     { "label": "Inspiration",       "href": "/inspiration/" },
     { "label": "Where to Buy",      "href": "/where-to-buy/" },
     { "label": "Pro",               "href": "/pro/" },
@@ -9,7 +11,9 @@
     { "label": "About",             "href": "/about/" }
   ],
   "es_main": [
-    { "label": "Productos",                      "href": "/es/products/" },
+    { "label": "Chimeneas",                      "href": "/es/products/" },
+    { "label": "Juegos de Leños",                "href": "/es/log-sets/" },
+    { "label": "Accesorios",                     "href": "/es/accessories/" },
     { "label": "Inspiración",                    "href": "/es/inspiration/" },
     { "label": "Dónde Comprar",                  "href": "/es/where-to-buy/" },
     { "label": "Pro",                            "href": "/es/pro/" },
@@ -18,7 +22,9 @@
     { "label": "Acerca de",                      "href": "/es/about/" }
   ],
   "en_ca_main": [
-    { "label": "Products",          "href": "/en-ca/products/" },
+    { "label": "Fireplaces",        "href": "/en-ca/products/" },
+    { "label": "Log Sets",          "href": "/en-ca/log-sets/" },
+    { "label": "Accessories",       "href": "/en-ca/accessories/" },
     { "label": "Inspiration",       "href": "/en-ca/inspiration/" },
     { "label": "Where to Buy",      "href": "/en-ca/where-to-buy/" },
     { "label": "Pro",               "href": "/en-ca/pro/" },
@@ -27,7 +33,9 @@
     { "label": "About",             "href": "/en-ca/about/" }
   ],
   "fr_ca_main": [
-    { "label": "Produits",                       "href": "/fr-ca/products/" },
+    { "label": "Foyers",                         "href": "/fr-ca/products/" },
+    { "label": "Ensembles de Bûches",            "href": "/fr-ca/log-sets/" },
+    { "label": "Accessoires",                    "href": "/fr-ca/accessories/" },
     { "label": "Inspiration",                    "href": "/fr-ca/inspiration/" },
     { "label": "Où acheter",                     "href": "/fr-ca/where-to-buy/" },
     { "label": "Pro",                            "href": "/fr-ca/pro/" },
