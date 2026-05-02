@@ -6,31 +6,107 @@ const products = await getCollection('products-en');
 const outdoor = products.filter((p) => p.data.placement === 'outdoor');
 ---
 <BaseLayout title="Outdoor Fireplaces | Heat & Glo" description="Heat & Glo outdoor fireplaces: gas and wood-burning fireplaces engineered for patios, outdoor kitchens, pool houses, and exterior living spaces." noIndex={true}>
+
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:1920,height:540" alt="Outdoor patio fireplace with stone surround and gas log set" class="w-full h-[280px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:1920,height:720"
+      alt="Outdoor patio fireplace with stone surround and gas log set in an exterior living space"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Outdoor Fireplaces</p>
-        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Engineered for the elements.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Outdoor Fireplaces</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Engineered for the elements.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">Extend the season your patio is usable. Heat &amp; Glo outdoor fireplaces span gas and wood, with structural durability built for genuine exterior installation. Your dealer can help you choose between built-in and patio configurations.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">Outdoor fireplaces extend the season your patio is usable. Heat & Glo's outdoor lineup spans gas and wood, indoor-outdoor convertibility, and the structural durability required for genuine exterior installation.</p>
+
+    <!-- INTRO + TRUST STRIP -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">Outdoor fireplaces extend the season your patio is usable. Heat &amp; Glo's outdoor lineup spans gas and wood, indoor-outdoor convertibility, and the structural durability required for genuine exterior installation.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Gas + wood</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Your fuel choice</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Exterior-grade</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Built for the elements</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized dealers</p>
+        </div>
+      </div>
     </header>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+    <!-- INLINE CTA BAND 1 -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px;">Planning a patio or outdoor kitchen project?</p>
+        <p style="color: #6b7280; font-size: 14px;">Your authorized dealer has worked with outdoor living contractors before and can help spec the right unit for your construction timeline.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {outdoor.map((p: any) => (
         <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:400'} alt={p.data.family + ' outdoor fireplace in an exterior patio setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
           <div class="p-5">
             <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
             <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
             <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.energy}</p>
+            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
           </div>
         </a>
       ))}
     </section>
-    {outdoor.length === 0 && <p class="text-neutral-600">Outdoor product pages populate from the legacy catalog as the rebuild scales beyond the pitch deliverable.</p>}
+
+    {outdoor.length === 0 && (
+      <div style="border: 1px solid #e5e7eb; border-radius: 10px; padding: 32px; text-align: center; margin-bottom: 48px;">
+        <p class="text-neutral-600 mb-4">Outdoor product pages populate from the full catalog as the rebuild scales beyond the pitch deliverable.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Ask your dealer about outdoor options</a>
+      </div>
+    )}
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-12" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/fa7735a5-7bac-4c5d-be4d-93212873562c/43_HHT_GasLogs_Outd?io=transform:fill,width:1920,height:560"
+        alt="Outdoor Kindled Stack gas log set in a built-in patio fireplace with stone surround"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Extend your season</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">The patio that gets used year-round.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">An outdoor fireplace adds usable months to your exterior space. Heat &amp; Glo's outdoor units are built with weatherproof materials and exterior-rated components. Your dealer has worked with outdoor living contractors and can spec the right unit for your project.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Engineered since 1975</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Schedule your consultation.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">Outdoor fireplace installation involves venting paths, clearances, and gas line coordination that varies by property. Your authorized dealer has done this before. Start the conversation before you finalize your patio plans.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
   </main>
 </BaseLayout>

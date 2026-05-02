@@ -6,28 +6,127 @@ const products = await getCollection('products-en');
 const seeThrough = products.filter((p) => p.data.placement === 'see-through' || p.id.includes('see-through'));
 ---
 <BaseLayout title="See-Through (Double-Sided) Fireplaces | Heat & Glo" description="Heat & Glo see-through fireplaces: double-sided fireboxes that serve two adjacent spaces from one unit. Living-to-dining, bedroom-to-bath, indoor-to-outdoor configurations." noIndex={true}>
+
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:540" alt="Open contemporary residential layout with Primo II 60 see-through linear fireplace" class="w-full h-[280px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:720"
+      alt="Open contemporary residential layout with Primo II 60 linear see-through gas fireplace between two living spaces"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">See-Through Fireplaces</p>
-        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">One fire. Two rooms.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">See-Through Fireplaces</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">One fire. Two rooms.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">A single firebox serving two adjacent spaces. Living-to-dining, primary bedroom-to-bath, indoor-to-outdoor. The most-specified architectural fireplace detail in custom residential builds. Your dealer can help you spec the right unit for your wall configuration.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          <a href="/fireplaces/gas/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Browse all gas fireplaces</a>
+        </div>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">See-through fireplaces share a single firebox between two adjacent rooms or between an indoor and outdoor space. The most-specified configurations: living-to-dining partitions, primary bedroom-to-bath, and indoor-to-outdoor patio walls.</p>
+
+    <!-- INTRO -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">See-through fireplaces share a single firebox between two adjacent rooms or between an indoor and outdoor space. The most-specified configurations: living-to-dining partitions, primary bedroom-to-bath, and indoor-to-outdoor patio walls.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">One firebox</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Two viewing faces</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Custom spec</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Engineered per project</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized dealers</p>
+        </div>
+      </div>
     </header>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-      {seeThrough.map((p: any) => (
-        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
-          <p class="font-semibold">{p.data.family}</p>
-          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
-          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.energy}</p>
-        </a>
-      ))}
+
+    <!-- INLINE CTA BAND 1 -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px;">See-through fireplaces require specification-level support.</p>
+        <p style="color: #6b7280; font-size: 14px;">Wall thickness, chase configuration, and venting path all affect which unit is correct for your project. Your authorized dealer has done this before.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
     </section>
-    {seeThrough.length === 0 && <p class="text-neutral-600">See-through configurations are also available within most product families. Check the family page for see-through variants.</p>}
+
+    <!-- PRODUCT GRID - now image-first instead of text-only cards -->
+    {seeThrough.length > 0 ? (
+      <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {seeThrough.map((p: any) => (
+          <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+            <img
+              src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400'}
+              alt={p.data.family + ' see-through gas fireplace in a contemporary two-room configuration'}
+              class="w-full h-52 object-cover group-hover:scale-105 transition duration-300"
+            />
+            <div class="p-5">
+              <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+              <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+              <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.energy}</p>
+              <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
+            </div>
+          </a>
+        ))}
+      </section>
+    ) : (
+      <div style="border: 1px solid #e5e7eb; border-radius: 10px; padding: 32px; margin-bottom: 48px;">
+        <p class="text-neutral-700 mb-4 text-base">See-through configurations are available within most product families. Many gas fireplace families offer a see-through variant within the same size range.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
+          <a href="/fireplaces/gas/" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <img src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:360" alt="Heat & Glo Mezzo gas fireplace available in see-through configuration" class="w-full h-36 object-cover rounded mb-3" />
+            <p class="font-semibold text-base mb-1">Gas fireplace families</p>
+            <p class="text-sm text-neutral-600">Most gas families include a see-through variant. Check the family page for see-through sizing.</p>
+            <p class="text-sm font-medium text-orange-700 mt-2">Browse gas &rarr;</p>
+          </a>
+          <a href="/fireplaces/outdoor/" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <img src="https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:360" alt="Outdoor patio fireplace with indoor-to-outdoor see-through configuration" class="w-full h-36 object-cover rounded mb-3" />
+            <p class="font-semibold text-base mb-1">Indoor-to-outdoor</p>
+            <p class="text-sm text-neutral-600">Select outdoor units are configured for interior-to-exterior see-through installation.</p>
+            <p class="text-sm font-medium text-orange-700 mt-2">Browse outdoor &rarr;</p>
+          </a>
+        </div>
+      </div>
+    )}
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-12" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:560"
+        alt="Heat & Glo Mezzo linear gas fireplace in a contemporary open-plan interior connecting living and dining spaces"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Architectural specification</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">The most-specified architectural detail in custom residential.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">See-through fireplaces create space definition without solid walls. Architects and designers specify them to connect kitchen-to-living, master suite-to-bath, and great room-to-patio. Your dealer works with the specification engineer on the unit that fits your wall design.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Engineered since 1975</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Bring this home.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">See-through configurations vary by wall thickness, chase size, and room arrangement. Your authorized dealer and Heat &amp; Glo's specification team work together on the install. Start the conversation early in your build.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
   </main>
 </BaseLayout>

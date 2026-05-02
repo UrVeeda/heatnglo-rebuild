@@ -1,18 +1,290 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Key Technologies | Heat & Glo Engineering" description="The Heat & Glo engineering technologies behind every product: IPI ignition systems, direct-vent design, glass cooling, EPA-certified wood combustion, and more." noIndex={true}>
+<BaseLayout title="Key Technologies | Heat & Glo Engineering" description="The Heat & Glo engineering platforms behind every product: IPI intermittent pilot ignition, direct-vent sealed combustion, cool-glass technology, and EPA-certified wood combustion. How each system works and why it matters." noIndex={true}>
+
+  <!-- Hero -->
+  <section class="relative mb-0 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:680"
+      alt="Heat & Glo Primo II 60 linear gas fireplace in contemporary open-plan living room"
+      class="w-full h-[480px] object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 flex items-end pb-12 px-8" style="background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.08) 100%);">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold mb-2" style="color: #f97316;">Key Technologies</p>
+        <h1 class="text-5xl font-bold max-w-3xl leading-tight">The engineering you don't see.</h1>
+        <p class="mt-4 text-lg max-w-2xl text-white/90">Four core platforms. Every one of them developed because the previous approach wasn't good enough. Here's how they work and why they matter.</p>
+      </div>
+    </div>
+  </section>
+
   <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Key Technologies</p>
-      <h1 class="text-4xl font-bold mt-2">The engineering you don't see.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo's product reliability comes from the engineering platforms shared across the lineup. Here are the systems that make the fireplaces work the way they do.</p>
-    </header>
-    <section class="grid sm:grid-cols-2 gap-6 mb-16">
-      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">IPI (Intermittent Pilot Ignition)</p><p class="text-sm text-neutral-600">No standing pilot light. The ignition system fires only when the fireplace is in use, saving gas and extending component life.</p></div>
-      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">Direct-vent design</p><p class="text-sm text-neutral-600">Sealed firebox, co-axial vent pipe, no chimney required. Combustion air drawn from outside; exhaust routed back outside without compromising indoor air quality.</p></div>
-      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">Cool-glass technology</p><p class="text-sm text-neutral-600">Engineered air-flow patterns reduce front-glass surface temperatures while maintaining radiant performance.</p></div>
-      <div class="border rounded-lg p-5"><p class="font-semibold mb-2">EPA-certified wood combustion</p><p class="text-sm text-neutral-600">Wood-burning units engineered to meet EPA emissions standards. Listed efficiency ratings on every model.</p></div>
+
+    <!-- Direct answer lede -->
+    <section class="mb-14 max-w-3xl">
+      <p class="text-xl text-neutral-700 leading-relaxed">Heat & Glo's product lineup is built on four engineering platforms: Intermittent Pilot Ignition (IPI), direct-vent sealed combustion, cool-glass technology, and EPA-certified wood combustion. Each one is a deliberate departure from an older approach that had real problems. Understanding these platforms is how you understand why a Heat & Glo fireplace performs differently than a generic gas or wood appliance.</p>
     </section>
+
+    <!-- Technology nav pills -->
+    <nav class="flex flex-wrap gap-3 mb-14" aria-label="Jump to technology section">
+      <a href="#ipi" style="background: #f5f5f5; color: #1a1a1a; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 1px solid #d4d4d4;">IPI Ignition</a>
+      <a href="#direct-vent" style="background: #f5f5f5; color: #1a1a1a; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 1px solid #d4d4d4;">Direct-Vent</a>
+      <a href="#cool-glass" style="background: #f5f5f5; color: #1a1a1a; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 1px solid #d4d4d4;">Cool-Glass</a>
+      <a href="#epa-wood" style="background: #f5f5f5; color: #1a1a1a; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 1px solid #d4d4d4;">EPA Wood Combustion</a>
+      <a href="#intellifire" style="background: #f5f5f5; color: #1a1a1a; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 1px solid #d4d4d4;">IntelliFire Controls</a>
+    </nav>
+
+    <!-- IPI -->
+    <section id="ipi" class="mb-16 scroll-mt-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="uppercase tracking-wide text-xs font-semibold mb-2" style="color: #c44a08;">Technology 01</p>
+          <h2 class="text-3xl font-bold mb-4">IPI: Intermittent Pilot Ignition</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-4">IPI fires a spark to light the pilot only when the fireplace is actually called to operate. When the fireplace shuts off, the pilot extinguishes. No standing flame. No gas burned between uses.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What the older system did</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">A standing pilot system burns a continuous small flame 24 hours a day, 365 days a year. The flame is there to ignite the main burner whenever the thermostat or switch calls for it. The problem is the timing: the fireplace is in active use for a fraction of the hours it burns gas. A family running a gas fireplace through a Minnesota winter might use it 300 hours. The standing pilot burns for roughly 8,760. The gas consumed between uses is pure waste, and the continuous heat cycle stresses the thermocouple and valve components that make up the ignition circuit.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">How IPI works</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">IPI replaces the standing flame with an electronic spark ignition system, the same basic technology used in most gas ranges and outdoor grills. When the fireplace receives an on-signal, the ignition module generates a spark at the pilot. The spark lights the pilot. The pilot lights the main burner. The sequence takes seconds. When the fireplace shuts off, the pilot valve closes and the flame goes out.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">The system requires a power source for the ignition electronics. Most Heat & Glo IPI systems include a battery backup so the fireplace remains operational during a power outage. This matters in the cold-weather markets where fireplaces are most frequently used. A power outage in January is exactly when you want the fireplace to work.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Why HHT engineered it this way</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">The math is straightforward. Gas consumed only during active use costs substantially less than gas consumed continuously. The component argument is equally clear: a thermocouple and pilot valve cycling on demand last significantly longer than the same components running under continuous heat load. IPI reduces operating cost and extends component life in the same design decision.</p>
+          <p class="text-neutral-700 leading-relaxed">There is also a safety dimension. A fireplace that holds no standing flame between uses eliminates the small but real risk associated with a continuously burning gas flame in a residential space. IPI systems include flame sensing that shuts the pilot if the flame does not light within the expected number of ignition attempts, preventing unburned gas from accumulating.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Where you find IPI in the lineup</h3>
+          <p class="text-neutral-700 leading-relaxed">IPI is standard or available across Heat & Glo's <a href="/fireplaces/gas/" class="underline" style="color: #c44a08;">gas fireplace families</a>, including the Mezzo, Primo II, and True series, and is included in <a href="/fireplaces/inserts/" class="underline" style="color: #c44a08;">gas inserts</a>. Confirm availability on specific models with your authorized dealer.</p>
+        </div>
+        <div class="space-y-4">
+          <img src="https://hearthnhome.getbynder.com/transform/bae1dba5-a6a6-46d1-9745-33cb72d18acb/GoogleHome-n-iPhone?io=transform:fill,width:720,height:480" alt="IntelliFire smart control app displayed on Google Home and iPhone" class="rounded-lg w-full object-cover h-56" />
+          <div class="rounded-lg p-6" style="background: #f9f5f0; border: 1px solid #e8ddd3;">
+            <p class="font-semibold mb-2">IPI vs. standing pilot: the key differences</p>
+            <ul class="space-y-2 text-sm text-neutral-700">
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Gas consumed only during active use</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Component stress reduced by eliminating continuous heat cycle</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Battery backup maintains operation during power outages</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Flame-sensing safety shutoff if pilot fails to light</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> No continuous flame hazard between uses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="my-4 border-neutral-200" />
+
+    <!-- Direct-vent -->
+    <section id="direct-vent" class="mb-16 mt-12 scroll-mt-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="order-2 md:order-1 space-y-4">
+          <img src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-?io=transform:fill,width:720,height:480" alt="Heat & Glo Mezzo linear gas fireplace installed in contemporary living room on interior wall" class="rounded-lg w-full object-cover h-56" />
+          <div class="rounded-lg p-6" style="background: #f9f5f0; border: 1px solid #e8ddd3;">
+            <p class="font-semibold mb-2">What direct-vent makes possible</p>
+            <ul class="space-y-2 text-sm text-neutral-700">
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Installation on interior walls with no existing chimney</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Basement and below-grade installation</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Zero indoor air quality impact from combustion</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> No conditioned indoor air drawn into the combustion chamber</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Glass stays cleaner with sealed combustion</li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <p class="uppercase tracking-wide text-xs font-semibold mb-2" style="color: #c44a08;">Technology 02</p>
+          <h2 class="text-3xl font-bold mb-4">Direct-vent: sealed combustion design</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-4">A direct-vent fireplace draws all combustion air from outside the home and exhausts all combustion gases back outside through a sealed co-axial pipe system. The firebox is completely sealed from the room it sits in. Indoor air quality is not affected. A chimney is not required.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">The problem with open-combustion and B-vent systems</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Older gas fireplaces and B-vent gas appliances draw combustion air from the room they occupy. This creates two problems. First, the combustion process consumes indoor air that has already been heated or cooled at the homeowner's expense. Second, the exhaust path relies on a chimney that creates a draft pulling warm indoor air up and out, compounding the efficiency loss. In a tightly sealed modern home with mechanical ventilation, this can create negative indoor pressure issues and back-drafting risks.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">Open-combustion systems also introduce combustion byproducts into the indoor environment if anything disrupts the draft. High winds, a blocked flue, and changes in indoor-outdoor pressure differential can all affect the draft direction of an open combustion system.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">How the co-axial pipe system works</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Direct-vent systems use a pipe-within-a-pipe arrangement. Fresh outdoor air flows into the firebox through the outer pipe. Combustion exhaust flows out through the inner pipe, in the opposite direction, through the same wall penetration. The two air streams do not mix. The exhaust exits at a low temperature compared to a wood-burning chimney system, which allows the pipe to terminate through a wall rather than requiring a tall vertical flue.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">The sealing of the firebox from the room is complete. The glass panel on the front of the firebox is gasketed to maintain the sealed envelope. This is why the glass can get hot: it is the only surface separating the combustion chamber from the room, and the combustion heat transfers through it. It is also why the glass stays clean compared to an open-combustion fireplace: the sealed system controls the combustion environment precisely.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What this means for installation flexibility</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">The absence of a chimney requirement changes where a fireplace can be installed. An interior wall in a room that was never designed to have a fireplace is a viable location. A basement room with no exterior chimney can accommodate a direct-vent gas fireplace. A bedroom, a study, a primary bath, a garage-turned-living-space, all locations where a traditional wood-burning or B-vent fireplace would require significant structural work become straightforward installations.</p>
+          <p class="text-neutral-700 leading-relaxed">Vent routing, the path the co-axial pipe takes from the firebox to the exterior, still requires careful planning and confirmation by the installing dealer. Every installation has unique routing constraints based on wall construction, floor framing, and exterior termination options. The authorized dealer will confirm the specific routing before rough-in.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Where you find direct-vent in the lineup</h3>
+          <p class="text-neutral-700 leading-relaxed">Direct-vent sealed combustion is the primary system across Heat & Glo's entire <a href="/fireplaces/gas/" class="underline" style="color: #c44a08;">gas fireplace lineup</a>, including the Mezzo, Primo II, and True families, as well as <a href="/fireplaces/see-through/" class="underline" style="color: #c44a08;">see-through configurations</a> and <a href="/fireplaces/inserts/" class="underline" style="color: #c44a08;">gas inserts</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band mid-page -->
+    <section class="rounded-lg p-8 mb-12" style="background: #1a1a1a;">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h2 class="text-xl font-bold text-white">Gas fireplace sale: $650 rebate available</h2>
+          <p class="text-white/80 mt-1">Select Heat & Glo gas fireplaces and inserts qualify for a $650 rebate. Ask your authorized dealer for details on qualifying models.</p>
+        </div>
+        <a href="/fireplace-sale/" style="background: #c44a08; color: #fff; padding: 0.75rem 1.75rem; border-radius: 0.375rem; font-weight: 700; white-space: nowrap; text-decoration: none; display: inline-block;">See the Sale</a>
+      </div>
+    </section>
+
+    <!-- Cool-glass -->
+    <section id="cool-glass" class="mb-16 scroll-mt-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="uppercase tracking-wide text-xs font-semibold mb-2" style="color: #c44a08;">Technology 03</p>
+          <h2 class="text-3xl font-bold mb-4">Cool-glass technology</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-4">Cool-glass is an engineered air-flow system that manages the front-glass surface temperature on a sealed direct-vent firebox. The system circulates a controlled stream of air between the firebox frame and the glass face, reducing the exterior surface temperature while maintaining the full radiant heat output and the wide, unobstructed flame view that contemporary fireplace designs require.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Why the glass temperature problem exists</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">A direct-vent sealed firebox concentrates combustion heat behind a single glass panel. The glass is strong enough to withstand the thermal cycle, but the exterior surface can reach temperatures that pose a burn risk if touched, particularly for children and adults who do not recognize a hot glass surface as a hazard. Consumer product safety standards and manufacturer liability both create strong pressure to manage glass surface temperatures below defined thresholds.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">The challenge is that the glass face is also the primary radiant surface. Blocking or reflecting heat away from the glass to reduce surface temperature compromises the radiant heating performance that makes the fireplace useful. The engineering goal is to manage contact-surface temperature without reducing radiant output.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">How the air-flow system manages it</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Cool-glass systems use convective air circulation directed specifically at the space between the outer frame of the firebox and the glass face. Air enters at the base of the firebox surround, flows upward along the glass face, picks up heat from the glass exterior surface, and exits at the top. This continuous air movement carries heat away from the glass surface before it accumulates to high levels.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">The air circulation also benefits the room's heating performance. The warmed air that exits at the top of the firebox contributes to room convection, adding to the radiant heat the glass emits. The thermal management and the room heating work together rather than against each other.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What this means in practice</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Reduced glass surface temperatures lower the risk of contact burns from accidental or curious touch. This is particularly relevant in households with young children and in commercial or hospitality applications where unaccompanied visitors may approach a burning fireplace. Reduced surface temperature does not eliminate burn risk from sustained contact; the glass is still hot during operation. But it meaningfully reduces the severity and speed of a brief accidental contact.</p>
+          <p class="text-neutral-700 leading-relaxed">For specifiers: glass temperature performance data is available for specific models through the ProAdvantage trade program. If your project has specific surface temperature requirements, confirm the data against your applicable standards before finalizing specifications.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Where you find cool-glass in the lineup</h3>
+          <p class="text-neutral-700 leading-relaxed">Cool-glass technology is incorporated across the primary Heat & Glo gas fireplace families, including the <a href="/fireplaces/gas/" class="underline" style="color: #c44a08;">Mezzo, Primo II, and True series</a>. Specific model-level data is available through your <a href="/where-to-buy/" class="underline" style="color: #c44a08;">authorized dealer</a>.</p>
+        </div>
+        <div class="space-y-4">
+          <img src="https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:720,height:480" alt="Couple discussing fireplace specifications with an authorized Heat & Glo dealer" class="rounded-lg w-full object-cover h-56" />
+          <div class="rounded-lg p-6" style="background: #f9f5f0; border: 1px solid #e8ddd3;">
+            <p class="font-semibold mb-2">Cool-glass: what changes</p>
+            <ul class="space-y-2 text-sm text-neutral-700">
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Lower glass contact-surface temperatures during operation</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Reduced accidental-contact burn risk</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Convected warm air added to room heating</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Full radiant output preserved</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Unobstructed full-width flame view maintained</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="my-4 border-neutral-200" />
+
+    <!-- EPA wood combustion -->
+    <section id="epa-wood" class="mb-16 mt-12 scroll-mt-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="order-2 md:order-1 space-y-4">
+          <img src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:720,height:480" alt="Heat & Glo wood-burning fireplace in traditional stone hearth setting" class="rounded-lg w-full object-cover h-56" />
+          <div class="rounded-lg p-6" style="background: #f9f5f0; border: 1px solid #e8ddd3;">
+            <p class="font-semibold mb-2">EPA Phase II: what the standard requires</p>
+            <ul class="space-y-2 text-sm text-neutral-700">
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Particulate emissions limits per gram per hour of burn rate</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Third-party lab testing and certification</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Listed efficiency ratings on every certified model</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Required for sale in EPA-regulated markets</li>
+              <li class="flex gap-2"><span style="color: #c44a08;">+</span> Combustion chamber and air-supply design engineered to the standard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <p class="uppercase tracking-wide text-xs font-semibold mb-2" style="color: #c44a08;">Technology 04</p>
+          <h2 class="text-3xl font-bold mb-4">EPA-certified wood combustion</h2>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-4">Heat & Glo's wood-burning fireplaces are certified to meet the U.S. Environmental Protection Agency's emissions standards for residential wood-heating appliances. EPA certification is not a marketing label. It is third-party lab testing against specific particulate output limits, with listed efficiency ratings required on every certified unit.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What the EPA regulates and why</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">The EPA regulates particulate emissions from residential wood-burning heaters under authority established by the Clean Air Act. Wood smoke contains fine particulate matter (PM2.5) that penetrates deep into lung tissue and contributes to both local air quality problems and regional haze. Dense residential areas where many homes burn wood simultaneously can see air quality impacts that rival industrial sources on high-use winter days.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">The EPA's Phase II standards tightened the emissions limits that residential wood heaters must meet. Units sold after the effective date of Phase II must be tested by an accredited laboratory and certified to emit no more than a defined quantity of particulate per hour of operation. The test methodology controls fuel type, moisture content, and burn rate to ensure results are comparable across manufacturers.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What certification actually requires from the engineering</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Meeting EPA Phase II limits requires specific combustion chamber design. The geometry of the combustion chamber, the location and sizing of the air supply openings, and the temperature maintained in the secondary combustion zone all affect particulate output. A poorly designed combustion chamber produces incomplete burns with high particulate emissions. An engineered chamber brings secondary combustion air in at temperatures and velocities that promote complete combustion of volatile gases before they exit as smoke.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">Heat & Glo's certified wood-burning models have combustion chambers designed to meet the EPA standard, not to approach it marginally. The engineering choices that produce a low-particulate burn also produce a more efficient burn: more of the fuel's energy is converted to heat rather than lost as unburned compounds in the exhaust stream. The environmental performance and the heating performance point in the same direction.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Efficiency ratings and what they mean</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">Every EPA-certified wood-burning heater carries a listed efficiency rating. This number represents the percentage of the fuel's heat energy that is transferred to the living space rather than lost up the flue. A unit rated at 75% efficiency delivers three-quarters of the wood's available energy as usable heat. The balance exits as exhaust.</p>
+          <p class="text-neutral-700 leading-relaxed mb-4">Efficiency ratings are listed in the product's documentation and on the EPA's certified wood heater database. Your authorized dealer can provide the specific efficiency data for any Heat & Glo wood-burning unit.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Where you find EPA-certified combustion in the lineup</h3>
+          <p class="text-neutral-700 leading-relaxed">EPA Phase II certification applies to Heat & Glo's <a href="/fireplaces/wood/" class="underline" style="color: #c44a08;">wood-burning fireplace lineup</a>. Specific efficiency and emissions data for each model is available through your <a href="/where-to-buy/" class="underline" style="color: #c44a08;">authorized dealer</a> or the <a href="/about-us/epa-certification/" class="underline" style="color: #c44a08;">EPA certification information page</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="my-4 border-neutral-200" />
+
+    <!-- IntelliFire controls -->
+    <section id="intellifire" class="mb-16 mt-12 scroll-mt-8">
+      <p class="uppercase tracking-wide text-xs font-semibold mb-2" style="color: #c44a08;">Technology 05</p>
+      <h2 class="text-3xl font-bold mb-4">IntelliFire: connected controls</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-lg text-neutral-700 leading-relaxed mb-4">IntelliFire is Heat & Glo's smart control platform, integrating the fireplace's ignition and flame-height controls with smartphone and smart-home systems. The RC400 remote, the wall-switch option, and the IntelliFire app each connect to the same underlying control system.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">What the system controls</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">IntelliFire-equipped fireplaces can be turned on and off, have flame height adjusted, and be set to a schedule, all from a remote, a wall switch, or a smartphone app. Compatible units also integrate with Google Home and Amazon Alexa, allowing voice-command operation.</p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2">Why the control system matters as much as the flame</h3>
+          <p class="text-neutral-700 leading-relaxed mb-4">A fireplace that requires walking to it to turn it on or adjust it gets used less than one that responds to a voice command or a phone tap. Usage frequency affects how a homeowner values the purchase. A fireplace that is actually used every morning of a Minnesota winter produces a different ownership experience than one used occasionally because operating it is inconvenient.</p>
+          <p class="text-neutral-700 leading-relaxed">Scheduling capability also removes a common consumer concern: the fear of leaving a fireplace on unintentionally. A programmed shutoff time eliminates that worry entirely.</p>
+        </div>
+        <div class="space-y-4">
+          <img src="https://hearthnhome.getbynder.com/transform/bae1dba5-a6a6-46d1-9745-33cb72d18acb/GoogleHome-n-iPhone?io=transform:fill,width:720,height:480" alt="IntelliFire app on Google Home and iPhone showing fireplace controls" class="rounded-lg w-full object-cover h-56" />
+          <img src="https://hearthnhome.getbynder.com/transform/0729e24a-f3a8-445f-892d-72ebc38b7709/RC400_SO_5x4-jpg?io=transform:fill,width:720,height:480" alt="Heat & Glo RC400 remote control for IntelliFire system" class="rounded-lg w-full object-cover h-56" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="rounded-lg p-8 mb-12" style="background: #c44a08;">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Find a dealer who knows these systems</h2>
+          <p class="text-white/85 mt-1">Every authorized Heat & Glo dealer has completed HHT technical training. They can answer specific questions about IPI, direct-vent routing, and EPA compliance for your installation.</p>
+        </div>
+        <a href="/where-to-buy/" style="background: #fff; color: #c44a08; padding: 0.75rem 1.75rem; border-radius: 0.375rem; font-weight: 700; white-space: nowrap; text-decoration: none; display: inline-block;">Find a Dealer</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Technical questions</h2>
+      <div class="space-y-6 max-w-3xl">
+        <details class="border rounded-lg">
+          <summary class="px-5 py-4 font-semibold cursor-pointer hover:bg-neutral-50">Can I switch between IPI and standing pilot mode?</summary>
+          <div class="px-5 pb-4 text-neutral-700 leading-relaxed">Many Heat & Glo gas fireplaces with IPI offer a standing pilot mode as an option, selectable at the control module. This can be useful in extremely cold climates where the pilot acts as a minor heat source that helps prevent condensation in the firebox. Confirm the available modes for your specific model with your authorized dealer before purchase if this matters for your installation.</div>
+        </details>
+        <details class="border rounded-lg">
+          <summary class="px-5 py-4 font-semibold cursor-pointer hover:bg-neutral-50">What is the vent termination requirement for direct-vent fireplaces?</summary>
+          <div class="px-5 pb-4 text-neutral-700 leading-relaxed">Vent termination requirements vary by model, local building code, and the specific vent path. General requirements include minimum clearances from windows, doors, and air intake openings, and specific clearances from grade. Your local building department and your authorized dealer can confirm the termination requirements for your installation before rough-in. Do not assume vent termination from a neighboring installation or a previous project without checking the specific model's requirements against your local code.</div>
+        </details>
+        <details class="border rounded-lg">
+          <summary class="px-5 py-4 font-semibold cursor-pointer hover:bg-neutral-50">Does EPA certification affect what wood I can burn?</summary>
+          <div class="px-5 pb-4 text-neutral-700 leading-relaxed">Yes. EPA certification testing uses seasoned cordwood of defined moisture content. Burning wet or unseasoned wood in an EPA-certified fireplace produces substantially more particulate than the certified level, defeats the combustion engineering designed into the unit, and accelerates creosote buildup in the flue. For an EPA-certified fireplace to perform as rated, use properly seasoned wood with moisture content below 20%, confirmed with a wood moisture meter.</div>
+        </details>
+        <details class="border rounded-lg">
+          <summary class="px-5 py-4 font-semibold cursor-pointer hover:bg-neutral-50">Can a direct-vent gas fireplace be converted to use a different fuel?</summary>
+          <div class="px-5 pb-4 text-neutral-700 leading-relaxed">Heat & Glo gas fireplaces are available in either natural gas or liquid propane configurations. Many models include a conversion kit that allows field conversion between fuel types. The conversion requires a qualified gas technician and must be performed according to the installation manual. A direct-vent gas fireplace cannot be converted to a wood-burning unit.</div>
+        </details>
+        <details class="border rounded-lg">
+          <summary class="px-5 py-4 font-semibold cursor-pointer hover:bg-neutral-50">What does a spec professional need to know about direct-vent gas when framing begins?</summary>
+          <div class="px-5 pb-4 text-neutral-700 leading-relaxed">The framing crew needs the firebox dimensions, the vent pipe diameter and routing path, the wall penetration location, and the clearance-to-combustibles requirements from the specific model's installation manual. These are available through your authorized dealer or through the ProAdvantage trade portal. Do not frame the opening based on a similar previous project without confirming against the specific unit being installed. Firebox dimensions and vent requirements vary between models and within the same family across sizes.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ProAdvantage CTA -->
+    <section class="border rounded-lg p-8 mb-12">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h2 class="text-xl font-bold">Specifying for a project? ProAdvantage has the technical data.</h2>
+          <p class="text-neutral-700 mt-1">CAD files, installation manuals, efficiency data, and a dedicated trade help desk for builders, architects, and mechanical contractors.</p>
+        </div>
+        <a href="/pro/" style="background: #c44a08; color: #fff; padding: 0.75rem 1.75rem; border-radius: 0.375rem; font-weight: 700; white-space: nowrap; text-decoration: none; display: inline-block;">ProAdvantage</a>
+      </div>
+    </section>
+
+    <p class="text-sm text-neutral-500">
+      Related: <a href="/history-and-heritage/" class="underline">History + Heritage</a> &middot; <a href="/about-us/epa-certification/" class="underline">EPA Certification</a> &middot; <a href="/fireplace-safety/" class="underline">Fireplace Safety</a> &middot; <a href="/fireplaces/" class="underline">Browse All Fireplaces</a>
+    </p>
+
   </main>
 </BaseLayout>

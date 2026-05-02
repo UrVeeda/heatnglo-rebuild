@@ -2,10 +2,34 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const sections = [
-  { title: 'Care + Maintenance', href: '/owner-resources/care/', description: 'Annual maintenance, glass cleaning, and seasonal startup procedures for Heat & Glo gas, wood, and electric units.' },
-  { title: 'Recall Notices', href: '/owner-resources/recall-notices/', description: 'Active and historical recall notices. Confirm whether your unit is affected and what action is required.' },
-  { title: 'Owner\'s Manuals', href: '/manuals/', description: 'Installation, operation, and maintenance manuals for current and discontinued Heat & Glo products. Download by model.' },
-  { title: 'Warranty Information', href: '/warranty-information/', description: 'Warranty terms and registration. Confirm your unit\'s coverage period and submit a warranty claim.' },
+  {
+    title: 'Care + Maintenance',
+    href: '/owner-resources/care/',
+    description: 'Annual maintenance, glass cleaning, and seasonal startup procedures for Heat & Glo gas, wood, and electric units.',
+    image: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:800,height:540',
+    alt: 'Heat & Glo Mezzo gas fireplace in a well-maintained contemporary living room with crystal glass media',
+  },
+  {
+    title: 'Recall Notices',
+    href: '/owner-resources/recall-notices/',
+    description: 'Active and historical recall notices. Confirm whether your unit is affected and what action is required.',
+    image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:540',
+    alt: 'Coastal Chic interior with traditional Heat & Glo fireplace in a family living room',
+  },
+  {
+    title: "Owner's Manuals",
+    href: '/manuals/',
+    description: "Installation, operation, and maintenance manuals for current and discontinued Heat & Glo products. Download by model.",
+    image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:800,height:540',
+    alt: 'Heat & Glo SupremeX gas fireplace in a bright contemporary living room',
+  },
+  {
+    title: 'Warranty Information',
+    href: '/warranty-information/',
+    description: "Warranty terms and registration. Confirm your unit's coverage period and submit a warranty claim.",
+    image: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:800,height:540',
+    alt: 'Open contemporary layout with Primo II 60 linear fireplace as architectural feature',
+  },
 ];
 ---
 <BaseLayout
@@ -13,45 +37,77 @@ const sections = [
   description="Heat & Glo owner resources: care and maintenance guides, recall notices, owner's manuals, and warranty information for your Heat & Glo fireplace."
   noIndex={true}
 >
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:1920,height:720" alt="Couple reviewing Heat & Glo fireplace owner information at a kitchen table" class="w-full h-[360px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:1920,height:720"
+      alt="Couple reviewing Heat & Glo fireplace care and maintenance information together"
+      class="w-full h-[400px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Owner Resources</p>
-        <h1 class="text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">Care, manuals, recalls, and warranty.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Owner Resources</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Care, manuals, recalls, and warranty.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">Everything you need to keep your Heat & Glo fireplace running well for the long run. Engineered since 1975, backed by a nationwide service network.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your authorized dealer</a>
       </div>
     </div>
   </section>
-  <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">
-        Everything you need to keep a Heat & Glo fireplace running well for the long run. If you can't
-        find your model or the answer you need, your authorized dealer is the fastest path to support.
-      </p>
-    </header>
 
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- SAFETY CALLOUT - elevated, not buried -->
+    <section style="background: #fffbeb; border: 1px solid #fcd34d; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 20px 24px; margin-bottom: 40px; display: flex; gap: 16px; align-items: flex-start;">
+      <div style="flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px;">
+        <svg viewBox="0 0 20 20" fill="#d97706" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      </div>
+      <p style="color: #78350f; font-size: 14px; line-height: 1.6; margin: 0;">For active recall notices, see <a href="/owner-resources/recall-notices/" style="text-decoration: underline; font-weight: 600;">Recall Notices</a>. For children, pet, and clearance-to-combustibles guidance, see <a href="/fireplace-safety/" style="text-decoration: underline; font-weight: 600;">Fireplace Safety</a>.</p>
+    </section>
+
+    <!-- RESOURCE GRID WITH IMAGES -->
     <section class="grid sm:grid-cols-2 gap-6 mb-16">
       {sections.map((s) => (
-        <a href={s.href} class="block border rounded-lg p-6 hover:border-orange-400 hover:shadow-md transition">
-          <p class="font-semibold text-lg mb-2">{s.title}</p>
-          <p class="text-sm text-neutral-600">{s.description}</p>
+        <a href={s.href} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+          <img src={s.image} alt={s.alt} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="p-6">
+            <p class="font-semibold text-lg mb-2 group-hover:text-orange-700">{s.title}</p>
+            <p class="text-sm text-neutral-700 leading-relaxed">{s.description}</p>
+            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">Go to {s.title} &rarr;</p>
+          </div>
         </a>
       ))}
     </section>
 
-    <section class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-16">
-      <h2 class="text-base font-semibold mb-2 text-amber-900">Safety first</h2>
-      <p class="text-sm text-amber-900">
-        For active recall notices, see <a href="/owner-resources/recall-notices/" class="underline">Recall Notices</a> for the current list.
-        For fireplace safety information, including children, pet, and combustible-material clearances,
-        see <a href="/fireplace-safety/" class="underline">Fireplace Safety</a>.
-      </p>
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-16" style="min-height: 360px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:540"
+        alt="Heat & Glo SupremeX fireplace as living room focal point in a bright, well-maintained family home"
+        class="w-full object-cover"
+        style="height: 360px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.55);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); padding: 32px 36px; border-radius: 12px; max-width: 34rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Annual service matters</p>
+            <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 10px;">Your dealer is your annual service partner.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Warranty claims, parts ordering, annual inspections, and technical support. Your authorized dealer has access to Heat & Glo's full technical library and the fastest path to answers.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your dealer</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="border-t pt-10">
-      <p class="text-neutral-600">
-        Need direct support? <a href="/where-to-buy/" class="underline">Find your authorized dealer</a> for service and parts.
-      </p>
+    <!-- INLINE CTA BAND -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: grid; gap: 24px; grid-template-columns: 2fr 1fr; align-items: center;">
+      <div>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a;">Need direct support?</h2>
+        <p style="color: #6b7280; font-size: 15px; max-width: 420px;">Your authorized dealer is your warranty claims contact and the fastest path to parts and technical questions. 1,400+ dealers across the US and Canada.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; text-align: center; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find your dealer</a>
     </section>
+
   </main>
 </BaseLayout>

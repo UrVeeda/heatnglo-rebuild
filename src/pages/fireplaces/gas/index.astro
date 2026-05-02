@@ -6,31 +6,105 @@ const products = await getCollection('products-en');
 const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !== 'log-set' && !p.data.available_in?.includes('au'));
 ---
 <BaseLayout title="Gas Fireplaces | Heat & Glo" description="Heat & Glo gas fireplaces: direct-vent, push-button warmth, and the most-specified category in the lineup. Indoor, outdoor, see-through, inserts, freestanding." noIndex={true}>
+
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:540" alt="Heat & Glo SupremeX gas fireplace in a contemporary living room" class="w-full h-[280px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo SupremeX gas fireplace in a contemporary living room with natural light and modern furniture"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Gas Fireplaces</p>
-        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Push-button warmth. Direct-vent design.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Gas Fireplaces</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Push-button warmth. Direct-vent design.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">The most-specified category in the Heat &amp; Glo lineup. No chimney required. Sealed combustion. IntelliFire ignition. 1,400+ dealers can show you the lineup in a working showroom.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          <a href="/fireplaces/inserts/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Save up to $650 on an insert</a>
+        </div>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">Gas is the most-specified category in the Heat & Glo lineup. Direct-vent design means no chimney required, sealed combustion preserves indoor air quality, and IPI ignition delivers reliable startup every time.</p>
+
+    <!-- INTRO + TRUST STRIP -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">Gas is the most-specified category in the Heat &amp; Glo lineup. Direct-vent design means no chimney required, sealed combustion preserves indoor air quality, and IPI ignition delivers reliable startup every time.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Direct-vent</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">No chimney required</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">IntelliFire</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Smart ignition system</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized dealers</p>
+        </div>
+      </div>
     </header>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+    <!-- INLINE CTA BAND 1 - insert rebate, before the product grid so it primes before they browse -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px;">Save up to $650 on a gas insert.</p>
+        <p style="color: #6b7280; font-size: 14px;">Retrofit your existing wood-burning opening. Limited-time rebate on qualifying gas inserts.</p>
+      </div>
+      <a href="/fireplaces/inserts/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">See inserts</a>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {gas.map((p: any) => (
         <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400'} alt={p.data.family + ' gas fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
           <div class="p-5">
             <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
             <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
-            <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} · {p.data.sizes?.length ?? 1} sizes</p>
+            <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} &middot; {p.data.sizes?.length ?? 1} sizes</p>
+            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
           </div>
         </a>
       ))}
     </section>
-    <p class="text-neutral-600 border-t pt-10">Looking for log set retrofits instead? <a href="/log-sets/" class="underline">Browse Gas Log Sets</a></p>
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-12" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:560"
+        alt="Heat & Glo Mezzo linear gas fireplace with ribbon flame and crystal glass media in a brick-wall living room"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.5);">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">See it in a working showroom</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">Bring this home.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Every Heat &amp; Glo dealer carries working displays so you can see the flame, feel the heat output, and compare sizes side by side before you commit. 1,400+ authorized locations across the US and Canada.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Engineered since 1975</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Schedule your consultation.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">The right gas fireplace depends on your room size, venting path, and design vision. Your authorized dealer walks you through the decision in a showroom with working units. No guessing.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
+    </section>
+
+    <p class="text-neutral-600 border-t pt-10">Looking for log set retrofits instead? <a href="/log-sets/" class="underline font-medium text-orange-700">Browse Gas Log Sets</a></p>
+
   </main>
 </BaseLayout>

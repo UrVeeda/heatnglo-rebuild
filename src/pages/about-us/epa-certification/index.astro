@@ -1,13 +1,191 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
-<BaseLayout title="EPA Certification | About Heat & Glo" description="Heat & Glo wood-burning fireplaces and the EPA emissions standards that govern them. Certified for indoor air quality and combustion efficiency." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">EPA Certification</p>
-      <h1 class="text-4xl font-bold mt-2">Wood-burning, certified clean.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo wood-burning fireplaces are certified to the U.S. Environmental Protection Agency's emissions standards for residential wood-heating appliances. Specific certification details, emissions data, and efficiency ratings are listed in the installation manual for each product.</p>
+<BaseLayout
+  title="EPA Certification | About Heat & Glo"
+  description="How the EPA certifies residential wood-burning fireplaces. Heat & Glo wood-burning units are certified to EPA emissions standards. What the testing process involves, what it means for indoor air quality, and how to find certified models."
+  noIndex={true}
+>
+
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo True ForgedArch EPA-certified wood-burning fireplace in a coastal stone hearth"
+      class="w-full object-cover"
+      style="height: 400px;"
+    />
+    <div class="absolute inset-0 flex items-center px-8" style="background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.18) 100%);">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold drop-shadow" style="color: #fdba74;">EPA Certification</p>
+        <h1 class="text-5xl font-bold mt-3 max-w-2xl drop-shadow-lg leading-tight">Wood-burning, certified clean.</h1>
+        <p class="mt-4 text-lg max-w-xl drop-shadow" style="color: #e5e5e5;">Heat & Glo wood-burning fireplaces are certified to U.S. EPA emissions standards for residential wood-heating appliances. Here is what that means and how it works.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- DIRECT ANSWER: LEDE -->
+    <header class="mb-16">
+      <p class="text-xl text-neutral-700 max-w-3xl leading-relaxed">
+        The U.S. Environmental Protection Agency certifies residential wood-burning appliances against particulate matter emissions limits set under the Clean Air Act. Heat & Glo wood-burning fireplaces carry this certification, which means each certified model has been independently tested and verified to meet the standard in effect at the time of manufacture. For homeowners, it means less particulate matter entering indoor and outdoor air. For specifiers and jurisdictions, it means the product is legally compliant for installation where EPA-certified appliances are required.
+      </p>
     </header>
-    <p class="text-neutral-600 border-t pt-10"><a href="/about-us/" class="underline">Back to about</a></p>
+
+    <!-- CTA BAND: EARLY PLACEMENT -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 32px 40px; margin-bottom: 64px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: center;">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-weight: 700; color: #c44a08;">Browse certified products</p>
+        <h2 style="font-size: 22px; font-weight: 700; margin-top: 8px; color: #1a1a1a;">See Heat & Glo wood-burning fireplaces.</h2>
+        <p style="color: #525252; margin-top: 8px; line-height: 1.7;">The current Heat & Glo wood-burning lineup includes traditional open-hearth and EPA-certified factory-built units. Certification details for each specific model are listed in its installation manual and available through your authorized dealer.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="/fireplaces/?fuel=wood" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Wood-Burning Fireplaces →</a>
+      </div>
+    </section>
+
+    <!-- HOW EPA CERTIFICATION WORKS -->
+    <section class="mb-20">
+      <p class="uppercase tracking-widest text-xs font-semibold mb-2" style="color: #c44a08;">How it works</p>
+      <h2 class="text-3xl font-bold mb-8" style="color: #1a1a1a;">What EPA certification actually involves.</h2>
+
+      <div class="grid sm:grid-cols-2 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold mb-3" style="color: #1a1a1a;">The standard: particulate matter emissions</h3>
+          <p class="text-neutral-700 leading-relaxed">The EPA's certification program for residential wood heaters regulates fine particulate matter (PM2.5) measured in grams per hour of operation. The tighter the limit, the less particulate matter a unit may emit and still qualify. The EPA has tightened these limits over time: the "Step 2" standard that went into full effect in 2020 is stricter than the preceding standard, and only products that pass third-party testing against Step 2 limits may be sold as certified under that standard. Specific emissions figures for each Heat & Glo model are listed in the unit's certification documentation and installation manual.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" style="color: #1a1a1a;">Third-party laboratory testing</h3>
+          <p class="text-neutral-700 leading-relaxed">A manufacturer cannot self-certify. Each model that carries EPA certification must be tested by an EPA-accredited third-party laboratory using a standardized test method. The test fires the unit through a protocol designed to measure real-world particulate output across different burn rates and fuel load conditions. Only when the results come back within the allowable limit does the unit qualify. The EPA maintains a public registry of certified wood heaters where the certification status of any specific model can be verified by model number.</p>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3" style="color: #1a1a1a;">Factory-built fireplaces vs. masonry hearths</h3>
+          <p class="text-neutral-700 leading-relaxed">EPA certification applies to factory-built wood-burning appliances: units that are manufactured, UL-listed, and shipped as a complete product. Traditional site-built masonry fireplaces are not subject to the same certification requirement because they are not manufactured appliances. If you are specifying a factory-built wood-burning fireplace in a jurisdiction that requires EPA-certified products, the fireplace's model number and certification status must match the EPA registry. Your Heat & Glo dealer can confirm the certification status of any specific model before you finalize the specification.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" style="color: #1a1a1a;">What certification does not cover</h3>
+          <p class="text-neutral-700 leading-relaxed">EPA certification covers particulate matter emissions at the point of combustion. It does not govern installation clearances, fuel type or moisture content, maintenance intervals, or state and local burn restrictions. A certified fireplace must still be installed to the manufacturer's specifications and to the requirements of the authority having jurisdiction. In many Western states and municipalities, air quality management districts have adopted burn-restriction days that apply to even certified wood-burning appliances during high-pollution weather events. Your local dealer can advise on restrictions applicable to your installation address.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-BLEED BAND: WHY IT MATTERS FOR INDOOR AIR -->
+    <section class="relative -mx-4 mb-20">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/bfdcf41c-51d9-4ee9-8420-4fc87fe719ca/happy_couple_discus?io=transform:fill,width:1920,height:520"
+        alt="Homeowners reviewing fireplace options with their dealer"
+        class="w-full object-cover"
+        style="height: 340px;"
+      />
+      <div class="absolute inset-0 flex items-center px-4" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.94); color: #fff; padding: 36px 40px; border-radius: 12px; max-width: 42rem; border: 1px solid #3a3a3a;">
+            <p style="text-transform: uppercase; letter-spacing: 0.12em; font-size: 11px; font-weight: 700; color: #fdba74;">Why it matters</p>
+            <h2 style="font-size: 24px; font-weight: 700; margin-top: 10px; line-height: 1.35;">Less particulate in the air your family breathes.</h2>
+            <p style="margin-top: 14px; color: #d4d4d4; line-height: 1.7; font-size: 15px;">Fine particulate matter (PM2.5) from wood combustion is associated with respiratory health effects at sustained exposure levels. An EPA-certified appliance produces measurably less PM2.5 than a non-certified unit burning the same fuel load. In a properly installed factory-built wood fireplace with a sealed firebox and an external air supply (or a well-designed flue system), that particulate exits through the venting system rather than entering the living space. The result is a wood-burning experience that is both legally compliant in most jurisdictions and measurably cleaner than an older or uncertified alternative.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO FIND CERTIFICATION FOR A SPECIFIC HEAT & GLO MODEL -->
+    <section class="mb-20">
+      <p class="uppercase tracking-widest text-xs font-semibold mb-2" style="color: #c44a08;">Finding certification details</p>
+      <h2 class="text-3xl font-bold mb-6" style="color: #1a1a1a;">How to verify a specific Heat & Glo model.</h2>
+      <p class="text-neutral-700 leading-relaxed max-w-3xl mb-10">Each Heat & Glo wood-burning fireplace model's EPA certification status is accessible through three sources. All three should agree on the certification status before you finalize a specification.</p>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 28px;">
+          <div style="width: 40px; height: 40px; background: #fff7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+            <span style="font-size: 18px;">01</span>
+          </div>
+          <h3 class="font-bold text-base mb-3" style="color: #1a1a1a;">The installation manual</h3>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Every Heat & Glo wood-burning unit ships with an installation manual that includes the product's EPA certification status, the emissions data collected during laboratory testing, and the test method used. This is the primary documentation for specification and permit review purposes.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 28px;">
+          <div style="width: 40px; height: 40px; background: #fff7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+            <span style="font-size: 18px;">02</span>
+          </div>
+          <h3 class="font-bold text-base mb-3" style="color: #1a1a1a;">Your authorized dealer</h3>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Your Heat & Glo dealer can confirm the EPA certification status of any model in the current lineup and retrieve the installation documentation needed for permit applications, code review, or authority having jurisdiction submissions.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 28px;">
+          <div style="width: 40px; height: 40px; background: #fff7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+            <span style="font-size: 18px;">03</span>
+          </div>
+          <h3 class="font-bold text-base mb-3" style="color: #1a1a1a;">The EPA certified wood heater database</h3>
+          <p class="text-sm leading-relaxed" style="color: #525252;">The EPA maintains a publicly searchable database of all certified residential wood heaters at epa.gov. Search by manufacturer name (Hearth & Home Technologies or Heat & Glo) and model number to verify current certification status independently of any manufacturer or dealer claim.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WOOD-BURNING PRODUCT LINK SECTION -->
+    <section class="mb-20">
+      <p class="uppercase tracking-widest text-xs font-semibold mb-2" style="color: #c44a08;">Relevant products</p>
+      <h2 class="text-3xl font-bold mb-6" style="color: #1a1a1a;">Heat & Glo wood-burning fireplaces.</h2>
+      <p class="text-neutral-700 leading-relaxed max-w-3xl mb-10">The Heat & Glo wood-burning lineup ranges from traditional open-hearth designs to factory-built units with EPA certification. The True series and the open-hearth wood-burning models in the current catalog represent the wood-burning side of the lineup. Certification details for each specific model are in its installation manual and available through your authorized dealer.</p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a
+          href="/fireplaces/true/"
+          style="display: block; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit;"
+          onmouseover="this.style.borderColor='#c44a08'; this.style.boxShadow='0 4px 16px rgba(196,74,8,0.12)';"
+          onmouseout="this.style.borderColor='#e5e5e5'; this.style.boxShadow='none';"
+        >
+          <img
+            src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:800,height:400"
+            alt="Heat & Glo True ForgedArch traditional wood-burning fireplace in a stone hearth"
+            style="width: 100%; height: 220px; object-fit: cover;"
+          />
+          <div style="padding: 24px;">
+            <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c44a08; margin-bottom: 6px;">Traditional wood-burning</p>
+            <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">True Series</p>
+            <p style="font-size: 14px; line-height: 1.6; color: #525252;">Traditional wood-burning fireplaces with ForgedArch and open-hearth configurations. Ask your dealer for EPA certification documentation specific to the model you are specifying.</p>
+            <p style="margin-top: 16px; font-size: 14px; font-weight: 600; color: #c44a08;">Explore True Series →</p>
+          </div>
+        </a>
+        <a
+          href="/fireplaces/?fuel=wood"
+          style="display: block; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit;"
+          onmouseover="this.style.borderColor='#c44a08'; this.style.boxShadow='0 4px 16px rgba(196,74,8,0.12)';"
+          onmouseout="this.style.borderColor='#e5e5e5'; this.style.boxShadow='none';"
+        >
+          <img
+            src="https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:800,height:400"
+            alt="Collection of Heat & Glo fireplaces from the Get Inspired gallery"
+            style="width: 100%; height: 220px; object-fit: cover;"
+          />
+          <div style="padding: 24px;">
+            <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c44a08; margin-bottom: 6px;">Full lineup</p>
+            <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">All Wood-Burning Models</p>
+            <p style="font-size: 14px; line-height: 1.6; color: #525252;">Browse the complete Heat & Glo wood-burning catalog filtered by fuel type. Each model page links to dealer contact for installation documentation and certification details.</p>
+            <p style="margin-top: 16px; font-size: 14px; font-weight: 600; color: #c44a08;">Browse wood-burning fireplaces →</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 40px; margin-bottom: 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: center;">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-weight: 700; color: #c44a08;">Talk to a dealer</p>
+        <h2 style="font-size: 26px; font-weight: 700; margin-top: 8px; color: #1a1a1a;">Get certification documentation for your project.</h2>
+        <p style="color: #525252; margin-top: 10px; max-width: 34rem; line-height: 1.7;">Your authorized Heat & Glo dealer can pull the installation manual, emissions data sheet, and EPA certification confirmation for any model you are specifying. That documentation is what permit reviewers and authorities having jurisdiction need.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 16px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a Dealer →</a>
+      </div>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600 text-sm">
+        <a href="/about-us/" class="underline font-medium">Back to About</a>
+      </p>
+    </section>
+
   </main>
 </BaseLayout>

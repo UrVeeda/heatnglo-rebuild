@@ -6,31 +6,110 @@ const products = await getCollection('products-en');
 const electric = products.filter((p) => p.data.energy === 'electric');
 ---
 <BaseLayout title="Electric Fireplaces | Heat & Glo" description="Heat & Glo electric fireplaces: no venting, no gas line, plug-and-play installation. Built-in, wall-mount, insert, and outdoor configurations for design flexibility." noIndex={true}>
+
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:1920,height:540" alt="Finished basement living space with electric fireplace as focal point" class="w-full h-[280px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:1920,height:720"
+      alt="Finished basement living space with Heat & Glo electric fireplace as the room focal point"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Electric Fireplaces</p>
-        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">No venting. No gas line. No compromise.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Electric Fireplaces</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">No venting. No gas line. No compromise.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">Heat &amp; Glo electric fireplaces install where gas and wood cannot go. Apartments, condos, basements, anywhere a gas line or venting would be cost-prohibitive. Plug-and-play. Multiple flame settings. Your dealer can walk you through the configuration that fits your space.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          <a href="/fireplaces/inserts/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Browse electric inserts</a>
+        </div>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">Heat & Glo electric fireplaces install where gas and wood can't go. Apartments, condos, multifamily, finished basements, anywhere venting and gas-line work would be cost-prohibitive. Plug-and-play installation, multiple flame settings, optional supplemental heat.</p>
+
+    <!-- INTRO + KEY ADVANTAGES -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">Heat &amp; Glo electric fireplaces install where gas and wood cannot go. Apartments, condos, multifamily, finished basements, anywhere venting and gas-line work would be cost-prohibitive. Plug-and-play installation, multiple flame settings, optional supplemental heat.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Plug-and-play</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Standard 120V outlet</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Any room</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">No venting required</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized dealers</p>
+        </div>
+      </div>
     </header>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+    <!-- INLINE CTA BAND 1 -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px;">Not sure which configuration fits your space?</p>
+        <p style="color: #6b7280; font-size: 14px;">Built-in, wall-mount, insert, and freestanding. Your dealer can show you working units in multiple configurations.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {electric.map((p: any) => (
         <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:400'} alt={p.data.family + ' electric fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
           <div class="p-5">
             <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
             <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
             <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement}</p>
+            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
           </div>
         </a>
       ))}
     </section>
-    {electric.length === 0 && <p class="text-neutral-600">Electric product pages populate from the legacy catalog as the rebuild scales beyond the pitch deliverable.</p>}
+
+    {electric.length === 0 && (
+      <div style="border: 1px solid #e5e7eb; border-radius: 10px; padding: 32px; text-align: center; margin-bottom: 48px;">
+        <p class="text-neutral-600 mb-4">Electric product pages populate from the full catalog as the rebuild scales beyond the pitch deliverable.</p>
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Ask your dealer about electric options</a>
+      </div>
+    )}
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-12" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:560"
+        alt="Open contemporary floor plan with linear electric fireplace as room-dividing architectural feature"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Goes where gas cannot</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">Apartments, condos, basements, outdoor rooms.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">No gas line. No chimney. No flue work. A standard 120V outlet is all you need. Heat &amp; Glo electric models are built to the same engineering standard as the rest of the lineup. Your dealer can show you the difference between configurations in a working showroom.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Engineered since 1975</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Bring this home.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">Your authorized dealer walks you through the built-in, insert, and wall-mount configurations that fit your room. Every dealer carries working displays so you can see the flame technology before you commit.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
   </main>
 </BaseLayout>

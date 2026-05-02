@@ -1,18 +1,186 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
-<BaseLayout title="The Company | About Heat & Glo" description="Heat & Glo as a Hearth & Home Technologies brand. Founded 1975, manufacturing in Lake City, Minnesota, ~1,400 dealers across the US and Canada." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">The Company</p>
-      <h1 class="text-4xl font-bold mt-2">Heat & Glo at a glance.</h1>
+<BaseLayout
+  title="The Company | About Heat & Glo"
+  description="Heat & Glo: founded 1975 in Lake City, Minnesota. A Hearth & Home Technologies brand. Gas, wood, electric, and outdoor fireplaces manufactured in the US. 1,400+ authorized dealers across the US and Canada."
+  noIndex={true}
+>
+
+  <!-- HERO -->
+  <section class="relative mb-12 -mx-4">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:720"
+      alt="Open contemporary residential layout centered on Heat & Glo Primo II 60 linear gas fireplace"
+      class="w-full object-cover"
+      style="height: 400px;"
+    />
+    <div class="absolute inset-0 flex items-center px-8" style="background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.18) 100%);">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold drop-shadow" style="color: #fdba74;">The Company</p>
+        <h1 class="text-5xl font-bold mt-3 max-w-2xl drop-shadow-lg leading-tight">Fifty years of fireplace engineering in Lake City, Minnesota.</h1>
+        <p class="mt-4 text-lg max-w-xl drop-shadow" style="color: #e5e5e5;">Heat & Glo. Founded 1975. A Hearth & Home Technologies brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- LEDE -->
+    <header class="mb-16">
+      <p class="text-xl text-neutral-700 max-w-3xl leading-relaxed">
+        Heat & Glo was founded in 1975 in Lake City, Minnesota, and has manufactured fireplaces from that same facility ever since. The company pioneered the factory-built direct-vent gas fireplace category, giving residential and commercial builders a sealed, ventable alternative to traditional open-hearth masonry construction. Today Heat & Glo operates as part of Hearth & Home Technologies, the largest hearth manufacturer in North America, while its product line continues to be engineered and assembled in Minnesota.
+      </p>
     </header>
-    <section class="grid sm:grid-cols-2 gap-6 mb-16">
-      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Founded</p><p class="text-2xl font-bold">1975</p><p class="text-sm text-neutral-600 mt-2">Lake City, Minnesota</p></div>
-      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Parent company</p><p class="text-2xl font-bold">HHT</p><p class="text-sm text-neutral-600 mt-2">Hearth & Home Technologies</p></div>
-      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Dealer network</p><p class="text-2xl font-bold">1,400+</p><p class="text-sm text-neutral-600 mt-2">Authorized dealers across the US and Canada</p></div>
-      <div class="border rounded-lg p-6"><p class="font-semibold mb-2">Manufacturing</p><p class="text-2xl font-bold">USA</p><p class="text-sm text-neutral-600 mt-2">Continuing manufacture at Lake City, Minnesota</p></div>
+
+    <!-- STATS ROW -->
+    <section class="grid sm:grid-cols-4 gap-4 mb-20">
+      <div class="text-center p-6 rounded-xl" style="background: #fff7ed; border: 1px solid #fed7aa;">
+        <p class="text-4xl font-bold" style="color: #c44a08;">1975</p>
+        <p class="text-sm font-semibold mt-2 uppercase tracking-wider" style="color: #7c2d12;">Founded</p>
+        <p class="text-sm mt-1" style="color: #525252;">Lake City, Minnesota</p>
+      </div>
+      <div class="text-center p-6 rounded-xl" style="background: #fff7ed; border: 1px solid #fed7aa;">
+        <p class="text-4xl font-bold" style="color: #c44a08;">1,400+</p>
+        <p class="text-sm font-semibold mt-2 uppercase tracking-wider" style="color: #7c2d12;">Dealers</p>
+        <p class="text-sm mt-1" style="color: #525252;">US and Canada</p>
+      </div>
+      <div class="text-center p-6 rounded-xl" style="background: #fff7ed; border: 1px solid #fed7aa;">
+        <p class="text-4xl font-bold" style="color: #c44a08;">HHT</p>
+        <p class="text-sm font-semibold mt-2 uppercase tracking-wider" style="color: #7c2d12;">Parent Company</p>
+        <p class="text-sm mt-1" style="color: #525252;">Hearth & Home Technologies</p>
+      </div>
+      <div class="text-center p-6 rounded-xl" style="background: #fff7ed; border: 1px solid #fed7aa;">
+        <p class="text-4xl font-bold" style="color: #c44a08;">USA</p>
+        <p class="text-sm font-semibold mt-2 uppercase tracking-wider" style="color: #7c2d12;">Manufactured</p>
+        <p class="text-sm mt-1" style="color: #525252;">Lake City, MN facility</p>
+      </div>
     </section>
-    <p class="text-neutral-600 border-t pt-10"><a href="/about-us/" class="underline">Back to about</a></p>
+
+    <!-- HISTORY: MILESTONES -->
+    <section class="mb-20">
+      <p class="uppercase tracking-widest text-xs font-semibold mb-2" style="color: #c44a08;">Company history</p>
+      <h2 class="text-3xl font-bold mb-10" style="color: #1a1a1a;">From the ground up, in Minnesota.</h2>
+
+      <div class="relative" style="border-left: 3px solid #fed7aa; padding-left: 32px;">
+
+        <div class="mb-12 relative">
+          <div class="absolute -left-10 top-1 w-5 h-5 rounded-full flex items-center justify-center" style="background: #c44a08; border: 3px solid #fff7ed;">
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color: #c44a08;">1975</p>
+          <h3 class="text-xl font-bold mb-2" style="color: #1a1a1a;">Founded in Lake City, Minnesota</h3>
+          <p class="text-neutral-700 leading-relaxed max-w-2xl">Heat & Glo begins operations in Lake City, Minnesota with a focus on residential fireplace engineering. The Lake City facility will remain the company's manufacturing home for the next fifty years.</p>
+        </div>
+
+        <div class="mb-12 relative">
+          <div class="absolute -left-10 top-1 w-5 h-5 rounded-full flex items-center justify-center" style="background: #c44a08; border: 3px solid #fff7ed;">
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color: #c44a08;">Direct-vent gas fireplace category</p>
+          <h3 class="text-xl font-bold mb-2" style="color: #1a1a1a;">Pioneering a sealed, ventable alternative</h3>
+          <p class="text-neutral-700 leading-relaxed max-w-2xl">Heat & Glo is credited with developing the factory-built direct-vent gas fireplace: a sealed combustion system that draws outside air for combustion and exhausts through a co-axial pipe, with no chimney required. The technology transformed how residential and commercial builders approached fireplace specification, enabling installations in locations and configurations that traditional masonry could not accommodate.</p>
+        </div>
+
+        <div class="mb-12 relative">
+          <div class="absolute -left-10 top-1 w-5 h-5 rounded-full flex items-center justify-center" style="background: #c44a08; border: 3px solid #fff7ed;">
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color: #c44a08;">Joining Hearth & Home Technologies</p>
+          <h3 class="text-xl font-bold mb-2" style="color: #1a1a1a;">Part of North America's largest hearth manufacturer</h3>
+          <p class="text-neutral-700 leading-relaxed max-w-2xl">Heat & Glo becomes part of Hearth & Home Technologies, the parent company that also owns Heatilator, Quadra-Fire, Harman, Vermont Castings, and several additional hearth brands. The acquisition expands Heat & Glo's distribution infrastructure and R&D resources while the brand retains its distinct product identity and its Minnesota manufacturing base.</p>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-5 h-5 rounded-full flex items-center justify-center" style="background: #c44a08; border: 3px solid #fff7ed;">
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color: #c44a08;">Today</p>
+          <h3 class="text-xl font-bold mb-2" style="color: #1a1a1a;">Gas, wood, electric, and outdoor. Built in Minnesota.</h3>
+          <p class="text-neutral-700 leading-relaxed max-w-2xl">The current Heat & Glo lineup spans gas fireplaces (linear contemporary and traditional), EPA-certified wood-burning units, clean-face electric fireplaces, and outdoor gas fire products. Every product is UL-listed, engineered to current emissions standards, and backed by the Heat & Glo dealer network of 1,400+ authorized partners across the US and Canada.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MANUFACTURING SECTION WITH IMAGE -->
+    <section class="relative -mx-4 mb-20">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:520"
+        alt="Heat & Glo True ForgedArch traditional gas fireplace installed in a coastal stone hearth"
+        class="w-full object-cover"
+        style="height: 360px;"
+      />
+      <div class="absolute inset-0 flex items-center px-4" style="background: rgba(0,0,0,0.50);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.94); color: #fff; padding: 36px 40px; border-radius: 12px; max-width: 40rem; border: 1px solid #3a3a3a;">
+            <p style="text-transform: uppercase; letter-spacing: 0.12em; font-size: 11px; font-weight: 700; color: #fdba74;">Manufacturing</p>
+            <h2 style="font-size: 26px; font-weight: 700; margin-top: 10px; line-height: 1.3;">Lake City, Minnesota. Every unit.</h2>
+            <p style="margin-top: 14px; color: #d4d4d4; line-height: 1.7; font-size: 15px;">Heat & Glo's engineering, combustion testing, UL certification work, and final assembly happen at HHT's Lake City facility. This is not contract manufacturing with a Minnesota address attached. The same facility that built the first Heat & Glo units in 1975 builds them today. That continuity matters: when a dealer installs a Heat & Glo fireplace and needs a parts or service answer fifteen years later, the institutional knowledge to support that unit still exists in the same building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE HHT FAMILY -->
+    <section class="mb-20">
+      <p class="uppercase tracking-widest text-xs font-semibold mb-2" style="color: #c44a08;">Hearth & Home Technologies</p>
+      <h2 class="text-3xl font-bold mb-6" style="color: #1a1a1a;">A portfolio of complementary hearth brands.</h2>
+      <p class="text-neutral-700 leading-relaxed max-w-3xl mb-10">HHT's brand family spans the full range of residential and commercial hearth products. Each brand has a distinct identity and product focus; they do not overlap. Heat & Glo represents the contemporary-forward end of the portfolio: clean lines, sealed direct-vent technology, and a design vocabulary suited to modern residential construction and commercial interiors.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px;">
+          <p class="font-bold text-base mb-2" style="color: #1a1a1a;">Heat & Glo</p>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Contemporary-forward gas, wood, electric, and outdoor fireplaces. Engineered in Lake City, MN since 1975.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px;">
+          <p class="font-bold text-base mb-2" style="color: #1a1a1a;">Heatilator</p>
+          <p class="text-sm leading-relaxed" style="color: #525252;">The original factory-built fireplace brand. A broad lineup spanning traditional and transitional residential applications.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px;">
+          <p class="font-bold text-base mb-2" style="color: #1a1a1a;">Quadra-Fire</p>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Wood and pellet stoves and inserts known for combustion efficiency and cast-iron construction.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px;">
+          <p class="font-bold text-base mb-2" style="color: #1a1a1a;">Harman</p>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Pellet and wood stoves with a focus on automated fuel management and extended burn cycles.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px;">
+          <p class="font-bold text-base mb-2" style="color: #1a1a1a;">Vermont Castings</p>
+          <p class="text-sm leading-relaxed" style="color: #525252;">Cast-iron wood and gas stoves and inserts with a heritage design identity spanning several decades.</p>
+        </div>
+        <div style="border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px; background: #fafafa;">
+          <p class="font-bold text-base mb-2" style="color: #525252;">And others</p>
+          <p class="text-sm leading-relaxed" style="color: #737373;">HHT's full portfolio includes additional brands covering markets in Australia, New Zealand, and North America. For the complete list, visit hhtmfg.com.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND: DEALER LOCATOR -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 40px; margin-bottom: 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: center;">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-weight: 700; color: #c44a08;">Ready to specify</p>
+        <h2 style="font-size: 26px; font-weight: 700; margin-top: 8px; color: #1a1a1a;">Find an authorized dealer near you.</h2>
+        <p style="color: #525252; margin-top: 10px; max-width: 34rem; line-height: 1.7;">Heat & Glo sells through dealers, not direct. Your local dealer can show you operating units in a showroom, configure your project spec, and manage installation end-to-end.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 16px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a Dealer →</a>
+      </div>
+    </section>
+
+    <!-- CTA BAND: ProAdvantage -->
+    <section style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 40px; margin-bottom: 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: center;">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-weight: 700; color: #c44a08;">For architects, builders, and contractors</p>
+        <h2 style="font-size: 26px; font-weight: 700; margin-top: 8px; color: #1a1a1a;">ProAdvantage trade program.</h2>
+        <p style="color: #525252; margin-top: 10px; max-width: 34rem; line-height: 1.7;">BIM files, spec sheets, trade pricing, specification engineering support, and installation training. If you specify Heat & Glo on professional projects, ProAdvantage is the right channel.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="/pro/" style="background: #1a1a1a; color: #fff; display: inline-block; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 16px;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#1a1a1a'">ProAdvantage Overview →</a>
+      </div>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600 text-sm">
+        <a href="/about-us/" class="underline font-medium">Back to About</a>
+      </p>
+    </section>
+
   </main>
 </BaseLayout>

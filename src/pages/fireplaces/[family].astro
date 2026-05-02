@@ -91,7 +91,8 @@ const data = product.data;
 
     <section class="-mx-4 mb-16">
       <div class="max-w-page mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-6">Specified across the country</h2>
+        <h2 class="text-2xl font-semibold mb-2">See the {data.family} in real homes</h2>
+        <p class="text-neutral-600 mb-6 max-w-2xl">Real installations across residential and hospitality projects. Photography from Heat & Glo's authorized dealer network.</p>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
         <img src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:600" alt={`${data.family} in a contemporary great room`} class="w-full aspect-square object-cover" />
@@ -103,10 +104,10 @@ const data = product.data;
 
     <section class="bg-orange-50 border border-orange-200 rounded-lg p-8 mb-16 grid sm:grid-cols-3 gap-6 items-center">
       <div class="sm:col-span-2">
-        <h2 class="text-2xl font-semibold mb-2">Ready to specify the {data.family}?</h2>
-        <p class="text-neutral-700 max-w-xl">Find your authorized Heat & Glo dealer to schedule a free in-home consultation. Most installations finish in 2 to 4 weeks from the consultation.</p>
+        <h2 class="text-2xl font-semibold mb-2">Bring the {data.family} home.</h2>
+        <p class="text-neutral-700 max-w-xl">Find your authorized Heat & Glo dealer to schedule a free in-home consultation. Most installations finish in 2 to 4 weeks.</p>
       </div>
-      <a href="/where-to-buy/" class="inline-block bg-orange-600 text-white px-6 py-3 rounded font-medium hover:bg-orange-700 transition text-center">Find a dealer →</a>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; text-align: center;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer →</a>
     </section>
 
     {data.complete_the_look && data.complete_the_look.length > 0 && (
@@ -115,20 +116,34 @@ const data = product.data;
           <p class="uppercase tracking-wide text-xs text-orange-700 font-semibold mb-2">Complete the look</p>
           <h2 class="text-2xl font-semibold mb-2">Pairs beautifully with the {data.family} Series</h2>
           <p class="text-neutral-600 mb-8 max-w-2xl">Heat & Glo mantel shelves, stone surrounds, and wood mantels are engineered to complete the install. Bring the conversation to your authorized dealer with the pieces already in mind.</p>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.complete_the_look.map((slug: string) => (
-              <a href={`/accessories/${slug}/`} class="group block bg-white border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
-                <div class="aspect-[4/3] bg-neutral-100 rounded mb-4 flex items-center justify-center text-xs text-neutral-400 uppercase tracking-wide">
-                  {slug.split('-')[0]}
-                </div>
-                <p class="font-semibold text-base mb-1 group-hover:text-orange-700">{slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</p>
-                <p class="text-sm text-neutral-600 mb-3">Designed to pair with {data.family}</p>
-                <p class="text-sm font-medium text-orange-700">Add to my consultation list →</p>
-              </a>
-            ))}
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {data.complete_the_look.map((slug: string) => {
+              const imageMap: Record<string, string> = {
+                'stone-surrounds':  'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
+                'wood-mantels':     'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
+                'mantel-shelves':   'https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:600,height:450',
+                'hearth-stones':    'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:450',
+              };
+              const labelMap: Record<string, string> = {
+                'stone-surrounds':  'Stone Surrounds',
+                'wood-mantels':     'Wood Mantels',
+                'mantel-shelves':   'Mantel Shelves',
+                'hearth-stones':    'Hearth Stones',
+              };
+              return (
+                <a href={`/accessories/${slug}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+                  <img src={imageMap[slug] ?? imageMap['stone-surrounds']} alt={labelMap[slug] ?? slug} class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-300" />
+                  <div class="p-5">
+                    <p class="font-semibold text-base mb-1 group-hover:text-orange-700">{labelMap[slug] ?? slug.replace(/-/g, ' ')}</p>
+                    <p class="text-sm text-neutral-600 mb-3">Designed to pair with {data.family}</p>
+                    <p class="text-sm font-medium" style="color: #c44a08;">Add to my consultation list →</p>
+                  </div>
+                </a>
+              );
+            })}
           </div>
           <p class="mt-8 text-sm text-neutral-500">
-            <a href="/accessories/" class="underline">Browse all accessories</a>
+            <a href="/accessories/" class="underline font-medium">Browse all accessories →</a>
           </p>
         </div>
       </section>

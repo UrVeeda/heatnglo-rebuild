@@ -6,35 +6,127 @@ const products = await getCollection('products-en');
 const inserts = products.filter((p) => p.data.placement === 'inserts');
 ---
 <BaseLayout title="Fireplace Inserts | Heat & Glo" description="Heat & Glo gas and electric fireplace inserts: retrofit existing wood-burning openings with modern controlled appliances. Save up to $650 on qualifying gas inserts." noIndex={true}>
+
+  <!-- HERO - rebate in the hero so you see it immediately -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:540" alt="Heat & Glo SupremeX gas insert retrofitted into a traditional fireplace opening" class="w-full h-[280px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:720"
+      alt="Heat & Glo SupremeX gas insert retrofitted into a traditional fireplace opening in a contemporary living room"
+      class="w-full h-[440px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Fireplace Inserts</p>
-        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Retrofit your existing fireplace.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">Fireplace Inserts</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">Retrofit your existing fireplace.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-6">Push-button warmth where you used to haul wood. A Heat &amp; Glo gas insert fits your existing wood-burning opening. Most installations complete in 2 to 4 weeks through your authorized dealer.</p>
+        <div style="display: inline-flex; align-items: center; gap: 12px; background: rgba(196,74,8,0.9); border: 1px solid #f97316; border-radius: 8px; padding: 12px 20px; margin-bottom: 20px;">
+          <p style="color: #fff; font-weight: 700; font-size: 16px; margin: 0;">Save up to $650 on a qualifying gas insert.</p>
+          <a href="/fireplace-sale/" style="color: #fed7aa; font-size: 13px; font-weight: 600; text-decoration: underline; white-space: nowrap;">See terms</a>
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          <a href="/fireplace-sale/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">See current offers</a>
+        </div>
       </div>
     </div>
   </section>
+
   <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">Heat & Glo inserts retrofit your existing wood-burning fireplace opening with a modern, controlled gas or electric appliance. Push-button warmth, cleaner glass, faster install. Most installations complete in 2 to 4 weeks.</p>
+
+    <!-- INTRO + TRUST STRIP -->
+    <header class="mb-10">
+      <p class="text-lg text-neutral-700 max-w-2xl mb-8">Heat &amp; Glo inserts retrofit your existing wood-burning fireplace opening with a modern, controlled gas or electric appliance. Push-button warmth, cleaner glass, faster install. Most installations complete in 2 to 4 weeks.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 24px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; text-align: center;">
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">2-4 weeks</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Typical installation</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">Up to $650</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Current gas insert rebate</p>
+        </div>
+        <div>
+          <p style="font-size: 20px; font-weight: 700; color: #c44a08;">1,400+</p>
+          <p style="font-size: 12px; color: #6b7280; margin-top: 2px;">Authorized installers</p>
+        </div>
+      </div>
     </header>
-    <section class="bg-orange-50 border border-orange-200 rounded-lg p-6 mb-16">
-      <p class="font-semibold mb-2">Save up to $650 on a gas insert.</p>
-      <p class="text-sm text-neutral-700 mb-3">Limited-time rebate when you upgrade your old wood-burning fireplace. <a href="/fireplace-sale/" class="underline">See terms</a></p>
+
+    <!-- REBATE CALLOUT - expanded, not a whisper -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #c44a08; border-radius: 10px; padding: 24px 28px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <p style="font-weight: 800; font-size: 20px; color: #1a1a1a; margin-bottom: 6px;">Save up to $650 on a qualifying gas insert.</p>
+        <p style="color: #6b7280; font-size: 14px; max-width: 480px;">Limited-time rebate when you upgrade your existing wood-burning fireplace to a Heat &amp; Glo gas insert. Your authorized dealer handles the paperwork. <a href="/fireplace-sale/" style="color: #c44a08; font-weight: 600; text-decoration: underline;">See full terms</a></p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px; white-space: nowrap; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Claim this offer</a>
     </section>
-    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+    <!-- PRODUCT GRID -->
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {inserts.map((p: any) => (
         <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400'} alt={p.data.family} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400'} alt={p.data.family + ' gas insert retrofitted into a traditional fireplace opening'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
           <div class="p-5">
             <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
             <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
             <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.energy}</p>
+            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View insert &rarr;</p>
           </div>
         </a>
       ))}
     </section>
-    {inserts.length === 0 && <p class="text-neutral-600">Insert product pages populate from the legacy catalog as the rebuild scales beyond the pitch deliverable.</p>}
+
+    {inserts.length === 0 && (
+      <div style="border: 1px solid #e5e7eb; border-radius: 10px; padding: 32px; margin-bottom: 48px;">
+        <p class="text-neutral-700 mb-6 text-base">Insert product pages populate from the full catalog as the rebuild scales. Your authorized dealer can show you current gas and electric insert configurations in a working showroom.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <a href="/fireplaces/gas/" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:360" alt="Heat & Glo gas fireplace insert in a traditional fireplace opening" class="w-full h-36 object-cover rounded mb-3" />
+            <p class="font-semibold text-base mb-1">Gas inserts</p>
+            <p class="text-sm text-neutral-600">Push-button warmth. Qualifies for up to $650 rebate. Available through authorized dealers.</p>
+            <p class="text-sm font-medium text-orange-700 mt-2">Browse gas &rarr;</p>
+          </a>
+          <a href="/fireplaces/electric/" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; display: block; text-decoration: none; color: inherit; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <img src="https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:360" alt="Heat & Glo electric insert in a basement fireplace opening" class="w-full h-36 object-cover rounded mb-3" />
+            <p class="font-semibold text-base mb-1">Electric inserts</p>
+            <p class="text-sm text-neutral-600">No gas line needed. Plug-and-play. Ideal for condos, apartments, and finished basements.</p>
+            <p class="text-sm font-medium text-orange-700 mt-2">Browse electric &rarr;</p>
+          </a>
+        </div>
+      </div>
+    )}
+
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-12" style="min-height: 380px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:560"
+        alt="Heat & Glo gas fireplace insert installed in a renovated traditional brick fireplace opening in a contemporary living room"
+        class="w-full object-cover"
+        style="height: 380px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.52);">
+        <div class="max-w-page mx-auto w-full flex justify-end">
+          <div style="background: rgba(26,26,26,0.95); padding: 36px 40px; border-radius: 12px; max-width: 36rem; border: 1px solid #333;">
+            <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">The case for an insert</p>
+            <h2 style="color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px;">From wood-burning to push-button in 2 to 4 weeks.</h2>
+            <p style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">Most homeowners who retrofit to a gas insert say they wish they had done it sooner. The existing fireplace opening stays. The surround and mantel stay. Only the firebox changes. Your authorized dealer measures the opening, orders the unit, and handles the installation. You pick up the remote.</p>
+            <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer near you</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Limited-time rebate available</p>
+        <h2 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 8px;">Claim up to $650 on a gas insert.</h2>
+        <p style="color: #d1d5db; font-size: 14px; max-width: 480px; line-height: 1.6;">Your authorized dealer processes the rebate with your purchase. Offer applies to qualifying Heat &amp; Glo gas inserts. 1,400+ authorized dealers across the US and Canada. Find the closest location and start the conversation today.</p>
+      </div>
+      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find an authorized dealer</a>
+    </section>
+
   </main>
 </BaseLayout>

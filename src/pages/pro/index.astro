@@ -2,12 +2,12 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const benefits = [
-  { title: 'BIM files + spec sheets', description: 'Direct access to BIM models, dimensional drawings, and PDF spec sheets for every Heat & Glo product, organized by category.' },
-  { title: 'Wholesale pricing', description: 'Trade pricing for builders, contractors, and design-build firms. Sign-up confirms your trade credentials.' },
-  { title: 'Specification support', description: 'Direct access to Heat & Glo specification engineers for complex installs. Email or schedule a call for project-level support.' },
-  { title: 'Installation training', description: 'Continuing education credits and installation training for trade professionals. Live sessions and on-demand modules.' },
-  { title: 'Photography library', description: 'High-resolution Heat & Glo product photography for use in your project marketing and presentations.' },
-  { title: 'Co-marketing toolkit', description: 'Logos, badge files, and template materials for incorporating Heat & Glo into your project marketing.' },
+  { title: 'BIM files + spec sheets', description: 'Direct access to BIM models, dimensional drawings, and PDF spec sheets for every Heat & Glo product, organized by category.', image: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400', alt: 'Heat & Glo Mezzo linear gas fireplace specified in a contemporary residential interior' },
+  { title: 'Wholesale pricing', description: 'Trade pricing for builders, contractors, and design-build firms. Sign-up confirms your trade credentials.', image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400', alt: 'Coastal Chic furniture arrangement around traditional fireplace with forged-arch stone surround' },
+  { title: 'Specification support', description: 'Direct access to Heat & Glo specification engineers for complex installs. Email or schedule a call for project-level support.', image: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400', alt: 'Open contemporary layout with angled stairs and L-shaped seating around linear fireplace' },
+  { title: 'Installation training', description: 'Continuing education credits and installation training for trade professionals. Live sessions and on-demand modules.', image: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:400', alt: 'Nest Out West influencer basement remodel with built-in electric fireplace' },
+  { title: 'Photography library', description: 'High-resolution Heat & Glo product photography for use in your project marketing and presentations.', image: 'https://hearthnhome.getbynder.com/transform/487a4332-ec09-4301-bb0b-d13b860a682d/HNG_Get-Inspired_Ga?io=transform:fill,width:600,height:400', alt: 'Collage of various Heat & Glo fireplaces across contemporary residential settings' },
+  { title: 'Co-marketing toolkit', description: 'Logos, badge files, and template materials for incorporating Heat & Glo into your project marketing.', image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400', alt: 'Heat & Glo SupremeX gas fireplace as room focal point in bright contemporary living room' },
 ];
 ---
 <BaseLayout
@@ -15,49 +15,100 @@ const benefits = [
   description="The Heat & Glo ProAdvantage trade program: BIM files, wholesale pricing, specification support, installation training, photography, and co-marketing for trade professionals."
   noIndex={true}
 >
+  <!-- HERO -->
   <section class="relative mb-12 -mx-4">
-    <img src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:720" alt="Open contemporary residential layout with Primo II 60 linear fireplace" class="w-full h-[360px] object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:720"
+      alt="Open contemporary residential layout with Primo II 60 linear gas fireplace specified by a design-build team"
+      class="w-full h-[420px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/20 flex items-center px-8">
       <div class="max-w-page mx-auto text-white">
-        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">ProAdvantage Trade Program</p>
-        <h1 class="text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">For builders, architects, designers, and contractors.</h1>
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">ProAdvantage Trade Program</p>
+        <h1 class="text-5xl font-bold max-w-2xl leading-tight mb-4">For builders, architects, designers, and contractors.</h1>
+        <p class="text-lg text-white/85 max-w-xl mb-8">Trade access to Heat & Glo's specification library, wholesale pricing, and project-level engineering support. Built for professionals who specify and install.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/apply-for-dealership/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Apply for ProAdvantage</a>
+          <a href="/where-to-buy/" style="background: rgba(255,255,255,0.12); color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 15px; border: 1px solid rgba(255,255,255,0.35);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Find a dealer near you</a>
+        </div>
       </div>
     </div>
   </section>
-  <main class="max-w-page mx-auto px-4 py-4">
-    <header class="mb-12">
-      <p class="text-lg text-neutral-700 max-w-2xl">
-        Direct trade access to Heat & Glo's specification library, wholesale pricing, and project
-        support. ProAdvantage is the channel for everyone who specifies, sells, or installs Heat & Glo
-        on professional projects.
-      </p>
-    </header>
 
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- TRUST STRIP -->
+    <section style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px; padding: 28px 32px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; text-align: center;">
+      <div>
+        <p style="font-size: 28px; font-weight: 800; color: #c44a08;">50 years</p>
+        <p style="font-size: 13px; color: #6b7280; margin-top: 4px;">Engineered since 1975</p>
+      </div>
+      <div>
+        <p style="font-size: 28px; font-weight: 800; color: #c44a08;">1,400+</p>
+        <p style="font-size: 13px; color: #6b7280; margin-top: 4px;">Authorized dealers nationwide</p>
+      </div>
+      <div>
+        <p style="font-size: 28px; font-weight: 800; color: #c44a08;">Lake City, MN</p>
+        <p style="font-size: 13px; color: #6b7280; margin-top: 4px;">Made in the USA</p>
+      </div>
+    </section>
+
+    <!-- BENEFITS GRID -->
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {benefits.map((b) => (
-        <div class="border rounded-lg p-5">
-          <p class="font-semibold mb-2">{b.title}</p>
-          <p class="text-sm text-neutral-600">{b.description}</p>
+        <div class="bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition group">
+          <img src={b.image} alt={b.alt} class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="p-5">
+            <p class="font-semibold text-lg mb-2">{b.title}</p>
+            <p class="text-sm text-neutral-700 leading-relaxed">{b.description}</p>
+          </div>
         </div>
       ))}
     </section>
 
-    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
-      <h2 class="text-xl font-semibold mb-3">Apply for ProAdvantage access</h2>
-      <p class="text-neutral-700 mb-4 max-w-2xl">
-        Trade access requires verification of your trade credentials (contractor license, design firm
-        registration, builder license, or architect registration). Apply to confirm eligibility and
-        receive your trade portal login.
-      </p>
-      <a href="/apply-for-dealership/" class="inline-block bg-orange-600 text-white px-5 py-2 rounded font-medium hover:bg-orange-700 transition">
-        Apply for ProAdvantage access →
-      </a>
+    <!-- INLINE CTA BAND 1 -->
+    <section style="background: #1a1a1a; border-radius: 12px; padding: 40px 48px; margin-bottom: 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p style="color: #fdba74; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Trade account access</p>
+        <h2 style="color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 8px;">Wholesale pricing starts at application.</h2>
+        <p style="color: #d1d5db; font-size: 15px; max-width: 480px;">Verification of contractor license, design firm registration, or builder credentials required. Approval typically within 2 business days.</p>
+      </div>
+      <a href="/apply-for-dealership/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; font-size: 15px; flex-shrink: 0;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Apply now</a>
     </section>
 
-    <section class="border-t pt-10">
-      <p class="text-neutral-600">
-        Already a ProAdvantage member? <a href="/pro-help-desk/" class="underline">Pro help desk</a> for technical support.
-      </p>
+    <!-- LIFESTYLE INTERSTITIAL -->
+    <section class="relative -mx-4 mb-16" style="min-height: 400px;">
+      <img
+        src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:600"
+        alt="Heat & Glo Mezzo linear gas fireplace specified in a contemporary residential interior with brick wall and crystal glass media"
+        class="w-full object-cover"
+        style="height: 400px;"
+      />
+      <div class="absolute inset-0 flex items-center px-8" style="background: rgba(0,0,0,0.5);">
+        <div class="max-w-page mx-auto w-full">
+          <div style="background: rgba(26,26,26,0.95); color: #fff; padding: 36px 40px; border-radius: 12px; max-width: 38rem; border: 1px solid #333;">
+            <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-weight: 600; color: #fdba74; margin-bottom: 8px;">For specifiers and architects</p>
+            <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 12px; color: #fff;">Specify with confidence on complex installs.</h2>
+            <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 20px;">Heat & Glo specification engineers work directly with architects and builders. BIM, dimensional drawings, code reviews, custom-install consultation. ProAdvantage members get direct engineer access, not a call center.</p>
+            <a href="/apply-for-dealership/" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Request spec consultation</a>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- INLINE CTA BAND 2 -->
+    <section style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 36px 40px; margin-bottom: 64px; display: grid; gap: 24px; grid-template-columns: 2fr 1fr; align-items: center;">
+      <div>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a;">Find a dealer to work with on your next project.</h2>
+        <p style="color: #6b7280; font-size: 15px; max-width: 420px;">Already a ProAdvantage member? Connect with one of 1,400+ authorized dealers for showroom access, stocking inventory, and installation coordination.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+        <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; text-align: center; width: 100%;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer</a>
+        <a href="/pro-help-desk/" style="color: #c44a08; font-size: 14px; font-weight: 500; text-decoration: underline; text-align: center;">Pro help desk</a>
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
