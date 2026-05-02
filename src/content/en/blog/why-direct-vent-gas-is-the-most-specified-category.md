@@ -7,7 +7,7 @@ updatedAt: 2026-05-02
 author: "Heat & Glo Editorial"
 category: "How to Choose"
 tags: ["gas", "direct-vent", "specification", "venting", "new construction", "renovation"]
-hero: "https://hearthnhome.getbynder.com/transform/7c78ef1f-b1af-43cc-9e76-048b67e02a96/HNG_Supreme-30_gas_fireplace_livingroom-1-2x-jpg?io=transform:fill,width:1920,height:720"
+hero: "https://hearthnhome.getbynder.com/transform/36d26562-a9d9-4b4c-b8cc-f8f1dac39f15/HNG_Supreme-30_gas_fireplace_livingroom-1-2x-jpg?io=transform:fill,width:1920,height:720"
 ---
 
 ## Direct answer
