@@ -4,6 +4,24 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 const products = await getCollection('products-en');
 const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !== 'log-set' && !p.data.available_in?.includes('au'));
+
+const gasFallback = 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400';
+
+const demoContextMap: Record<string, string> = {
+  cosmo: '<strong>{label}</strong> is the contemporary linear sibling of Mezzo — same clean geometry, taller glass proportion for high-ceiling rooms. In production, the Cosmo family page renders the same template structure: hero, sizes available, complete-the-look surrounds, technical specs, dealer CTAs. The Mezzo template is fully built — open it to see the layout.',
+  '6k-8k-series': '<strong>{label}</strong> is the traditional firebox sibling of Mezzo. Same template structure, different aesthetic register — brick-lined firebox, log set, the familiar American hearth. In production, every size, every FAQ, every dealer CTA renders through the same layout. Open the Mezzo template to see the production-quality pattern.',
+  'phoenix-trueview': '<strong>{label}</strong> is Heat &amp; Glo\'s open-hearth gas fireplace — no front glass, direct radiant heat, the open-fire experience on a gas appliance. In production it gets the same full family page: hero, configuration detail, specs, and dealer CTAs. The Mezzo template is the live example of that layout. Open it to see how the pattern works.',
+  true: '<strong>{label}</strong> sits at the top of Heat &amp; Glo\'s traditional gas range — premium flame quality, refined firebox detail, the hearth that earns a long stare. In production, its family page follows the same template structure as Mezzo: hero, sizes, surrounds, specs, FAQs, dealer path. Open Mezzo to see the full layout.',
+  'primo-ii': '<strong>{label}</strong> is the contemporary linear family that offers both single-sided and see-through configurations from a single product line. In production, its page renders every size, every configuration detail, and all dealer CTAs through the same template. Open the Mezzo family page to see the production layout.',
+};
+
+const demoImageMap: Record<string, string> = {
+  cosmo: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400',
+  '6k-8k-series': 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400',
+  'phoenix-trueview': 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400',
+  true: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400',
+  'primo-ii': 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400',
+};
 ---
 <BaseLayout title="Gas Fireplaces | Heat & Glo" description="Heat & Glo gas fireplaces: direct-vent, push-button warmth, and the most-specified category in the lineup. Indoor, outdoor, see-through, inserts, freestanding." noIndex={true}>
 
@@ -61,17 +79,43 @@ const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !
 
     <!-- PRODUCT GRID -->
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      {gas.map((p: any) => (
-        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
-          <img src={p.data.ogImage ?? 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400'} alt={p.data.family + ' gas fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
-          <div class="p-5">
-            <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
-            <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
-            <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} &middot; {p.data.sizes?.length ?? 1} sizes</p>
-            <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
-          </div>
-        </a>
-      ))}
+      {gas.map((p: any) => {
+        const slug = p.id.replace(/\.json$/, '');
+        const isLive = slug === 'mezzo';
+        const demoContext = demoContextMap[slug] ?? '<strong>{label}</strong> is a Heat &amp; Glo gas fireplace family. In production, it renders the same template structure as the Mezzo family page. Open Mezzo to see the production layout.';
+        const demoImage = demoImageMap[slug] ?? gasFallback;
+        return isLive ? (
+          <a href={`/fireplaces/${slug}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+            <img src={p.data.ogImage ?? gasFallback} alt={p.data.family + ' gas fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="p-5">
+              <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+              <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+              <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} &middot; {p.data.sizes?.length ?? 1} sizes</p>
+              <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
+            </div>
+          </a>
+        ) : (
+          <a
+            href={`/fireplaces/${slug}/`}
+            data-demo-target="/fireplaces/mezzo/"
+            data-demo-label={p.data.family}
+            data-demo-eyebrow="Sample Product Family Template"
+            data-demo-heading={p.data.family}
+            data-demo-context={demoContext}
+            data-demo-image={demoImage}
+            data-demo-cta="See the Mezzo family template →"
+            class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
+          >
+            <img src={p.data.ogImage ?? gasFallback} alt={p.data.family + ' gas fireplace in a residential setting'} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="p-5">
+              <p class="font-semibold text-lg group-hover:text-orange-700">{p.data.family}</p>
+              <p class="text-sm text-neutral-600 mt-2 line-clamp-3">{p.data.description}</p>
+              <p class="text-xs text-neutral-500 mt-3 uppercase tracking-wide">{p.data.placement} &middot; {p.data.sizes?.length ?? 1} sizes</p>
+              <p class="text-sm font-medium text-orange-700 mt-3 group-hover:underline">View family &rarr;</p>
+            </div>
+          </a>
+        );
+      })}
     </section>
 
     <!-- LIFESTYLE INTERSTITIAL -->
