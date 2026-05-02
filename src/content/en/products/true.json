@@ -1,0 +1,23 @@
+{
+  "_schema": "default",
+  "title": "True Indoor Gas Fireplace",
+  "description": "The True is Heat & Glo's premium-tier traditional gas fireplace, differentiated by the most lifelike flame quality in the lineup and a superior firebox aesthetic. The step-up from the 6K/8K Series Traditional for buyers who want the visible craft.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/true-hero/Heat-Glo-True-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "True",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/true-gas-fireplace"
+  ],
+  "sizes": [
+    { "id": "36", "name": "True 36", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "42", "name": "True 42", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "50", "name": "True 50", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}

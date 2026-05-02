@@ -1,0 +1,21 @@
+{
+  "_schema": "default",
+  "title": "Phoenix TrueView Indoor Open Gas Fireplace",
+  "description": "The Phoenix TrueView is an open-hearth gas fireplace with no glass front, delivering a true open-fire experience as a controlled gas appliance. A specifier favorite for high-end residential where the fire itself is the architectural moment.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/phoenix-hero/Heat-Glo-Phoenix-TrueView-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "Phoenix TrueView",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/phoenix-trueview-open-gas-fireplace"
+  ],
+  "sizes": [
+    { "id": "default", "name": "Phoenix TrueView", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}

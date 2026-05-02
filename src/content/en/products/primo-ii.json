@@ -1,0 +1,27 @@
+{
+  "_schema": "default",
+  "title": "Primo II Linear Gas Fireplace",
+  "description": "The Primo II is a contemporary linear gas fireplace available in single-sided and see-through (double-sided) configurations. One fire, two rooms when the see-through variant is specified for a partition wall.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/primo-hero/Heat-Glo-Primo-II-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "Primo II",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/primo-ii",
+    "/fireplaces/gas/see-through/primo-ii"
+  ],
+  "sizes": [
+    { "id": "36", "name": "Primo II 36", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "48", "name": "Primo II 48", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "60", "name": "Primo II 60", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "36-st", "name": "Primo II 36 See-Through", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "48-st", "name": "Primo II 48 See-Through", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "60-st", "name": "Primo II 60 See-Through", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}
