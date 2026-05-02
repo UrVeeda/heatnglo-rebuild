@@ -6,92 +6,26 @@ const featured = [
     title: '21 Fireplace Accent Wall Ideas',
     excerpt: 'Stone, tile, plaster, wood. Twenty-one accent wall treatments that pair with a Heat & Glo fireplace as the room\'s focal point.',
     href: '/blog/21-fireplace-accent-wall-ideas/',
-    demoTarget: null,
-    demoLabel: null,
   },
   {
     title: 'Cosmo: The Fireplace for Every Room',
     excerpt: 'How the Cosmo Series adapts to bedrooms, great rooms, hospitality lobbies, and everywhere in between.',
     href: '/blog/21-fireplace-accent-wall-ideas/',
-    demoTarget: '/blog/21-fireplace-accent-wall-ideas/',
-    demoLabel: 'Cosmo: The Fireplace for Every Room',
-    demoEyebrow: 'Editorial Article · Cosmo Series',
-    demoHeading: 'This article is in production scope.',
-    demoContext: '<strong>{label}</strong> is one of the editorial articles slated for production launch. The article structure, photography pattern, and product cross-link logic match the live example we\'ve already built — click below to see the production-quality template fully built.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1200,height:560',
-    demoCta: 'Open the live editorial template →',
   },
   {
     title: 'Heat & Glo on Military Makeover',
     excerpt: 'The brand\'s collaboration with Military Makeover, supporting veterans and their families.',
     href: '/blog/21-fireplace-accent-wall-ideas/',
-    demoTarget: '/blog/21-fireplace-accent-wall-ideas/',
-    demoLabel: 'Heat & Glo on Military Makeover',
-    demoEyebrow: 'Press Feature · Brand Partnership',
-    demoHeading: 'Brand partnership coverage launches in production.',
-    demoContext: '<strong>{label}</strong> is part of the production-engagement press archive — one of dozens of brand partnership stories that scale into the same article template. To see what that template looks like fully built, open the live example below.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1200,height:560',
-    demoCta: 'See the live editorial template →',
   },
 ];
 
 const categories = [
-  {
-    name: 'Design Trends',
-    count: 28,
-    href: '/ideas/design-trends/',
-    demoTarget: null,
-  },
-  {
-    name: 'Room-by-Room Inspiration',
-    count: 24,
-    href: '/ideas/design-trends/',
-    demoTarget: '/ideas/design-trends/',
-    demoEyebrow: 'Sample Category Template',
-    demoHeading: 'Room-by-Room scales from the same template.',
-    demoContext: 'In production, <strong>{label}</strong> is its own curated category page with 24 articles tagged by room type — bedroom, great room, kitchen-adjacent, basement, outdoor. The Design Trends template you\'re about to view scales identically across every category in the inspiration hub.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1200,height:560',
-    demoCta: 'View the Design Trends template →',
-  },
-  {
-    name: 'Renovation Stories',
-    count: 19,
-    href: '/ideas/design-trends/',
-    demoTarget: '/ideas/design-trends/',
-    demoEyebrow: 'Sample Category Template',
-    demoHeading: 'Renovation Stories uses the same template.',
-    demoContext: '<strong>{label}</strong> renders 19 long-form before/after stories from real Heat & Glo dealer installs in production. Layout matches the Design Trends template exactly — open it to see the pattern.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:1200,height:560',
-    demoCta: 'View the Design Trends template →',
-  },
-  {
-    name: 'HGTV Partnerships',
-    count: 14,
-    href: '/ideas/design-trends/',
-    demoTarget: '/ideas/design-trends/',
-    demoEyebrow: 'Sample Category Template',
-    demoHeading: 'HGTV Partnerships uses the same template.',
-    demoContext: '<strong>{label}</strong> renders 14 articles from the HGTV Designer Showcase, Smart Home, Dream Home, and seasonal partnerships in production. Same 28-card grid pattern as Design Trends.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1200,height:560',
-    demoCta: 'View the Design Trends template →',
-  },
-  {
-    name: 'Architect Features',
-    count: 11,
-    href: '/architect/',
-    demoTarget: null,
-  },
-  {
-    name: 'Outdoor Living',
-    count: 7,
-    href: '/ideas/design-trends/',
-    demoTarget: '/ideas/design-trends/',
-    demoEyebrow: 'Sample Category Template',
-    demoHeading: 'Outdoor Living uses the same template.',
-    demoContext: '<strong>{label}</strong> renders 7 articles on outdoor patio, three-season room, and outdoor kitchen fireplace installs in production. Same article-grid pattern as Design Trends.',
-    demoImage: 'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:1200,height:560',
-    demoCta: 'View the Design Trends template →',
-  },
+  { name: 'Design Trends',            count: 28, href: '/ideas/design-trends/' },
+  { name: 'Room-by-Room Inspiration', count: 24, href: '/ideas/design-trends/' },
+  { name: 'Renovation Stories',       count: 19, href: '/ideas/design-trends/' },
+  { name: 'HGTV Partnerships',        count: 14, href: '/ideas/design-trends/' },
+  { name: 'Architect Features',       count: 11, href: '/architect/' },
+  { name: 'Outdoor Living',           count: 7,  href: '/ideas/design-trends/' },
 ];
 ---
 <BaseLayout
@@ -129,15 +63,6 @@ const categories = [
             <a
               href={f.href}
               class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition"
-              {...(f.demoTarget ? {
-                'data-demo-target': f.demoTarget,
-                'data-demo-label':  f.demoLabel ?? f.title,
-                'data-demo-heading': (f as any).demoHeading,
-                'data-demo-eyebrow': (f as any).demoEyebrow,
-                'data-demo-context': (f as any).demoContext,
-                'data-demo-image':   (f as any).demoImage,
-                'data-demo-cta':     (f as any).demoCta,
-              } : {})}
             >
               <img src={heroImages[i] ?? heroImages[0]} alt={f.title} class="w-full h-52 object-cover group-hover:scale-105 transition duration-300" />
               <div class="p-5">
@@ -157,15 +82,6 @@ const categories = [
           <a
             href={c.href}
             class="block border rounded-lg p-5 hover:bg-orange-50 hover:border-orange-300 transition"
-            {...(c.demoTarget ? {
-              'data-demo-target': c.demoTarget,
-              'data-demo-label':  c.name,
-              'data-demo-heading': c.demoHeading,
-              'data-demo-eyebrow': c.demoEyebrow,
-              'data-demo-context': c.demoContext,
-              'data-demo-image':   c.demoImage,
-              'data-demo-cta':     c.demoCta,
-            } : {})}
           >
             <p class="font-semibold">{c.name}</p>
             <p class="text-sm text-neutral-500 mt-1">{c.count} stories</p>
