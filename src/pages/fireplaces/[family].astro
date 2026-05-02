@@ -21,30 +21,37 @@ const data = product.data;
   ogImage={data.ogImage ?? undefined}
   noIndex={true}
 >
-  <main class="max-w-page mx-auto px-4 py-12">
-    <header class="mb-12">
-      {data.hero?.eyebrow ? (
-        <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">{data.hero.eyebrow}</p>
-      ) : (
-        <p class="uppercase tracking-wide text-sm text-neutral-500">{data.energy} · {data.placement}</p>
-      )}
-      <h1 class="text-4xl font-bold mt-2">
-        {data.hero?.h1 ? (
-          <>
-            {data.hero.h1.split(data.hero.h1_em ?? '__no_em__').map((part: string, i: number, arr: string[]) => (
-              <>
-                {part}
-                {i < arr.length - 1 && data.hero?.h1_em && (
-                  <em class="text-orange-600 not-italic">{data.hero.h1_em}</em>
-                )}
-              </>
-            ))}
-          </>
+  <section class="relative mb-12 -mx-4">
+    <img src={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1920,height:720"} alt={`Heat & Glo ${data.family}`} class="w-full h-[420px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        {data.hero?.eyebrow ? (
+          <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">{data.hero.eyebrow}</p>
         ) : (
-          data.family
+          <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">{data.energy} · {data.placement}</p>
         )}
-      </h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">{data.hero?.lede ?? data.description}</p>
+        <h1 class="text-5xl font-bold mt-2 max-w-2xl drop-shadow-lg">
+          {data.hero?.h1 ? (
+            <>
+              {data.hero.h1.split(data.hero.h1_em ?? '__no_em__').map((part: string, i: number, arr: string[]) => (
+                <>
+                  {part}
+                  {i < arr.length - 1 && data.hero?.h1_em && (
+                    <em class="text-orange-300 not-italic">{data.hero.h1_em}</em>
+                  )}
+                </>
+              ))}
+            </>
+          ) : (
+            data.family
+          )}
+        </h1>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-page mx-auto px-4 py-4">
+    <header class="mb-12">
+      <p class="text-lg text-neutral-700 max-w-2xl">{data.hero?.lede ?? data.description}</p>
     </header>
 
     {data.sizes.length > 0 && (
