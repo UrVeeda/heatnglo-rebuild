@@ -23,7 +23,19 @@ const data = accessory.data;
     <header class="mb-12">
       <p class="uppercase tracking-wide text-sm text-neutral-500">{data.accessory_type.replace(/-/g, ' ')}</p>
       <h1 class="text-4xl font-bold mt-2">{data.title}</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">{data.description}</p>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl mb-6">{data.description}</p>
+      <button
+        type="button"
+        data-hg-add-to-consultation
+        data-hg-item-id={`accessory:${accessory.id.replace(/\.json$/, '')}`}
+        data-hg-item-type={data.accessory_type.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}
+        data-hg-item-title={data.title}
+        data-hg-slug={`/accessories/${accessory.id.replace(/\.json$/, '')}/`}
+        data-hg-item-image={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:600,height:400"}
+        style="background: #c44a08; color: #fff; padding: 14px 28px; border-radius: 8px; font-weight: 700; border: 0; cursor: pointer; font-size: 15px; transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.18s ease;"
+        onmouseover="this.style.background='#a83e07'; this.style.boxShadow='0 4px 18px rgba(196,74,8,0.45)'; this.style.transform='translateY(-1px)';"
+        onmouseout="this.style.background='#c44a08'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+      >🔥 Add to my consultation list</button>
     </header>
 
     {data.compatible_fireplaces && data.compatible_fireplaces.length > 0 && (

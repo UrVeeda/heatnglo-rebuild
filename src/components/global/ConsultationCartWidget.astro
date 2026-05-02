@@ -1,0 +1,59 @@
+---
+/* Persistent cart-style indicator. Renders in Header (desktop + mobile menu).
+   Hidden by default; reveals when count > 0 via inline JS reading localStorage.
+   Click → /my-consultation/ */
+---
+<a
+  id="hg-cart-widget"
+  href="/my-consultation/"
+  aria-label="My consultation list"
+  hidden
+  style="
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px 6px 10px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 999px;
+    color: #c44a08;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.18s ease;
+  "
+  onmouseover="this.style.background='#fdba74'; this.style.color='#7c2d12'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(196,74,8,0.30)';"
+  onmouseout="this.style.background='#fff7ed'; this.style.color='#c44a08'; this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+>
+  <span style="font-size: 15px; line-height: 1;">🔥</span>
+  <span><span id="hg-cart-count">0</span> on your list</span>
+</a>
+
+<script>
+  // Show/hide based on localStorage count, sync on cart change events
+  (function () {
+    const widget = document.getElementById('hg-cart-widget');
+    const countEl = document.getElementById('hg-cart-count');
+    if (!widget || !countEl) return;
+
+    function render(count: number) {
+      countEl.textContent = String(count);
+      if (count > 0) {
+        widget.removeAttribute('hidden');
+      } else {
+        widget.setAttribute('hidden', '');
+      }
+    }
+
+    // Wait for HG_CART global from /scripts/consultation-cart.ts
+    const tryWire = () => {
+      if (window.HG_CART && typeof window.HG_CART.onChange === 'function') {
+        window.HG_CART.onChange(render);
+      } else {
+        setTimeout(tryWire, 50);
+      }
+    };
+    tryWire();
+  })();
+</script>

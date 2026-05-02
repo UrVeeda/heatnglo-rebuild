@@ -1,0 +1,258 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="My Consultation List | Heat & Glo"
+  description="Your curated list of Heat & Glo fireplaces and accessories. Send the list to your local authorized dealer with a consultation request."
+  noIndex={true}
+>
+  <section class="relative mb-12 -mx-4 overflow-hidden">
+    <img
+      src="https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-shot-05-jpg?io=transform:fill,width:1920,height:560"
+      alt="Heat & Glo contemporary linear fireplace as the room's focal point"
+      class="w-full h-[520px] md:h-[360px] object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-end pb-10 md:items-center md:pb-0 px-6 md:px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-widest text-xs font-semibold text-orange-300 mb-3">My Consultation List</p>
+        <h1 class="text-3xl md:text-5xl font-bold max-w-2xl leading-tight mb-4 drop-shadow-lg">Walk into your dealer with the list already done.</h1>
+        <p class="text-sm md:text-lg text-white/85 max-w-xl drop-shadow">When you submit, your local authorized Heat & Glo dealer receives your full curated list plus your contact info. Most dealers respond within 1-2 business days to schedule a free consultation.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+
+    <!-- LIST + EMPTY STATE -->
+    <section class="mb-16">
+      <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+        <h2 class="text-2xl font-bold">Your list</h2>
+        <button
+          type="button"
+          id="hg-cart-clear"
+          hidden
+          style="background: transparent; color: #6b7280; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; border: 1px solid #d4d4d4; cursor: pointer; transition: background 0.15s ease, color 0.15s ease;"
+          onmouseover="this.style.background='#f8f6f2'; this.style.color='#1a1a1a';"
+          onmouseout="this.style.background='transparent'; this.style.color='#6b7280';"
+        >Clear list</button>
+      </div>
+
+      <div id="hg-cart-empty" hidden style="background: #fafaf9; border: 1px dashed #d4d4d4; border-radius: 12px; padding: 48px 32px; text-align: center;">
+        <p style="font-size: 38px; line-height: 1; margin-bottom: 12px;">🧱</p>
+        <h3 class="text-xl font-semibold mb-2">Your list is empty.</h3>
+        <p class="text-neutral-600 max-w-md mx-auto mb-6">Browse the lineup and tap "Add to my consultation list" on any fireplace, mantel, surround, or accessory. Build your spec, then walk into your dealer with it ready.</p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a href="/fireplaces/" style="background: #c44a08; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Browse fireplaces</a>
+          <a href="/accessories/" style="background: #fff; color: #1a1a1a; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; border: 1px solid #d4d4d4;">Browse accessories</a>
+        </div>
+      </div>
+
+      <div id="hg-cart-items" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- CONSULTATION REQUEST FORM -->
+    <section id="hg-cart-form-wrap" hidden class="bg-neutral-50 border-2 border-neutral-200 rounded-xl p-8 mb-16">
+      <p class="uppercase tracking-wide text-xs font-semibold text-orange-700 mb-2">Step 2 · Tell your dealer</p>
+      <h2 class="text-2xl font-bold mb-2">Send your list to a Heat & Glo dealer.</h2>
+      <p class="text-neutral-700 mb-6 max-w-2xl">Your nearest authorized dealer receives the items on your list plus your contact info. Most dealers schedule a free in-home consultation within 1-2 business days.</p>
+
+      <form id="hg-consultation-form" class="grid sm:grid-cols-2 gap-4">
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Your full name *
+          <input type="text" name="name" required class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;" />
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Email *
+          <input type="email" name="email" required class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;" />
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Phone *
+          <input type="tel" name="phone" required class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;" />
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          ZIP / Postal code *
+          <input type="text" name="zip" required maxlength="7" class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;" />
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium sm:col-span-2">
+          Project notes (room type, budget bracket, anything else)
+          <textarea name="notes" rows="4" class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;"></textarea>
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Project timeline
+          <select name="timeline" class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;">
+            <option value="">Choose…</option>
+            <option value="0-3-months">0-3 months</option>
+            <option value="3-6-months">3-6 months</option>
+            <option value="6-12-months">6-12 months</option>
+            <option value="just-researching">Just researching</option>
+          </select>
+        </label>
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          New construction or renovation?
+          <select name="project_type" class="px-3 py-3 border border-neutral-300 rounded-lg" style="background: #fff; color: #1a1a1a;">
+            <option value="">Choose…</option>
+            <option value="new-construction">New construction</option>
+            <option value="renovation">Renovation</option>
+            <option value="replacement">Replacement of existing</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+        </label>
+
+        <div class="sm:col-span-2 flex flex-col gap-2 mt-2">
+          <button
+            type="submit"
+            id="hg-consultation-submit"
+            style="background: #c44a08; color: #fff; padding: 16px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; border: 0; cursor: pointer; transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.18s ease;"
+            onmouseover="this.style.background='#a83e07'; this.style.boxShadow='0 4px 18px rgba(196,74,8,0.45)'; this.style.transform='translateY(-1px)';"
+            onmouseout="this.style.background='#c44a08'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+          >Send my list to a dealer →</button>
+          <p class="text-xs text-neutral-500 mt-2">By submitting you agree to be contacted by a Heat & Glo authorized dealer regarding your project. Your list is shared only with that dealer.</p>
+        </div>
+      </form>
+    </section>
+
+    <div id="hg-consultation-success" hidden style="background: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 12px; padding: 48px 32px; text-align: center; margin-bottom: 64px;">
+      <p style="font-size: 48px; color: #059669; line-height: 1; margin-bottom: 8px;">✓</p>
+      <h2 class="text-2xl font-bold mb-2" style="color: #064e3b;">Sent — your dealer is on it.</h2>
+      <p class="text-neutral-700 max-w-md mx-auto">Your list and contact info just landed with the nearest authorized Heat & Glo dealer. Expect a response within 1-2 business days. We've cleared the list — feel free to start a new one anytime.</p>
+    </div>
+
+    <div id="hg-consultation-error" hidden style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+      <p style="color: #991b1b; font-weight: 600; margin-bottom: 4px;">Something didn't go through.</p>
+      <p style="color: #7f1d1d; font-size: 14px;">Please email <a href="mailto:dealer-support@heatnglo.com" style="text-decoration: underline;">dealer-support@heatnglo.com</a> with your list — we'll route manually.</p>
+    </div>
+
+    <!-- DEALER NOTE -->
+    <section class="border-t pt-10 mb-16">
+      <p class="text-sm text-neutral-600 max-w-2xl">
+        Already know the dealer you want to work with? <a href="/where-to-buy/" class="underline">Find them in our directory</a> — you can also send your list directly to a specific dealer's profile page.
+      </p>
+    </section>
+
+  </main>
+
+  <script>
+    (function () {
+      const itemsEl   = document.getElementById('hg-cart-items');
+      const emptyEl   = document.getElementById('hg-cart-empty');
+      const formWrap  = document.getElementById('hg-cart-form-wrap');
+      const clearBtn  = document.getElementById('hg-cart-clear');
+      const form      = document.getElementById('hg-consultation-form') as HTMLFormElement | null;
+      const submitBtn = document.getElementById('hg-consultation-submit') as HTMLButtonElement | null;
+      const successEl = document.getElementById('hg-consultation-success');
+      const errorEl   = document.getElementById('hg-consultation-error');
+
+      if (!itemsEl || !emptyEl || !formWrap || !clearBtn || !form || !submitBtn) return;
+
+      // Webhook: same Discord webhook used for the intake form. In production this would route
+      // to the dealer-locator service / Salesforce intake.
+      const WEBHOOK = 'https://discord.com/api/webhooks/1500005576430587954/qEGejPSjI-5YGY73y8bmSADLVl47ev9oTGmDP3TRUXwleFf4HuoigOoxh1hjA2KlBSVo';
+
+      function renderItems(items: any[]) {
+        if (items.length === 0) {
+          itemsEl!.innerHTML = '';
+          emptyEl!.hidden = false;
+          formWrap!.hidden = true;
+          clearBtn!.hidden = true;
+          return;
+        }
+        emptyEl!.hidden = true;
+        formWrap!.hidden = false;
+        clearBtn!.hidden = false;
+
+        itemsEl!.innerHTML = items.map((it) => `
+          <article class="bg-white border rounded-lg overflow-hidden hover:shadow-md transition" style="display: flex; flex-direction: column;">
+            <div style="height: 180px; overflow: hidden; background: #f5f5f4;">
+              <img src="${escapeAttr(it.image)}" alt="${escapeAttr(it.title)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 6px;">
+              <p style="text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; font-weight: 600; color: #c44a08; margin: 0;">${escapeText(it.type)}</p>
+              <h3 style="font-size: 16px; font-weight: 700; color: #1a1a1a; line-height: 1.3; margin: 0;">${escapeText(it.title)}</h3>
+              <div style="margin-top: auto; display: flex; gap: 10px; align-items: center; padding-top: 10px;">
+                <a href="${escapeAttr(it.slug)}" style="font-size: 13px; font-weight: 600; color: #c44a08; text-decoration: underline;">View details</a>
+                <span style="color: #d4d4d4;">·</span>
+                <button type="button" data-hg-remove="${escapeAttr(it.id)}" style="background: none; border: 0; padding: 0; cursor: pointer; font-size: 13px; color: #6b7280; text-decoration: underline;">Remove</button>
+              </div>
+            </div>
+          </article>
+        `).join('');
+
+        itemsEl!.querySelectorAll('[data-hg-remove]').forEach((b) => {
+          b.addEventListener('click', (e) => {
+            const id = (e.currentTarget as HTMLElement).getAttribute('data-hg-remove');
+            if (id) (window as any).HG_CART.remove(id);
+          });
+        });
+      }
+
+      function escapeText(s: any) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]!)); }
+      function escapeAttr(s: any) { return escapeText(s); }
+
+      const tryWire = () => {
+        if ((window as any).HG_CART) {
+          (window as any).HG_CART.onChange((c: number) => {
+            renderItems((window as any).HG_CART.getAll());
+          });
+        } else {
+          setTimeout(tryWire, 50);
+        }
+      };
+      tryWire();
+
+      clearBtn.addEventListener('click', () => {
+        if (confirm('Clear your consultation list?')) (window as any).HG_CART.clear();
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const items = (window as any).HG_CART.getAll();
+        if (items.length === 0) { return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        const data: Record<string, string> = {};
+        new FormData(form).forEach((v, k) => { data[k] = (v || '').toString().trim(); });
+
+        const payload = {
+          content: '🆕 **New Heat & Glo consultation request** — ' + (data.name || 'unknown') + ' · ZIP ' + (data.zip || '?'),
+          embeds: [{
+            title: data.name || 'Consultation request',
+            color: 12863496,
+            timestamp: new Date().toISOString(),
+            fields: [
+              { name: 'Contact', value: data.name + ' · ' + data.email + ' · ' + data.phone, inline: false },
+              { name: 'Location', value: 'ZIP ' + data.zip, inline: true },
+              { name: 'Timeline', value: data.timeline || 'Not specified', inline: true },
+              { name: 'Project type', value: data.project_type || 'Not specified', inline: true },
+              { name: 'Project notes', value: data.notes || '—', inline: false },
+              { name: 'Items on the list (' + items.length + ')', value: items.map((i: any) => '• ' + i.title + ' (' + i.type + ')').join('\n').slice(0, 1000), inline: false },
+            ],
+            footer: { text: 'heatnglo-v2.vercel.app/my-consultation/' },
+          }],
+        };
+
+        fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).then((r) => {
+          if (!r.ok) throw new Error('Webhook ' + r.status);
+          (window as any).HG_CART.clear();
+          formWrap!.hidden = true;
+          if (successEl) {
+            successEl.hidden = false;
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }).catch(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send my list to a dealer →';
+          if (errorEl) errorEl.hidden = false;
+        });
+      });
+    })();
+  </script>
+
+</BaseLayout>

@@ -96,6 +96,94 @@ const alternates = allLocaleAlternates(pathname);
     <DemoLinkModal />
 
     <script>
+      // Consultation cart — localStorage-backed list buyer can take to dealer.
+      // Vanilla JS, no framework. Loaded globally on every page.
+      (function () {
+        if (typeof window === 'undefined') return;
+        const KEY = 'heatnglo:consultation';
+        const listeners: Array<(c: number) => void> = [];
+
+        function read(): any[] {
+          try {
+            const raw = localStorage.getItem(KEY);
+            if (!raw) return [];
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch { return []; }
+        }
+        function write(items: any[]) {
+          try { localStorage.setItem(KEY, JSON.stringify(items)); } catch {}
+          notify(items.length);
+        }
+        function notify(c: number) {
+          listeners.forEach(fn => { try { fn(c); } catch {} });
+        }
+
+        function flashToast(msg: string) {
+          let t = document.getElementById('hg-cart-toast');
+          if (!t) {
+            t = document.createElement('div');
+            t.id = 'hg-cart-toast';
+            t.style.cssText = "position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:14px 22px;border-radius:999px;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:9500;opacity:0;transition:opacity 0.18s ease,transform 0.18s ease;pointer-events:none;max-width:90vw;text-align:center;";
+            t.innerHTML = '<span style="margin-right:8px;">🔥</span><span class="hg-cart-toast-msg"></span> <a href="/my-consultation/" style="color:#fdba74;text-decoration:underline;margin-left:8px;pointer-events:auto;">View list →</a>';
+            document.body.appendChild(t);
+          }
+          const span = t.querySelector('.hg-cart-toast-msg');
+          if (span) span.textContent = msg;
+          requestAnimationFrame(() => {
+            t!.style.opacity = '1';
+            t!.style.transform = 'translateX(-50%) translateY(-6px)';
+          });
+          window.clearTimeout((t as any)._hideTimer);
+          (t as any)._hideTimer = window.setTimeout(() => {
+            t!.style.opacity = '0';
+            t!.style.transform = 'translateX(-50%) translateY(0)';
+          }, 3200);
+        }
+
+        (window as any).HG_CART = {
+          add(item: any) {
+            const items = read();
+            if (items.some((i: any) => i.id === item.id)) {
+              flashToast(item.title + ' is already on your list');
+              return;
+            }
+            items.push(item);
+            write(items);
+            flashToast('Added ' + item.title + ' to your consultation list');
+          },
+          remove(id: string) { write(read().filter((i: any) => i.id !== id)); },
+          clear() { write([]); },
+          getAll: read,
+          count: () => read().length,
+          onChange(cb: (c: number) => void) {
+            listeners.push(cb);
+            cb(read().length);
+          },
+        };
+
+        document.addEventListener('click', (e) => {
+          const t = (e.target as HTMLElement).closest('[data-hg-add-to-consultation]') as HTMLElement | null;
+          if (!t) return;
+          e.preventDefault();
+          const item = {
+            id:    t.dataset.hgItemId    || t.dataset.hgSlug || '',
+            type:  t.dataset.hgItemType  || 'fireplace',
+            title: t.dataset.hgItemTitle || '',
+            slug:  t.dataset.hgSlug      || '',
+            image: t.dataset.hgItemImage || '',
+          };
+          if (!item.id || !item.title) return;
+          (window as any).HG_CART.add(item);
+        });
+
+        window.addEventListener('storage', (e) => {
+          if (e.key === KEY) notify(read().length);
+        });
+      })();
+    </script>
+
+    <script>
       if (typeof window !== 'undefined' && (window as Window & { inEditorMode?: boolean }).inEditorMode) {
         import('../cloudcannon/registerComponents').catch((err) => {
           console.warn('CloudCannon registerComponents failed to load:', err);

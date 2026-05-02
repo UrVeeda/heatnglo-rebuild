@@ -154,9 +154,23 @@ const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
     <section class="bg-orange-50 border border-orange-200 rounded-lg p-8 mb-16 grid sm:grid-cols-3 gap-6 items-center">
       <div class="sm:col-span-2">
         <h2 class="text-2xl font-semibold mb-2">Bring the {data.family} home.</h2>
-        <p class="text-neutral-700 max-w-xl">Find your authorized Heat & Glo dealer to schedule a free in-home consultation. Most installations finish in 2 to 4 weeks.</p>
+        <p class="text-neutral-700 max-w-xl">Add this fireplace to your consultation list, then send it to your authorized Heat &amp; Glo dealer. Or skip ahead and find a dealer now — most installations finish in 2 to 4 weeks.</p>
       </div>
-      <a href="/where-to-buy/" style="background: #c44a08; color: #fff; display: inline-block; padding: 16px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; text-align: center;" onmouseover="this.style.background='#a83e07'" onmouseout="this.style.background='#c44a08'">Find a dealer →</a>
+      <div class="flex flex-col gap-3">
+        <button
+          type="button"
+          data-hg-add-to-consultation
+          data-hg-item-id={`fireplace:${product.id.replace(/\.json$/, '')}`}
+          data-hg-item-type="Fireplace"
+          data-hg-item-title={`${data.family} ${data.energy === 'gas' ? 'Gas Fireplace' : data.energy === 'wood' ? 'Wood-Burning Fireplace' : data.energy === 'electric' ? 'Electric Fireplace' : 'Fireplace'}`}
+          data-hg-slug={`/fireplaces/${product.id.replace(/\.json$/, '')}/`}
+          data-hg-item-image={data.ogImage ?? "https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400"}
+          style="background: #c44a08; color: #fff; padding: 16px 28px; border-radius: 8px; font-weight: 700; text-align: center; border: 0; cursor: pointer; font-size: 15px; transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.18s ease;"
+          onmouseover="this.style.background='#a83e07'; this.style.boxShadow='0 4px 18px rgba(196,74,8,0.45)'; this.style.transform='translateY(-1px)';"
+          onmouseout="this.style.background='#c44a08'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+        >🔥 Add to my consultation list</button>
+        <a href="/where-to-buy/" style="text-align: center; padding: 12px 24px; color: #c44a08; font-weight: 600; text-decoration: underline; font-size: 14px;">Or find a dealer now →</a>
+      </div>
     </section>
 
     {data.complete_the_look && data.complete_the_look.length > 0 && (

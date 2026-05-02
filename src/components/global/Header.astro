@@ -1,6 +1,7 @@
 ---
 import { detectLocale, localeUrl, type Locale } from '@lib/localeUrls';
 import navData from '@data/nav.json';
+import ConsultationCartWidget from '@components/global/ConsultationCartWidget.astro';
 
 const pathname = Astro.url.pathname;
 const currentLocale: Locale = detectLocale(pathname);
@@ -39,6 +40,7 @@ const localePrefix = currentLocale === 'en' ? '' : '/' + currentLocale;
       </a>
 
       <div class="header__util">
+        <ConsultationCartWidget />
         <a href={localePrefix + '/where-to-buy/'} aria-label={u.search}>🔍 {u.search}</a>
         <a href={localePrefix + '/where-to-buy/'} aria-label={u.dealer}>📍 {u.dealer}</a>
         <a href="tel:8884273973" aria-label="Call 888-427-3973">📞 888-427-3973</a>
