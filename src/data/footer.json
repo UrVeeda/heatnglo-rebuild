@@ -8,30 +8,45 @@
   },
   "columns": [
     {
-      "heading": "Products",
+      "heading": "Fireplaces",
       "links": [
-        { "label": "Gas Fireplaces",      "href": "/products/gas-fireplaces/" },
-        { "label": "Electric Fireplaces", "href": "/products/electric-fireplaces/" },
-        { "label": "Wood Fireplaces",     "href": "/products/wood-fireplaces/" },
-        { "label": "Outdoor Fireplaces",  "href": "/products/outdoor-fireplaces/" }
+        { "label": "Gas Fireplaces",      "href": "/fireplaces/gas/" },
+        { "label": "Wood Fireplaces",     "href": "/fireplaces/wood/" },
+        { "label": "Electric Fireplaces", "href": "/fireplaces/electric/" },
+        { "label": "Outdoor Fireplaces",  "href": "/fireplaces/outdoor/" },
+        { "label": "Log Sets",            "href": "/log-sets/" },
+        { "label": "Accessories",         "href": "/accessories/" }
       ]
     },
     {
       "heading": "For Pros",
       "links": [
-        { "label": "ProAdvantage Trade Program", "href": "/pro/proadvantage/" },
-        { "label": "BIM Library",                "href": "/pro/bim-library/" },
-        { "label": "AIA Continuing Ed",          "href": "/pro/aia-continuing-education/" },
-        { "label": "Designers on Fire",          "href": "/pro/designers-on-fire/" }
+        { "label": "ProAdvantage Trade Program", "href": "/pro/" },
+        { "label": "Pro Tools + BIM",            "href": "/pro-tools/" },
+        { "label": "Continuing Education",       "href": "/continuing-education/" },
+        { "label": "Architects + Designers",     "href": "/architect/" },
+        { "label": "Apply for Dealership",       "href": "/apply-for-dealership/" }
       ]
     },
     {
       "heading": "Owners",
       "links": [
-        { "label": "Manuals",        "href": "/owner-resources/manuals/" },
-        { "label": "Parts",          "href": "/owner-resources/parts/" },
-        { "label": "Safety Screens", "href": "/owner-resources/safety-screens/" },
-        { "label": "Recalls",        "href": "/owner-resources/recalls/" }
+        { "label": "Care + Maintenance", "href": "/owner-resources/care/" },
+        { "label": "Manuals",            "href": "/manuals/" },
+        { "label": "Recall Notices",     "href": "/owner-resources/recall-notices/" },
+        { "label": "Warranty",           "href": "/warranty-information/" },
+        { "label": "Fireplace Safety",   "href": "/fireplace-safety/" }
+      ]
+    },
+    {
+      "heading": "Company",
+      "links": [
+        { "label": "About Heat & Glo",  "href": "/about-us/" },
+        { "label": "History + Heritage","href": "/history-and-heritage/" },
+        { "label": "Key Technologies",  "href": "/key-technologies/" },
+        { "label": "Press + Media",     "href": "/press-and-media/" },
+        { "label": "Inspiration",       "href": "/ideas/" },
+        { "label": "Blog",              "href": "/blog/" }
       ]
     }
   ],

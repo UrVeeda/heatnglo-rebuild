@@ -1,16 +1,142 @@
 ---
-// Catch-all stub — Phase 8 wires this against content-collection slugs.
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
   return [];
 }
+
+const pathname = Astro.url.pathname;
+const segments = pathname.split('/').filter(Boolean);
+
+let suggestedTitle = "Browse our Fireplaces lineup";
+let suggestedHref = "/fireplaces/";
+let suggestedDescription = "Gas, wood, electric, outdoor. The full Heat & Glo catalog.";
+
+if (pathname.includes('insert')) {
+  suggestedTitle = "See our Fireplace Inserts";
+  suggestedHref = "/fireplaces/inserts/";
+  suggestedDescription = "Retrofit your existing wood-burning fireplace with a modern gas or electric insert.";
+} else if (pathname.includes('outdoor') || pathname.includes('patio')) {
+  suggestedTitle = "Browse Outdoor Fireplaces";
+  suggestedHref = "/fireplaces/outdoor/";
+  suggestedDescription = "Gas and wood-burning outdoor fireplaces engineered for the elements.";
+} else if (pathname.includes('electric')) {
+  suggestedTitle = "Browse Electric Fireplaces";
+  suggestedHref = "/fireplaces/electric/";
+  suggestedDescription = "No venting, no gas line, plug-and-play installation.";
+} else if (pathname.includes('wood')) {
+  suggestedTitle = "Browse Wood-Burning Fireplaces";
+  suggestedHref = "/fireplaces/wood/";
+  suggestedDescription = "Real wood combustion, EPA-certified efficiency, irreplaceable presence.";
+} else if (pathname.includes('log-set') || pathname.includes('gas-log')) {
+  suggestedTitle = "Browse Gas Log Sets";
+  suggestedHref = "/log-sets/";
+  suggestedDescription = "Real flame retrofits for existing fireplace openings.";
+} else if (pathname.includes('see-through') || pathname.includes('double-sided')) {
+  suggestedTitle = "Browse See-Through Fireplaces";
+  suggestedHref = "/fireplaces/see-through/";
+  suggestedDescription = "One firebox, two adjacent rooms.";
+} else if (pathname.includes('mantel') || pathname.includes('surround') || pathname.includes('accessor')) {
+  suggestedTitle = "Browse Accessories";
+  suggestedHref = "/accessories/";
+  suggestedDescription = "Mantels, stone surrounds, and wood mantel collections.";
+} else if (pathname.includes('idea') || pathname.includes('inspirat') || pathname.includes('design')) {
+  suggestedTitle = "Browse Inspiration";
+  suggestedHref = "/ideas/";
+  suggestedDescription = "Real renovations, designer features, and seasonal hooks.";
+} else if (pathname.includes('architect') || pathname.includes('design')) {
+  suggestedTitle = "See Featured Architects + Designers";
+  suggestedHref = "/architect/";
+  suggestedDescription = "The specifiers who chose Heat & Glo.";
+} else if (pathname.includes('owner') || pathname.includes('manual') || pathname.includes('warranty')) {
+  suggestedTitle = "Owner Resources";
+  suggestedHref = "/owner-resources/";
+  suggestedDescription = "Care, manuals, recalls, and warranty support.";
+} else if (pathname.includes('pro') || pathname.includes('builder') || pathname.includes('contractor')) {
+  suggestedTitle = "ProAdvantage Trade Program";
+  suggestedHref = "/pro/";
+  suggestedDescription = "BIM, wholesale pricing, project support for trade.";
+} else if (pathname.includes('dealer') || pathname.includes('buy')) {
+  suggestedTitle = "Find a Dealer";
+  suggestedHref = "/where-to-buy/";
+  suggestedDescription = "An authorized Heat & Glo dealer near you.";
+} else if (pathname.includes('blog') || pathname.includes('news') || pathname.includes('story')) {
+  suggestedTitle = "Read the Blog";
+  suggestedHref = "/blog/";
+  suggestedDescription = "Stories from the rooms our fires anchor.";
+} else if (pathname.includes('about') || pathname.includes('company') || pathname.includes('histor')) {
+  suggestedTitle = "About Heat & Glo";
+  suggestedHref = "/about-us/";
+  suggestedDescription = "Engineered in Lake City, Minnesota since 1975.";
+}
+
+const featured = [
+  { title: 'Mezzo', subtitle: 'Linear gas fireplace, 5 sizes', href: '/fireplaces/mezzo/', image: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400' },
+  { title: 'Primo II', subtitle: 'Single-sided + see-through', href: '/fireplaces/primo-ii/', image: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400' },
+  { title: 'True', subtitle: 'Premium traditional', href: '/fireplaces/true/', image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400' },
+];
 ---
 <BaseLayout
-  title="Heat & Glo"
-  description="Heat & Glo manufactured fireplaces, inserts, and outdoor fire features."
+  title="Demo — Heat & Glo"
+  description="You're exploring a demo of Heat & Glo's redesigned site. This page is in the production build queue."
+  noIndex={true}
 >
-  <main class="max-w-page mx-auto px-4 py-16">
-    <h1 class="text-2xl font-bold">Page not yet wired.</h1>
+  <section class="relative -mx-4 mb-0">
+    <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:600" alt="Heat & Glo SupremeX gas fireplace in a contemporary living room" class="w-full h-[420px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-xs font-semibold drop-shadow inline-block bg-orange-600/90 px-3 py-1 rounded-full">Demo Site</p>
+        <h1 class="text-5xl font-bold mt-4 max-w-2xl drop-shadow-lg">This page is in our build queue.</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-12">
+    <section class="bg-orange-50 border-l-4 border-orange-600 rounded-r-lg p-6 mb-12 max-w-3xl">
+      <p class="text-orange-900 font-medium mb-2">Welcome to the Heat & Glo redesign demo.</p>
+      <p class="text-neutral-700 leading-relaxed">
+        You followed a link to <code class="px-2 py-0.5 bg-white border rounded text-sm">{pathname}</code>, which is one of the 200+ pages we'll be building as part of the full production rollout. The redesigned IA, conversion-optimized templates, and CloudCannon-edit-ready infrastructure are all wired and ready, this specific page just hasn't been authored yet.
+      </p>
+      <p class="text-neutral-700 leading-relaxed mt-3">
+        Continue exploring the demo by clicking the link below to a similar built page.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-2">Continue your visit</h2>
+      <p class="text-neutral-600 mb-6 max-w-2xl">{suggestedDescription}</p>
+      <a href={suggestedHref} class="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition">
+        {suggestedTitle} →
+      </a>
+    </section>
+
+    <section class="border-t pt-10 mb-16">
+      <h2 class="text-xl font-semibold mb-6">Featured product families</h2>
+      <p class="text-neutral-600 mb-6 max-w-2xl">A few of the deeply-built product families in this demo. Click in to see the redesigned PDP treatment, conversion modules, and CloudCannon-edit-ready content structure.</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {featured.map((f) => (
+          <a href={f.href} class="block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition group">
+            <img src={f.image} alt={f.title} class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="p-5">
+              <p class="font-semibold text-base mb-1 group-hover:text-orange-700">{f.title}</p>
+              <p class="text-sm text-neutral-600">{f.subtitle}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <h2 class="text-xl font-semibold mb-3">Want the full site?</h2>
+      <p class="text-neutral-700 max-w-2xl mb-4">
+        The production engagement builds out every URL on Heat & Glo's existing 243-URL sitemap with fully-authored content, real product photography, CloudCannon editing for the HHT marketing team, and full SEO schema markup. This demo represents roughly 30 percent of the eventual scope, focused on demonstrating the IA, the visual direction, and the conversion patterns.
+      </p>
+    </section>
+
+    <section class="border-t pt-10 text-sm text-neutral-600">
+      <p>
+        Looking for something specific? <a href="/where-to-buy/" class="underline">Find a Heat & Glo dealer near you</a> for direct product information and consultation.
+      </p>
+    </section>
   </main>
 </BaseLayout>
