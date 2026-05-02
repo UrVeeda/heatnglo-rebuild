@@ -20,7 +20,7 @@ export default defineConfig({
     fallback: {
       es: 'en',
       'en-ca': 'en',
-      'fr-ca': 'en-ca',
+      'fr-ca': 'en',
     },
   },
   image: {
