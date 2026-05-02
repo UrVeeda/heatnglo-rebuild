@@ -1,13 +1,24 @@
 {
   "redirects": [
-    { "source": "/architect/:path*",        "destination": "/pro/:path*",                                "permanent": true },
-    { "source": "/products/electric-inserts",  "destination": "/products/electric-fireplaces/inserts/", "permanent": true },
-    { "source": "/products/wood-inserts",      "destination": "/products/wood-fireplaces/inserts/",     "permanent": true },
-    { "source": "/products/outdoor-fire-pits", "destination": "/products/outdoor-fireplaces/fire-pits/", "permanent": true },
-    { "source": "/products/outdoor-gas-log-sets","destination": "/products/outdoor-fireplaces/log-sets/", "permanent": true },
-    { "source": "/owner-resources/recall-information", "destination": "/owner-resources/recalls/",     "permanent": true },
-    { "source": "/privacy-policy",             "destination": "/privacy/",                              "permanent": true },
-    { "source": "/terms-of-use",               "destination": "/terms/",                                "permanent": true },
-    { "source": "/fireplace-safety",           "destination": "/owner-resources/safety-screens/",       "permanent": true }
+    { "source": "/products",                       "destination": "/fireplaces/",         "permanent": true },
+    { "source": "/products/",                      "destination": "/fireplaces/",         "permanent": true },
+    { "source": "/products/gas-fireplaces",        "destination": "/fireplaces/gas/",     "permanent": true },
+    { "source": "/products/gas-fireplaces/:path*", "destination": "/fireplaces/gas/",     "permanent": true },
+    { "source": "/products/wood-fireplaces",       "destination": "/fireplaces/wood/",    "permanent": true },
+    { "source": "/products/wood-fireplaces/:path*","destination": "/fireplaces/wood/",    "permanent": true },
+    { "source": "/products/electric-fireplaces",   "destination": "/fireplaces/electric/","permanent": true },
+    { "source": "/products/electric-fireplaces/:path*","destination": "/fireplaces/electric/","permanent": true },
+    { "source": "/products/outdoor-fireplaces",    "destination": "/fireplaces/outdoor/", "permanent": true },
+    { "source": "/products/outdoor-fireplaces/:path*","destination": "/fireplaces/outdoor/","permanent": true },
+    { "source": "/products/electric-inserts",      "destination": "/fireplaces/electric/","permanent": true },
+    { "source": "/products/wood-inserts",          "destination": "/fireplaces/wood/",    "permanent": true },
+    { "source": "/products/outdoor-fire-pits",     "destination": "/fireplaces/outdoor/", "permanent": true },
+    { "source": "/products/outdoor-gas-log-sets",  "destination": "/log-sets/",           "permanent": true },
+    { "source": "/promotions",                     "destination": "/fireplace-sale/",     "permanent": true },
+    { "source": "/promotions/:path*",              "destination": "/fireplace-sale/",     "permanent": true },
+    { "source": "/inspiration",                    "destination": "/ideas/",              "permanent": true },
+    { "source": "/inspiration/:path*",             "destination": "/ideas/",              "permanent": true },
+    { "source": "/about",                          "destination": "/about-us/",           "permanent": true },
+    { "source": "/owner-resources/recall-information","destination": "/owner-resources/recall-notices/","permanent": true }
   ]
 }
