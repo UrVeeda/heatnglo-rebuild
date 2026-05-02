@@ -1,7 +1,7 @@
 {
   "_schema": "default",
-  "title": "Mezzo Linear Indoor Gas Fireplace — 32, 36, 48, 60, 72",
-  "description": "The Mezzo Series brings the linear gas fireplace into focus. Five sizes from 32 to 72 inches, low-profile thin frame, true contemporary geometry. Configurable for indoor or see-through installations.",
+  "title": "Mezzo Linear Gas Fireplace | Heat & Glo",
+  "description": "The Mezzo Series: five sizes from 32 to 72 inches, thin-frame contemporary gas fireplace. Indoor and see-through configurations. Find an authorized dealer near you.",
   "ogImage": "https://hearthnhome.getbynder.com/transform/mezzo-hero/Heat-Glo-Mezzo-Hero?io=transform:fill,width:1200,height:630",
   "draft": true,
   "family": "Mezzo",
@@ -11,65 +11,48 @@
     "/fireplaces/gas/indoor/mezzo-gas-fireplace",
     "/fireplaces/gas/see-through/mezzo-gas-fireplace"
   ],
+  "hero": {
+    "eyebrow": "MEZZO SERIES — LINEAR GAS FIREPLACE",
+    "h1": "The fire that organizes the room around it.",
+    "h1_em": "the room around it.",
+    "lede": "Five sizes, one uncompromising geometry. The Mezzo Series is a thin-frame, low-profile contemporary linear gas fireplace engineered to anchor modern interiors without demanding attention. Choose the width that fits your wall. The fire does the rest."
+  },
   "sizes": [
-    {
-      "id": "32",
-      "name": "Mezzo 32",
-      "width_in": null,
-      "height_in": null,
-      "depth_in": null,
-      "btu_max": null,
-      "spec_pdf_url": null,
-      "image": null
-    },
-    {
-      "id": "36",
-      "name": "Mezzo 36",
-      "width_in": null,
-      "height_in": null,
-      "depth_in": null,
-      "btu_max": null,
-      "spec_pdf_url": null,
-      "image": null
-    },
-    {
-      "id": "48",
-      "name": "Mezzo 48",
-      "width_in": null,
-      "height_in": null,
-      "depth_in": null,
-      "btu_max": null,
-      "spec_pdf_url": null,
-      "image": null
-    },
-    {
-      "id": "60",
-      "name": "Mezzo 60",
-      "width_in": null,
-      "height_in": null,
-      "depth_in": null,
-      "btu_max": null,
-      "spec_pdf_url": null,
-      "image": null
-    },
-    {
-      "id": "72",
-      "name": "Mezzo 72",
-      "width_in": null,
-      "height_in": null,
-      "depth_in": null,
-      "btu_max": null,
-      "spec_pdf_url": null,
-      "image": null
-    }
+    { "id": "32", "name": "Mezzo 32", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "36", "name": "Mezzo 36", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "48", "name": "Mezzo 48", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "60", "name": "Mezzo 60", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "72", "name": "Mezzo 72", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
   ],
   "gallery": [],
-  "complete_the_look": [
-    "stone-surrounds",
-    "wood-mantels",
-    "mantel-shelves"
-  ],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
   "available_in": ["us", "ca"],
   "hreflang_locales": [],
+  "faq": [
+    {
+      "question": "Which Mezzo size is right for my room?",
+      "answer": "A useful starting point is to match the firebox width to roughly two-thirds of the wall it will occupy. The 32 and 36 suit focused accent walls in bedrooms, dining rooms, and smaller living spaces. The 48 is the most specified size for great-room media walls. The 60 and 72 are scaled for open-plan interiors with high ceilings or wide wall runs. Your authorized dealer can confirm the right fit based on your actual room dimensions and how the fireplace relates to adjacent furniture and openings."
+    },
+    {
+      "question": "What venting options does the Mezzo support?",
+      "answer": "The Mezzo Series is a direct-vent gas fireplace, meaning it draws combustion air from outside and exhausts directly through a co-axial pipe system, with no chimney required. This keeps the firebox sealed, the glass clean, and the indoor air quality unaffected. Your local dealer or the project's mechanical engineer can confirm the specific vent routing options and termination requirements for your installation. For projects with unique venting constraints, discuss power-vent availability with your dealer."
+    },
+    {
+      "question": "What does my contractor need to know about the gas line?",
+      "answer": "Each Mezzo size has its own BTU range, and the gas line sizing should be confirmed against the installed unit's spec sheet before rough-in. Your contractor will need to confirm line size, pressure, and shutoff location with the spec PDF for the exact model. Spec sheets are available through your authorized dealer or the ProAdvantage trade program portal. Do not rough in gas based on neighboring fireplace installations without verifying Mezzo's own requirements."
+    },
+    {
+      "question": "What is the installation envelope, and what should the framing crew know before I specify Mezzo?",
+      "answer": "Mezzo is a factory-built zero-clearance gas fireplace, which means it can be framed directly into a combustible wall assembly within the clearances specified in the installation manual. The firebox sits flush with or slightly proud of the finished wall surface, giving you the low-profile look the design renders show. Before framing begins, your team needs the unit's width, height, and depth dimensions plus the listed clearance requirements from the HHT installation document. These are available through your dealer or the ProAdvantage trade program. Note: dimensional values for all Mezzo sizes are currently pending final HHT spec sheet publication in this product listing. Contact your dealer directly for current confirmed dimensions."
+    },
+    {
+      "question": "Can the Mezzo be configured as a see-through (double-sided) fireplace?",
+      "answer": "Yes. The Mezzo is also available in a see-through configuration (listed as the Mezzo Double-Sided Linear Gas Fireplace), which allows it to serve two adjacent spaces from a single firebox. This is a distinct product configuration, not a field modification of the standard unit. If you are designing for a partition wall between a dining room and a living room, or a bedroom and a bath, confirm the see-through variant with your dealer early in the design phase, as the framing envelope and clearance requirements differ from the single-sided model."
+    },
+    {
+      "question": "How does Mezzo pair with mantels, stone surrounds, and tile?",
+      "answer": "Mezzo's thin steel frame is designed to disappear into the surround material rather than compete with it. Large-format tile and continuous slab stone work particularly well because the clean linear geometry of the firebox opening reinforces the horizontal run of the material. For wood mantels, a floating shelf at the top of the tile or stone field keeps the contemporary proportion intact. Avoid traditional corbeled mantel profiles, they read as a style conflict with Mezzo's geometry. The Heat & Glo mantel shelf and stone set collections include profiles engineered specifically for the Mezzo's surround depth. Confirm clearance-to-combustibles requirements against your specific mantel material before installation."
+    }
+  ],
   "content_blocks": []
 }

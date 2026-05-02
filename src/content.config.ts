@@ -92,6 +92,18 @@ const productSchema = z.object({
   available_in: z.array(z.string()).default(['us']),
   hreflang_locales: z.array(z.string()).default([]),
 
+  hero: z.object({
+    eyebrow: z.string().nullish(),
+    h1: z.string().nullish(),
+    h1_em: z.string().nullish(),
+    lede: z.string().nullish(),
+  }).nullish(),
+
+  faq: z.array(z.object({
+    question: z.string(),
+    answer: z.string(),
+  })).default([]),
+
   content_blocks: z.array(z.object({ _type: z.string() }).passthrough()).default([]),
 });
 
