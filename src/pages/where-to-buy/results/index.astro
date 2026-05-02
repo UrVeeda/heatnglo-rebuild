@@ -1,0 +1,136 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const zip = Astro.url.searchParams.get('zip') || '00000';
+
+const dealers = [
+  {
+    slug: 'pacific-hearth-design',
+    name: 'Pacific Hearth + Design',
+    address: '247 Cascade Avenue, Springfield, OR 97477',
+    phone: '(541) 555-0142',
+    distance: '2.3 mi',
+    rating: 4.9,
+    reviews: 127,
+    tier: 'Platinum',
+    isReal: true,
+    image: 'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:400',
+  },
+  {
+    slug: 'cascade-fireplace-co',
+    name: 'Cascade Fireplace Co.',
+    address: '8401 Belmont Boulevard, Eugene, OR 97401',
+    phone: '(541) 555-0193',
+    distance: '4.7 mi',
+    rating: 4.7,
+    reviews: 89,
+    tier: 'Gold',
+    isReal: false,
+    image: 'https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:600,height:400',
+  },
+  {
+    slug: 'highland-hearth-stove',
+    name: 'Highland Hearth + Stove',
+    address: '512 N Main Street, Cottage Grove, OR 97424',
+    phone: '(541) 555-0218',
+    distance: '12.1 mi',
+    rating: 4.6,
+    reviews: 64,
+    tier: 'Gold',
+    isReal: false,
+    image: 'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:400',
+  },
+  {
+    slug: 'rivers-edge-fireplaces',
+    name: "River's Edge Fireplaces",
+    address: '3219 Coburg Road, Eugene, OR 97401',
+    phone: '(541) 555-0247',
+    distance: '5.4 mi',
+    rating: 4.8,
+    reviews: 102,
+    tier: 'Platinum',
+    isReal: false,
+    image: 'https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:600,height:400',
+  },
+  {
+    slug: 'willamette-hearth',
+    name: 'Willamette Valley Hearth',
+    address: '8847 Pacific Highway, Salem, OR 97301',
+    phone: '(503) 555-0312',
+    distance: '23.5 mi',
+    rating: 4.5,
+    reviews: 71,
+    tier: 'Silver',
+    isReal: false,
+    image: 'https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:600,height:400',
+  },
+];
+---
+<BaseLayout
+  title={`Dealers near ${zip} | Heat & Glo`}
+  description="Demo dealer results for your ZIP code search. Click any dealer to see their detail page."
+  noIndex={true}
+>
+  <section class="relative mb-12 -mx-4">
+    <img src="https://hearthnhome.getbynder.com/transform/c220ce20-e963-4c07-85ca-83fa16359ef4/Nest-Out-West-Basem?io=transform:fill,width:1920,height:540" alt="Heat & Glo dealer showroom interior" class="w-full h-[280px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Find a Dealer</p>
+        <h1 class="text-4xl font-bold mt-2 drop-shadow-lg">5 dealers near {zip}</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-page mx-auto px-4 py-4">
+    <section class="bg-amber-50 border-l-4 border-orange-600 rounded-r p-5 mb-8">
+      <p class="text-orange-900 font-semibold text-sm uppercase tracking-wide mb-1">Demo Results</p>
+      <p class="text-neutral-800">These are sample dealer cards showing how the production locator will display results. Click <strong>Pacific Hearth + Design</strong> to see a fully-built dealer detail page. The other 4 dealers route to the demo modal.</p>
+    </section>
+
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm">
+      <p class="text-neutral-700"><strong>5 results</strong> within 25 miles of {zip}, sorted by distance.</p>
+      <div class="flex gap-2">
+        <button style="background: #1a1a1a; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 500; border: none;">List view</button>
+        <button style="background: #fff; color: #1a1a1a; padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 500; border: 1px solid #d4d4d4;">Map view</button>
+      </div>
+    </div>
+
+    <section class="grid lg:grid-cols-2 gap-6 mb-16">
+      {dealers.map((d) => (
+        <a href={`/where-to-buy/dealers/${d.slug}/`} class="group block bg-white border rounded-lg overflow-hidden hover:border-orange-400 hover:shadow-md transition">
+          <div class="grid sm:grid-cols-[200px_1fr]">
+            <img src={d.image} alt={d.name} class="w-full h-full min-h-[140px] object-cover" />
+            <div class="p-5">
+              <div class="flex items-start justify-between mb-2 gap-3">
+                <p class="font-semibold text-lg group-hover:text-orange-700">{d.name}</p>
+                <span class="bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded shrink-0">{d.tier}</span>
+              </div>
+              <p class="text-sm text-neutral-700 mb-1">{d.address}</p>
+              <p class="text-sm text-neutral-700 mb-3">📞 {d.phone}</p>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="text-neutral-600">⭐ {d.rating} ({d.reviews})</span>
+                <span class="text-neutral-500">·</span>
+                <span class="font-medium text-neutral-700">{d.distance}</span>
+              </div>
+              {d.isReal && <p class="text-xs text-orange-700 font-semibold mt-3 uppercase tracking-wide">↑ Click to see fully-built dealer detail page</p>}
+            </div>
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <section class="bg-orange-50 border border-orange-200 rounded-lg p-8 mb-16 grid sm:grid-cols-3 gap-6 items-center">
+      <div class="sm:col-span-2">
+        <h2 class="text-2xl font-semibold mb-2">Need help narrowing it down?</h2>
+        <p class="text-neutral-700">Heat & Glo's customer team can route you to the right dealer based on your project type, fuel preference, and timeline.</p>
+      </div>
+      <a href="tel:8884273973" style="background: #c44a08; color: #fff; display: inline-block; padding: 12px 28px; border-radius: 8px; font-weight: 600; text-align: center; text-decoration: none;">Call 888-427-3973</a>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600 text-sm">
+        <a href="/where-to-buy/" class="underline">← Back to dealer search</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>
