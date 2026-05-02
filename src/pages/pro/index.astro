@@ -1,0 +1,56 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const benefits = [
+  { title: 'BIM files + spec sheets', description: 'Direct access to BIM models, dimensional drawings, and PDF spec sheets for every Heat & Glo product, organized by category.' },
+  { title: 'Wholesale pricing', description: 'Trade pricing for builders, contractors, and design-build firms. Sign-up confirms your trade credentials.' },
+  { title: 'Specification support', description: 'Direct access to Heat & Glo specification engineers for complex installs. Email or schedule a call for project-level support.' },
+  { title: 'Installation training', description: 'Continuing education credits and installation training for trade professionals. Live sessions and on-demand modules.' },
+  { title: 'Photography library', description: 'High-resolution Heat & Glo product photography for use in your project marketing and presentations.' },
+  { title: 'Co-marketing toolkit', description: 'Logos, badge files, and template materials for incorporating Heat & Glo into your project marketing.' },
+];
+---
+<BaseLayout
+  title="ProAdvantage Trade Program — For Builders, Architects, Designers | Heat & Glo"
+  description="The Heat & Glo ProAdvantage trade program: BIM files, wholesale pricing, specification support, installation training, photography, and co-marketing for trade professionals."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">ProAdvantage Trade Program</p>
+      <h1 class="text-4xl font-bold mt-2">For builders, architects, designers, and contractors.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Direct trade access to Heat & Glo's specification library, wholesale pricing, and project
+        support. ProAdvantage is the channel for everyone who specifies, sells, or installs Heat & Glo
+        on professional projects.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {benefits.map((b) => (
+        <div class="border rounded-lg p-5">
+          <p class="font-semibold mb-2">{b.title}</p>
+          <p class="text-sm text-neutral-600">{b.description}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <h2 class="text-xl font-semibold mb-3">Apply for ProAdvantage access</h2>
+      <p class="text-neutral-700 mb-4 max-w-2xl">
+        Trade access requires verification of your trade credentials (contractor license, design firm
+        registration, builder license, or architect registration). Apply to confirm eligibility and
+        receive your trade portal login.
+      </p>
+      <a href="/apply-for-dealership/" class="inline-block bg-orange-600 text-white px-5 py-2 rounded font-medium hover:bg-orange-700 transition">
+        Apply for ProAdvantage access →
+      </a>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Already a ProAdvantage member? <a href="/pro-help-desk/" class="underline">Pro help desk</a> for technical support.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

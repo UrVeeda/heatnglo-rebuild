@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const sections = [
+  { title: 'Company', href: '/about-us/company/', description: 'Heat & Glo as a Hearth & Home Technologies brand. Manufacturing in Lake City, Minnesota since 1975.' },
+  { title: 'EPA Certification', href: '/about-us/epa-certification/', description: 'Heat & Glo wood-burning fireplaces and the EPA emissions standards that govern them. Certified for indoor air quality.' },
+  { title: 'Sustainability', href: '/about-us/sustainability/', description: 'How Heat & Glo approaches manufacturing, packaging, and end-of-life material recovery.' },
+];
+---
+<BaseLayout
+  title="About Heat & Glo | Engineered in Lake City, MN since 1975"
+  description="Heat & Glo: a Hearth & Home Technologies brand. Manufacturing fireplaces in Lake City, Minnesota since 1975. EPA-certified, sustainability-focused."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">About Heat & Glo</p>
+      <h1 class="text-4xl font-bold mt-2">Engineered in Lake City, Minnesota since 1975.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Heat & Glo is a Hearth & Home Technologies brand. Manufacturing happens at HHT's Lake City,
+        Minnesota facility, where the engineering, testing, and final assembly of every Heat & Glo
+        unit is overseen by the same teams that have been doing it for fifty years.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-3 gap-6 mb-16">
+      {sections.map((s) => (
+        <a href={s.href} class="block border rounded-lg p-6 hover:border-orange-400 hover:shadow-md transition">
+          <p class="font-semibold text-lg mb-2">{s.title}</p>
+          <p class="text-sm text-neutral-600">{s.description}</p>
+        </a>
+      ))}
+    </section>
+
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <h2 class="text-xl font-semibold mb-3">A Hearth & Home Technologies brand</h2>
+      <p class="text-neutral-700 max-w-2xl">
+        Hearth & Home Technologies is the parent company behind Heat & Glo, Heatilator, Quadra-Fire,
+        Harman, Vermont Castings, and several other hearth brands. HHT manufactures, distributes, and
+        services hearth products across North America and selected international markets including
+        Australia and New Zealand.
+      </p>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Questions about the brand or the company? <a href="/get-in-touch/" class="underline">Contact us</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

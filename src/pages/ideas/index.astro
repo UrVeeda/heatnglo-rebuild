@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const featured = [
+  { title: '21 Fireplace Accent Wall Ideas', excerpt: 'Stone, tile, plaster, wood. Twenty-one accent wall treatments that pair with a Heat & Glo fireplace as the room\'s focal point.', href: '/ideas/fireplace-accent-wall-ideas/' },
+  { title: 'Cosmo: The Fireplace for Every Room', excerpt: 'How the Cosmo Series adapts to bedrooms, great rooms, hospitality lobbies, and everywhere in between.', href: '/ideas/cosmo-fireplace-every-room/' },
+  { title: 'Heat & Glo on Military Makeover', excerpt: 'The brand\'s collaboration with Military Makeover, supporting veterans and their families.', href: '/ideas/military-makeover-collaboration/' },
+];
+
+const categories = [
+  { name: 'Design Trends', count: 28 },
+  { name: 'Room-by-Room Inspiration', count: 24 },
+  { name: 'Renovation Stories', count: 19 },
+  { name: 'HGTV Partnerships', count: 14 },
+  { name: 'Architect Features', count: 11 },
+  { name: 'Outdoor Living', count: 7 },
+];
+---
+<BaseLayout
+  title="Inspiration — Fireplace Ideas, Design Trends, Renovations | Heat & Glo"
+  description="Browse fireplace inspiration: accent wall ideas, room-by-room renovations, HGTV partnerships, architect features, and outdoor living photography."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Inspiration</p>
+      <h1 class="text-4xl font-bold mt-2">The fireplace as the room's idea.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Real renovations, designer features, and seasonal hooks. Photography from HGTV partnerships,
+        architect projects, and Heat & Glo dealer installs across the US and Canada.
+      </p>
+    </header>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-6">Featured</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {featured.map((f) => (
+          <a href={f.href} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+            <div class="aspect-[4/3] bg-neutral-100 rounded mb-4"></div>
+            <p class="font-semibold mb-2">{f.title}</p>
+            <p class="text-sm text-neutral-600 line-clamp-3">{f.excerpt}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-6">Browse by category</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {categories.map((c) => (
+          <a href={`/ideas/${c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="block border rounded-lg p-5 hover:bg-neutral-50 transition">
+            <p class="font-semibold">{c.name}</p>
+            <p class="text-sm text-neutral-500 mt-1">{c.count} stories</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Inspired? <a href="/where-to-buy/" class="underline">Find a dealer</a> to walk through the lineup in person.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

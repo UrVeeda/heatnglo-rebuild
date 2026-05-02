@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Find a Heat & Glo Dealer Near You | Heat & Glo"
+  description="Find a Heat & Glo authorized dealer near you. 1,400+ dealers across the US and Canada. Schedule an in-home consultation, browse fireplaces in person, get installation quotes."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Find a Dealer</p>
+      <h1 class="text-4xl font-bold mt-2">An authorized dealer near you.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Heat & Glo sells through a network of authorized dealers across the US and Canada. Your local
+        dealer can walk you through the lineup in person, schedule an in-home consultation, and quote
+        installation for your specific space.
+      </p>
+    </header>
+
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+        <label for="zip" class="sr-only">ZIP or postal code</label>
+        <input
+          id="zip"
+          type="text"
+          name="zip"
+          placeholder="ZIP or postal code"
+          class="flex-1 px-4 py-3 border rounded-lg text-base"
+        />
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition">
+          Find dealers
+        </button>
+      </form>
+      <p class="text-sm text-neutral-500 mt-3">
+        Dealer locator launching with the production rollout. For now, call <a href="tel:8884273973" class="underline">888-427-3973</a> to be routed to your nearest dealer.
+      </p>
+    </section>
+
+    <section class="grid sm:grid-cols-3 gap-6 mb-16">
+      <div class="border rounded-lg p-5">
+        <p class="font-semibold mb-2">Schedule a consultation</p>
+        <p class="text-sm text-neutral-600">Most dealers offer free in-home consultations to size the right fireplace for your space.</p>
+      </div>
+      <div class="border rounded-lg p-5">
+        <p class="font-semibold mb-2">See it installed</p>
+        <p class="text-sm text-neutral-600">Many dealers maintain showrooms with operating Heat & Glo units across the lineup.</p>
+      </div>
+      <div class="border rounded-lg p-5">
+        <p class="font-semibold mb-2">Service + parts</p>
+        <p class="text-sm text-neutral-600">Your authorized dealer is also your annual service partner. Find your dealer for warranty work and maintenance.</p>
+      </div>
+    </section>
+
+    <section class="border-t pt-10 text-sm text-neutral-600">
+      <p>
+        For Australia and New Zealand: <a href="/fireplaces/global/" class="underline">visit the AU/NZ regional page</a> for local AGA-certified dealers.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

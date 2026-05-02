@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+let posts: any[] = [];
+try {
+  posts = await getCollection('blog-en');
+} catch (e) {
+  posts = [];
+}
+---
+<BaseLayout
+  title="Heat & Glo Blog — Renovation Stories, Designer Features, How-To Guides"
+  description="The Heat & Glo blog: real renovation stories, designer features, seasonal hooks, fireplace operation guides, and inspiration from across the dealer network."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Heat & Glo Blog</p>
+      <h1 class="text-4xl font-bold mt-2">Stories from the rooms our fires anchor.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Renovation stories, designer features, seasonal hooks, and the practical guides that make a
+        Heat & Glo a fire your home wears comfortably.
+      </p>
+    </header>
+
+    {posts.length > 0 ? (
+      <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {posts.map((p: any) => (
+          <a href={`/blog/${p.id.replace(/\.(md|mdx)$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+            <p class="font-semibold mb-2">{p.data.title}</p>
+            <p class="text-sm text-neutral-600 line-clamp-3">{p.data.excerpt ?? p.data.description}</p>
+          </a>
+        ))}
+      </section>
+    ) : (
+      <section class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-16">
+        <p class="text-amber-900 text-sm">
+          Blog posts ship as part of the production engagement. The blog framework is wired to a
+          translate-loader-aware content collection (4 locales: en, es, en-ca, fr-ca), backed by
+          CloudCannon for editorial workflow.
+        </p>
+      </section>
+    )}
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Looking for a specific topic? <a href="/ideas/" class="underline">Browse our inspiration library</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const sections = [
+  { title: 'Care + Maintenance', href: '/owner-resources/care/', description: 'Annual maintenance, glass cleaning, and seasonal startup procedures for Heat & Glo gas, wood, and electric units.' },
+  { title: 'Recall Notices', href: '/owner-resources/recall-notices/', description: 'Active and historical recall notices. Confirm whether your unit is affected and what action is required.' },
+  { title: 'Owner\'s Manuals', href: '/manuals/', description: 'Installation, operation, and maintenance manuals for current and discontinued Heat & Glo products. Download by model.' },
+  { title: 'Warranty Information', href: '/warranty-information/', description: 'Warranty terms and registration. Confirm your unit\'s coverage period and submit a warranty claim.' },
+];
+---
+<BaseLayout
+  title="Owner Resources — Care, Recalls, Manuals, Warranty | Heat & Glo"
+  description="Heat & Glo owner resources: care and maintenance guides, recall notices, owner's manuals, and warranty information for your Heat & Glo fireplace."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Owner Resources</p>
+      <h1 class="text-4xl font-bold mt-2">Care, manuals, recalls, and warranty.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Everything you need to keep a Heat & Glo fireplace running well for the long run. If you can't
+        find your model or the answer you need, your authorized dealer is the fastest path to support.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 gap-6 mb-16">
+      {sections.map((s) => (
+        <a href={s.href} class="block border rounded-lg p-6 hover:border-orange-400 hover:shadow-md transition">
+          <p class="font-semibold text-lg mb-2">{s.title}</p>
+          <p class="text-sm text-neutral-600">{s.description}</p>
+        </a>
+      ))}
+    </section>
+
+    <section class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-16">
+      <h2 class="text-base font-semibold mb-2 text-amber-900">Safety first</h2>
+      <p class="text-sm text-amber-900">
+        For active recall notices, see <a href="/owner-resources/recall-notices/" class="underline">Recall Notices</a> for the current list.
+        For fireplace safety information, including children, pet, and combustible-material clearances,
+        see <a href="/fireplace-safety/" class="underline">Fireplace Safety</a>.
+      </p>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Need direct support? <a href="/where-to-buy/" class="underline">Find your authorized dealer</a> for service and parts.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

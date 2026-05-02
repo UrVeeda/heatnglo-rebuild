@@ -1,0 +1,56 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const designers = [
+  { name: 'Brandi Hagen', title: 'Eminent Interior Design', slug: 'brandi-hagen', focus: 'Hospitality + luxury residential' },
+  { name: 'Ann Fritz', title: 'Ann Fritz Designs', slug: 'ann-fritz', focus: 'Custom residential, Pacific Northwest' },
+  { name: 'Chris Walker', title: 'Walker Design Studio', slug: 'chris-walker', focus: 'Contemporary residential' },
+  { name: 'Jordan Iverson', title: 'Iverson Architecture', slug: 'jordan-iverson', focus: 'Modern residential + multifamily' },
+  { name: 'Katie Kurtz', title: 'Kurtz Interiors', slug: 'katie-kurtz', focus: 'Traditional and transitional residential' },
+];
+---
+<BaseLayout
+  title="Architects + Designers Specifying Heat & Glo | Heat & Glo"
+  description="Heat & Glo featured architects and interior designers. Custom residential, hospitality, and commercial projects specifying Heat & Glo across North America."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Architects + Designers</p>
+      <h1 class="text-4xl font-bold mt-2">The specifiers who chose Heat & Glo.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Custom residential, hospitality, and commercial projects from architects and interior designers
+        who chose Heat & Glo for the projects that had to be specified right the first time.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {designers.map((d) => (
+        <a href={`/architect/${d.slug}/`} class="block border rounded-lg p-6 hover:border-orange-400 hover:shadow-md transition">
+          <div class="aspect-[4/3] bg-neutral-100 rounded mb-4"></div>
+          <p class="font-semibold text-lg">{d.name}</p>
+          <p class="text-sm text-neutral-600 mt-1">{d.title}</p>
+          <p class="text-sm text-neutral-500 mt-2">{d.focus}</p>
+        </a>
+      ))}
+    </section>
+
+    <section class="bg-neutral-50 rounded-lg p-8 mb-16">
+      <h2 class="text-xl font-semibold mb-3">For trade specifiers</h2>
+      <p class="text-neutral-700 mb-4 max-w-2xl">
+        The Heat & Glo ProAdvantage trade program provides BIM files, installation manuals, spec PDFs,
+        and dedicated specification support. Sign up for direct access to the resources your project
+        team needs at every stage of the build.
+      </p>
+      <a href="/pro/" class="inline-block bg-orange-600 text-white px-5 py-2 rounded font-medium hover:bg-orange-700 transition">
+        ProAdvantage trade program →
+      </a>
+    </section>
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Specifying Heat & Glo for a project? <a href="/where-to-buy/" class="underline">Find a regional rep</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

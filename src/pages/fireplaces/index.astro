@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const products = await getCollection('products-en');
+const families = products.filter((p) => p.data.placement !== 'log-set' && !p.data.available_in?.includes('au'));
+
+const byEnergy = {
+  gas: families.filter((p) => p.data.energy === 'gas'),
+  wood: families.filter((p) => p.data.energy === 'wood'),
+  electric: families.filter((p) => p.data.energy === 'electric'),
+};
+---
+<BaseLayout
+  title="Fireplaces — Gas, Wood, Electric, Outdoor | Heat & Glo"
+  description="Browse the full Heat & Glo fireplace lineup: gas, wood, electric, outdoor, see-through, and inserts. Engineered since 1975."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Fireplaces</p>
+      <h1 class="text-4xl font-bold mt-2">The full Heat & Glo lineup</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Gas, wood, electric, outdoor. See-through, inserts, freestanding. Heat & Glo has been engineering
+        fireplaces in Lake City, Minnesota since 1975. Find the configuration that fits your room.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+      <a href="/fireplaces/gas/" class="block border rounded-lg p-6 hover:bg-neutral-50 transition">
+        <p class="font-semibold text-lg">Gas</p>
+        <p class="text-sm text-neutral-600 mt-1">Direct-vent, push-button warmth, the most-specified category</p>
+      </a>
+      <a href="/fireplaces/wood/" class="block border rounded-lg p-6 hover:bg-neutral-50 transition">
+        <p class="font-semibold text-lg">Wood</p>
+        <p class="text-sm text-neutral-600 mt-1">Real wood-burning fireplaces with EPA-certified efficiency</p>
+      </a>
+      <a href="/fireplaces/electric/" class="block border rounded-lg p-6 hover:bg-neutral-50 transition">
+        <p class="font-semibold text-lg">Electric</p>
+        <p class="text-sm text-neutral-600 mt-1">No venting required, plug-and-play installation flexibility</p>
+      </a>
+      <a href="/fireplaces/outdoor/" class="block border rounded-lg p-6 hover:bg-neutral-50 transition">
+        <p class="font-semibold text-lg">Outdoor</p>
+        <p class="text-sm text-neutral-600 mt-1">Patio and outdoor-living fireplaces engineered for the elements</p>
+      </a>
+    </section>
+
+    {Object.entries(byEnergy).map(([energy, items]) => items.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-6 capitalize">{energy} fireplaces</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {items.map((p: any) => (
+            <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+              <p class="font-semibold">{p.data.family}</p>
+              <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Need help narrowing it down? <a href="/where-to-buy/" class="underline">Find an authorized dealer near you</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>
