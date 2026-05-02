@@ -1,0 +1,22 @@
+{
+  "_schema": "default",
+  "title": "6K/8K Series Traditional Gas Fireplace",
+  "description": "The 6K/8K Series Traditional is the bread-and-butter American hearth: brick-lined firebox, traditional log set, warm orange flame. Two tiers (6K and 8K) for the spec-conscious builder and the replacement buyer. The product the schedule respects.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/6k-8k-hero/Heat-Glo-6K-8K-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "6K/8K Series Traditional",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/6k-and-8k-series"
+  ],
+  "sizes": [
+    { "id": "6k", "name": "6K Series", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "8k", "name": "8K Series", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}

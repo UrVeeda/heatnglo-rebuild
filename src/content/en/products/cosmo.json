@@ -1,0 +1,24 @@
+{
+  "_schema": "default",
+  "title": "Cosmo Linear Gas Fireplace — 36, 48, 60, 72",
+  "description": "The Cosmo Series is a contemporary linear gas fireplace with a taller glass proportion engineered for rooms where ceiling height, architectural presence, and first-impression impact matter. Multiple sizes, one vertical intention. Shares the Mezzo's clean geometry and adds altitude.",
+  "ogImage": "https://hearthnhome.getbynder.com/transform/cosmo-hero/Heat-Glo-Cosmo-Hero?io=transform:fill,width:1200,height:630",
+  "draft": true,
+  "family": "Cosmo",
+  "energy": "gas",
+  "placement": "indoor",
+  "legacy_slugs": [
+    "/fireplaces/gas/indoor/cosmo-gas-fireplace"
+  ],
+  "sizes": [
+    { "id": "36", "name": "Cosmo 36", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "48", "name": "Cosmo 48", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "60", "name": "Cosmo 60", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
+    { "id": "72", "name": "Cosmo 72", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null }
+  ],
+  "gallery": [],
+  "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
+  "available_in": ["us", "ca"],
+  "hreflang_locales": [],
+  "content_blocks": []
+}
