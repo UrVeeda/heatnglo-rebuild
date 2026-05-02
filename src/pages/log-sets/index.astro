@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const products = await getCollection('products-en');
+const logSets = products.filter((p) => p.data.placement === 'log-set');
+const indoor = logSets.filter((p) => !p.id.includes('outdoor'));
+const outdoor = logSets.filter((p) => p.id.includes('outdoor'));
+---
+<BaseLayout
+  title="Gas Log Sets — Heat & Glo"
+  description="Heat & Glo gas log sets bring real flame to existing fireplace openings. Indoor and outdoor configurations across vented and vent-free options."
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-neutral-500">Log Sets</p>
+      <h1 class="text-4xl font-bold mt-2">Gas log sets for existing fireplace openings</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">
+        Real flame, controlled gas, no chimney rebuild. Heat & Glo log sets retrofit into existing
+        masonry openings without replacing the fireplace, indoor or outdoor.
+      </p>
+    </header>
+
+    {logSets.length === 0 && (
+      <section class="bg-amber-50 border border-amber-200 rounded p-6">
+        <p class="text-amber-900">
+          Log set product pages are being populated from the legacy catalog. Check back soon, or
+          <a href="/where-to-buy/" class="underline ml-1">find an authorized dealer</a> for current
+          inventory and pairing recommendations.
+        </p>
+      </section>
+    )}
+
+    {indoor.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Indoor log sets</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {indoor.map((p: any) => (
+            <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-4 hover:bg-neutral-50 transition">
+              <p class="font-semibold">{p.data.family}</p>
+              {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {outdoor.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Outdoor log sets</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {outdoor.map((p: any) => (
+            <a href={`/log-sets/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-4 hover:bg-neutral-50 transition">
+              <p class="font-semibold">{p.data.family}</p>
+              {p.data.description && <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Need a complete fireplace install instead of a retrofit?
+        <a href="/fireplaces/gas/" class="underline ml-2">Browse Gas Fireplaces</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

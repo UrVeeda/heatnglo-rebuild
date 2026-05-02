@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products-en');
+  return products
+    .filter((p) => p.data.placement === 'log-set')
+    .map((p) => ({
+      params: { slug: p.id.replace(/\.json$/, '') },
+      props: { product: p },
+    }));
+}
+
+const { product } = Astro.props;
+const data = product.data;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': `https://heatnglo.com/log-sets/${product.id.replace(/\.json$/, '')}`,
+  name: data.title,
+  brand: { '@type': 'Brand', name: 'Heat & Glo' },
+  category: 'gas log set',
+};
+---
+<BaseLayout
+  title={data.title}
+  description={data.description ?? ''}
+  ogImage={data.ogImage ?? undefined}
+  structuredData={structuredData}
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-neutral-500">{data.energy} log set</p>
+      <h1 class="text-4xl font-bold mt-2">{data.family}</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">{data.description}</p>
+    </header>
+
+    {data.sizes.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Configurations</h2>
+        {data.sizes.map((s: any) => (
+          <article class="border-t py-10">
+            <h3 class="text-xl font-semibold mb-4">{s.name}</h3>
+            <dl class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+              {s.width_in && (<><dt class="text-neutral-500">Width</dt><dd>{s.width_in}"</dd></>)}
+              {s.btu_max && (<><dt class="text-neutral-500">Max BTU</dt><dd>{s.btu_max}</dd></>)}
+            </dl>
+            {!s.width_in && !s.btu_max && (
+              <p class="text-sm text-amber-700 italic mt-2">Specifications pending. Real values import from HHT spec sheets.</p>
+            )}
+          </article>
+        ))}
+      </section>
+    )}
+
+    <section class="border-t pt-10">
+      <p class="text-neutral-600">
+        Looking for a complete fireplace install instead of a log set retrofit?
+        <a href="/fireplaces/gas/" class="underline ml-2">Browse Gas Fireplaces</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

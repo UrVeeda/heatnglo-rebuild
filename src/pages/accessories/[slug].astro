@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const accessories = await getCollection('accessories-en');
+  return accessories.map((a) => ({
+    params: { slug: a.id.replace(/\.json$/, '') },
+    props: { accessory: a },
+  }));
+}
+
+const { accessory } = Astro.props;
+const data = accessory.data;
+---
+<BaseLayout
+  title={data.title}
+  description={data.description ?? ''}
+  ogImage={data.ogImage ?? undefined}
+  noIndex={true}
+>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-neutral-500">{data.accessory_type.replace(/-/g, ' ')}</p>
+      <h1 class="text-4xl font-bold mt-2">{data.title}</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">{data.description}</p>
+    </header>
+
+    {data.compatible_fireplaces && data.compatible_fireplaces.length > 0 && (
+      <section class="border-t pt-10 mb-16">
+        <h2 class="text-2xl font-semibold mb-6">Compatible fireplaces</h2>
+        <p class="text-neutral-600 mb-4">Pairs with these Heat & Glo families:</p>
+        <ul class="grid sm:grid-cols-3 gap-4">
+          {data.compatible_fireplaces.map((slug: string) => (
+            <li class="border rounded-lg p-4">
+              <a href={`/fireplaces/${slug}/`} class="font-medium hover:underline">{slug.replace(/-/g, ' ')}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="border-t pt-10">
+      <a href="/accessories/" class="underline">All accessories</a>
+    </section>
+  </main>
+</BaseLayout>
