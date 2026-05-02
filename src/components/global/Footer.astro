@@ -8,30 +8,26 @@ const localePrefix = currentLocale === 'en' ? '' : '/' + currentLocale;
 
 const year = new Date().getFullYear();
 
-const FOOTER_LABELS: Record<Locale, { engineered: string; contact: string; copyright: string; optimized: string }> = {
+const FOOTER_LABELS: Record<Locale, { engineered: string; contact: string; copyright: string }> = {
   en: {
     engineered: 'Engineered in Lake City, Minnesota since 1975.',
     contact:    'Contact:',
     copyright:  `© ${year} Heat & Glo. All rights reserved.`,
-    optimized:  'Optimized by The Voice of Cash AI Platform',
   },
   es: {
     engineered: 'Diseñado en Lake City, Minnesota desde 1975.',
     contact:    'Contacto:',
     copyright:  `© ${year} Heat & Glo. Todos los derechos reservados.`,
-    optimized:  'Optimizado por The Voice of Cash AI Platform',
   },
   'en-ca': {
     engineered: 'Engineered in Lake City, Minnesota since 1975.',
     contact:    'Contact:',
     copyright:  `© ${year} Heat & Glo. All rights reserved.`,
-    optimized:  'Optimized by The Voice of Cash AI Platform',
   },
   'fr-ca': {
     engineered: 'Conçu à Lake City, Minnesota depuis 1975.',
     contact:    'Contact :',
     copyright:  `© ${year} Heat & Glo. Tous droits réservés.`,
-    optimized:  'Optimisé par The Voice of Cash AI Platform',
   },
 };
 
@@ -84,7 +80,6 @@ function localizeHref(href: string): string {
           <li><a href={localizeHref(l.href)}>{l.label}</a></li>
         ))}
       </ul>
-      <p class="footer__optimized">{f.optimized}</p>
     </div>
   </div>
 </footer>
