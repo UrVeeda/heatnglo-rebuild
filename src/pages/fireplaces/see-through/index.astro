@@ -6,11 +6,18 @@ const products = await getCollection('products-en');
 const seeThrough = products.filter((p) => p.data.placement === 'see-through' || p.id.includes('see-through'));
 ---
 <BaseLayout title="See-Through (Double-Sided) Fireplaces | Heat & Glo" description="Heat & Glo see-through fireplaces: double-sided fireboxes that serve two adjacent spaces from one unit. Living-to-dining, bedroom-to-bath, indoor-to-outdoor configurations." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
+  <section class="relative mb-12 -mx-4">
+    <img src="https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1920,height:540" alt="Open contemporary residential layout with Primo II 60 see-through linear fireplace" class="w-full h-[280px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">See-Through Fireplaces</p>
+        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">One fire. Two rooms.</h1>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-page mx-auto px-4 py-4">
     <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">See-Through Fireplaces</p>
-      <h1 class="text-4xl font-bold mt-2">One fire. Two rooms.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">See-through fireplaces share a single firebox between two adjacent rooms or between an indoor and outdoor space. The most-specified configurations: living-to-dining partitions, primary bedroom-to-bath, and indoor-to-outdoor patio walls.</p>
+      <p class="text-lg text-neutral-700 max-w-2xl">See-through fireplaces share a single firebox between two adjacent rooms or between an indoor and outdoor space. The most-specified configurations: living-to-dining partitions, primary bedroom-to-bath, and indoor-to-outdoor patio walls.</p>
     </header>
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
       {seeThrough.map((p: any) => (

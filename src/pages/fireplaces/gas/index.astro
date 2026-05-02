@@ -6,11 +6,18 @@ const products = await getCollection('products-en');
 const gas = products.filter((p) => p.data.energy === 'gas' && p.data.placement !== 'log-set' && !p.data.available_in?.includes('au'));
 ---
 <BaseLayout title="Gas Fireplaces | Heat & Glo" description="Heat & Glo gas fireplaces: direct-vent, push-button warmth, and the most-specified category in the lineup. Indoor, outdoor, see-through, inserts, freestanding." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
+  <section class="relative mb-12 -mx-4">
+    <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:540" alt="Heat & Glo SupremeX gas fireplace in a contemporary living room" class="w-full h-[280px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Gas Fireplaces</p>
+        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Push-button warmth. Direct-vent design.</h1>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-page mx-auto px-4 py-4">
     <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Gas Fireplaces</p>
-      <h1 class="text-4xl font-bold mt-2">Push-button warmth. Direct-vent design.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Gas is the most-specified category in the Heat & Glo lineup. Direct-vent design means no chimney required, sealed combustion preserves indoor air quality, and IPI ignition delivers reliable startup every time.</p>
+      <p class="text-lg text-neutral-700 max-w-2xl">Gas is the most-specified category in the Heat & Glo lineup. Direct-vent design means no chimney required, sealed combustion preserves indoor air quality, and IPI ignition delivers reliable startup every time.</p>
     </header>
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
       {gas.map((p: any) => (

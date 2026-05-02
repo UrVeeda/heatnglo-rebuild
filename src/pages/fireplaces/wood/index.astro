@@ -6,11 +6,18 @@ const products = await getCollection('products-en');
 const wood = products.filter((p) => p.data.energy === 'wood');
 ---
 <BaseLayout title="Wood-Burning Fireplaces | Heat & Glo" description="Heat & Glo wood-burning fireplaces: real wood combustion, EPA-certified efficiency, the irreplaceable presence of a real fire. Indoor and outdoor options." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
+  <section class="relative mb-12 -mx-4">
+    <img src="https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1920,height:540" alt="Traditional fireplace with stone hearth and forged-arch surround" class="w-full h-[280px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Wood-Burning Fireplaces</p>
+        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Real wood. Real fire. Real presence.</h1>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-page mx-auto px-4 py-4">
     <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Wood-Burning Fireplaces</p>
-      <h1 class="text-4xl font-bold mt-2">Real wood. Real fire. Real presence.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo wood-burning fireplaces are EPA-certified for emissions and efficiency. The crackle, the smell, the irreplaceable presence of a real fire. The category most homeowners come to thinking they want gas and stay because the reality of wood is what they actually wanted.</p>
+      <p class="text-lg text-neutral-700 max-w-2xl">Heat & Glo wood-burning fireplaces are EPA-certified for emissions and efficiency. The crackle, the smell, the irreplaceable presence of a real fire. The category most homeowners come to thinking they want gas and stay because the reality of wood is what they actually wanted.</p>
     </header>
     <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
       {wood.map((p: any) => (

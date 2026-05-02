@@ -6,11 +6,18 @@ const products = await getCollection('products-en');
 const inserts = products.filter((p) => p.data.placement === 'inserts');
 ---
 <BaseLayout title="Fireplace Inserts | Heat & Glo" description="Heat & Glo gas and electric fireplace inserts: retrofit existing wood-burning openings with modern controlled appliances. Save up to $650 on qualifying gas inserts." noIndex={true}>
-  <main class="max-w-page mx-auto px-4 py-12">
+  <section class="relative mb-12 -mx-4">
+    <img src="https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1920,height:540" alt="Heat & Glo SupremeX gas insert retrofitted into a traditional fireplace opening" class="w-full h-[280px] object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-center px-8">
+      <div class="max-w-page mx-auto text-white">
+        <p class="uppercase tracking-wide text-sm font-semibold drop-shadow">Fireplace Inserts</p>
+        <h1 class="text-4xl font-bold mt-2 max-w-2xl drop-shadow-lg">Retrofit your existing fireplace.</h1>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-page mx-auto px-4 py-4">
     <header class="mb-12">
-      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Fireplace Inserts</p>
-      <h1 class="text-4xl font-bold mt-2">Retrofit your existing fireplace.</h1>
-      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo inserts retrofit your existing wood-burning fireplace opening with a modern, controlled gas or electric appliance. Push-button warmth, cleaner glass, faster install. Most installations complete in 2 to 4 weeks.</p>
+      <p class="text-lg text-neutral-700 max-w-2xl">Heat & Glo inserts retrofit your existing wood-burning fireplace opening with a modern, controlled gas or electric appliance. Push-button warmth, cleaner glass, faster install. Most installations complete in 2 to 4 weeks.</p>
     </header>
     <section class="bg-orange-50 border border-orange-200 rounded-lg p-6 mb-16">
       <p class="font-semibold mb-2">Save up to $650 on a gas insert.</p>
