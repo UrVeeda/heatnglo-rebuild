@@ -185,7 +185,7 @@ const gallery = familyGalleryMap[familySlug] ?? defaultGallery;
                   <div class="p-5">
                     <p class="font-semibold text-base mb-1 group-hover:text-orange-700">{labelMap[slug] ?? slug.replace(/-/g, ' ')}</p>
                     <p class="text-sm text-neutral-600 mb-3">Designed to pair with {data.family}</p>
-                    <p class="text-sm font-medium" style="color: #c44a08;">Add to my consultation list →</p>
+                    <p class="text-sm font-medium" style="color: #c44a08;">View {labelMap[slug]?.toLowerCase() ?? 'collection'} →</p>
                   </div>
                 </a>
               );
