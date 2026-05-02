@@ -1,7 +1,7 @@
 {
   "_schema": "default",
-  "title": "True Indoor Gas Fireplace",
-  "description": "The True is Heat & Glo's premium-tier traditional gas fireplace, differentiated by the most lifelike flame quality in the lineup and a superior firebox aesthetic. The step-up from the 6K/8K Series Traditional for buyers who want the visible craft.",
+  "title": "True Indoor Gas Fireplace | Heat & Glo",
+  "description": "True Gas Fireplace: premium traditional indoor gas fireplace with superior flame quality and firebox detail. Multiple sizes. Find an authorized Heat & Glo dealer near you.",
   "ogImage": "https://hearthnhome.getbynder.com/transform/true-hero/Heat-Glo-True-Hero?io=transform:fill,width:1200,height:630",
   "draft": true,
   "family": "True",
@@ -10,6 +10,12 @@
   "legacy_slugs": [
     "/fireplaces/gas/indoor/true-gas-fireplace"
   ],
+  "hero": {
+    "eyebrow": "TRUE — INDOOR GAS FIREPLACE",
+    "h1": "A traditional hearth built around the most lifelike flame.",
+    "h1_em": "the most lifelike flame.",
+    "lede": "Multiple sizes, one premium commitment. The True Indoor Gas Fireplace sits at the top of Heat & Glo's traditional gas fireplace range, differentiated by a flame quality and firebox aesthetic that reads as genuinely wood-fire rather than gas. The familiar form. An unfamiliar level of realism."
+  },
   "sizes": [
     { "id": "36", "name": "True 36", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
     { "id": "42", "name": "True 42", "width_in": null, "height_in": null, "depth_in": null, "btu_max": null, "spec_pdf_url": null, "image": null },
@@ -19,5 +25,31 @@
   "complete_the_look": ["stone-surrounds", "wood-mantels", "mantel-shelves"],
   "available_in": ["us", "ca"],
   "hreflang_locales": [],
+  "faq": [
+    {
+      "question": "How is the True different from the 6K/8K Series Traditional?",
+      "answer": "Both are Heat & Glo traditional-style indoor gas fireplaces with brick-lined fireboxes and log set arrangements. The True is differentiated primarily by flame quality and firebox presentation. The fire in the True is engineered to produce a more variable, layered, and visually complex flame pattern that more closely approximates the irregular character of a wood fire. The firebox interior detailing is also refined at a higher level. If your client will be sitting close to this fireplace for extended periods, or if the hearth is the room's signature feature in a custom or luxury build, the True's visible quality difference justifies the step up. If the fireplace is one of several features in a production home and the standard hearth aesthetic is the goal, the 6K/8K Series is typically the right call."
+    },
+    {
+      "question": "What firebox interior does the True use?",
+      "answer": "The True features a brick-lined firebox interior with a log set arrangement designed to work specifically with the True's flame system. The combination of the firebox liner, log positioning, and burner configuration is engineered as a system to produce the flame behavior that differentiates the True from other Heat & Glo traditional products. Do not mix components from other Heat & Glo models. For accessory and log set options compatible with the True, confirm with your authorized dealer."
+    },
+    {
+      "question": "What does my framing contractor need before the True goes in?",
+      "answer": "The True is a factory-built zero-clearance direct-vent gas fireplace, frameable into a combustible wall assembly within the clearances listed in its installation manual. Your framing crew needs the unit's width, height, and depth dimensions plus the listed clearance requirements before rough-in begins. These are available through your authorized dealer or the ProAdvantage trade program. Note: dimensional values for True sizes are pending final HHT spec sheet publication in this listing and should be confirmed with your dealer before framing."
+    },
+    {
+      "question": "What venting options does the True support?",
+      "answer": "The True is a direct-vent gas fireplace, drawing combustion air from outside and exhausting through a co-axial pipe system with no traditional chimney required. The sealed firebox maintains indoor air quality. Your dealer or the project's mechanical engineer can confirm vent routing options and termination requirements for your installation. For projects with constrained vent paths, ask your dealer about power-vent availability."
+    },
+    {
+      "question": "How do I surround the True with a mantel appropriate to its quality level?",
+      "answer": "The True's premium firebox presentation calls for a surround that matches its level of craft. Corbeled wood mantels in hardwood species, stone surrounds in natural or cast stone, and custom brick face-extensions all read appropriately against the True's traditional aesthetic. The Heat & Glo wood mantel and stone set collections include profiles compatible with the True's surround depth. The critical step before any mantel selection is confirming clearance-to-combustibles requirements from the True's installation manual. Custom mantel fabricators should receive those clearance specs before they begin design."
+    },
+    {
+      "question": "Is the True compatible with remote control and smart-home systems?",
+      "answer": "The True Series is compatible with Heat & Glo's IPI (Intermittent Pilot Ignition) system, which supports remote control operation. Specific remote and smart-home integration options depend on the exact model and configuration. Your authorized dealer can confirm available control accessories and advise on compatibility with home automation platforms. For high-end residential specifications where the fireplace is part of a whole-home control system, discuss integration requirements with your dealer early in the design process."
+    }
+  ],
   "content_blocks": []
 }
