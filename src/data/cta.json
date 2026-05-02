@@ -11,7 +11,7 @@
     "label_es":    "Solicitar Consulta",
     "label_en-ca": "Request Consultation",
     "label_fr-ca": "Demander une consultation",
-    "href":        "/contact/"
+    "href":        "/request-a-consultation/"
   },
   "phone": "888-427-3973"
 }
