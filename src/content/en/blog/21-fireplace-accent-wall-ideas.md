@@ -29,7 +29,11 @@ The 21 treatments below are organized by material family. Each pairs cleanly wit
 | Plaster (smooth, fluted) | High (non-combustible) | $$ | Modern + minimalist |
 | Wood (mantel + paneling) | Lower (clearance-critical) | $$$ | Traditional, transitional, mid-century |
 
+![A bright contemporary living room with a Heat & Glo SupremeX gas fireplace as the architectural anchor of an open-plan space](https://hearthnhome.getbynder.com/transform/938c4268-c58b-4e89-be57-3740ffd4bbd9/Heat-Glo-SupremeX-Living-Room-1?io=transform:fill,width:1200,height:680)
+
 ## Stone accent walls (1 to 7)
+
+![Heat & Glo True Series traditional fireplace with a stone hearth and forged-arch surround in a Coastal Chic interior](https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:1200,height:680)
 
 Stone is the most permissive specification because most stone is non-combustible. Slab, cast, dry-laid, or veneer all work within manufacturer clearance specs.
 
@@ -65,6 +69,8 @@ Mixed-period treatment, increasingly specified in transitional residential. The 
 
 ## Tile accent walls (8 to 14)
 
+![Heat & Glo Mezzo linear gas fireplace with crystal glass media set into a brick accent wall — contemporary residential](https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:1200,height:680)
+
 Tile is the contemporary middle ground. Most ceramic and porcelain tiles are non-combustible, but the substrate behind them and the grout joints need spec attention. Confirm both with your installer before order.
 
 ### 8. Large-format porcelain in a continuous slab look
@@ -97,6 +103,8 @@ Plaster fluting has the same vertical-emphasis effect as fluted tile at lower co
 
 ## Wood + mantel accent walls (15 to 21)
 
+![Heat & Glo floating wood mantel detail in a residential living room — the Fillmore mantel shelf paired with a stone hearth](https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:1200,height:680)
+
 Wood is aesthetic gold and an engineering minefield. The wrong species or the wrong distance from the firebox creates a real fire-safety problem. Heat & Glo's [Wood Mantel collections](/accessories/wood-mantels/) are profile-engineered to specific clearance specs.
 
 ### 15. Floating walnut mantel shelf with stone base
@@ -128,6 +136,8 @@ Mixed-period treatment. The limewash softens the brick (which would otherwise re
 The contemporary signature for custom residential. The wall reads as one continuous wood field, with the fireplace cut out of it cleanly. Pair with a Mezzo or Cosmo for the proportion. Confirm clearance-to-combustibles before any wood paneling sits within the manufacturer-specified distance from the firebox opening.
 
 [Schedule a consultation with your authorized dealer →](/where-to-buy/)
+
+![Heat & Glo Primo II 60 see-through linear gas fireplace anchoring an architecturally composed open contemporary living room with angled stair volume](https://hearthnhome.getbynder.com/transform/937081fe-73df-4957-a0ec-8c5a1bfa3a05/HNG-Primo-II_60-2_2?io=transform:fill,width:1200,height:680)
 
 ## How to choose: a simple framework
 

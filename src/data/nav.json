@@ -9,7 +9,7 @@
     { "label": "Owner Resources",   "href": "/owner-resources/" },
     { "label": "Blog",              "href": "/blog/" },
     { "label": "About",             "href": "/about-us/" },
-    { "label": "Stellar by Heat & Glo", "href": "https://www.stellarfireplaces.com/" }
+    { "label": "Stellar by Heat & Glo", "href": "https://stellar.heatnglo.com/" }
   ],
   "es_main": [
     { "label": "Chimeneas",                      "href": "/es/fireplaces/" },
@@ -21,7 +21,7 @@
     { "label": "Recursos para Propietarios",     "href": "/es/owner-resources/" },
     { "label": "Blog",                           "href": "/es/blog/" },
     { "label": "Acerca de",                      "href": "/es/about-us/" },
-    { "label": "Stellar by Heat & Glo",          "href": "https://www.stellarfireplaces.com/" }
+    { "label": "Stellar by Heat & Glo",          "href": "https://stellar.heatnglo.com/" }
   ],
   "en_ca_main": [
     { "label": "Fireplaces",        "href": "/en-ca/fireplaces/" },
@@ -33,7 +33,7 @@
     { "label": "Owner Resources",   "href": "/en-ca/owner-resources/" },
     { "label": "Blog",              "href": "/en-ca/blog/" },
     { "label": "About",             "href": "/en-ca/about-us/" },
-    { "label": "Stellar by Heat & Glo", "href": "https://www.stellarfireplaces.com/" }
+    { "label": "Stellar by Heat & Glo", "href": "https://stellar.heatnglo.com/" }
   ],
   "fr_ca_main": [
     { "label": "Foyers",                         "href": "/fr-ca/fireplaces/" },
@@ -45,6 +45,6 @@
     { "label": "Ressources pour propriétaires",  "href": "/fr-ca/owner-resources/" },
     { "label": "Blogue",                         "href": "/fr-ca/blog/" },
     { "label": "À propos",                       "href": "/fr-ca/about-us/" },
-    { "label": "Stellar by Heat & Glo",          "href": "https://www.stellarfireplaces.com/" }
+    { "label": "Stellar by Heat & Glo",          "href": "https://stellar.heatnglo.com/" }
   ]
 }

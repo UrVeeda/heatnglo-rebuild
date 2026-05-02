@@ -75,19 +75,25 @@
       </svg>
     </button>
 
+    <!-- HERO IMAGE (optional, populated from data-demo-image) -->
+    <div id="demo-modal-hero" style="display: none; margin: -40px -40px 24px; height: 180px; overflow: hidden; border-radius: 12px 12px 0 0; background: #1a1a1a;">
+      <img id="demo-modal-hero-img" src="" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
     <!-- EYEBROW -->
     <p
+      id="demo-modal-eyebrow"
       style="
         font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 11px;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         color: #c44a08;
         margin: 0 0 12px;
       "
     >
-      Demo Scope
+      Production Scope · Demo Sample
     </p>
 
     <!-- HEADING -->
@@ -95,47 +101,45 @@
       id="demo-modal-heading"
       style="
         font-family: 'DM Sans', system-ui, sans-serif;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 700;
         color: #1a1a1a;
-        margin: 0 0 16px;
-        line-height: 1.25;
+        margin: 0 0 14px;
+        line-height: 1.2;
       "
     >
-      This section is part of the production engagement.
+      You're seeing the template.
     </h2>
 
     <!-- BODY -->
     <div id="demo-modal-body">
       <p
+        id="demo-modal-context"
         style="
           font-family: 'Roboto', system-ui, sans-serif;
           font-size: 15px;
           color: #333333;
           line-height: 1.65;
-          margin: 0 0 8px;
+          margin: 0 0 16px;
         "
       >
-        The page you clicked &mdash;
-        <strong id="demo-modal-label" style="color: #1a1a1a;"></strong>
-        &mdash; is within the full production scope but not included in this
-        demo deliverable.
+        <strong id="demo-modal-label" style="color: #1a1a1a;"></strong> is one of many pages this template will scale to in production. For this demo, click the button below to see what the fully-built version looks like.
       </p>
-      <p
+      <div
+        id="demo-modal-meta"
         style="
-          font-family: 'Roboto', system-ui, sans-serif;
-          font-size: 15px;
-          color: #333333;
-          line-height: 1.65;
-          margin: 0 0 28px;
+          background: #fdf6ed;
+          border-left: 3px solid #c44a08;
+          padding: 12px 16px;
+          margin: 0 0 24px;
+          border-radius: 0 6px 6px 0;
         "
       >
-        To experience a comparable built page right now, use the button below.
-      </p>
+        <p style="font-family: 'Roboto', system-ui, sans-serif; font-size: 13px; color: #6e6e6e; line-height: 1.55; margin: 0;">
+          🔥 In the production engagement, this template renders for every entry in the catalog. Each one editable in CloudCannon. The demo shows the pattern; production scales it.
+        </p>
+      </div>
     </div>
-
-    <!-- RULE -->
-    <hr style="border: none; border-top: 1px solid #e8e8e8; margin: 0 0 28px;" />
 
     <!-- ACTIONS -->
     <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -153,12 +157,13 @@
           padding: 14px 24px;
           border-radius: 8px;
           text-decoration: none;
-          transition: background 0.15s ease;
+          transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.18s ease;
+          box-shadow: 0 2px 8px rgba(196, 74, 8, 0.25);
         "
-        onmouseover="this.style.background='#a83e07'"
-        onmouseout="this.style.background='#c44a08'"
+        onmouseover="this.style.background='#a83e07'; this.style.boxShadow='0 4px 18px rgba(196,74,8,0.45)'; this.style.transform='translateY(-1px)';"
+        onmouseout="this.style.background='#c44a08'; this.style.boxShadow='0 2px 8px rgba(196,74,8,0.25)'; this.style.transform='translateY(0)';"
       >
-        View a similar live page
+        See the live version →
       </a>
 
       <button
@@ -203,10 +208,43 @@
 
     let previouslyFocused: Element | null = null;
 
+    const headingEl = document.getElementById('demo-modal-heading');
+    const eyebrowEl = document.getElementById('demo-modal-eyebrow');
+    const contextEl = document.getElementById('demo-modal-context');
+    const heroEl    = document.getElementById('demo-modal-hero');
+    const heroImg   = document.getElementById('demo-modal-hero-img') as HTMLImageElement | null;
+    const ctaTextDefault = ctaEl.textContent ?? 'See the live version →';
+
     // ---- Open ----
-    function openModal(label: string, target: string) {
+    function openModal(label: string, target: string, opts: {
+      heading?: string | null;
+      eyebrow?: string | null;
+      context?: string | null;
+      image?: string | null;
+      ctaText?: string | null;
+    } = {}) {
       labelEl.textContent = label;
       ctaEl.setAttribute('href', target);
+
+      if (headingEl) headingEl.textContent = opts.heading || 'You\'re seeing the template.';
+      if (eyebrowEl) eyebrowEl.textContent = opts.eyebrow || 'Production Scope · Demo Sample';
+      if (contextEl) {
+        contextEl.innerHTML = opts.context
+          ? opts.context.replace(/\{label\}/g, `<strong style="color: #1a1a1a;">${label}</strong>`)
+          : `<strong style="color: #1a1a1a;">${label}</strong> is one of many pages this template will scale to in production. For this demo, click the button below to see what the fully-built version looks like.`;
+      }
+      if (heroEl && heroImg) {
+        if (opts.image) {
+          heroImg.src = opts.image;
+          heroImg.alt = label;
+          heroEl.style.display = 'block';
+        } else {
+          heroEl.style.display = 'none';
+          heroImg.src = '';
+        }
+      }
+      ctaEl.textContent = opts.ctaText || ctaTextDefault;
+
       modal.removeAttribute('hidden');
       modal.style.display = 'flex';
       previouslyFocused = document.activeElement;
@@ -275,7 +313,13 @@
           const label  = anchor.dataset.demoLabel ?? anchor.textContent?.trim() ?? 'this section';
           if (!target) return;
           e.preventDefault();
-          openModal(label, target);
+          openModal(label, target, {
+            heading: anchor.dataset.demoHeading ?? null,
+            eyebrow: anchor.dataset.demoEyebrow ?? null,
+            context: anchor.dataset.demoContext ?? null,
+            image:   anchor.dataset.demoImage ?? null,
+            ctaText: anchor.dataset.demoCta ?? null,
+          });
         });
       });
     });
