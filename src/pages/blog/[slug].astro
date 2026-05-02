@@ -22,7 +22,7 @@ const { Content } = await render(post);
 >
   {data.hero && (
     <section class="relative -mx-4 mb-12">
-      <img src={data.hero} alt={data.title} class="w-full h-[420px] object-cover" />
+      <img src={data.hero} alt={data.title} class="w-full h-[600px] md:h-[420px] object-cover" />
       <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30 flex items-end px-8 pb-12">
         <div class="max-w-page mx-auto text-white">
           {data.category && <p class="uppercase tracking-wide text-sm font-semibold drop-shadow text-orange-300">{data.category}</p>}
