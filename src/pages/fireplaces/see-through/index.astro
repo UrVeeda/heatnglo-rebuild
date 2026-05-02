@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const products = await getCollection('products-en');
+const seeThrough = products.filter((p) => p.data.placement === 'see-through' || p.id.includes('see-through'));
+---
+<BaseLayout title="See-Through (Double-Sided) Fireplaces | Heat & Glo" description="Heat & Glo see-through fireplaces: double-sided fireboxes that serve two adjacent spaces from one unit. Living-to-dining, bedroom-to-bath, indoor-to-outdoor configurations." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">See-Through Fireplaces</p>
+      <h1 class="text-4xl font-bold mt-2">One fire. Two rooms.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">See-through fireplaces share a single firebox between two adjacent rooms or between an indoor and outdoor space. The most-specified configurations: living-to-dining partitions, primary bedroom-to-bath, and indoor-to-outdoor patio walls.</p>
+    </header>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+      {seeThrough.map((p: any) => (
+        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+          <p class="font-semibold">{p.data.family}</p>
+          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
+          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.energy}</p>
+        </a>
+      ))}
+    </section>
+    {seeThrough.length === 0 && <p class="text-neutral-600">See-through configurations are also available within most product families. Check the family page for see-through variants.</p>}
+  </main>
+</BaseLayout>

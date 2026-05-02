@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const products = await getCollection('products-en');
+const outdoor = products.filter((p) => p.data.placement === 'outdoor');
+---
+<BaseLayout title="Outdoor Fireplaces | Heat & Glo" description="Heat & Glo outdoor fireplaces: gas and wood-burning fireplaces engineered for patios, outdoor kitchens, pool houses, and exterior living spaces." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Outdoor Fireplaces</p>
+      <h1 class="text-4xl font-bold mt-2">Engineered for the elements.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Outdoor fireplaces extend the season your patio is usable. Heat & Glo's outdoor lineup spans gas and wood, indoor-outdoor convertibility, and the structural durability required for genuine exterior installation.</p>
+    </header>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+      {outdoor.map((p: any) => (
+        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+          <p class="font-semibold">{p.data.family}</p>
+          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
+          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.energy}</p>
+        </a>
+      ))}
+    </section>
+    {outdoor.length === 0 && <p class="text-neutral-600">Outdoor product pages populate from the legacy catalog as the rebuild scales beyond the pitch deliverable.</p>}
+  </main>
+</BaseLayout>

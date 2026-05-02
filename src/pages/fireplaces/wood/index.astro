@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const products = await getCollection('products-en');
+const wood = products.filter((p) => p.data.energy === 'wood');
+---
+<BaseLayout title="Wood-Burning Fireplaces | Heat & Glo" description="Heat & Glo wood-burning fireplaces: real wood combustion, EPA-certified efficiency, the irreplaceable presence of a real fire. Indoor and outdoor options." noIndex={true}>
+  <main class="max-w-page mx-auto px-4 py-12">
+    <header class="mb-12">
+      <p class="uppercase tracking-wide text-sm text-orange-700 font-semibold">Wood-Burning Fireplaces</p>
+      <h1 class="text-4xl font-bold mt-2">Real wood. Real fire. Real presence.</h1>
+      <p class="mt-4 text-lg text-neutral-700 max-w-2xl">Heat & Glo wood-burning fireplaces are EPA-certified for emissions and efficiency. The crackle, the smell, the irreplaceable presence of a real fire. The category most homeowners come to thinking they want gas and stay because the reality of wood is what they actually wanted.</p>
+    </header>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+      {wood.map((p: any) => (
+        <a href={`/fireplaces/${p.id.replace(/\.json$/, '')}/`} class="block border rounded-lg p-5 hover:border-orange-400 hover:shadow-md transition">
+          <p class="font-semibold">{p.data.family}</p>
+          <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{p.data.description}</p>
+          <p class="text-xs text-neutral-500 mt-2 uppercase tracking-wide">{p.data.placement}</p>
+        </a>
+      ))}
+    </section>
+    {wood.length === 0 && <p class="text-neutral-600">Wood-burning product pages populate from the legacy catalog as the rebuild scales beyond the pitch deliverable.</p>}
+  </main>
+</BaseLayout>
