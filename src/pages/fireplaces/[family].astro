@@ -118,13 +118,13 @@ const data = product.data;
           <p class="text-neutral-600 mb-8 max-w-2xl">Heat & Glo mantel shelves, stone surrounds, and wood mantels are engineered to complete the install. Bring the conversation to your authorized dealer with the pieces already in mind.</p>
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.complete_the_look.map((slug: string) => {
-              const imageMap: Record<string, string> = {
+              const imageMap = {
                 'stone-surrounds':  'https://hearthnhome.getbynder.com/transform/96f4f3b6-bb4e-4004-a797-85aa7179b3bb/HNG-True_ForgedArch?io=transform:fill,width:600,height:450',
                 'wood-mantels':     'https://hearthnhome.getbynder.com/transform/d46ab388-275f-4983-b659-7c4cd454dcf5/img-pdp-mezzo-room-1?io=transform:fill,width:600,height:450',
                 'mantel-shelves':   'https://hearthnhome.getbynder.com/transform/1463c616-67bb-453c-b704-3d065d548b0c/Fillmore_MantelShel?io=transform:fill,width:600,height:450',
                 'hearth-stones':    'https://hearthnhome.getbynder.com/transform/4b548b1f-4515-4438-be37-975077ed748a/20_HHT_GasLogs_Outd?io=transform:fill,width:600,height:450',
               };
-              const labelMap: Record<string, string> = {
+              const labelMap = {
                 'stone-surrounds':  'Stone Surrounds',
                 'wood-mantels':     'Wood Mantels',
                 'mantel-shelves':   'Mantel Shelves',
