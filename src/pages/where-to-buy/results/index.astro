@@ -201,4 +201,24 @@ const dealers = [
       </p>
     </section>
   </main>
+
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var zip = (params.get('zip') || '').replace(/[^0-9A-Za-z]/g, '').slice(0, 7);
+        if (!zip || zip === '00000') return;
+        document.title = document.title.replace(/00000/g, zip);
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+        var node;
+        var nodes = [];
+        while ((node = walker.nextNode())) {
+          if (node.nodeValue && node.nodeValue.indexOf('00000') !== -1) nodes.push(node);
+        }
+        nodes.forEach(function (n) {
+          n.nodeValue = n.nodeValue.replace(/00000/g, zip);
+        });
+      } catch (e) {}
+    })();
+  </script>
 </BaseLayout>
